@@ -1,3 +1,5 @@
+import shutil
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -43,6 +45,24 @@ class RepositoryValidatorTests(unittest.TestCase):
         for path in fragment_paths:
             with self.subTest(path=path):
                 self.assertEqual(validate_manifest(path), [])
+
+    def test_missing_originals_fragment_is_rejected(self):
+        validate_originals = getattr(validator, "validate_originals", None)
+        self.assertIsNotNone(validate_originals, "validate_originals must exist")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            originals = Path(temp_dir)
+            shutil.copyfile(
+                FIXTURES / "missing-fragment.yaml", originals / "manifest.yaml"
+            )
+            (originals / "SHA256SUMS").write_text("", encoding="utf-8")
+            findings = validate_originals(originals)
+        self.assertIn("ORIGINALS_MISSING_FRAGMENT", {item.code for item in findings})
+
+    def test_real_originals_index_and_checksums_are_consistent(self):
+        validate_originals = getattr(validator, "validate_originals", None)
+        self.assertIsNotNone(validate_originals, "validate_originals must exist")
+        findings = validate_originals(ROOT / "data" / "originals")
+        self.assertEqual(findings, [])
 
 
 if __name__ == "__main__":
