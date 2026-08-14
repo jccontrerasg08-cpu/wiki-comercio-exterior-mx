@@ -26,6 +26,24 @@ class RepositoryValidatorTests(unittest.TestCase):
         findings = validate_registry(ROOT / "sources" / "registry.yaml")
         self.assertEqual(findings, [])
 
+    def test_invalid_manifest_sha_is_rejected(self):
+        validate_manifest = getattr(validator, "validate_manifest", None)
+        self.assertIsNotNone(validate_manifest, "validate_manifest must exist")
+        findings = validate_manifest(FIXTURES / "invalid-sha256.yaml")
+        self.assertIn("MANIFEST_SHA256", {item.code for item in findings})
+
+    def test_real_manifest_fragments_have_valid_structure(self):
+        validate_manifest = getattr(validator, "validate_manifest", None)
+        self.assertIsNotNone(validate_manifest, "validate_manifest must exist")
+        fragment_paths = [
+            ROOT / "data" / "originals" / "diputados" / "MANIFEST.yaml",
+            ROOT / "data" / "originals" / "sidof" / "5778300" / "MANIFEST.yaml",
+            ROOT / "data" / "originals" / "tmec" / "MANIFEST.yaml",
+        ]
+        for path in fragment_paths:
+            with self.subTest(path=path):
+                self.assertEqual(validate_manifest(path), [])
+
 
 if __name__ == "__main__":
     unittest.main()
