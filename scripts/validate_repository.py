@@ -43,6 +43,17 @@ _REQUIRED_DOCUMENT_FIELDS = (
     "redistribution",
 )
 
+_BINARY_SUFFIXES = {
+    ".pdf",
+    ".doc",
+    ".docx",
+    ".xls",
+    ".xlsx",
+    ".zip",
+    ".7z",
+    ".rar",
+}
+
 _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 _CHECKSUM_LINE_RE = re.compile(r"^([0-9a-f]{64})  (.+)$")
 
@@ -400,4 +411,24 @@ def validate_originals(originals_dir: Path) -> list[ValidationFinding]:
                     )
                 )
 
+    return findings
+
+
+def validate_repository_hygiene(root: Path) -> list[ValidationFinding]:
+    """Reject original binary payloads that should live in GitHub Releases."""
+
+    originals_dir = root / "data" / "originals"
+    if not originals_dir.is_dir():
+        return []
+
+    findings: list[ValidationFinding] = []
+    for path in sorted(item for item in originals_dir.rglob("*") if item.is_file()):
+        if path.suffix.lower() in _BINARY_SUFFIXES:
+            findings.append(
+                ValidationFinding(
+                    "REPOSITORY_BINARY_IN_GIT",
+                    str(path),
+                    "official binary payload must live in a GitHub Release, not Git history",
+                )
+            )
     return findings
