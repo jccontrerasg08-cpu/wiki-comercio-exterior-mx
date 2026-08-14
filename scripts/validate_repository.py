@@ -88,14 +88,23 @@ def validate_registry(path: Path) -> list[ValidationFinding]:
         url = source.get("url")
         if isinstance(url, str):
             parsed = urlparse(url)
-            if parsed.scheme != "https" or not parsed.netloc:
+            if parsed.scheme not in {"http", "https"} or not parsed.netloc:
                 findings.append(
                     ValidationFinding(
                         "REGISTRY_URL",
                         item_path,
-                        f"expected absolute HTTPS URL: {url}",
+                        f"expected absolute HTTP(S) URL: {url}",
                     )
                 )
+            elif source.get("harvest") is True and parsed.scheme != "https":
+                findings.append(
+                    ValidationFinding(
+                        "REGISTRY_INSECURE_HARVEST_URL",
+                        item_path,
+                        f"harvested source must use HTTPS: {url}",
+                    )
+                )
+
             allowed_hosts = source.get("allowed_hosts")
             if isinstance(allowed_hosts, list) and parsed.hostname:
                 if parsed.hostname not in allowed_hosts:
