@@ -6,7 +6,7 @@ Las RRNA son permisos, NOMs, avisos y controles que no son el arancel pero bloqu
 
 ## Cómo aplica en México
 
-Cada fracción puede tener RRNA de distintas dependencias. Se consultan en SNICE (página LIGIE) y se acreditan en el pedimento. No scrapear las apps. Textiles, juguetes o autos no se "aconsejan" aquí: se leen por fracción, NOM y padrón. Mapa: [Inicio](index.md).
+Cada fracción puede tener RRNA de distintas dependencias. Se consultan en SNICE (página LIGIE) y se acreditan en el pedimento. No scrapear las apps. Textiles, juguetes o autos no se "aconsejan" aquí: se leen por fracción, NOM y padrón. Mapa: [Inicio](../index.md).
 
 ## Fuentes oficiales
 
@@ -17,6 +17,6 @@ Catálogo local: `docs/catalog/mexico/arancel.md`.
 
 ## Ver también
 
-[TIGIE y NICO](tigie-nico.md) · [Pedimento y RGCE](pedimento-rgce.md) · [ANAM](anam.md)
+[TIGIE y NICO](tigie-nico.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md) · [ANAM](../aduana/anam.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

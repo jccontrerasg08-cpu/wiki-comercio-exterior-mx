@@ -18,6 +18,6 @@ Catálogo local: `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Aranceles](aranceles.md) · [TIGIE y NICO](tigie-nico.md) · [Pedimento y RGCE](pedimento-rgce.md)
+[Aranceles](aranceles.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

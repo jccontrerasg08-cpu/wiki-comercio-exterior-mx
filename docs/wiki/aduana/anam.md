@@ -20,6 +20,6 @@ Catálogo local: `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Pedimento y RGCE](pedimento-rgce.md) · [RRNA](rrna.md) · [Logística internacional](logistica-internacional.md)
+[Pedimento y RGCE](pedimento-rgce.md) · [RRNA](../clasificacion/rrna.md) · [Logística internacional](../logistica/logistica-internacional.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

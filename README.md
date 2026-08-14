@@ -45,12 +45,18 @@ mkdocs serve
 ## Folder map
 
 ```
-docs/wiki/       Wiki Comercio Exterior MX
-docs/catalog/    Official URLs (Mexico deep, global thin)
-sources/         registry.yaml (one official URL per PR)
-data/originals/  MANIFEST.yaml + SHA-256; bytes in Releases
-data/corpus/     RAG summaries (not the DOF)
-tests/           wiki citation checks
+docs/wiki/           Wiki Comercio Exterior MX (one topic folder)
+  fundamentos/       Padrón
+  aduana/            Pedimento, ANAM
+  clasificacion/     TIGIE, SA, RRNA
+  contribuciones/    IGI, valor, cuotas
+  programas/         TLC, origen, IMMEX, PROSEC
+  logistica/         Incoterms (catalog-only), transporte, pagos
+docs/catalog/        Official URLs (Mexico deep, global thin)
+sources/             registry.yaml + harvest (not a second catalog)
+data/originals/      MANIFEST.yaml + SHA-256 by agency; bytes in Releases
+data/corpus/         RAG summaries (not the DOF; not under docs/)
+tests/               wiki citation checks
 ```
 
 ## How to cite

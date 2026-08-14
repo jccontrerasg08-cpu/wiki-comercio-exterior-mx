@@ -55,7 +55,7 @@ sources:
     cadence_days: 30
     probe: *probe_pdf
 
-  # RGCE 2025 (SIDOF). Human index: docs/mexico/rgce.md
+  # RGCE 2025 (SIDOF). Human index: docs/catalog/mexico/rgce.md
   - id: mx_sidof_rgce_2025_body
     jurisdiction: MEX
     title: RGCE 2025 y Anexo 13

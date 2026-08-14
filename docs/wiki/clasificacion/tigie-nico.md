@@ -8,7 +8,7 @@ La TIGIE es la tarifa de la LIGIE: clasifica mercancías y fija el arancel. El N
 
 Sin fracción no hay pedimento correcto: arancel, RRNA, preferencia de TLC y programas IMMEX/PROSEC se leen sobre ese código. Clasificar mal es el error más caro del trámite.
 
-Textiles, ropa, maquinaria, juguetes, autos o coleccionables se leen por capítulo TIGIE, NOM y padrón sectorial, no como consejo de "qué conviene importar". Ver [Padrón](padron-importadores.md) y el mapa en [Inicio](index.md).
+Textiles, ropa, maquinaria, juguetes, autos o coleccionables se leen por capítulo TIGIE, NOM y padrón sectorial, no como consejo de "qué conviene importar". Ver [Padrón](../fundamentos/padron-importadores.md) y el mapa en [Inicio](../index.md).
 
 ## Fuentes oficiales
 
@@ -23,6 +23,6 @@ Catálogo local: `docs/catalog/mexico/arancel.md`, `docs/catalog/mexico/inegi-ti
 
 ## Ver también
 
-[Sistema Armonizado](sistema-armonizado.md) · [Aranceles](aranceles.md) · [RRNA](rrna.md) · [Pedimento y RGCE](pedimento-rgce.md)
+[Sistema Armonizado](sistema-armonizado.md) · [Aranceles](../contribuciones/aranceles.md) · [RRNA](rrna.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

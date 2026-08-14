@@ -22,6 +22,6 @@ Catálogo local: `docs/catalog/global/index.md`, `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Valor en aduana](valor-en-aduana.md) · [Logística internacional](logistica-internacional.md) · [Pagos internacionales](pagos-internacionales.md) · [Pedimento y RGCE](pedimento-rgce.md)
+[Valor en aduana](../contribuciones/valor-en-aduana.md) · [Logística internacional](logistica-internacional.md) · [Pagos internacionales](pagos-internacionales.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

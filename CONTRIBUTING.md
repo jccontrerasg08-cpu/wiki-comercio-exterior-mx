@@ -10,7 +10,7 @@ Do not scrape [INEGI TIGIE–SCIAN](https://www.inegi.org.mx/app/tigie/) or [SNI
 
 ## Wiki pages (`docs/wiki/`)
 
-Original explainers only. Cite `docs/catalog/` or a SIDOF/Diputados/SAT URL. No LinkedIn, Tec syllabi, LMS dumps, or Incoterms® rule text.
+Original explainers only, one topic folder (`fundamentos/`, `aduana/`, `clasificacion/`, `contribuciones/`, `programas/`, `logistica/`). Cite `docs/catalog/` or a SIDOF/Diputados/SAT URL. No LinkedIn, Tec syllabi, LMS dumps, or Incoterms® rule text.
 
 ## Originals (`data/originals/`)
 

@@ -19,6 +19,6 @@ Catálogo local: `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Pedimento y RGCE](pedimento-rgce.md) · [RRNA](rrna.md)
+[Pedimento y RGCE](../aduana/pedimento-rgce.md) · [RRNA](../clasificacion/rrna.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.
