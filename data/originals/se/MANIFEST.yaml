@@ -1,0 +1,23 @@
+documents:
+- id: mx_snice_decreto_immex
+  file: DECRETO-IMMEX-BIBLIOTECA_20250925.pdf
+  url: https://www.snice.gob.mx/~oracle/SNICE_DOCS/DECRETO-IMMEX-BIBLIOTECA_20250925-20250925.08.2025).pdf
+  title: Decreto IMMEX consolidado (referencial al 28 de agosto de 2025)
+  summary: data/corpus/README.md
+  sha256: 7e0c15f73b6e83573b94682c84f93c503971e68aab904bc3466f41690132cdd8
+  bytes: 511762
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_decreto_prosec
+  file: Decreto_prosec-Prosec_20240704.pdf
+  url: https://www.snice.gob.mx/~oracle/SNICE_DOCS/Decreto_prosec-Prosec_20240704-20240704.pdf
+  title: Decreto PROSEC consolidado (ultima reforma DOF 22-05-2024)
+  summary: data/corpus/README.md
+  sha256: 9f010745b178007ff33301e6878bb4b1d47f99e87fc3634a2172257e2d1c44e6
+  bytes: 2864712
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

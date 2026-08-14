@@ -1,0 +1,34 @@
+documents:
+- id: mx_snice_tipat_decreto_aprobacion
+  file: CPTPP_Chile-Tratado-Integral-y-Progresista_20190123-20180523.pdf
+  url: https://www.snice.gob.mx/~oracle/SNICE_DOCS/CPTPP_Chile-Tratado-Integral-y-Progresista_20190123-20180523.pdf
+  title: Decreto de aprobacion del CPTPP/TIPAT
+  summary: data/corpus/README.md
+  sha256: 36ac311432e2347e97dbb4b93ee5fc0ccdd0a57b65f6db582f44394860beceab
+  bytes: 124803
+  note: approval decree only, not the full CPTPP/TIPAT chapter text
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_segob_tipat_instrumento
+  file: TIPAT.pdf
+  url: http://politicamigratoria.segob.gob.mx/work/models/PoliticaMigratoria/CPM/DRII/normateca/nacional/TIPAT.pdf
+  title: Tratado Integral y Progresista de Asociacion Transpacifico (TIPAT) instrumento
+  summary: data/corpus/README.md
+  sha256: 3cef070affbe10e9a2ebf174f83fdb97729f347f81a98dd6925d822710a5f42d
+  bytes: 1034518
+  note: instrumento DOF/SEGOB, not full TPP text
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: cl_subrei_cptpp_tpp11_es_legalizado
+  file: texto-tpp-en-espa--ol-legalizado.pdf
+  url: https://www.subrei.gob.cl/docs/default-source/tratado-tpp11/texto-tpp-en-espa--ol-legalizado.pdf?sfvrsn=a29f4323_0
+  title: CPTPP/TPP11 texto espanol legalizado SUBREI
+  sha256: 4059c3cadc18581b7f77a526b4d7391344f77be6d6fa88ec88b1e607909468ba
+  bytes: 6429185
+  note: CPTPP/TPP11 texto espanol legalizado SUBREI, not DOF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

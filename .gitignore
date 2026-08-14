@@ -1,0 +1,13 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+site/
+.env
+token.txt
+*.egg-info/
+.DS_Store
+_export.py
+_skipped_gafete.txt
+_release_staging/

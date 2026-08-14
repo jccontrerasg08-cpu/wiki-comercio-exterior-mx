@@ -1,0 +1,246 @@
+documents:
+- id: mx_snice_reglas_aduaneras_tasa_japon
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Tasas_Tasa-Japón-29062012-WORD-Tasa-Japón_20160817-20120629.doc
+  url: https://www.snice.gob.mx/
+  title: Tasa Japon 29 junio 2012
+  summary: data/corpus/README.md
+  sha256: 4b33658c0a967b83747197b45fd906fc2ee0e5f386338ea8cd85f0f546098a68
+  bytes: 17094144
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_tlcan
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-materia-aduanera-TLCAN-Origen-Preferencial-Verificar_20160818-19950915.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera TLCAN origen preferencial
+  summary: data/corpus/README.md
+  sha256: 75eca867fdce947bc1ec2cbab3c7eeab9f1cb23436bf4c847bbb6f34e39f6aa5
+  bytes: 889344
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_uruguay
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Uruguay-Word-Origen-Verificar-Certificación_20160822-20040714.w..doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Uruguay origen verificar certificacion
+  summary: data/corpus/README.md
+  sha256: 93fddf46dc31940f2a602f3215dccc37b1b7c0285865f0048f0e3cb9ac01c076
+  bytes: 118784
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_tlcue
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-TLCUE-Word-Origen-Verificar-Certificación_20160822-20021231.w.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera TLCUE origen verificar certificacion
+  summary: data/corpus/README.md
+  sha256: f76e7efafa511dc3ab5ae126810dbcfed3f228759b12e7ba28d7033a9c3bde0f
+  bytes: 177152
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_peru
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Perú-Word-Origen-Verificar-Certificación_20160822-20120117.w.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Peru origen verificar certificacion
+  summary: data/corpus/README.md
+  sha256: f51e2be81d0a60fc2c42cd5b25b568d5e51af01def938dd16a120c21f0bb419d
+  bytes: 95232
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_panama
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Panamá-Word-Origen-Certificación-Verificar_20160822-20150630.w.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Panama origen certificacion verificar
+  summary: data/corpus/README.md
+  sha256: f892309aa022abd15abbc6e7fbada65b2882bae668b9bc99c655dc61de1e7a33
+  bytes: 119808
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_japon
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Japón-Word-Origen-Verificar-Certificación_20160822-20050331.w.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Japon origen verificar certificacion
+  summary: data/corpus/README.md
+  sha256: e3a5a34ff1b5d66574103c6fb7b68f841f5534d18c04561c1e88fad245c6b15b
+  bytes: 60416
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_chile
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Chile-Word-Origen-Certificación-Verificar_20160822-19990730.w..doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Chile origen certificacion verificar
+  summary: data/corpus/README.md
+  sha256: 1055b1b78cd00c3567aa1ad7fd2716334aaade05dddad3a327bb67ce1b3439d0
+  bytes: 660992
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_bolivia
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Bolivia-Word-Origen-Verificar-Certificación_20160822-19950315.w.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Bolivia origen verificar certificacion
+  summary: data/corpus/README.md
+  sha256: 0ce799f8e67ee240c0d2203ddf0eb9daf4acfe28cddd2c522d3657f39f15b662
+  bytes: 82432
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_alianza_pacifico
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_ReglasM-Aduanera-AlianzaP-Word-Origen-Verificar-Certificación_20160822-20160429.w.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Alianza del Pacifico origen verificar certificacion
+  summary: data/corpus/README.md
+  sha256: 8c627c3bd5b2e3511048b8cdb8e64e121333da8851439b4da53598b759c123c3
+  bytes: 105472
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_aelc
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-AELC-Word-Origen-Verificar-Certificación_20160822-20021231.w.doc
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera AELC origen verificar certificacion
+  summary: data/corpus/README.md
+  sha256: 6dc670691f657111c8ff393d7c2b8c59bc4a1763e673d8e1356c375041af9401
+  bytes: 169472
+  note: local user copy of official SNICE/ANAM .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_tasa_japon_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Tasas_Tasa-Japón-2012-PDF-Tasa-Japón_20160817-20120629.pdf
+  url: https://www.snice.gob.mx/
+  title: Tasa Japon 2012 PDF
+  summary: data/corpus/README.md
+  sha256: 601697601b7702bd53bb983bf53083e4be8857087dfde65a5b509231b6ad9709
+  bytes: 9176871
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_tlcan_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-materia-aduanera-TLCAN-Origen-Preferencial-Verificar_20160818-19950915.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera TLCAN origen preferencial PDF
+  summary: data/corpus/README.md
+  sha256: d0de00df3a4bca69c852cc6edde3155d0e1d131810ec4afe1e856faa4b6d5173
+  bytes: 1468614
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_uruguay_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Uruguay-PDF-Origen-Verificar-Certificación_20160822-20040714.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Uruguay origen verificar certificacion PDF
+  summary: data/corpus/README.md
+  sha256: fa674a0b8083c3c813e19f11b4bf4ed6d4ae1f32c78a08f19a10511cea0425ba
+  bytes: 114424
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_tlcue_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-TLCUE-PDF-Origen-Verificar-Certificación_20160822-20021231.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera TLCUE origen verificar certificacion PDF
+  summary: data/corpus/README.md
+  sha256: 40c518d861d13359f733c8e046785a4f7c7f438ad807ad6f74be7d0a630a1a8a
+  bytes: 341316
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_peru_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Perú-PDF-Origen-Verificar-Certificación_20160822-20120117.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Peru origen verificar certificacion PDF
+  summary: data/corpus/README.md
+  sha256: 84ee9b210ec80fc41269c5d56cb9deff74980eb1594329a1f223e9cc94a63efc
+  bytes: 207663
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_panama_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Panamá-PDF-Origen-Verificar-Certificación_20160822-20150630.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Panama origen verificar certificacion PDF
+  summary: data/corpus/README.md
+  sha256: d7be0acd69f5ac8ec6dc2056afad88de631584c85bf9227e63e47c340d430a14
+  bytes: 215440
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_japon_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_TLC-Reglas-en-Materia-Aduanera_Reglas-M-Aduanera-Japón-PDF-Origen-Verificar-Certificación_20160822-20050331.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Japon origen verificar certificacion PDF
+  summary: data/corpus/README.md
+  sha256: 8fc417732b4f0137415ed092b941215eca8c38c0315ca0429519132510bc2550
+  bytes: 158702
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_chile_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Chile-PDF-Origen-Certificación-Verificar_20160822-19990730.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Chile origen certificacion verificar PDF
+  summary: data/corpus/README.md
+  sha256: 906e67f8496e8ba35051ddd758bb77ce37fbe2fb5993a090dc1ef6a036c0006b
+  bytes: 1013975
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_bolivia_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Bolivia-PDF-Origen-Verificar-Certificación_20160822-19950315.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Bolivia origen verificar certificacion PDF
+  summary: data/corpus/README.md
+  sha256: 2714bf1eb972a2855a938d72c092150cb1c8fcaff5d123295fdad7d800e2d353
+  bytes: 69018
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_alianza_pacifico_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_ReglasM-Aduanera-AlianzaP-PDF-Origen-Verificar-Certificación_20160822-20160429.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Alianza del Pacifico origen verificar certificacion
+    PDF
+  summary: data/corpus/README.md
+  sha256: 3449c423a1aef6714bb51b73f5ef45d3ef4cebc248ab782a0da0e1b9f736b3c3
+  bytes: 291320
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_aelc_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-AELC-PDF-Origen-Verificar-Certificación_20160822-20021231.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera AELC origen verificar certificacion PDF
+  summary: data/corpus/README.md
+  sha256: 99fb9ba2b8edd5701a5335b157461537b34ba16d6b409e899ae1cbe2173d6a09
+  bytes: 279241
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_colombia_pdf
+  file: Exportación-definitivaImportación-definitiva-Importación-temporal-Exportación-temporal_Vigente_Normatividad_Reglas-en-Materia-Aduanera-TLC_Reglas-M-Aduanera-Colombia-PDF-Origen-Certificación-Verificar_20160822-19950313.p.pdf
+  url: https://www.snice.gob.mx/
+  title: Reglas en materia aduanera Colombia origen certificacion verificar PDF
+  summary: data/corpus/README.md
+  sha256: 4963c822ab05623031db54aaa67a4378776618a92f13d8410114642af39de6f7
+  bytes: 190958
+  note: local user copy of official SNICE/ANAM PDF; no matching .doc in this drop
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_snice_reglas_aduaneras_resolucion_pdf
+  file: RESOLUCIÓN-Resolucion-PDF_20180202-20180202.pdf
+  url: https://www.snice.gob.mx/
+  title: Resolucion PDF 20180202
+  summary: data/corpus/README.md
+  sha256: 068ec899583ad544eae41d2487ea90c3535a24d766ee30bc4ec3204a5aa0a31c
+  bytes: 363273
+  note: local user copy of official SNICE/ANAM PDF
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

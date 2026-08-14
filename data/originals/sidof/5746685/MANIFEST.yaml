@@ -1,0 +1,14 @@
+documents:
+- id: mx_sidof_5746685
+  file: 5595826.doc
+  url: https://sidof.segob.gob.mx/notas/docFuente/5746685
+  summary: data/corpus/README.md
+  sha256: 212fa50ca868df333c0ef26e2d39deed3480fa2ce0ff9efd8f3f9faea4e7f9bf
+  bytes: 130112
+  note: RGCE 2025 anexos 3–9, 11–12, 14–21, 23–26, 28–30. Not the 2026 lote.
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

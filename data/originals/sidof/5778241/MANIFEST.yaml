@@ -1,0 +1,15 @@
+documents:
+- id: mx_sidof_5778241
+  file: 5778241.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5778241
+  title: Anexos 3-12 y 14-20 RGCE 2026
+  summary: data/corpus/rgce-2026.md
+  sha256: 9ac1efa0a6608e7813a3cad36748f3c861c99cd283c3bb219f8d4c14a6fce382
+  bytes: 9855984
+  note: docFuente iframe was empty; official bytes are the getDoc .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

@@ -1,0 +1,14 @@
+documents:
+- id: mx_doue_tlcuem_acuerdo_comercial_interino
+  file: L00001-00975.pdf
+  url: https://www.boe.es/doue/2026/1528/L00001-00975.pdf
+  title: Acuerdo Comercial Interino UE-Mexico (DOUE L 2026/1528), TLCUEM modernizado
+  summary: data/corpus/README.md
+  sha256: 161d610013d1d3557cc4194bb61f23cd012f7178151a1e522dbf7e75230399fe
+  bytes: 10736532
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

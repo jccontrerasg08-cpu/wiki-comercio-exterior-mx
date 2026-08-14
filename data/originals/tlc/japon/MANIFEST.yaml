@@ -1,0 +1,14 @@
+documents:
+- id: mx_economia_aae_japon
+  file: texto_acuerdo.pdf
+  url: https://www.economia.gob.mx/files/texto_acuerdo.pdf
+  title: Acuerdo para el Fortalecimiento de la Asociacion Economica Mexico-Japon (AAE)
+  summary: data/corpus/README.md
+  sha256: 7fd865ee9c35de429fd11f74f1dcdcc82da28e418834a1c21a2e0decb04a5422
+  bytes: 319869
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

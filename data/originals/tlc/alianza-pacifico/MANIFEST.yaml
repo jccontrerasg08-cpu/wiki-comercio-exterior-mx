@@ -1,0 +1,14 @@
+documents:
+- id: mx_snice_alianza_pacifico_protocolo_adicional
+  file: ProtocoloAdicionalAcuerdoMarco-Protocolo-adicional-Alianza_20190207-20160429.pdf
+  url: https://www.snice.gob.mx/~oracle/SNICE_DOCS/ProtocoloAdicionalAcuerdoMarco-Protocolo-adicional-Alianza_20190207-20160429.pdf
+  title: Protocolo Adicional al Acuerdo Marco de la Alianza del Pacifico
+  summary: data/corpus/README.md
+  sha256: ee280c588d75f736e8d1204da065e209e0790d272eccafaf6713a50ab7651355
+  bytes: 3439254
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

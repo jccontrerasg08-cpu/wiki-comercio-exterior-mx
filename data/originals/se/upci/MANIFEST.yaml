@@ -1,0 +1,119 @@
+documents:
+- id: mx_se_upci_guia_exportadores
+  file: GEM_guiaparaexportadores.pdf
+  url: http://www.gob.mx/cms/uploads/attachment/file/31685/GEM_guiaparaexportadores.pdf
+  sha256: 1311e755881cdcedf02fd0e8545bc1b6adcf5e48c75b85dd555151179b71102b
+  bytes: 1060199
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_wto_scm
+  file: 24-scm.pdf
+  url: http://www.gob.mx/cms/uploads/attachment/file/31688/24-scm.pdf
+  sha256: 1cc56209d44212dcd4c1e0750dbfe404932931171d388529cac586945f1b95df
+  bytes: 175322
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_wto_safeguards
+  file: 25-safeg.pdf
+  url: http://www.gob.mx/cms/uploads/attachment/file/31676/25-safeg.pdf
+  sha256: 73570f33ca5a9dbfd7ea44c93ad42d9096ecbb8468ed2ea44764dbeb7f5cd83c
+  bytes: 39477
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_estadisticas_20260731
+  file: 31072026_Estad_sticas_UPCI.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/1094853/31072026_Estad_sticas_UPCI.pdf
+  sha256: d7cbf86e434fee2c00dbc7a6e1f8fbc48df785090863ce8b4019cd90ed1425f5
+  bytes: 803571
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_seguimiento_dai_202412
+  file: SEGUIMIENTO_DE_CASOS_DAI_A_Diciembre_2024_RevJE.PDF
+  url: https://www.gob.mx/cms/uploads/attachment/file/962047/SEGUIMIENTO_DE_CASOS_DAI_A_Diciembre_2024_RevJE.PDF
+  sha256: 7737b2610004806b55b54fcb417555da1ec2130dce710c967ff463d18ea08694
+  bytes: 876784
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_antidumping
+  file: 230310_antidumping.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811554/230310_antidumping.pdf
+  sha256: 3cde0101a4b9cf0406646e73ed82bd6926595bd88d68e774c901094b84130da2
+  bytes: 631686
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_antisubvencion
+  file: 230310_antisubvenci_n.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811556/230310_antisubvenci_n.pdf
+  sha256: 73db091df0ade43c86cf2f88b6d3e41b52340514806855aaeb1b04b36793859e
+  bytes: 640142
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_salvaguarda
+  file: 230310_salvaguarda.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811562/230310_salvaguarda.pdf
+  sha256: 4e98490152cb06600d0d76c74c52401766445c1aca534ffc1e965775612d8a0e
+  bytes: 218095
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_revision
+  file: 230310_revisi_n.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811561/230310_revisi_n.pdf
+  sha256: 86e71d4ba929e1557bdcadb8c0515b6e2cefa597a2c79805596c5e3ad82ebc95
+  bytes: 294001
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_extension_beneficios
+  file: 230310_extensi_n_beneficios.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811559/230310_extensi_n_beneficios.pdf
+  sha256: aea90cab7104dd0b3ece37eba290d15014458ec08d12f8617982ba3022ed8094
+  bytes: 550249
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_margen_individual
+  file: 230310_margen_individual.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811560/230310_margen_individual.pdf
+  sha256: 78c7ddb5036ab2393615794a62339765081330c41d56f267c8470ff251c01a25
+  bytes: 595321
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_aclaracion
+  file: 230310_aclaraci_n.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811553/230310_aclaraci_n.pdf
+  sha256: 7179304bb90ef3a0d6856889c4f1fa20fc954222edc39496a9484e72f5795e32
+  bytes: 543698
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_cobertura
+  file: 230310_cobertura.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811555/230310_cobertura.pdf
+  sha256: 5e4407801db0414c6f5c87ede2de62ebbfaca61851a7dd93a59408410eceba80
+  bytes: 239783
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_elusion
+  file: 230310_elusi_n.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811557/230310_elusi_n.pdf
+  sha256: 805230836cd44859dec6cfd7268225c937f45c2e74a4161be9883d4cf35a906e
+  bytes: 671228
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_flujo_examen
+  file: 230310_examen.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/811558/230310_examen.pdf
+  sha256: 998f5f60ea4b060bdafc07602bf644bf60abf380d4a9f38e39d482cce86ae0e1
+  bytes: 229557
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_upci_boletin_17
+  file: BoletinUPCIpedia_17.pdf
+  url: https://www.gob.mx/se/acciones-y-programas/industria-y-comercio-unidad-de-practicas-comerciales-internacionales-upci
+  title: Boletín UPCI 17
+  sha256: 1b4a71211c92ae942ff7b9d2fb649fb924fb96cc9572bbfc72260c662b1ca191
+  bytes: 2290742
+  note: user-provided Boletín UPCI 17; CMS attachment URL unknown
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

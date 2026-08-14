@@ -1,0 +1,13 @@
+documents:
+- id: mx_se_cuotas_compensatorias_210426
+  file: Mercanc_as_sujetas_a_cuotas_compensatorias_210426.docx
+  url: https://www.gob.mx/cms/uploads/attachment/file/1075675/Mercanc_as_sujetas_a_cuotas_compensatorias_210426.docx
+  title: Mercancias sujetas a cuotas compensatorias (21 abril 2026)
+  sha256: 41a583ada53278be89aaab25f4a9b7ea7ee0743d93594f5064ada77cafb80b54
+  bytes: 1139880
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

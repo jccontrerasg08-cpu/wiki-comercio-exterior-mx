@@ -1,0 +1,14 @@
+documents:
+- id: mx_sidof_5787982
+  file: 5787982.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5787982
+  title: Anexos 5, 22 y 29 Primera Modificacion RGCE 2026
+  summary: data/corpus/rgce-2026.md
+  sha256: ef1616334dbe2d0ae0820cc77a5d2abfa7afa5403d484edd20f1b0b6264fc5d7
+  bytes: 2797408
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

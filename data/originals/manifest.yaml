@@ -1,0 +1,32 @@
+fragments:
+- diputados/MANIFEST.yaml
+- sat/rgce-2026/MANIFEST.yaml
+- sat/rmf-2026/MANIFEST.yaml
+- se/MANIFEST.yaml
+- se/cuotas/MANIFEST.yaml
+- se/noms-241/MANIFEST.yaml
+- se/upci/MANIFEST.yaml
+- sidof/5746685/MANIFEST.yaml
+- sidof/5777199/MANIFEST.yaml
+- sidof/5777376/MANIFEST.yaml
+- sidof/5777997/MANIFEST.yaml
+- sidof/5778101/MANIFEST.yaml
+- sidof/5778241/MANIFEST.yaml
+- sidof/5778300/MANIFEST.yaml
+- sidof/5787425/MANIFEST.yaml
+- sidof/5787982/MANIFEST.yaml
+- snice/reglas-aduaneras-tlc/MANIFEST.yaml
+- tlc/alianza-pacifico/MANIFEST.yaml
+- tlc/chile/MANIFEST.yaml
+- tlc/japon/MANIFEST.yaml
+- tlc/tipat/MANIFEST.yaml
+- tlc/tlcuem/MANIFEST.yaml
+- tlc/uk/MANIFEST.yaml
+- tigie/MANIFEST.yaml
+- tmec/MANIFEST.yaml
+- vucem/MANIFEST.yaml
+- wto/MANIFEST.yaml
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

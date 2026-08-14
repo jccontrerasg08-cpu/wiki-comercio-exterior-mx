@@ -1,0 +1,29 @@
+site_name: Wiki Comercio Exterior MX
+site_description: Public wiki of Mexican foreign trade. Not SAT or the DOF.
+repo_url: https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx
+repo_name: wiki-comercio-exterior-mx
+docs_dir: docs/wiki
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+nav:
+  - Inicio: index.md
+  - Incoterms: incoterms.md
+  - TIGIE y NICO: tigie-nico.md
+  - Aranceles: aranceles.md
+  - RRNA: rrna.md
+  - TLC y T-MEC: tlc-tmec.md
+  - Reglas de origen: reglas-de-origen.md
+  - PROSEC: prosec.md
+  - IMMEX: immex.md
+  - Pedimento y RGCE: pedimento-rgce.md
+  - Logística internacional: logistica-internacional.md
+  - Valor en aduana: valor-en-aduana.md
+  - Padrón de importadores: padron-importadores.md
+  - Cuotas compensatorias: cuotas-compensatorias.md
+  - Pagos internacionales: pagos-internacionales.md
+  - ANAM: anam.md
+  - Sistema Armonizado: sistema-armonizado.md

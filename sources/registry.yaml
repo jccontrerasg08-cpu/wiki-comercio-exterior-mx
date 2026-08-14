@@ -1,0 +1,609 @@
+sources:
+  - id: mx_diputados_ligie_current
+    jurisdiction: MEX
+    title: LIGIE vigente (Camara de Diputados)
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: primary_legal
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 30
+    probe: &probe_pdf
+      method: GET
+      expected_status: [200]
+      min_bytes: 10000
+      reject_if_contains: ["Access Denied", "Captcha", "Iniciar sesion"]
+
+  - id: mx_diputados_ligie_reform_2025
+    jurisdiction: MEX
+    title: Decreto LIGIE 29 de diciembre de 2025
+    url: https://www.diputados.gob.mx/LeyesBiblio/ref/ligie_2022/LIGIE_2022_ref02_29dic25.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: primary_legal
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 30
+    probe: *probe_pdf
+
+  - id: mx_diputados_ley_aduanera
+    jurisdiction: MEX
+    title: Ley Aduanera (Camara de Diputados)
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: primary_legal
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 30
+    probe: *probe_pdf
+
+  - id: mx_diputados_reg_ley_aduanera
+    jurisdiction: MEX
+    title: Reglamento de la Ley Aduanera (Camara de Diputados)
+    url: https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAdua.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: primary_legal
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 30
+    probe: *probe_pdf
+
+  # RGCE 2025 (SIDOF). Human index: docs/mexico/rgce.md
+  - id: mx_sidof_rgce_2025_body
+    jurisdiction: MEX
+    title: RGCE 2025 y Anexo 13
+    url: https://sidof.segob.gob.mx/notas/5746326
+    note_id: "5746326"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: &probe_html
+      method: GET
+      expected_status: [200]
+      min_bytes: 500
+      reject_if_contains: ["Access Denied", "Captcha", "Iniciar sesion"]
+
+  - id: mx_sidof_rgce_2025
+    jurisdiction: MEX
+    title: Anexos 3-9, 11-12, 14-21, 23-26, 28-30 RGCE 2025
+    url: https://sidof.segob.gob.mx/notas/5746685
+    note_id: "5746685"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_anexos_10_22_27
+    jurisdiction: MEX
+    title: Anexos 10, 22 y 27 RGCE 2025
+    url: https://sidof.segob.gob.mx/notas/5746745
+    note_id: "5746745"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_anexo_2
+    jurisdiction: MEX
+    title: Anexo 2 RGCE 2025
+    url: https://sidof.segob.gob.mx/notas/5746846
+    note_id: "5746846"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_anexo_1
+    jurisdiction: MEX
+    title: Anexo 1 RGCE 2025
+    url: https://sidof.segob.gob.mx/notas/5747310
+    note_id: "5747310"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_mod1
+    jurisdiction: MEX
+    title: Primera Modificacion RGCE 2025 y anexos 1, 2, 19 y 22
+    url: https://sidof.segob.gob.mx/notas/5754200
+    note_id: "5754200"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_mod2
+    jurisdiction: MEX
+    title: Segunda Modificacion RGCE 2025 y anexo 22
+    url: https://sidof.segob.gob.mx/notas/5757079
+    note_id: "5757079"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_mod3
+    jurisdiction: MEX
+    title: Tercera Modificacion RGCE 2025 y anexos 1, 2, 4, 10, 22 y 29
+    url: https://sidof.segob.gob.mx/notas/5758614
+    note_id: "5758614"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_mod4
+    jurisdiction: MEX
+    title: Cuarta Modificacion RGCE 2025
+    url: https://sidof.segob.gob.mx/notas/5763997
+    note_id: "5763997"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_mod5
+    jurisdiction: MEX
+    title: Quinta Modificacion RGCE 2025 y anexos 1, 2 y 5
+    url: https://sidof.segob.gob.mx/notas/5770439
+    note_id: "5770439"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_mod6
+    jurisdiction: MEX
+    title: Sexta Modificacion RGCE 2025
+    url: https://sidof.segob.gob.mx/notas/5770661
+    note_id: "5770661"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2025_mod7
+    jurisdiction: MEX
+    title: Septima Modificacion RGCE 2025 y Anexo 2
+    url: https://sidof.segob.gob.mx/notas/5776301
+    note_id: "5776301"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  # Decreto TIGIE (SIDOF, not RGCE)
+  - id: mx_sidof_decreto_20251229
+    jurisdiction: MEX
+    title: Decreto TIGIE 29 de diciembre de 2025
+    url: https://sidof.segob.gob.mx/notas/5777376
+    note_id: "5777376"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  # RGCE 2026 (SIDOF)
+  - id: mx_sidof_rgce_2026
+    jurisdiction: MEX
+    title: RGCE 2026 y Anexo 13
+    url: https://sidof.segob.gob.mx/notas/5777199
+    note_id: "5777199"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2026_anexo_1
+    jurisdiction: MEX
+    title: Anexo 1 RGCE 2026
+    url: https://sidof.segob.gob.mx/notas/5777997
+    note_id: "5777997"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2026_anexo_2
+    jurisdiction: MEX
+    title: Anexo 2 RGCE 2026
+    url: https://sidof.segob.gob.mx/notas/5778101
+    note_id: "5778101"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2026_anexos_3_20
+    jurisdiction: MEX
+    title: Anexos 3-12 y 14-20 RGCE 2026
+    url: https://sidof.segob.gob.mx/notas/5778241
+    note_id: "5778241"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2026_anexos_21_30
+    jurisdiction: MEX
+    title: Anexos 21-30 RGCE 2026
+    url: https://sidof.segob.gob.mx/notas/5778300
+    note_id: "5778300"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2026_mod1
+    jurisdiction: MEX
+    title: Primera Modificacion RGCE 2026
+    url: https://sidof.segob.gob.mx/notas/5787425
+    note_id: "5787425"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_rgce_2026_mod1_anexos
+    jurisdiction: MEX
+    title: Anexos 5, 22 y 29 Primera Modificacion RGCE 2026
+    url: https://sidof.segob.gob.mx/notas/5787982
+    note_id: "5787982"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_inegi_tigie_scian
+    jurisdiction: MEX
+    title: INEGI Catalogo TIGIE-SCIAN
+    url: https://www.inegi.org.mx/app/tigie/
+    note_id: null
+    authority: INEGI
+    evidence_class: official_statistics
+    allowed_hosts: [www.inegi.org.mx, inegi.org.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_snice_mi_fraccion
+    jurisdiction: MEX
+    title: SNICE Mi Fraccion Arancelaria
+    url: https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_operational
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: global_wto_tariff_download
+    jurisdiction: GLOBAL
+    title: WTO Tariff and Trade Data
+    url: https://ttd.wto.org/en
+    note_id: null
+    authority: WTO
+    evidence_class: intergovernmental
+    allowed_hosts: [ttd.wto.org, www.wto.org]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: global_un_comtrade
+    jurisdiction: GLOBAL
+    title: UN Comtrade
+    url: https://comtrade.un.org/
+    note_id: null
+    authority: UNSD
+    evidence_class: intergovernmental
+    allowed_hosts: [comtrade.un.org]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: global_wits
+    jurisdiction: GLOBAL
+    title: WITS/TRAINS
+    url: https://wits.worldbank.org/
+    note_id: null
+    authority: World Bank
+    evidence_class: intergovernmental
+    allowed_hosts: [wits.worldbank.org]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: global_itc_macmap
+    jurisdiction: GLOBAL
+    title: ITC Market Access Map
+    url: https://www.macmap.org/
+    note_id: null
+    authority: ITC
+    evidence_class: intergovernmental
+    allowed_hosts: [www.macmap.org, macmap.org]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: global_cepii_baci
+    jurisdiction: GLOBAL
+    title: CEPII BACI
+    url: https://www.cepii.fr/cepii/en/bdd_modele/bdd_modele_item.asp?id=37
+    note_id: null
+    authority: CEPII
+    evidence_class: secondary
+    allowed_hosts: [www.cepii.fr, cepii.fr]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: us_usitc_hts
+    jurisdiction: USA
+    title: USITC Harmonized Tariff Schedule
+    url: https://hts.usitc.gov/
+    note_id: null
+    authority: USITC
+    evidence_class: official_operational
+    allowed_hosts: [hts.usitc.gov, www.usitc.gov]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: can_cbsa
+    jurisdiction: CAN
+    title: CBSA
+    url: https://www.cbsa-asfc.gc.ca/
+    note_id: null
+    authority: CBSA
+    evidence_class: official_operational
+    allowed_hosts: [www.cbsa-asfc.gc.ca, cbsa-asfc.gc.ca]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: eu_taric
+    jurisdiction: DEU
+    title: EU Customs Tariff TARIC
+    url: https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/eu-customs-tariff-taric_en
+    note_id: null
+    authority: European Commission
+    evidence_class: official_operational
+    allowed_hosts: [taxation-customs.ec.europa.eu, ec.europa.eu]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: nl_douane
+    jurisdiction: NLD
+    title: Douane Nederland
+    url: https://www.douane.nl/
+    note_id: null
+    authority: Douane
+    evidence_class: official_operational
+    allowed_hosts: [www.douane.nl, douane.nl]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: jp_customs
+    jurisdiction: JPN
+    title: Japan Customs
+    url: https://www.customs.go.jp/
+    note_id: null
+    authority: Japan Customs
+    evidence_class: official_operational
+    allowed_hosts: [www.customs.go.jp, customs.go.jp]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: cn_customs
+    jurisdiction: CHN
+    title: China Customs (English)
+    url: http://english.customs.gov.cn/
+    note_id: null
+    authority: GACC
+    evidence_class: official_operational
+    allowed_hosts: [english.customs.gov.cn, customs.gov.cn]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: br_receita
+    jurisdiction: BRA
+    title: Receita Federal
+    url: https://www.gov.br/receitafederal/
+    note_id: null
+    authority: Receita Federal
+    evidence_class: official_operational
+    allowed_hosts: [www.gov.br, gov.br]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_snice_ligie_info
+    jurisdiction: MEX
+    title: SNICE LIGIE IMMEX PROSEC RRNA
+    url: https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_operational
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_gob_tmec
+    jurisdiction: MEX
+    title: T-MEC
+    url: https://www.gob.mx/t-mec
+    note_id: null
+    authority: Gobierno de Mexico
+    evidence_class: official_operational
+    allowed_hosts: [www.gob.mx, gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_gob_anam
+    jurisdiction: MEX
+    title: ANAM
+    url: https://anam.gob.mx/
+    note_id: null
+    authority: ANAM
+    evidence_class: official_operational
+    allowed_hosts: [anam.gob.mx, www.anam.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_sat_padron
+    jurisdiction: MEX
+    title: SAT Padron de Importadores y Exportadores
+    url: https://www.sat.gob.mx/minisitio/PadronImportadoresExportadores/index.html
+    note_id: null
+    authority: SAT
+    evidence_class: official_operational
+    allowed_hosts: [www.sat.gob.mx, sat.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: global_wco
+    jurisdiction: GLOBAL
+    title: WCO nomenclature and HS classification
+    url: https://www.wcoomd.org/en/topics/nomenclature.aspx
+    note_id: null
+    authority: WCO
+    evidence_class: intergovernmental
+    allowed_hosts: [www.wcoomd.org, wcoomd.org]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_gob_upci
+    jurisdiction: MEX
+    title: UPCI practicas comerciales internacionales
+    url: https://www.gob.mx/se/acciones-y-programas/industria-y-comercio-unidad-de-practicas-comerciales-internacionales-upci
+    note_id: null
+    authority: Secretaria de Economia
+    evidence_class: official_operational
+    allowed_hosts: [www.gob.mx, gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_snice_cuotas
+    jurisdiction: MEX
+    title: SNICE cuotas compensatorias
+    url: https://www.snice.gob.mx/cs/avi/snice/drrnas.cuotascomp.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_operational
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: global_icc_incoterms
+    jurisdiction: GLOBAL
+    title: ICC Incoterms rules
+    url: https://iccwbo.org/business-solutions/incoterms-rules/
+    note_id: null
+    authority: ICC
+    evidence_class: secondary
+    allowed_hosts: [iccwbo.org, www.iccwbo.org]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html

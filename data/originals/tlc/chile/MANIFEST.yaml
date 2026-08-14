@@ -1,0 +1,44 @@
+documents:
+- id: mx_economia_tlc_chile_1a_parte
+  file: Tratado_Libre_Comercio_Mexico-Chile_1a_parte.pdf
+  url: https://www.economia.gob.mx/files/comunidad_negocios/tlcs/tlcs_americalatina/Tratado_Libre_Comercio_Mexico-Chile_1a_parte.pdf
+  title: Tratado de Libre Comercio Mexico-Chile (1a parte)
+  summary: data/corpus/README.md
+  sha256: 17e42534cdd87425f7d2d14130037515280822bfa556b285eda0ca625e1e8edd
+  bytes: 391744
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_economia_tlc_chile_tlcchile1
+  file: tlcchile1.pdf
+  url: https://www.economia.gob.mx/
+  title: Tratado de Libre Comercio Mexico-Chile (1a parte, copia tlcchile1.pdf)
+  summary: data/corpus/README.md
+  sha256: 3e4eb941be9afa862468e0145e04100373783f0332d5c6f1d2560a7244116c75
+  bytes: 384384
+  note: user-provided tlcchile1.pdf; different sha256 from Tratado_Libre_Comercio_Mexico-Chile_1a_parte.pdf
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_economia_tlc_chile_2a_parte
+  file: tlcchile2.pdf
+  url: https://www.economia.gob.mx/
+  title: Tratado de Libre Comercio Mexico-Chile (2a parte)
+  summary: data/corpus/README.md
+  sha256: ad4a6ffb08a7fdd70fd4671cebefdfd7e4b8d3faf09a35011278307f92fc5967
+  bytes: 375897
+  note: user-provided tlcchile2.pdf, Chile FTA part 2 missing from prior SE ingest
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sice_chile_chl_version_s
+  file: CHL_Version_s.pdf
+  url: http://www.sice.oas.org/Trade/chmefta/CHL_Version_s.pdf
+  title: TLC Chile-Mexico SICE consolidated
+  summary: data/corpus/README.md
+  sha256: 282a1a9b933dd250e7f9f2ea4799e6733b60a337d24bced8f42e6495619a544e
+  bytes: 1007077
+  note: SICE Chile consolidated text
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

@@ -1,0 +1,12 @@
+name: Wiki page
+description: Change a pedagogical page in docs/wiki
+title: "[wiki] "
+labels: []
+body:
+  - type: textarea
+    id: page
+    attributes:
+      label: Page and change
+      description: Cite docs/catalog or a SIDOF/Diputados/SAT URL. No LinkedIn. No Tec syllabi. No Incoterms rule text.
+    validations:
+      required: true

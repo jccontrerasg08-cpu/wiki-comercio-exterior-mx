@@ -1,0 +1,303 @@
+documents:
+- id: mx_sat_rmf_2026
+  file: RMF_2026-DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/rmf/RMF_2026-DOF-28122025.pdf
+  sha256: 6f71ce0cccf430171fe858c5d244b1c321fa68306f962d44ec4977858a52919a
+  bytes: 4688799
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_2026_1a_rm
+  file: 1aRM_RMF2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/rmf/1aRM_RMF2026.pdf
+  sha256: ff4b0ed8957f4ff5cbb678f8fdd2e4da84b3a4a96d259027ed0d817c255e6e37
+  bytes: 232948
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_2026_1a_rm_16a_anticipada_02072026
+  file: 1aRM_RMF2026_16a_anticipada_02072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anticipadas/1aRM_RMF2026_DecimaSextaVersionAnticipada.zip
+  sha256: 6e560606e36c95e29d160f242ffc40d6a1f783516a98ee0a152a58f949176040
+  bytes: 144133
+  note: versión anticipada, not DOF vigente. PDF from SAT zip 1aRM_RMF2026_DecimaSextaVersionAnticipada.zip
+    (publicado 02-07-2026). Distinct from 1aRM_RMF2026.pdf.
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_2026_compilado_1a_rm
+  file: Compilado_Primera_Modificacion_RMF_2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/compiladas/Compilado_Primera_Modificacion_a_la-Resolucion_Miscelanea_Fiscal_para_2026.pdf
+  sha256: edd1ae82fe16ba96e79a591d26a29cc3b91e104713d63e2395a7212546da9718
+  bytes: 9849784
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo6_comp_2014
+  file: Compilado_Novena_Modificacion_Anexo_6_RMF2014.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/compiladas/Compilado_Novena_Modificacion_Anexo_6_RMF2014-28122025.pdf
+  sha256: 118a4b11b9b12f7324320f3d5d37c92d7ad3d4ab652a37ff4d2a8ab57d2272b4
+  bytes: 1720956
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo15_comp_2022
+  file: Compilado_DecimaSegunda_Modificacion_Anexo_15_RMF2022.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/compiladas/Compilado_DecimaSegunda_Modificacion_Anexo_15_RMF2022-28122025.pdf
+  sha256: d410f3e23428a800a5c1ef8d8beb5699d1ac9a704abb1f4e75bd7e3188e0f9a6
+  bytes: 10017447
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_1_rmf_2026_dof_28122025
+  file: Anexo-1-RMF-2026_DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-1-RMF-2026_DOF-28122025.pdf
+  sha256: acbfb10b4f4dca4493c53a5980916296f13b104ac89b8fbfb5a428a7923425c2
+  bytes: 17674651
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_primera_modificacion_anexo_1_dof_17072026
+  file: Primera-Modificacion-Anexo-1-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Primera-Modificacion-Anexo-1-DOF-17072026.pdf
+  sha256: 48d83d3d6b359c04a8dfa47de12acd73867ee50615be75664d9e41490d4f6f99
+  bytes: 16478498
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_2_rmf_2026_dof_28122025
+  file: Anexo-2-RMF-2026_DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-2-RMF-2026_DOF-28122025.pdf
+  sha256: ea38b1fa101a8fb07a4b913589aad3f0cda85e67345581cbe199fa016a4c7e1d
+  bytes: 8697752
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_primera_modificacion_anexo_2_dof_17072026
+  file: Primera-Modificacion-Anexo-2-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Primera-Modificacion-Anexo-2-DOF-17072026.pdf
+  sha256: c4879e1d08f7bd872ba3df97fb9b8421250453fce94efd2f4cf6e38fc8fd437a
+  bytes: 5652852
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_3_rmf2026_09012026
+  file: Anexo_3_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_3_RMF2026-09012026.pdf
+  sha256: ba7119f26e28b7e542efd65eb206da44cca27694f78253765b15bcc3df0cff5b
+  bytes: 1095884
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_primera_modificacion_anexo_3_dof_17072026
+  file: Primera-Modificacion-Anexo-3-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Primera-Modificacion-Anexo-3-DOF-17072026.pdf
+  sha256: 83d2c4b5eb0cf98ebc992154452d4a98a0f0a4ce98486ec88935498e4dbb3744
+  bytes: 154803
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_4_rmf_2026_dof_28122025
+  file: Anexo-4-RMF-2026_DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-4-RMF-2026_DOF-28122025.pdf
+  sha256: 4b9479d878533372d3c26b3a5a16015154f42c063956742ba7adfa5e2439365d
+  bytes: 1074234
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_5_rmf_2026_dof_28122025
+  file: Anexo-5-RMF-2026_DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-5-RMF-2026_DOF-28122025.pdf
+  sha256: ed96a19389de60bb2ea317fecfa0fd833ad649fbee1021e1f1d7d9a5c8b6dd14
+  bytes: 174232
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_6_rmf_2026_dof_28122025
+  file: Anexo-6-RMF-2026_DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-6-RMF-2026_DOF-28122025.pdf
+  sha256: d42f9cdaa16942bfeed344da688f98f53ea400e674d305e0d440c208c2225dff
+  bytes: 82512
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_7_rmf2026_09012026
+  file: Anexo_7_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_7_RMF2026-09012026.pdf
+  sha256: fb05d0a105da6536e2c8fa313b2f862b7849759513eaeaab106ddd6a119104c9
+  bytes: 1593112
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_8_rmf_2026_dof_28122025
+  file: Anexo-8-RMF-2026_DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-8-RMF-2026_DOF-28122025.pdf
+  sha256: 69ebaf8a78a3bde5d631ad2a994e81ec6d07e2d4e39085c8c948d138f782c1f4
+  bytes: 308287
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_9_rmf_2026_dof_17072026
+  file: Anexo-9-RMF-2026_DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-9-RMF-2026_DOF-17072026.pdf
+  sha256: 9f12f91583bd9caaf8e2185e72bb9d66b9e98bc98aa43322bf0d159a92503181
+  bytes: 33240
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_10_rmf2026_09012026
+  file: Anexo_10_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_10_RMF2026-09012026.pdf
+  sha256: 3b5bdafb68ce187a3282a7b8543073f735b5627f9a494cb79698bafc93f5000a
+  bytes: 207884
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_11_rmf2026_09012026
+  file: Anexo_11_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_11_RMF2026-09012026.pdf
+  sha256: 43f72f3c6545434c8a5154f3fda20be40072a74dad0d294480b07340d5beaad9
+  bytes: 370085
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_12_rmf2026_09012026
+  file: Anexo_12_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_12_RMF2026-09012026.pdf
+  sha256: ab70903a19787d8e0c1cd54942ee31cc672628191dc9a5d7388bb4e738261837
+  bytes: 131365
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_13_rmf2026_09012026
+  file: Anexo_13_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_13_RMF2026-09012026.pdf
+  sha256: c8efd09d71cf962708e45edd41035b307ba05d3c4362fbbebef3190572688ebe
+  bytes: 272890
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_14_rmf2026_09012026
+  file: Anexo_14_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_14_RMF2026-09012026.pdf
+  sha256: 01edf0186a806a97b8b753167c7d7dcf783d963ef56af1919bf8da5f17b1a650
+  bytes: 6640429
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_primera_modificacion_anexo_14_dof_17072026
+  file: Primera-Modificacion-Anexo-14-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Primera-Modificacion-Anexo-14-DOF-17072026.pdf
+  sha256: ad79affa4a3983fba032da09183b33f6745f490ff1165fdb5548fd4cbc1d15ea
+  bytes: 139250
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_15_rmf_2026_dof_2812225
+  file: Anexo-15-RMF-2026_DOF-2812225.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-15-RMF-2026_DOF-2812225.pdf
+  sha256: 84eb08cfece46faccdc86beb82ffcc283141b29c8b7a97a7cbd3665e04e4f928
+  bytes: 153181
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_decima_tercera_modificacion_anexo_15_dof_17072026
+  file: Decima-Tercera-Modificacion-Anexo-15-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Decima-Tercera-Modificacion-Anexo-15-DOF-17072026.pdf
+  sha256: 78d0111b914c0b755063586d1576799db58a95b423197c3b508e59881a1ad7da
+  bytes: 212785
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo15_13a_mod_16a_anticipada_02072026
+  file: Anexo15_13aMod_RMF2022_16a_anticipada_02072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anticipadas/1aRM_RMF2026_DecimaSextaVersionAnticipada.zip
+  sha256: 7cb926b9e1afc52b28a06cb8e2033629e8ab8833ef65dd0c7d0e1321df13c194
+  bytes: 557137
+  note: versión anticipada, not DOF vigente. PDF from SAT zip 1aRM_RMF2026_DecimaSextaVersionAnticipada.zip
+    (publicado 02-07-2026). Distinct from Decima-Tercera-Modificacion-Anexo-15-DOF-17072026.pdf.
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_16_rmf2026_09012026
+  file: Anexo_16_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_16_RMF2026-09012026.pdf
+  sha256: e630f10583aaacaa4ffc12e3e010182480c7b3a0de96edf88e16c4989b09dfaa
+  bytes: 142153
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_17_rmf2026_13012026
+  file: Anexo_17_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_17_RMF2026-13012026.pdf
+  sha256: 182e53ffdc152abe9565bf1ae0f89bae483dc69dbd36f89bdb5723b33b8b03f1
+  bytes: 199337
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_18_rmf2026_19012026
+  file: Anexo_18_RMF2026-19012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_18_RMF2026-19012026.pdf
+  sha256: 13fbde22a719611cd88ae2d57cc057575381e49a6b40392329f0d5a36030fe6d
+  bytes: 10334391
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_21_rmf2026_13012026
+  file: Anexo_21_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_21_RMF2026-13012026.pdf
+  sha256: 49f42a55f3bbc76525ab3d1f6a810f3f1ae0ca0b2fd0b2dbc704cb4c91d448fc
+  bytes: 277165
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_primera_modificacion_anexo_21_dof_17072026
+  file: Primera-Modificacion-Anexo-21-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Primera-Modificacion-Anexo-21-DOF-17072026.pdf
+  sha256: decdb53630fc3c1938d16d687cb5c597978e88d2106d805ae33af5d2327ab881
+  bytes: 49820
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_22_rmf2026_13012026
+  file: Anexo_22_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_22_RMF2026-13012026.pdf
+  sha256: 8417f331b77828e937ce29520f2af81e64dfc5fa742efc17277a5fd45fa658f7
+  bytes: 277353
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_primera_modificacion_anexo_22_dof_17072026
+  file: Primera-Modificacion-Anexo-22-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Primera-Modificacion-Anexo-22-DOF-17072026.pdf
+  sha256: 883bfcd8c122e514010aa374c0e157495830b852a39c1d27dd16ff1c8bc2733c
+  bytes: 97660
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_23_rmf2026_13012026
+  file: Anexo_23_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_23_RMF2026-13012026.pdf
+  sha256: accd3e271090386de309ef9b64592482e828973500909ee224547810c9739395
+  bytes: 150882
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_24_rmf2026_13012026
+  file: Anexo_24_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_24_RMF2026-13012026.pdf
+  sha256: 689d323d0a5fe517c69abf05c246b054445febb865b2da185cbb9079bcc166e2
+  bytes: 624593
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_25_rmf_2026_dof_28122025
+  file: Anexo-25-RMF-2026_DOF-28122025.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo-25-RMF-2026_DOF-28122025.pdf
+  sha256: 9ef622b7b99b2f6102932d525b5d4927eb172d16c33a22cc22e54b2d46b54495
+  bytes: 13777
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_27_rmf2026_13012026
+  file: Anexo_27_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_27_RMF2026-13012026.pdf
+  sha256: 446a7f040d04efedecc03fe4928387925672239caf82a47d6738b8fb76f39407
+  bytes: 447438
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_28_rmf2026_13012026
+  file: Anexo_28_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_28_RMF2026-13012026.pdf
+  sha256: 6f0afcb5178e6b78591fb1ad1c340c03019a2cb446c7cde70ff663661f59da18
+  bytes: 422530
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_29_rmf2026_09012026
+  file: Anexo_29_RMF2026-09012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_29_RMF2026-09012026.pdf
+  sha256: b9bcd511eab2558510abaa1dfccb133c36a2e8c5aad97efa8f8f7bd2b01cd19e
+  bytes: 467510
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_primera_modificacion_anexo_29_dof_17072026
+  file: Primera-Modificacion-Anexo-29-DOF-17072026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Primera-Modificacion-Anexo-29-DOF-17072026.pdf
+  sha256: 37aa6b777f25603075d7742ddf0270c858dda8a8a0787b62fa93fa72d8d2a664
+  bytes: 93308
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rmf_anexo_30_rmf2026_13012026
+  file: Anexo_30_RMF2026-13012026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rmf/anexos/Anexo_30_RMF2026-13012026.pdf
+  sha256: c170b7952db3d88862317610468987a7a67891d8a7d15030d8b7c8c0fffd5a08
+  bytes: 1799427
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

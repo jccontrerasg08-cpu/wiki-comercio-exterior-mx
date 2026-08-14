@@ -1,0 +1,53 @@
+documents:
+- id: mx_dof_tmec_promulgatorio
+  file: T_MEC_290620.pdf
+  url: https://www.dof.gob.mx/2020/SRE/T_MEC_290620.pdf
+  title: Decreto Promulgatorio T-MEC (DOF 29 junio 2020)
+  summary: data/corpus/README.md
+  sha256: ecea17b0e46a8f37f1391dae908548461ddcd0c8b385fcf19615576277622bbd
+  bytes: 5158703
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_gob_tmec_protocolo
+  file: Protocolo_Esp_BIS_COTEJO_SE_SRE.pdf
+  url: https://www.gob.mx/cms/uploads/attachment/file/516595/Protocolo_Esp_BIS_COTEJO_SE_SRE.pdf
+  title: Protocolo modificatorio T-MEC (texto SE/SRE)
+  summary: data/corpus/README.md
+  sha256: 2b197f4c860eb2d42a07a9ba0d060fe4ad032d2e9b4dc9fff0949e751fa503d7
+  bytes: 432549
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sidof_5595761
+  file: 5595761.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5595761
+  title: Decreto Promulgatorio T-MEC SIDOF nota 5595761
+  summary: data/corpus/README.md
+  sha256: 0f24cc025ce1c9951afb56ff50a70ca56beccadbf6f9852d7b8d9a8c6ba4c6e0
+  bytes: 32528
+  note: short SIDOF .doc wrapper; full treaty bytes are T_MEC_290620.pdf
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_gob_tmec_tomo_i
+  file: TMEC_TOMO_I_CAP_1_AL_13.pdf
+  url: https://www.gob.mx/t-mec
+  title: T-MEC Tomo I (capítulos 1 al 13)
+  summary: data/corpus/README.md
+  sha256: 8b6cd4ba672570ba3ad02348273d30477949421a6b89f11c61d669f063fa3cba
+  bytes: 9233728
+  note: user-provided official tomo; gob.mx/t-mec hub (direct PDF was challenge-gated)
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_gob_tmec_tomo_ii
+  file: TMEC_TOMO_II_CAP_14_AL_34_y_Acuerdos_Paralelos.pdf
+  url: https://www.gob.mx/t-mec
+  title: T-MEC Tomo II (capítulos 14 al 34 y acuerdos paralelos)
+  summary: data/corpus/README.md
+  sha256: 897f8501927fbfef1b117856be64f01e1a03df893b60f4827991c4dee4fcb44a
+  bytes: 8768165
+  note: user-provided official tomo; gob.mx/t-mec hub (direct PDF was challenge-gated)
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

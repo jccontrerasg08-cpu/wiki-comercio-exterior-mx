@@ -1,0 +1,25 @@
+documents:
+- id: wto_tfa_wt_l_940
+  file: AFC_OMC_WT_L_940_protocolo_enmienda.pdf
+  url: https://docs.wto.org/dol2fe/Pages/SS/directdoc.aspx?filename=q:/WT/L/940.pdf
+  title: Acuerdo sobre Facilitación del Comercio / Protocolo de enmienda (WT/L/940)
+  sha256: 263b39fcf6e2b315f2f1b12fe1a9c384d2459cdb4ea239385e9580e6dd90f1ee
+  bytes: 167610
+  note: 'user-provided official WTO Spanish text of WT/L/940. WCO ATF hub catalog-only
+    (not vendored): https://www.wcoomd.org/en/topics/wco-implementing-the-wto-atf/atf.aspx'
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: wto_adp_19
+  file: 19-adp.pdf
+  url: https://www.wto.org/english/docs_e/legal_e/19-adp.pdf
+  title: Acuerdo Antidumping de la OMC (WTO Anti-Dumping Agreement)
+  sha256: 039edfd5bfb21185547f927fcbc78b6608040049e29e65babc3c56b825768339
+  bytes: 100705
+  note: user-provided WTO ADP PDF (Word 19-adp-1.doc). Live English catalog PDF differs
+    (a51c1fd9e4cb, 144668 bytes); Spanish docs_s/legal_s/19-adp.pdf also differs.
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

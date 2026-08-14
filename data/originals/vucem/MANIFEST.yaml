@@ -1,0 +1,217 @@
+documents:
+- id: mx_vucem_manual_mv_feb26
+  file: Manual_Manifestacion_de_Valor_Feb26.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/Manual_de_usuario_Registro_de_solicitud_de_Manifestacion_de_Valor_Feb26.pdf
+  sha256: 95445d3e603a7df2daec9b45cf6e668b9b43ac2f5a2535fe39a23ecdb27fcff8
+  bytes: 1654882
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_diccionario_mv_2025
+  file: Diccionario_de_datos_MV_2025.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/Diccionario_de_datos_MV_2025.pdf
+  sha256: e33f35bf4e47e82ddf8e8105739866c4e48dc90d203364bf6f2e7feca73158af
+  bytes: 233615
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_faq_e2_2026
+  file: Preguntas_Frecuentes_Formato_E2_MV_07_05_2026.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/Preguntas_Frecuentes_Formato_E2_Manifestacion_de_Valor_07_05_2026.pdf
+  sha256: 6588d3f6fcea142a4b047dd9e5035569a5dd2f07b3c64ad7ada5d45b25dea76c
+  bytes: 106974
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_manual_rfc_digitalizados
+  file: Manual_Agregar_RFC_consulta_documentos_digitalizados.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/Manual_de_usuario_Agregar_RFC_de_consulta_y_o_documentos_digitalizados.pdf
+  sha256: 1310e84effe87ff0aeb2d1819179e4ae3f50bc6c20a94626c0a8730d72f13045
+  bytes: 890668
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_guia_sira
+  file: GuiaOperativaSIRA.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/pedimentos/GuiaOperativaSIRA.pdf
+  sha256: 3ed96d07ff840b1cdae8acb3b56285d8d5234e693df2792e7e8313154e4261a1
+  bytes: 775894
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_faq_sira
+  file: PreguntasFrecuentesSIRA.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/pedimentos/PreguntasFrecuentesSIRA.pdf
+  sha256: 7db314b4001ab25cf1d025bebc2e6404a86da7820c6b4c4992946d38ea0fde02
+  bytes: 449441
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_guia_ws_aereo
+  file: Guia_Usuario_Web_Service_aereo_V2.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/Guia_Usuario_Web_Service_aereo_V2.pdf
+  sha256: 70d3740111d8bd8b7c3124aec4628fc8612dab5978d7625f61674429925ae9db
+  bytes: 955122
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_hi08_mv
+  file: Hoja_informativa_No_08_Manifestacion_de_Valor.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/meses/agosto2025/Hoja_informativa_No_08_Manifestacion_de_Valor.pdf
+  sha256: 9cda2f80b1e6df2c635c195c67379adc6fd468a1ba2678e0974a335b88158819
+  bytes: 113498
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_guia_servext_2026
+  file: Guia_de_usuario_Servicios_Extraordinarios_2026.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SHCP/Guias_de_usuario/Guia_de_usuario_Servicios_Extraordinarios_2026.pdf
+  sha256: bde379283e3149713b95bf43c6996897c985796fe4143db67113cd3fa371e741
+  bytes: 3916453
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_aviso_no_arribo_2025
+  file: Manual_usuario_externo_Aviso_de_No_arribo_08-12-2025.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SHCP/Avisos2025/Manual_de_usuario_externo-Aviso_de_No_arribo-08-12-2025.pdf
+  sha256: 4ff98075b842cc38722ff39dc06819af4a9a80e93c02ec9a182882280ca95fa6
+  bytes: 1287768
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_aviso_fracciones
+  file: Aviso_de_Adicion_de_Fracciones_Arancelarias.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SHCP/Avisos2025/Aviso_de_Adicion_de_Fracciones_Arancelarias.pdf
+  sha256: b1d01641139656d86d1ccef96db3bbdb8ff4b977968463a29e1f1105f2b6cd58
+  bytes: 3830122
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_aviso_retorno_vehiculos
+  file: Manual_Usuario_Aviso_retorno_seguro_vehiculos_extranjeros.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SHCP/Avisos2025/Manual_de_Usuario_Aviso_de_retorno_seguro_de_vehiculos_extranjeros.pdf
+  sha256: e366983a1fe41446d99556bc467f17f7d93ed9aa7cffdc03bb89db0682e145bd
+  bytes: 1454906
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_manual_ci
+  file: Manual_usuario_Modalidad_Comercializadora_e_Importadora_V1_1.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SHCP/AGACExt/SIINCER/Manual_de_usuario_Modalidad_Comercializadora_e_Importadora_V_1_1.pdf
+  sha256: 6e8605d8286b41bcb1989d72ec7c6cc4950ab935958993730e403c5d82734ff9
+  bytes: 1485314
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_manual_oea
+  file: Manual_usuario_Modalidad_OEA_V1_0.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SHCP/AGACExt/SIINCER/Manual_de_usuario_Solicitud_de_Registro_en_el_ECE_Modalidad_OEA_V_1_0.pdf
+  sha256: 9b11abbe20dc53580d7644ffd476124f47cdbab66f400d5afba3bdaee5f35c1c
+  bytes: 8276754
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_manual_iva_ieps
+  file: Manual_Modalidad_IVA_IEPS.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SHCP/AGACExt/SIINCER/Manual%20Modalidad%20IVA%20E%20IEPS.PDF
+  sha256: 8b3e97802506ba9db006a850a3e23fbf5c2219c1f41b891a17dcefd327fd035a
+  bytes: 2797283
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_aviso_siderurgicos
+  file: Manual_Aviso_importacion_siderurgicos_7ago25.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SE/SE/Manual_de_usuario_Aviso_de_importacion_de_siderurgicos_7ago25.pdf
+  sha256: 1eb41849187dd67fd878138712cf718e69d0dc0f748c5d9e452b9ea0574b8442
+  bytes: 1096021
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_immex_productos_sensibles
+  file: Manual_Ampliacion_Productos_Sensibles_7ago25.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SE/SE/ImexRAPSens/Manual_de_usuario_Ampliacion_Productos_Sensibles_7ago25.pdf
+  sha256: 1a6a5a114aa47634a2776b4b5da67b7b5475bcf10568212f62d666145c032568
+  bytes: 2258537
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_permiso_automatico
+  file: Manual_Permiso_Automatico_Importacion_7ago25.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SE/SE/Manual_de_usuario_Permiso_Automatico_de_Importacion_7_ago25.pdf
+  sha256: aafe2c52c31cbb232ce842a202d289311e382950034581917f0858230ba3aa12
+  bytes: 1007366
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_aviso_aluminio
+  file: Manual_Aviso_automatico_importacion_aluminio.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SE/SE/PEXIM-Manual_de_usuario_Aviso_automatico_de_importacion_de_aluminio/Manual_de_usuario_Aviso_automatico_de_importacion_de_aluminio.pdf
+  sha256: 8f79679b005830cf963345183fdfc29da7b87520f37c8dad8ffe340ab8da92d4
+  bytes: 2430372
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_dgn_documentos_equivalentes
+  file: Manual_Documentos_equivalentes_DGN.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/SE/DGN/DEquiv/vucem091020.pdf
+  sha256: e694d5dad8b6c29a9001eaae538e737d32299038d6ae914f60a5632a6bcc2d0f
+  bytes: 1560981
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_contingencia
+  file: Manual_Contingencia_Ventanilla_Digital.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/Gen/ContinVentanDigi/ucm100163.pdf
+  sha256: a017d2cdc3193b1c2fa08e67ad3eaa3f8e58775eb3c02b972856c93f4ea9a6dd
+  bytes: 339824
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_app_manual
+  file: MU_VUCEM_App_Manual_Usuario.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/Manualesa/Gen/movil/MU_VUCEM_App_Manual_Usuario.pdf
+  sha256: f8cc09fcf7ea7467a5dc7a591e7e2a29c7cb3ba38b5a44f2f5d2b51cf2c046c9
+  bytes: 2712471
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_faq_ferro
+  file: ucm014802~1.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/ucm014802~1.pdf
+  sha256: 9eed85dff15b6cef9bc4c0c37aaabc4121cd794aa7c04ea45c9e859095684d0c
+  bytes: 475579
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_complemento_lineamientos_aereos_transbordo
+  file: ComplementoLineamientosAereosTransbordo.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/ComplementoLineamientosAereosTransbordo.pdf
+  sha256: a0349a759dc4ab5023a076935a55271114b26a45bf6c2944d1efb7e51d11383a
+  bytes: 460815
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_ucm040222
+  file: ucm040222~1.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/ucm040222~1.pdf
+  sha256: 41cf959f99ec2e9097a82543dd5618bc2e38123f4bc4eea9332c625a67953a45
+  bytes: 4331604
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_transmision_manifiesto_unico_aereo
+  file: TransmisionManifiestoUnicoAereo.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/TransmisionManifiestoUnicoAereo.pdf
+  sha256: 8bfad9267335282afd39c848d48f3e1791733529f61f8f6c5ec9a2c40a1c4e35
+  bytes: 823600
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_transmision_guias_aereas
+  file: TransmisiondeGuiasaereas.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/TransmisiondeGuiasaereas.pdf
+  sha256: 4055d52bf0e332a4618707b36eef95171a6af612de1fba9fcad9780c92827ee4
+  bytes: 1488183
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_consulta_pedimentos_ws
+  file: vucem017396~1.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/vucem017396~1.pdf
+  title: Consulta de pedimentos web service
+  sha256: 7c1f89b48248e91ca82cea39665122f6b0cd39fdca0042ea6311420c5a5b78eb
+  bytes: 615797
+  note: consulta pedimentos WS
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_manual_consulta_mv
+  file: Manual_de_usuario _Consulta_de_solicitud_de_Manifiesto_de_valor.pdf
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/Manual_de_usuario%20_Consulta_de_solicitud_de_Manifiesto_de_valor.pdf
+  sha256: 07bd86fdaf957a127c7b5634ac24b5c1600c552d6111d79d1659c3643cf7873f
+  bytes: 934280
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_vucem_guia_mv_docx
+  file: Guia_Manifestacion_de_Valor.docx
+  url: https://www.ventanillaunica.gob.mx/vucem/otros/Guia_Manifestacion_de_Valor.docx
+  sha256: f630d597b2ed9ed07ef4d789bb6aea728687741ed53a8f6d4ed067ea3f8dad86
+  bytes: 228051
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

@@ -1,0 +1,131 @@
+documents:
+- id: mx_diputados_ley_aduanera
+  file: LAdua.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
+  summary: data/corpus/ley-aduanera.md
+  sha256: 43927095d22ff7bc7780e78132d2160b5050b5f76026b539daec32be09d7341d
+  bytes: 2088249
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_reg_ley_aduanera
+  file: Reg_LAdua.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAdua.pdf
+  summary: data/corpus/reglamento-ley-aduanera.md
+  sha256: bcdfcd9073014aec4aefbacc01c9dd5b1f97f0da0c4556f0f506d20f12d77812
+  bytes: 903770
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_ligie_2022
+  file: LIGIE_2022.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf
+  summary: data/corpus/tigie-nico-notas.md
+  sha256: a7688a47c8283f327b943e06ed948782feba2f5a0e16fe796d50d8340ce40ece
+  bytes: 19154404
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_ligie_reform_2025
+  file: LIGIE_2022_ref02_29dic25.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/ref/ligie_2022/LIGIE_2022_ref02_29dic25.pdf
+  summary: data/corpus/tigie-nico-notas.md
+  sha256: 3c5285cf2b250af0175ae9f31d69d069915834acdfa7150c3449349f087690bf
+  bytes: 1241762
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_cff
+  file: CFF.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf
+  summary: data/corpus/README.md
+  sha256: be7427b20d3552775ab42018f8f87578078770095bf8cf46322c25e36ee3aa7d
+  bytes: 3134465
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lce
+  file: LCE.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LCE.pdf
+  summary: data/corpus/README.md
+  sha256: 3f114f47007c21b4691bad502b786b45aa5e45c1571bd56dd8ca4f5af991b459
+  bytes: 573351
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lce_211206
+  file: LCE211206.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/ref/lce.htm
+  summary: data/corpus/README.md
+  sha256: 9535ba0705fbe2e416c6f88c003f3c710fc3b876a314e1f146192d2ca14996ec
+  bytes: 172035
+  note: user-provided dated LCE edition (21-12-2006 / Word 28.doc). Distinct from
+    current LCE.pdf. Historical LeyesBiblio/pdf/LCE211206.pdf is 404; DOF reform decree
+    LCE_ref05_21dic06.pdf is different bytes.
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_reg_lce
+  file: Reg_LComExt.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LCE.pdf
+  summary: data/corpus/README.md
+  sha256: b090a0c4db3ceac62394d201304ace6f8ccd42e7c86a157995d3901c2ff1254a
+  bytes: 519458
+  note: user-provided Reglamento de la Ley de Comercio Exterior. Suggested LeyesBiblio/regley/Reg_LComExt.pdf
+    is 404. Live Diputados Reg_LCE.pdf is a different edition (14d38a7a24e4, 645727
+    bytes).
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_ccom
+  file: CCom.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/CCom.pdf
+  summary: data/corpus/README.md
+  sha256: b99bbf981434011b6351ef308922fea90f6f0f8777b113183cf1737840c5bbef
+  bytes: 2630704
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lie
+  file: LIE.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIE.pdf
+  summary: data/corpus/README.md
+  sha256: 14cd17e37e96e766c8ab74950c71186d579c0ba6cc10ac9e8b06f6194af7d953
+  bytes: 728116
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lical
+  file: LICal_010720.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LICal_010720.pdf
+  summary: data/corpus/README.md
+  sha256: a9f33bb2a633b8533f902808df4d75cff31a4c71e21728b12cde45b7e229be2a
+  bytes: 680036
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lfce
+  file: LFCE.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LFCE.pdf
+  summary: data/corpus/README.md
+  sha256: d0021bbef2e0c3251d6efdea2c1efd9959ff3f02df4bcd1fc37c1ee7826a72ba
+  bytes: 894149
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lncm
+  file: LNCM.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LNCM.pdf
+  summary: data/corpus/README.md
+  sha256: f16b066f28d00980415d75d52b7165cbba892a37c4881f3b6b6cf122c57eb926
+  bytes: 946507
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_ley_puertos
+  file: 65_071220.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/65_071220.pdf
+  summary: data/corpus/README.md
+  sha256: 36f74d61a6190ff8005805ad80aa6cf90f7d5bf2209d24bdaf32f51d21214daf
+  bytes: 502402
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lcpaf
+  file: LCPAF.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LCPAF.pdf
+  summary: data/corpus/README.md
+  sha256: 9133f4bfc63f4f6ee32f3657ba4468c67b2eb9db46410ed893c85e693018a036
+  bytes: 588718
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

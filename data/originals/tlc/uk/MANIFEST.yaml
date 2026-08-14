@@ -1,0 +1,14 @@
+documents:
+- id: uk_gov_mx_trade_continuity
+  file: TS_74.2024_UK_Mexico_Trade_Continuity_Agreement.pdf
+  url: https://assets.publishing.service.gov.uk/media/66f1883508a2c7f27217e2b7/TS_74.2024_UK_Mexico_Trade_Continuity_Agreement.pdf
+  title: UK-Mexico Trade Continuity Agreement (TS 74.2024)
+  summary: data/corpus/README.md
+  sha256: 11cc1d450134b5d7b999bbad584138dd06c3e1b1a89ef8b9707e876e5a6ed1eb
+  bytes: 817984
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

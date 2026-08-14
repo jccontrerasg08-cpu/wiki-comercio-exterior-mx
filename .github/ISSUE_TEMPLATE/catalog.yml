@@ -1,0 +1,12 @@
+name: Catalog URL
+description: Add or fix one official URL in docs/catalog or sources/registry.yaml
+title: "[catalog] "
+labels: []
+body:
+  - type: textarea
+    id: url
+    attributes:
+      label: Official URL
+      description: One official URL. HTTP 200 is not enough. Do not scrape INEGI TIGIE–SCIAN or SNICE Mi Fracción.
+    validations:
+      required: true

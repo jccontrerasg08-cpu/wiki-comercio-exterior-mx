@@ -1,0 +1,14 @@
+documents:
+- id: mx_sidof_5787425
+  file: 5787425.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5787425
+  title: Primera Modificacion RGCE 2026
+  summary: data/corpus/rgce-2026.md
+  sha256: 5c57438d458fd86c23fe8e7a099a73367dbc3769f1499dcfa2d9728292333cf6
+  bytes: 65056
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

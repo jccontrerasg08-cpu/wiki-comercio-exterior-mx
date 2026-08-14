@@ -1,0 +1,14 @@
+documents:
+- id: mx_inegi_tigie_scian_corr_2025
+  file: tabla-correlacion-actualizacion-2025.xlsx
+  url: https://www.inegi.org.mx/contenidos/app/tigie/tabla-correlacion-actualizacion-2025.xlsx
+  title: Tabla de correlacion TIGIE-SCIAN. Actualizacion 2025
+  summary: data/corpus/README.md
+  sha256: 50100ee65a3dd80aa57d1b413ae0b39cdd1267a6b3bf3326ca5121b9734674e0
+  bytes: 970625
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

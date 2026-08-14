@@ -1,0 +1,15 @@
+documents:
+- id: mx_sidof_5778101
+  file: 5778101.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5778101
+  title: Anexo 2 RGCE 2026
+  summary: data/corpus/rgce-2026.md
+  sha256: cce1a6e21bfb3499fd35fac3065b35336cba371de25fc959acdf207218eab2e6
+  bytes: 5920096
+  note: docFuente iframe was empty stub; official bytes are the getDoc .doc
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

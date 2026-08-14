@@ -1,0 +1,285 @@
+documents:
+- id: mx_sat_rgce_2026
+  file: sat/rgce-2026/ReglasGeneralesComercioExteriorpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/rgce/ReglasGeneralesComercioExteriorpara2026.pdf
+  summary: data/corpus/rgce-2026.md
+  sha256: 50d2b9c07422be5c9fc56bd3fe63f33a52e3119a5ffcd1951987a3d62e03e752
+  bytes: 3028506
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_1ra_rm
+  file: sat/rgce-2026/1raRMRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/compiladas/1raRMRGCEpara2026.pdf
+  summary: data/corpus/rgce-2026.md
+  sha256: 94d01b289a2acfd0e8027993ec1d34d41c57828cb95059836944272e003f9ae8
+  bytes: 5864587
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_01
+  file: sat/rgce-2026/Anexo1delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo1delasRGCEpara2026.pdf
+  sha256: 89f10ba768a4ddc1e5b68ca7fb91f15ae72a58e2b69b259dbfac8d41184fa830
+  bytes: 16524368
+  summary: data/corpus/anexo-01-formatos-modelos.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_02
+  file: sat/rgce-2026/Anexo2delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo2delasRGCEpara2026.pdf
+  sha256: 51f2d7ea00bb327227ed0c894f42f9f07fb65f013afd4c0bf895bbc3e18ea700
+  bytes: 3486277
+  summary: data/corpus/anexo-02-tramites.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_03
+  file: sat/rgce-2026/Anexo3delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo3delasRGCEpara2026.pdf
+  sha256: c4ece983627b9ad09739275e463cacf842d7aab28a91eb837f44dacb2af3c428
+  bytes: 23572
+  summary: data/corpus/anexo-03-aduanas-pita.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_04
+  file: sat/rgce-2026/Anexo4delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo4delasRGCEpara2026.pdf
+  sha256: 8a84faabbd43175bd1d483ed683537db88d91ae31927f275c066a0fcc12cf82d
+  bytes: 136693
+  summary: data/corpus/anexo-04-horarios-aduanas.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_05
+  file: sat/rgce-2026/Anexo5delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo5delasRGCEpara2026.pdf
+  sha256: 45c9f555b01653e2157f25fa819dae1967a4e570f31aa8081b7d1a41803278c8
+  bytes: 214940
+  summary: data/corpus/anexo-05-criterios-practicas-indebidas.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_06
+  file: sat/rgce-2026/Anexo6delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo6delasRGCEpara2026.pdf
+  sha256: 56cbca7465c49fe25a4662b2f60a1d670129d172be756736422339fc25ce2dad
+  bytes: 160949
+  summary: data/corpus/anexo-06-consejo-clasificacion-arancelaria.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_07
+  file: sat/rgce-2026/Anexo7delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo7delasRGCEpara2026.pdf
+  sha256: e874be3b92c9330cdc40fdafd6da6c3b3ffead9f86998e81158bbbfa846583c5
+  bytes: 94610
+  summary: data/corpus/anexo-07-ejidatarios-sin-padron.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_08
+  file: sat/rgce-2026/Anexo8delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo8delasRGCEpara2026.pdf
+  sha256: 9aaf892f599e9cb0bf8960b7c30b4eb3aff8a66cab8f256ac9f9442f86a96759
+  bytes: 868765
+  summary: data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_09
+  file: sat/rgce-2026/Anexo9delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo9delasRGCEpara2026.pdf
+  sha256: 6381bfe6ca18f61fce039c3cc90b116a4c3306683f96c79c4bc2701c8f7a5ce4
+  bytes: 261667
+  summary: data/corpus/anexo-09-exentos-igi-equipo-medico.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_10
+  file: sat/rgce-2026/Anexo10delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo10delasRGCEpara2026.pdf
+  sha256: c8e922c28ee4978debf8e7c2dba9cabd89925c81ae2e23f8e78716577103e24c
+  bytes: 1044485
+  summary: data/corpus/anexo-10-padron-sectorial.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_11
+  file: sat/rgce-2026/Anexo11delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo11delasRGCEpara2026.pdf
+  sha256: e26772b753ab9153c0c88099db7ec1d9b5b1710c2b12a2042f961e1912a2d085
+  bytes: 15746
+  summary: data/corpus/anexo-11-rutas-fiscales-transito.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_12
+  file: sat/rgce-2026/Anexo12delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo12delasRGCEpara2026.pdf
+  sha256: e41abf3b328d1b3a10588a1d9dbd3a7d1ad95fcf517bb869f7c8bf2012771ccc
+  bytes: 21575
+  summary: data/corpus/anexo-12-exportacion-temporal.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_14
+  file: sat/rgce-2026/Anexo14delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo14delasRGCEpara2026.pdf
+  sha256: ea7258e6286aa5b6b3546be2e916467ca54592e07a05b886958c060297415748
+  bytes: 248516
+  summary: data/corpus/anexo-14-hidrocarburos-petroliferos.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_15
+  file: sat/rgce-2026/Anexo15delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo15delasRGCEpara2026.pdf
+  sha256: f43019708a32230433e088cc6278154c2a932b2086dc3d025eda000897adc98e
+  bytes: 671158
+  summary: data/corpus/anexo-15-distancias-plazos-transito.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_16
+  file: sat/rgce-2026/Anexo16delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo16delasRGCEpara2026.pdf
+  sha256: f419657c54306f8cfbda2f1325f9a519c1b57bbd3e940a28821287fa14d7b4ed
+  bytes: 53854
+  summary: data/corpus/anexo-16-aduanas-transito-norte-sur.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_17
+  file: sat/rgce-2026/Anexo17delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo17delasRGCEpara2026.pdf
+  sha256: 153b670c51e54b8e7dc5c0408ed0738451b57a5863f9c1931383ed5ed9d09d47
+  bytes: 407754
+  summary: data/corpus/anexo-17-sin-transito-internacional.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_18
+  file: sat/rgce-2026/Anexo18delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo18delasRGCEpara2026.pdf
+  sha256: 87fe2f44d26e8b586267c0738baabf0663b285e2152205aa72b8a1a82afeb17e
+  bytes: 62824
+  summary: data/corpus/anexo-18-sin-deposito-fiscal.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_19
+  file: sat/rgce-2026/Anexo19delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo19delasRGCEpara2026.pdf
+  sha256: de475d26850a5b8f9d09b24f86be9d01adea6867a46194f003d2d4fa73765cf7
+  bytes: 15262
+  summary: data/corpus/anexo-19-datos-inexactos-multa-184.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_20
+  file: sat/rgce-2026/Anexo20delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo20delasRGCEpara2026.pdf
+  sha256: 9ad02f72c005cde5ccb815beac1ea2845829f953e446b93882d40657b045ccf4
+  bytes: 666376
+  summary: data/corpus/anexo-20-marcas-nominativas.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_21
+  file: sat/rgce-2026/Anexo21delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo21delasRGCEpara2026.pdf
+  sha256: 60f3e1938dcf47d699638bb73ed6f67aeb9f5ae3fdd580f87565e68e4c8962c7
+  bytes: 438684
+  summary: data/corpus/anexo-21-aduanas-exclusivas.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_22
+  file: sat/rgce-2026/Anexo22delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo22delasRGCEpara2026.pdf
+  sha256: f0ad60bd1c7be9d2551ce2f56628178f7baf40b8638eae0ca41743bec4077ec3
+  bytes: 1380263
+  summary: data/corpus/anexo-22.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_23
+  file: sat/rgce-2026/Anexo23delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo23delasRGCEpara2026.pdf
+  sha256: f661069d77a12190449717cfa4de519ad36b98ef04e7e1093e74c880d06ee8ef
+  bytes: 221809
+  summary: data/corpus/anexo-23-mercancias-peligrosas-muestreo.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_24
+  file: sat/rgce-2026/Anexo24delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo24delasRGCEpara2026.pdf
+  sha256: 9c48454f55bd54a0fcdeb97d1f23b74b9b40427d13af242ad47520492fc549ff
+  bytes: 134508
+  summary: data/corpus/anexo-24-control-inventarios-immex.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_25
+  file: sat/rgce-2026/Anexo25delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo25delasRGCEpara2026.pdf
+  sha256: aef85665e6cce9961eb7fdc6fe7b22bd2fded6cac4078338165930348f1ca776
+  bytes: 15378
+  summary: data/corpus/anexo-25-puntos-revision-franja.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_26
+  file: sat/rgce-2026/Anexo26delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo26delasRGCEpara2026.pdf
+  sha256: 5d5905985cc70ee9463c8c469f07cb14e0e82cfe10e7a4fea4cec9811ca5234b
+  bytes: 73115
+  summary: data/corpus/anexo-26-noms-informacion-comercial.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_27
+  file: sat/rgce-2026/Anexo27delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo27delasRGCEpara2026.pdf
+  sha256: cc32f6cb40cd1b6f85aeb650c5a13948ce8fda0c507502c357c42dfe24882540
+  bytes: 1531261
+  summary: data/corpus/anexo-27-fracciones-sin-iva.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_28
+  file: sat/rgce-2026/Anexo28delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo28delasRGCEpara2026.pdf
+  sha256: a1e8563cd8f2b678c66d12f659eb610a53749e4120f9800002dae59e67a8c39a
+  bytes: 246913
+  summary: data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_29
+  file: sat/rgce-2026/Anexo29delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo29delasRGCEpara2026.pdf
+  sha256: a7e66537e9cd0dbeda2b99414efd0c60b2e970f7c760099214d5fc3e6ff265fa
+  bytes: 27189
+  summary: data/corpus/anexo-29-regimenes-prohibidos.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_anexo_30
+  file: sat/rgce-2026/Anexo30delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo30delasRGCEpara2026.pdf
+  sha256: 9b2de94d5696a638164354a87db48f2d933483329c818813a377de7fd9e2bcf2
+  bytes: 78118
+  summary: data/corpus/anexo-30-scccyg.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_1ra_rm_anexo_05
+  file: sat/rgce-2026/1ra_modificacionAnexo5delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/1ra_modificacionAnexo5delasRGCEpara2026.pdf
+  sha256: 2a0eded0462eae2a7f82579683a6c28cb6f7875b172c104d44b7c3e8b68e343d
+  bytes: 116937
+  summary: data/corpus/anexo-05-criterios-practicas-indebidas.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_1ra_rm_anexo_29
+  file: sat/rgce-2026/1ra_modificacionAnexo29delasRGCEpara2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/1ra_modificacionAnexo29delasRGCEpara2026.pdf
+  sha256: 23121c8be96901681184f3f21c3c9eb98a017f41f6f19e8ef18f0a1e229f6261
+  bytes: 1285024
+  summary: data/corpus/anexo-29-regimenes-prohibidos.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_1ra_rm_compilado_anexo_05
+  file: sat/rgce-2026/CompiladoAnexo5_1raRMRGCE2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/compiladas/CompiladoAnexo5_1raRMRGCE2026.pdf
+  sha256: 494b677f1f1e0ff2ffdeefdb93d0842c332ef4a2ffd3f405c0d2e7ce4749ee61
+  bytes: 476390
+  summary: data/corpus/anexo-05-criterios-practicas-indebidas.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_sat_rgce_2026_1ra_rm_compilado_anexo_29
+  file: sat/rgce-2026/CompiladoAnexo29_1raRMRGCE2026.pdf
+  url: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/compiladas/CompiladoAnexo29_1raRMRGCE2026.pdf
+  sha256: 5396d5e2316f5c99c54720f3523ac72a66b88efb7058ca12730c3ba2a562d19b
+  bytes: 1814072
+  summary: data/corpus/anexo-29-regimenes-prohibidos.md
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

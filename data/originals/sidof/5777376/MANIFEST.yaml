@@ -1,0 +1,14 @@
+documents:
+- id: mx_sidof_5777376
+  file: 5777376.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5777376
+  title: Decreto TIGIE 29 de diciembre de 2025
+  summary: data/corpus/tigie-nico-notas.md
+  sha256: 47a6b215fdf1574ff80af559eb3f230cb16e680d961f758a3e459df3bf4a5654
+  bytes: 2472128
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

@@ -1,0 +1,19 @@
+documents:
+- id: mx_se_acuerdo_reglas_2026
+  file: ACUERDO-REGLAS-SE-02ABRIL2026.pdf
+  url: https://www.snice.gob.mx/~oracle/SNICE_DOCS/ACUERDO-REGLAS-SE-02ABRIL2026-BIBLIOTECA_20260520-20260520.pdf
+  sha256: 95952c44dcf306516744959974ce618490693fb8396013b76173ca62a7b6ac0e
+  bytes: 5372338
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_se_noms_faq_20240610
+  file: PREGUNTASFRECUENTES-NOMS-20240610.pdf
+  url: https://www.snice.gob.mx/~oracle/SNICE_DOCS/PREGUNTASFRECUENTES-NOMS-PREGUNTAS_20240610-20240610.pdf
+  sha256: 6553c7e234767d582ea0fd682a17a94cbd4a28fe4ddfc4c0d59dbbfe2bf371bf
+  bytes: 307158
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed
