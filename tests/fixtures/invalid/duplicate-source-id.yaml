@@ -1,0 +1,20 @@
+sources:
+  - id: duplicate
+    jurisdiction: MEX
+    title: Source A
+    url: https://example.gob.mx/a
+    authority: Example Authority
+    evidence_class: primary_legal
+    allowed_hosts: [example.gob.mx]
+    media_types: [application/pdf]
+    harvest: false
+
+  - id: duplicate
+    jurisdiction: MEX
+    title: Source B
+    url: https://example.gob.mx/b
+    authority: Example Authority
+    evidence_class: primary_legal
+    allowed_hosts: [example.gob.mx]
+    media_types: [application/pdf]
+    harvest: false
