@@ -1,0 +1,9 @@
+documents:
+  - id: bad-sha
+    file: example.pdf
+    url: https://example.gob.mx/example.pdf
+    summary: data/corpus/README.md
+    sha256: not-a-sha256
+    bytes: 100
+    license: official-not-relicensed
+    redistribution: official publication
