@@ -64,6 +64,22 @@ class RepositoryValidatorTests(unittest.TestCase):
         findings = validate_originals(ROOT / "data" / "originals")
         self.assertEqual(findings, [])
 
+    def test_official_binary_committed_under_originals_is_rejected(self):
+        validate_hygiene = getattr(validator, "validate_repository_hygiene", None)
+        self.assertIsNotNone(validate_hygiene, "validate_repository_hygiene must exist")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            originals = root / "data" / "originals"
+            originals.mkdir(parents=True)
+            (originals / "example.PDF").write_bytes(b"not a real pdf")
+            findings = validate_hygiene(root)
+        self.assertIn("REPOSITORY_BINARY_IN_GIT", {item.code for item in findings})
+
+    def test_real_repository_has_no_original_binary_payloads(self):
+        validate_hygiene = getattr(validator, "validate_repository_hygiene", None)
+        self.assertIsNotNone(validate_hygiene, "validate_repository_hygiene must exist")
+        self.assertEqual(validate_hygiene(ROOT), [])
+
 
 if __name__ == "__main__":
     unittest.main()
