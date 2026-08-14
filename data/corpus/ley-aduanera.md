@@ -1,16 +1,26 @@
+---
+document_type: legal_summary
+authority: derived_non_authoritative
+transform: paraphrase
+legal_checked_at: 2026-08-14
+digest_status: stale_pending_full_rebuild
+---
+
 # Ley Aduanera (Texto Vigente)
 
 **Fuente oficial:** Cámara de Diputados del H. Congreso de la Unión
 **Publicación original:** DOF 15-12-1995
-**Última reforma:** DOF 12-11-2021
-**Cantidades actualizadas por:** Reglas Generales de Comercio Exterior DOF 24-12-2021
-**URL oficial (PDF completo, 202 págs.):** http://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
+**Última reforma:** DOF 19-11-2025
+**Cantidades actualizadas por:** RGCE y Anexo 13 DOF 27-12-2025
+**Histórico de reformas:** https://www.diputados.gob.mx/LeyesBiblio/ref/ladua.htm
+**URL oficial (PDF completo):** https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
 **Copia local:** `data/originals/diputados/LAdua.pdf`
 
 ---
 
+> **Aviso:** Este digest **no** es un rebuild completo del decreto DOF 19-11-2025. El texto vinculante es el PDF de Diputados.
+
 Este documento resume los Títulos Primero a Quinto (arts. 1 a 137+) con énfasis operativo.
-Para texto legal vinculante, siempre usar el PDF oficial de Diputados.
 
 ## Artículo 2o. — Definiciones clave
 
@@ -80,7 +90,7 @@ Causales de cancelación incluyen (art. 165): transmitir datos distintos de los 
 - **Arts. 137 bis 1 a 137 bis 9:** régimen especial de importación definitiva de vehículos usados para personas físicas residentes en BC, BCS, franja fronteriza norte, región parcial de Sonora y Cananea. Fundamento del Decreto de vehículos usados (DOF 04-11-2024).
 
 ## Fuentes complementarias
-- Texto completo (PDF): http://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
+- Texto completo (PDF): https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
 - Artículos con cantidades actualizadas 2026: ver `anexo-13-multas-cantidades.md`
 - Regímenes especiales: ver `rgce-2026.md` (Títulos 3-4)
 - Definición de RRNA y NOMs: ver `noms-comercio-exterior.md`

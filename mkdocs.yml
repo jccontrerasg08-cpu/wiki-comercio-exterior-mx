@@ -1,10 +1,11 @@
 site_name: Wiki Comercio Exterior MX
-site_description: Public wiki of Mexican foreign trade. Not SAT or the DOF.
+site_description: Wiki de comercio exterior de México. No es SAT ni el Diario Oficial.
 repo_url: https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx
 repo_name: wiki-comercio-exterior-mx
 docs_dir: docs/wiki
 theme:
   name: material
+  language: es
 markdown_extensions:
   - admonition
   - toc:

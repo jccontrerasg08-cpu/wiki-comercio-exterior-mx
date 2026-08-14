@@ -1,11 +1,20 @@
+---
+document_type: legal_summary
+authority: derived_non_authoritative
+transform: paraphrase
+legal_checked_at: 2026-08-14
+---
+
 # Reglamento de la Ley Aduanera (Texto Vigente)
 
 **Fuente oficial:** DOF 20-04-2015 (texto vigente)
 **Reforma relevante 2026:** DOF 23-02-2026 (refuerza obligaciones de agentes/agencias aduanales y mecanismos de control)
-**Cantidades actualizadas por:** RGCE DOF 28-12-2023
+**Cantidades actualizadas por:** Anexo 13 RGCE 2026 (DOF 27-12-2025; SIDOF https://sidof.segob.gob.mx/notas/5777199)
 **URL oficial:** https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAdua.pdf
 
 ---
+
+> **Aviso:** Este digest **no** es un rebuild completo. El texto vinculante es el PDF de Diputados.
 
 ## Artículos clave para el chatbot de comercio exterior
 
