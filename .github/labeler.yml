@@ -1,0 +1,27 @@
+changed-files-labels-limit: 4
+max-files-changed: 500
+
+documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.md"
+          - "mkdocs.yml"
+          - "docs/**"
+
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "requirements*.txt"
+          - ".github/dependabot.yml"
+
+github_actions:
+  - changed-files:
+      - any-glob-to-any-file:
+          - ".github/workflows/**"
+          - ".github/labeler.yml"
+          - ".github/dependabot.yml"
+
+python:
+  - changed-files:
+      - any-glob-to-any-file:
+          - "**/*.py"
