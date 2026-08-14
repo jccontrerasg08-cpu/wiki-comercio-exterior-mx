@@ -37,9 +37,20 @@ class LegalCurrentnessTests(unittest.TestCase):
             "reformó la regla 1.8.3. para establecer este nuevo monto"
         )
         self.assertNotIn(false_attribution, text)
-        self.assertIn("$350.00 por pedimento prevalidado", text)
+        self.assertIn("$350.00 de pago base por pedimento prevalidado", text)
+        self.assertIn("$330.00", text)
+        self.assertIn("$20.00", text)
         self.assertIn("RGCE 2026 originales", text)
         self.assertIn("no reformó la regla 1.8.3", text)
+
+    def test_rgce_2026_anexo_13_uses_current_update_factor(self):
+        text = (CORPUS / "anexo-13-multas-cantidades.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("**1.1321**", text)
+        self.assertIn("**13.21%**", text)
+        self.assertNotIn("**1.1245**", text)
+        self.assertNotIn("**12.45%**", text)
 
 
 if __name__ == "__main__":
