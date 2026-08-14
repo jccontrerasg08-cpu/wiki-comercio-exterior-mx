@@ -1,7 +1,8 @@
 # Wiki Comercio Exterior MX
 Public wiki and official-URL catalog for Mexican foreign trade.
-Wiki: docs/wiki/
+Wiki: docs/wiki/ (fundamentos, aduana, clasificacion, contribuciones, programas, logistica)
 Catalog: docs/catalog/
+Corpus: data/corpus/
 Tariff tables: https://github.com/jccontrerasg08-cpu/arancel-mx
 Incoterms: ICC catalog URLs only (https://iccwbo.org/business-solutions/incoterms-rules/)
 Mexico TIGIE-SCIAN: https://www.inegi.org.mx/app/tigie/ (catalog-only; do not scrape)

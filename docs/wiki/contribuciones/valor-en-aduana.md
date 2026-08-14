@@ -19,6 +19,6 @@ Catálogo local: `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Aranceles](aranceles.md) · [Pedimento y RGCE](pedimento-rgce.md) · [Incoterms](incoterms.md)
+[Aranceles](aranceles.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md) · [Incoterms](../logistica/incoterms.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

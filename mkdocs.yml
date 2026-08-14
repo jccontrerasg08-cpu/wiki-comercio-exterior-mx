@@ -11,19 +11,25 @@ markdown_extensions:
       permalink: true
 nav:
   - Inicio: index.md
-  - Incoterms: incoterms.md
-  - TIGIE y NICO: tigie-nico.md
-  - Aranceles: aranceles.md
-  - RRNA: rrna.md
-  - TLC y T-MEC: tlc-tmec.md
-  - Reglas de origen: reglas-de-origen.md
-  - PROSEC: prosec.md
-  - IMMEX: immex.md
-  - Pedimento y RGCE: pedimento-rgce.md
-  - Logística internacional: logistica-internacional.md
-  - Valor en aduana: valor-en-aduana.md
-  - Padrón de importadores: padron-importadores.md
-  - Cuotas compensatorias: cuotas-compensatorias.md
-  - Pagos internacionales: pagos-internacionales.md
-  - ANAM: anam.md
-  - Sistema Armonizado: sistema-armonizado.md
+  - Fundamentos:
+    - Padrón de importadores: fundamentos/padron-importadores.md
+  - Aduana:
+    - Pedimento y RGCE: aduana/pedimento-rgce.md
+    - ANAM: aduana/anam.md
+  - Clasificación:
+    - Sistema Armonizado: clasificacion/sistema-armonizado.md
+    - TIGIE y NICO: clasificacion/tigie-nico.md
+    - RRNA: clasificacion/rrna.md
+  - Contribuciones:
+    - Aranceles: contribuciones/aranceles.md
+    - Valor en aduana: contribuciones/valor-en-aduana.md
+    - Cuotas compensatorias: contribuciones/cuotas-compensatorias.md
+  - Programas:
+    - TLC y T-MEC: programas/tlc-tmec.md
+    - Reglas de origen: programas/reglas-de-origen.md
+    - PROSEC: programas/prosec.md
+    - IMMEX: programas/immex.md
+  - Logística:
+    - Incoterms: logistica/incoterms.md
+    - Logística internacional: logistica/logistica-internacional.md
+    - Pagos internacionales: logistica/pagos-internacionales.md

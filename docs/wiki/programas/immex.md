@@ -18,6 +18,6 @@ Catálogo local: `docs/catalog/mexico/arancel.md`.
 
 ## Ver también
 
-[PROSEC](prosec.md) · [Pedimento y RGCE](pedimento-rgce.md) · [Logística internacional](logistica-internacional.md)
+[PROSEC](prosec.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md) · [Logística internacional](../logistica/logistica-internacional.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

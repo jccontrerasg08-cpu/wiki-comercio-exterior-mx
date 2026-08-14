@@ -19,6 +19,6 @@ Catálogo local: `docs/catalog/mexico/arancel.md`.
 
 ## Ver también
 
-[TIGIE y NICO](tigie-nico.md) · [TLC y T-MEC](tlc-tmec.md) · [PROSEC](prosec.md) · [Cuotas compensatorias](cuotas-compensatorias.md) · [Valor en aduana](valor-en-aduana.md)
+[TIGIE y NICO](../clasificacion/tigie-nico.md) · [TLC y T-MEC](../programas/tlc-tmec.md) · [PROSEC](../programas/prosec.md) · [Cuotas compensatorias](cuotas-compensatorias.md) · [Valor en aduana](valor-en-aduana.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

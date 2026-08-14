@@ -18,6 +18,6 @@ Catálogo local: `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Reglas de origen](reglas-de-origen.md) · [Aranceles](aranceles.md) · [TIGIE y NICO](tigie-nico.md)
+[Reglas de origen](reglas-de-origen.md) · [Aranceles](../contribuciones/aranceles.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

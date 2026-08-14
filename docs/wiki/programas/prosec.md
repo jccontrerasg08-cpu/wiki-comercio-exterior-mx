@@ -17,6 +17,6 @@ Catálogo local: `docs/catalog/mexico/arancel.md`.
 
 ## Ver también
 
-[IMMEX](immex.md) · [Aranceles](aranceles.md) · [TIGIE y NICO](tigie-nico.md)
+[IMMEX](immex.md) · [Aranceles](../contribuciones/aranceles.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

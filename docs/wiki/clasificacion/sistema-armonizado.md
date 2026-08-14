@@ -18,6 +18,6 @@ Catálogo local: `docs/catalog/mexico/arancel.md`.
 
 ## Ver también
 
-[TIGIE y NICO](tigie-nico.md) · [Aranceles](aranceles.md)
+[TIGIE y NICO](tigie-nico.md) · [Aranceles](../contribuciones/aranceles.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

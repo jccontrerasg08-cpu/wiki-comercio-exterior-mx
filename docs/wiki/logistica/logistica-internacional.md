@@ -19,6 +19,6 @@ Catálogo local: `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Incoterms](incoterms.md) · [IMMEX](immex.md) · [Pedimento y RGCE](pedimento-rgce.md) · [Valor en aduana](valor-en-aduana.md)
+[Incoterms](incoterms.md) · [IMMEX](../programas/immex.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md) · [Valor en aduana](../contribuciones/valor-en-aduana.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

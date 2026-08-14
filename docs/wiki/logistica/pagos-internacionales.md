@@ -21,6 +21,6 @@ Catálogo local: `docs/catalog/catalog.md`.
 
 ## Ver también
 
-[Incoterms](incoterms.md) · [Logística internacional](logistica-internacional.md) · [Reglas de origen](reglas-de-origen.md)
+[Incoterms](incoterms.md) · [Logística internacional](logistica-internacional.md) · [Reglas de origen](../programas/reglas-de-origen.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

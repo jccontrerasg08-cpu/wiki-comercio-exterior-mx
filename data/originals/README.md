@@ -5,6 +5,7 @@ Git holds `MANIFEST.yaml` only: official URL, SHA-256, byte size, and
 GitHub Release assets (`originals-YYYY.MM.DD`), not clone blobs.
 
 Each folder has `MANIFEST.yaml`. Root `manifest.yaml` lists those fragments.
+Agency folders: `diputados/`, `sat/`, `se/`, `sidof/`, `snice/`, `tlc/`, `tmec/`, `vucem/`, `wto/`. `tigie/` holds the INEGI TIGIE–SCIAN table (paths frozen to Release `SHA256SUMS`).
 Binding cite is the official URL (SIDOF, Diputados, SAT). This project does
 not re-license gazettes or treaties.
 
