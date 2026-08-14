@@ -207,12 +207,12 @@ def validate_manifest(path: Path) -> list[ValidationFinding]:
         url = document.get("url")
         if isinstance(url, str):
             parsed = urlparse(url)
-            if parsed.scheme != "https" or not parsed.netloc:
+            if parsed.scheme not in {"http", "https"} or not parsed.netloc:
                 findings.append(
                     ValidationFinding(
                         "MANIFEST_URL",
                         item_path,
-                        f"expected absolute HTTPS URL: {url}",
+                        f"expected absolute HTTP(S) URL: {url}",
                     )
                 )
 
