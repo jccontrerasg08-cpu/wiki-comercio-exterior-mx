@@ -36,5 +36,8 @@ jobs:
       - name: Run repository tests
         run: python -m unittest tests.test_career_wiki tests.test_repository_validator
 
+      - name: Validate repository integrity
+        run: python -m scripts.validate_repository
+
       - name: Build MkDocs in strict mode
         run: mkdocs build --strict
