@@ -34,7 +34,11 @@ jobs:
         run: python -m pip install -r requirements-docs.txt
 
       - name: Run repository tests
-        run: python -m unittest tests.test_career_wiki tests.test_repository_validator
+        run: >-
+          python -m unittest
+          tests.test_career_wiki
+          tests.test_repository_validator
+          tests.test_legal_currentness
 
       - name: Validate repository integrity
         run: python -m scripts.validate_repository
