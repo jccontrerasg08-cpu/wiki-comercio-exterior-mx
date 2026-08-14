@@ -1,3 +1,7 @@
+---
+authority: derived_non_authoritative
+legal_checked_at: 2026-08-14
+---
 # NOMs en Comercio Exterior — Documento Maestro del Anexo 2.4.1
 # Acuerdo de Reglas y Criterios de la Secretaría de Economía (RCSE)
 
@@ -13,8 +17,10 @@ PUBLICACIÓN BASE:    DOF 09-05-2022
                      y Anexo 2.4.1 numerales 1 y 3 — NOM-001-SCFI-2018 para
                      teléfonos inteligentes; NOMs de energía actualizadas a 2025;
                      SINEC→PLATIICA)
-PRÓXIMA MODIFICACIÓN ANTICIPADA: pendiente de publicación en DOF (anteproyecto
-                     CONAMER con cambios adicionales en numeral 1)
+PRÓXIMA MODIFICACIÓN ANTICIPADA: **PROPUESTA / NO PUBLICADA EN DOF** — status proposed,
+                     no vigente; no tiene el mismo peso jurídico que el texto DOF.
+                     Anteproyecto CONAMER (pendiente de publicación) con cambios
+                     adicionales en numeral 1. No aplicar hasta que salga en DOF.
 
 FUENTES OFICIALES PARA ACTUALIZAR ESTE DOCUMENTO:
   • DOF (texto de cada modificación):
@@ -25,8 +31,9 @@ FUENTES OFICIALES PARA ACTUALIZAR ESTE DOCUMENTO:
     https://platiica.economia.gob.mx/
   • Normas-Aduana (transmisión electrónica de certificados NOM):
     https://www.normas-aduana.gob.mx/normas-Aduanas
-  • LFMN (Ley Federal sobre Metrología y Normalización — base legal):
-    http://www.diputados.gob.mx/LeyesBiblio/pdf/130_150618.pdf
+  • LIC (Ley de Infraestructura de la Calidad — base legal vigente; source_id mx_diputados_lical, LICal_010720.pdf):
+    https://www.diputados.gob.mx/LeyesBiblio/pdf/LICal_010720.pdf
+    (La LFMN está abrogada desde el 30-08-2020: https://www.diputados.gob.mx/LeyesBiblio/abro/lfmn.htm)
 
 CÓMO ACTUALIZAR ESTE DOCUMENTO:
   1. Ir al DOF (dof.gob.mx) y buscar "Secretaría de Economía" + "Reglas y criterios
@@ -45,7 +52,7 @@ CÓMO ACTUALIZAR ESTE DOCUMENTO:
 
 ## NATURALEZA JURÍDICA DEL ANEXO 2.4.1
 
-El Anexo 2.4.1 **no crea** NOMs ni amplía su alcance. Es un instrumento **identificador**: vincula cada fracción arancelaria de la TIGIE con la(s) NOM(s) que esa mercancía debe cumplir en el **punto de entrada o salida** del país, conforme a los arts. 40, 52 y 53 de la LFMN y arts. 20 y 26 de la Ley de Comercio Exterior.
+El Anexo 2.4.1 **no crea** NOMs ni amplía su alcance. Es un instrumento **identificador**: vincula cada fracción arancelaria de la TIGIE con la(s) NOM(s) que esa mercancía debe cumplir en el **punto de entrada o salida** del país, conforme a la Ley de Infraestructura de la Calidad (LIC, vigente) y arts. 20 y 26 de la Ley de Comercio Exterior. La LFMN está **abrogada** desde el 30-08-2020 por el Decreto DOF 01-07-2020 que expidió la LIC.
 
 **Consecuencia para el chatbot:** si una fracción no aparece en el Anexo 2.4.1, no significa que la mercancía esté libre de NOM — puede tener NOMs de cumplimiento en destino (verificación en territorio nacional antes de comercializar) que no están en este Anexo. Solo significa que no se exige su cumplimiento en la aduana.
 
@@ -221,7 +228,7 @@ Mercancías nacionales que deben cumplir con estas NOMs **al salir** del país (
 
 ## NUMERAL 5 — NOMs DE EMERGENCIA
 
-**Sin NOMs de emergencia vigentes** en el Anexo 2.4.1 a la fecha de este documento. Las NOMs de emergencia tienen vigencia de 6 meses prorrogables conforme a la LFMN. Si la SE emite una NOM de emergencia que deba verificarse en frontera, la Dependencia emisora notifica a la Comisión de Comercio Exterior para actualizar este numeral.
+**Sin NOMs de emergencia vigentes** en el Anexo 2.4.1 a la fecha de este documento. Las NOMs de emergencia se rigen conforme a la LIC vigente. Si la SE emite una NOM de emergencia que deba verificarse en frontera, la Dependencia emisora notifica a la Comisión de Comercio Exterior para actualizar este numeral.
 
 ---
 
@@ -313,7 +320,7 @@ PASO 6: DESPACHO ADUANERO
 | 09-05-2022 | **RCSE 2022 (nuevo texto base)** | Reestructura total: numerales 5-13 del Anexo 2.4.1 pasan al Capítulo 2.4 como reglas 2.4.1 a 2.4.14; eliminación del acrónimo SINEC (transitorio); 73 NOMs en numeral 1; 14 en numeral 3 |
 | 28-08-2024 | Modificación | Actualización de reglas 2.4.8 y 2.4.11; nuevas fracciones textiles sujetas a NOM de etiquetado; actualización de referencias a NOMs sustituidas |
 | **29-05-2026** | **Modificación vigente más reciente** | Regla 2.4.3, 2.4.6, 2.4.11 reformadas; SINEC → PLATIICA; fracciones 8517.13.01, 8517.14.91, 8517.18.99 (teléfonos inteligentes/celulares) sujetos a NOM-001-SCFI-2018 (numeral 1) y NOM-024-SCFI-2013 (numeral 3); NOMs de eficiencia energética actualizadas a versión 2025 (004, 011, 014, 016-ENER-2025); eliminación de fracción 8413.60.01 del numeral 1 |
-| Pendiente | Proyecto CONAMER (23-04-2026) | Adicionales cambios menores en acotaciones del numeral 1 — verificar publicación en DOF |
+| — (no DOF) | Proyecto CONAMER (23-04-2026) — **status: proposed**, no vigente | Anteproyecto; cambios menores en acotaciones del numeral 1. **No aplicar** hasta publicación en DOF; no tiene el mismo peso que el texto vigente. |
 
 ---
 
@@ -326,5 +333,5 @@ PASO 6: DESPACHO ADUANERO
 | PLATIICA — Organismos de certificación acreditados | https://platiica.economia.gob.mx/ | Continua (sustituyó al SINEC desde DOF 29-05-2026) |
 | Normas-Aduana — Validación electrónica de certificados | https://www.normas-aduana.gob.mx/normas-Aduanas | Tiempo real |
 | CONAMER — Anteproyectos (proyectos de reforma) | https://www.conamer.gob.mx | Irregular; consultar para anticipar cambios |
-| LFMN (base legal de las NOMs) | http://www.diputados.gob.mx/LeyesBiblio/pdf/130_150618.pdf | Cuando se reforma la ley |
-| Ley de Infraestructura de la Calidad | https://www.diputados.gob.mx/LeyesBiblio/pdf/LInCal_300820.pdf | Cuando se reforma la ley |
+| Ley de Infraestructura de la Calidad (LIC; base legal vigente de las NOMs; source_id mx_diputados_lical) | https://www.diputados.gob.mx/LeyesBiblio/pdf/LICal_010720.pdf | Cuando se reforma la ley |
+| LFMN (abrogada desde 30-08-2020 por Decreto DOF 01-07-2020 que expidió la LIC) | https://www.diputados.gob.mx/LeyesBiblio/abro/lfmn.htm | Histórica — no vigente |

@@ -1,6 +1,10 @@
+---
+authority: derived_non_authoritative
+legal_checked_at: 2026-08-14
+---
 # NOMs en Comercio Exterior (Normas Oficiales Mexicanas — Regulaciones y Restricciones No Arancelarias)
 
-**Marco legal:** Ley de Comercio Exterior, Ley Federal sobre Metrología y Normalización (LFMN), Ley Aduanera (art. 36-A, fracción I, inciso c; art. 52 párrafo final)
+**Marco legal:** Ley de Comercio Exterior, Ley de Infraestructura de la Calidad (LIC; DOF 01-07-2020; source_id `mx_diputados_lical`, archivo `LICal_010720.pdf` — https://www.diputados.gob.mx/LeyesBiblio/pdf/LICal_010720.pdf), Ley Aduanera (art. 36-A, fracción I, inciso c; art. 52 párrafo final). La Ley Federal sobre Metrología y Normalización (LFMN) está **abrogada** desde el 30-08-2020 por el Decreto DOF 01-07-2020 que expidió la LIC (https://www.diputados.gob.mx/LeyesBiblio/abro/lfmn.htm).
 **Instrumento operativo principal:** Capítulo 2.4 del **Acuerdo por el que la Secretaría de Economía emite reglas y criterios de carácter general en materia de comercio exterior**, y su **Anexo 2.4.1** — *"Fracciones arancelarias de la TIGIE en las que se clasifican las mercancías sujetas al cumplimiento de las NOMs en el punto de entrada al país y en el de su salida (Anexo de NOM's)"*
 **URL oficial Anexo NOM's:** https://www.snice.gob.mx/cs/avi/snice/seguridad.normatividad.html
 **Actualización 2026 clave (COFEPRIS Digital):** a partir de enero 2026, todos los avisos de funcionamiento y registros sanitarios se gestionan digitalmente en la plataforma COFEPRIS Digital, eliminando documentos físicos.

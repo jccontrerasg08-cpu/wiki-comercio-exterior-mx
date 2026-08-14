@@ -2,9 +2,11 @@
 
 This is a public wiki plus an official-URL catalog. Unsourced claims are rejected.
 
-## One official URL per catalog PR
+## One coherent legal/source event per PR
 
-Each pull request that changes `docs/catalog/` or `sources/registry.yaml` adds or updates **one** official URL. Include authority. HTTP 200 is not enough.
+A pull request may touch wiki + catalog + corpus + manifest together when they describe **the same** legal or source event (one SIDOF/DOF/SAT publication). Do not mix unrelated reforms.
+
+Catalog-only PRs still need the official URL, authority, and `source_id`. HTTP 200 is not enough.
 
 Do not scrape [INEGI TIGIE–SCIAN](https://www.inegi.org.mx/app/tigie/) or [SNICE Mi Fracción](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html).
 

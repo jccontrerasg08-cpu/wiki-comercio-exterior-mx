@@ -1,11 +1,30 @@
+---
+document_id: rgce-2026-anexo-13
+source_ids:
+  - mx_sidof_5777199
+  - mx_sat_rgce_2026
+authority: derived_non_authoritative
+legal_checked_at: 2026-08-14
+---
+
 # Anexo 13 — Multas y Cantidades Actualizadas que Establece la Ley Aduanera y su Reglamento (RGCE 2026)
 
-**Fuente oficial:** DOF 27-12-2025 (publicado como parte de las RGCE para 2026 y Anexo 13)
+**Fuente oficial:** DOF 27-12-2025 (RGCE para 2026 y Anexo 13)
 **Vigencia:** 1 de enero de 2026 al 31 de diciembre de 2026
 **Fundamento:** Arts. 5o. de la Ley Aduanera y 2o. del Reglamento; regla 1.1.6. de las RGCE 2026 (la fracción XII —nueva en 2026— referencia estas cantidades)
 **Nota importante:** Los montos del Anexo 13 son de carácter informativo respecto de su ubicación; para sustento legal de resoluciones se deben consultar las publicaciones del DOF directamente (regla 1.1.1., RGCE 2026). El Anexo 13 se actualiza anualmente conforme al art. 17-A y 70 del CFF (INPC).
 **Incremento 2026 vs. 2025:** Aproximadamente **+13%** en la mayoría de los conceptos.
-**URL oficial:** El Anexo 13 se publicó dentro del documento de las RGCE para 2026, DOF 27-12-2025. No existe URL independiente; consultar la compilación: https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/compiladas/1raRMRGCEpara2026.pdf
+
+**URLs oficiales (primarias):**
+- SIDOF 5777199 (RGCE 2026 y Anexo 13): https://sidof.segob.gob.mx/notas/5777199
+- SAT RGCE 2026 PDF (`mx_sat_rgce_2026`): https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/rgce/ReglasGeneralesComercioExteriorpara2026.pdf
+  Copia local: `data/originals/sat/rgce-2026/ReglasGeneralesComercioExteriorpara2026.pdf`
+
+**URL secundaria:** 1ra RM compilado (usar si una modificación posterior cambió montos): https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/compiladas/1raRMRGCEpara2026.pdf
+
+**Hueco en originales:** no hay PDF SAT independiente de Anexo 13. El manifiesto RGCE 2026 salta `anexo_12` → `anexo_14`. El Anexo 13 2026 se publicó con las RGCE en el DOF 27-12-2025.
+
+Los montos de este digest deben cotejarse contra el Anexo 13 en DOF/SIDOF. Este archivo no es la gaceta.
 
 ---
 
