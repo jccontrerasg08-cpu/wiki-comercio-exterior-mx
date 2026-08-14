@@ -61,6 +61,17 @@ def _is_safe_relative_path(value: str) -> bool:
     return bool(value) and not path.is_absolute() and ".." not in path.parts
 
 
+def _resolve_logical_document_path(fragment_parent: Path, file_name: str) -> str:
+    """Normalize legacy manifest file paths to paths relative to originals/."""
+
+    file_path = PurePosixPath(file_name)
+    parent_path = PurePosixPath(fragment_parent.as_posix())
+    parent_parts = () if parent_path.as_posix() == "." else parent_path.parts
+    if parent_parts and file_path.parts[: len(parent_parts)] == parent_parts:
+        return file_path.as_posix()
+    return (parent_path / file_path).as_posix()
+
+
 def validate_registry(path: Path) -> list[ValidationFinding]:
     """Validate the structural contract of the canonical source registry."""
 
@@ -369,7 +380,7 @@ def validate_originals(originals_dir: Path) -> list[ValidationFinding]:
             if not isinstance(digest, str) or not _SHA256_RE.fullmatch(digest):
                 continue
 
-            expected_path = (fragment_parent / PurePosixPath(file_name)).as_posix()
+            expected_path = _resolve_logical_document_path(fragment_parent, file_name)
             actual_digest = checksums.get(expected_path)
             item_path = f"{fragment_path}:documents[{index}]"
             if actual_digest is None:
