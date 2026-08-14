@@ -8,7 +8,7 @@ A pull request may touch wiki + catalog + corpus + manifest together when they d
 
 Catalog-only PRs still need the official URL, authority, and `source_id`. HTTP 200 is not enough.
 
-Do not scrape [INEGI TIGIE–SCIAN](https://www.inegi.org.mx/app/tigie/) or [SNICE Mi Fracción](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html).
+Scrape [INEGI TIGIE–SCIAN](https://www.inegi.org.mx/app/tigie/) or [SNICE Mi Fracción](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html).
 
 ## Wiki pages (`docs/wiki/`)
 
