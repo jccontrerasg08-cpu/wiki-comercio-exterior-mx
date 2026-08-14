@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 import re
+import sys
 from collections import Counter
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any
@@ -432,3 +434,69 @@ def validate_repository_hygiene(root: Path) -> list[ValidationFinding]:
                 )
             )
     return findings
+
+
+def _validation_domains(root: Path) -> list[tuple[str, list[ValidationFinding]]]:
+    """Run each repository validation domain independently for clear reporting."""
+
+    return [
+        ("registry", validate_registry(root / "sources" / "registry.yaml")),
+        ("originals", validate_originals(root / "data" / "originals")),
+        ("repository-hygiene", validate_repository_hygiene(root)),
+    ]
+
+
+def validate_repository(root: Path) -> list[ValidationFinding]:
+    """Validate all currently enforced repository-integrity domains."""
+
+    findings = [
+        finding
+        for _, domain_findings in _validation_domains(root)
+        for finding in domain_findings
+    ]
+    return sorted(findings, key=lambda item: (item.path, item.code, item.message))
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    """CLI entry point for deterministic repository integrity validation."""
+
+    args = list(sys.argv[1:] if argv is None else argv)
+    if len(args) > 1:
+        print(
+            "Usage: python -m scripts.validate_repository [repository-root]",
+            file=sys.stderr,
+        )
+        return 2
+
+    root = (
+        Path(args[0]).expanduser().resolve()
+        if args
+        else Path(__file__).resolve().parents[1]
+    )
+    domains = _validation_domains(root)
+    findings = sorted(
+        (
+            finding
+            for _, domain_findings in domains
+            for finding in domain_findings
+        ),
+        key=lambda item: (item.path, item.code, item.message),
+    )
+
+    for name, domain_findings in domains:
+        print(f"{'PASS' if not domain_findings else 'FAIL'} {name}")
+
+    if findings:
+        for finding in findings:
+            print(
+                f"{finding.code} {finding.path} {finding.message}",
+                file=sys.stderr,
+            )
+        return 1
+
+    print("Repository validation passed")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
