@@ -2,8 +2,9 @@
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 from urllib.parse import urlparse
 
@@ -30,6 +31,18 @@ _REQUIRED_SOURCE_FIELDS = (
     "media_types",
     "harvest",
 )
+
+_REQUIRED_DOCUMENT_FIELDS = (
+    "id",
+    "file",
+    "url",
+    "sha256",
+    "bytes",
+    "license",
+    "redistribution",
+)
+
+_SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
 
 
 def _load_yaml(path: Path) -> tuple[Any | None, list[ValidationFinding]]:
@@ -115,5 +128,92 @@ def validate_registry(path: Path) -> list[ValidationFinding]:
                             f"URL host {parsed.hostname} missing from allowed_hosts",
                         )
                     )
+
+    return findings
+
+
+def validate_manifest(path: Path) -> list[ValidationFinding]:
+    """Validate one original-document manifest fragment."""
+
+    data, findings = _load_yaml(path)
+    if findings:
+        return findings
+    if not isinstance(data, dict) or not isinstance(data.get("documents"), list):
+        return [
+            ValidationFinding(
+                "MANIFEST_SHAPE", str(path), "expected top-level documents list"
+            )
+        ]
+
+    seen: set[str] = set()
+    for index, document in enumerate(data["documents"]):
+        item_path = f"{path}:documents[{index}]"
+        if not isinstance(document, dict):
+            findings.append(
+                ValidationFinding(
+                    "MANIFEST_DOCUMENT_SHAPE", item_path, "document must be a mapping"
+                )
+            )
+            continue
+
+        for field in _REQUIRED_DOCUMENT_FIELDS:
+            if field not in document:
+                findings.append(
+                    ValidationFinding(
+                        "MANIFEST_REQUIRED_FIELD", item_path, f"missing {field}"
+                    )
+                )
+
+        document_id = document.get("id")
+        if isinstance(document_id, str):
+            if document_id in seen:
+                findings.append(
+                    ValidationFinding(
+                        "MANIFEST_DUPLICATE_ID",
+                        item_path,
+                        f"duplicate id {document_id}",
+                    )
+                )
+            seen.add(document_id)
+
+        file_name = document.get("file")
+        if isinstance(file_name, str):
+            pure_path = PurePosixPath(file_name)
+            if pure_path.is_absolute() or ".." in pure_path.parts:
+                findings.append(
+                    ValidationFinding(
+                        "MANIFEST_FILE_PATH",
+                        item_path,
+                        f"file must be a safe relative path: {file_name}",
+                    )
+                )
+
+        url = document.get("url")
+        if isinstance(url, str):
+            parsed = urlparse(url)
+            if parsed.scheme != "https" or not parsed.netloc:
+                findings.append(
+                    ValidationFinding(
+                        "MANIFEST_URL",
+                        item_path,
+                        f"expected absolute HTTPS URL: {url}",
+                    )
+                )
+
+        sha256 = document.get("sha256")
+        if not isinstance(sha256, str) or not _SHA256_RE.fullmatch(sha256):
+            findings.append(
+                ValidationFinding(
+                    "MANIFEST_SHA256", item_path, "sha256 must be 64 lowercase hex chars"
+                )
+            )
+
+        byte_count = document.get("bytes")
+        if not isinstance(byte_count, int) or isinstance(byte_count, bool) or byte_count <= 0:
+            findings.append(
+                ValidationFinding(
+                    "MANIFEST_BYTES", item_path, "bytes must be a positive integer"
+                )
+            )
 
     return findings
