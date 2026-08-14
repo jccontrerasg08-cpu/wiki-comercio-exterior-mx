@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path, PurePosixPath
 from typing import Any
@@ -43,6 +44,7 @@ _REQUIRED_DOCUMENT_FIELDS = (
 )
 
 _SHA256_RE = re.compile(r"^[0-9a-f]{64}$")
+_CHECKSUM_LINE_RE = re.compile(r"^([0-9a-f]{64})  (.+)$")
 
 
 def _load_yaml(path: Path) -> tuple[Any | None, list[ValidationFinding]]:
@@ -52,6 +54,11 @@ def _load_yaml(path: Path) -> tuple[Any | None, list[ValidationFinding]]:
         return None, [
             ValidationFinding("YAML_INVALID", str(path), f"cannot parse YAML: {exc}")
         ]
+
+
+def _is_safe_relative_path(value: str) -> bool:
+    path = PurePosixPath(value)
+    return bool(value) and not path.is_absolute() and ".." not in path.parts
 
 
 def validate_registry(path: Path) -> list[ValidationFinding]:
@@ -177,16 +184,14 @@ def validate_manifest(path: Path) -> list[ValidationFinding]:
             seen.add(document_id)
 
         file_name = document.get("file")
-        if isinstance(file_name, str):
-            pure_path = PurePosixPath(file_name)
-            if pure_path.is_absolute() or ".." in pure_path.parts:
-                findings.append(
-                    ValidationFinding(
-                        "MANIFEST_FILE_PATH",
-                        item_path,
-                        f"file must be a safe relative path: {file_name}",
-                    )
+        if isinstance(file_name, str) and not _is_safe_relative_path(file_name):
+            findings.append(
+                ValidationFinding(
+                    "MANIFEST_FILE_PATH",
+                    item_path,
+                    f"file must be a safe relative path: {file_name}",
                 )
+            )
 
         url = document.get("url")
         if isinstance(url, str):
@@ -215,5 +220,173 @@ def validate_manifest(path: Path) -> list[ValidationFinding]:
                     "MANIFEST_BYTES", item_path, "bytes must be a positive integer"
                 )
             )
+
+    return findings
+
+
+def _load_checksums(path: Path) -> tuple[dict[str, str], list[ValidationFinding]]:
+    findings: list[ValidationFinding] = []
+    checksums: dict[str, str] = {}
+    try:
+        lines = path.read_text(encoding="utf-8").splitlines()
+    except (OSError, UnicodeError) as exc:
+        return {}, [
+            ValidationFinding(
+                "ORIGINALS_CHECKSUM_FORMAT", str(path), f"cannot read SHA256SUMS: {exc}"
+            )
+        ]
+
+    for line_number, line in enumerate(lines, start=1):
+        if not line:
+            continue
+        match = _CHECKSUM_LINE_RE.fullmatch(line)
+        item_path = f"{path}:{line_number}"
+        if match is None:
+            findings.append(
+                ValidationFinding(
+                    "ORIGINALS_CHECKSUM_FORMAT",
+                    item_path,
+                    "expected '<64 lowercase hex><two spaces><relative path>'",
+                )
+            )
+            continue
+        digest, relative_path = match.groups()
+        if not _is_safe_relative_path(relative_path):
+            findings.append(
+                ValidationFinding(
+                    "ORIGINALS_CHECKSUM_FORMAT",
+                    item_path,
+                    f"checksum path must be safe and relative: {relative_path}",
+                )
+            )
+            continue
+        if relative_path in checksums:
+            findings.append(
+                ValidationFinding(
+                    "ORIGINALS_DUPLICATE_CHECKSUM_PATH",
+                    item_path,
+                    f"duplicate checksum path {relative_path}",
+                )
+            )
+            continue
+        checksums[relative_path] = digest
+
+    return checksums, findings
+
+
+def validate_originals(originals_dir: Path) -> list[ValidationFinding]:
+    """Cross-check manifest fragments and logical release checksums."""
+
+    findings: list[ValidationFinding] = []
+    root_manifest = originals_dir / "manifest.yaml"
+    root_data, root_findings = _load_yaml(root_manifest)
+    findings.extend(root_findings)
+    if root_findings:
+        return findings
+    if not isinstance(root_data, dict) or not isinstance(root_data.get("fragments"), list):
+        return [
+            ValidationFinding(
+                "ORIGINALS_ROOT_SHAPE",
+                str(root_manifest),
+                "expected top-level fragments list",
+            )
+        ]
+
+    raw_fragments = root_data["fragments"]
+    fragment_counts = Counter(item for item in raw_fragments if isinstance(item, str))
+    listed_fragments: list[str] = []
+    for index, fragment_value in enumerate(raw_fragments):
+        item_path = f"{root_manifest}:fragments[{index}]"
+        if not isinstance(fragment_value, str) or not _is_safe_relative_path(fragment_value):
+            findings.append(
+                ValidationFinding(
+                    "ORIGINALS_ROOT_SHAPE",
+                    item_path,
+                    f"fragment must be a safe relative path: {fragment_value!r}",
+                )
+            )
+            continue
+        listed_fragments.append(fragment_value)
+        if fragment_counts[fragment_value] > 1:
+            findings.append(
+                ValidationFinding(
+                    "ORIGINALS_DUPLICATE_FRAGMENT",
+                    item_path,
+                    f"fragment listed more than once: {fragment_value}",
+                )
+            )
+
+    listed_set = set(listed_fragments)
+    actual_set = {
+        path.relative_to(originals_dir).as_posix()
+        for path in originals_dir.rglob("MANIFEST.yaml")
+    }
+
+    for fragment_value in sorted(listed_set - actual_set):
+        findings.append(
+            ValidationFinding(
+                "ORIGINALS_MISSING_FRAGMENT",
+                str(root_manifest),
+                f"listed fragment does not exist: {fragment_value}",
+            )
+        )
+
+    for fragment_value in sorted(actual_set - listed_set):
+        findings.append(
+            ValidationFinding(
+                "ORIGINALS_UNLISTED_FRAGMENT",
+                str(originals_dir / fragment_value),
+                "manifest fragment is not listed in root manifest",
+            )
+        )
+
+    checksums, checksum_findings = _load_checksums(originals_dir / "SHA256SUMS")
+    findings.extend(checksum_findings)
+
+    for fragment_value in listed_fragments:
+        fragment_path = originals_dir / fragment_value
+        if not fragment_path.is_file():
+            continue
+
+        manifest_findings = validate_manifest(fragment_path)
+        findings.extend(manifest_findings)
+
+        manifest_data, load_findings = _load_yaml(fragment_path)
+        if load_findings or not isinstance(manifest_data, dict):
+            continue
+        documents = manifest_data.get("documents")
+        if not isinstance(documents, list):
+            continue
+
+        fragment_parent = fragment_path.parent.relative_to(originals_dir)
+        for index, document in enumerate(documents):
+            if not isinstance(document, dict):
+                continue
+            file_name = document.get("file")
+            digest = document.get("sha256")
+            if not isinstance(file_name, str) or not _is_safe_relative_path(file_name):
+                continue
+            if not isinstance(digest, str) or not _SHA256_RE.fullmatch(digest):
+                continue
+
+            expected_path = (fragment_parent / PurePosixPath(file_name)).as_posix()
+            actual_digest = checksums.get(expected_path)
+            item_path = f"{fragment_path}:documents[{index}]"
+            if actual_digest is None:
+                findings.append(
+                    ValidationFinding(
+                        "ORIGINALS_CHECKSUM_MISSING",
+                        item_path,
+                        f"missing SHA256SUMS entry for {expected_path}",
+                    )
+                )
+            elif actual_digest != digest:
+                findings.append(
+                    ValidationFinding(
+                        "ORIGINALS_CHECKSUM_MISMATCH",
+                        item_path,
+                        f"manifest/checksum digest differs for {expected_path}",
+                    )
+                )
 
     return findings
