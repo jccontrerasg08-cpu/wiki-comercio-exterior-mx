@@ -15,6 +15,7 @@ PAGES = [
     "programas/prosec.md",
     "programas/immex.md",
     "aduana/pedimento-rgce.md",
+    "aduana/documentos.md",
     "logistica/logistica-internacional.md",
     "contribuciones/valor-en-aduana.md",
     "fundamentos/padron-importadores.md",

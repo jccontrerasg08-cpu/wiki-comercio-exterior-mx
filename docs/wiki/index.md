@@ -34,7 +34,7 @@ Estado: **cubierto** hay página o corpus. **solo catálogo** hay URL, sin texto
 | Tipos de importación | [Pedimento y RGCE](aduana/pedimento-rgce.md), [IMMEX](programas/immex.md); corpus `data/corpus/ley-aduanera.md` (art. 90) y `anexo-29-regimenes-prohibidos.md` | [Ley Aduanera](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf), [RGCE 2026](https://sidof.segob.gob.mx/notas/5777199) | cubierto como regímenes legales, no como "estrategia comercial" |
 | Estrategias de importación | — | — | hueco |
 | Aduana | [ANAM](aduana/anam.md); corpus anexos 3, 4, 21 | [ANAM](https://anam.gob.mx/), SIDOF RGCE | cubierto (autoridad y recintos). ANAM no es una agencia aduanal privada |
-| Documentos | [Pedimento y RGCE](aduana/pedimento-rgce.md); corpus `anexo-01-formatos-modelos.md`, `anexo-22.md`; originales `data/originals/vucem/` (manifestación de valor) | SIDOF anexos 1 y 22, [VUCEM](https://www.ventanillaunica.gob.mx/) | cubierto para documentos aduaneros. Hueco para plantillas de contrato mercantil |
+| Documentos | [Documentos de comercio exterior](aduana/documentos.md), [Pedimento y RGCE](aduana/pedimento-rgce.md); corpus `anexo-01-formatos-modelos.md`, `anexo-22.md`; originales `data/originals/vucem/` | SIDOF anexos 1 y 22, [VUCEM](https://www.ventanillaunica.gob.mx/) | cubierto para documentos aduaneros. Hueco para plantillas de contrato mercantil |
 | Cálculo de costos | [Valor en aduana](contribuciones/valor-en-aduana.md), [Aranceles](contribuciones/aranceles.md) | LA arts. 64-78, [LIGIE](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf) | cubierto para base gravable y arancel. Hueco para costo-beneficio o precio de reventa |
 | Contribuciones e impuestos | [Aranceles](contribuciones/aranceles.md), [Cuotas compensatorias](contribuciones/cuotas-compensatorias.md); corpus `anexo-13-multas-cantidades.md`, `anexo-27-fracciones-sin-iva.md`; RMF en `data/originals/sat/rmf-2026/` | LIGIE, RGCE, SAT RMF | cubierto (IGI, IVA en aduana, DTA, cuotas). RMF está en originales, sin página en esta wiki |
 | Cómo elegir agencia aduanal | [Pedimento y RGCE](aduana/pedimento-rgce.md); corpus LA arts. 54, 159, 167-D y `criterios-anam-sat.md` | [Ley Aduanera](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf) | cubierto como patente, agencia aduanal y responsabilidades. Hueco como directorio de despachadores |
@@ -62,7 +62,7 @@ Estado: **cubierto** hay página o corpus. **solo catálogo** hay URL, sin texto
 | Logística internacional | [Logística internacional](logistica/logistica-internacional.md) | ANAM | cubierto (figura). No es un diplomado de cadena de suministro |
 | Clasificación arancelaria | [TIGIE y NICO](clasificacion/tigie-nico.md), [Sistema Armonizado](clasificacion/sistema-armonizado.md); corpus `tigie-nico-notas.md`, `anexo-06-consejo-clasificacion-arancelaria.md` | LIGIE, [OMA nomenclatura](https://www.wcoomd.org/en/topics/nomenclature.aspx) | cubierto en TIGIE. Notas explicativas del SA: solo catálogo |
 | Operación aduanera | [Pedimento y RGCE](aduana/pedimento-rgce.md), [ANAM](aduana/anam.md); originales `data/originals/vucem/` | SIDOF RGCE, VUCEM | cubierto |
-| Documentos de comercio exterior | corpus Anexo 1 y Anexo 22; VUCEM manifestación de valor | SIDOF, VUCEM | cubierto |
+| Documentos de comercio exterior | [Documentos de comercio exterior](aduana/documentos.md); corpus Anexo 1 y Anexo 22; VUCEM | SIDOF, VUCEM | cubierto |
 | Incoterms | [Incoterms](logistica/incoterms.md) | ICC (tres URLs arriba) | solo catálogo |
 
 ## Contents
@@ -82,6 +82,7 @@ Un tema, una carpeta. No hay un quinto nivel.
 
 ## Aduana
 
+- [Documentos de comercio exterior](aduana/documentos.md) - Pedimento, factura, transporte, MV, origen y RRNA.
 - [Pedimento y RGCE](aduana/pedimento-rgce.md) - Declaración aduanera y anexos SIDOF.
 - [ANAM](aduana/anam.md) - Agencia Nacional de Aduanas (autoridad), no agencia aduanal privada.
 

@@ -27,6 +27,6 @@ Lista 2025 y huecos de iframe: `docs/catalog/mexico/rgce.md`. Catálogo: `docs/c
 
 ## Ver también
 
-[IMMEX](../programas/immex.md) · [Valor en aduana](../contribuciones/valor-en-aduana.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md) · [ANAM](anam.md)
+[Documentos de comercio exterior](documentos.md) · [IMMEX](../programas/immex.md) · [Valor en aduana](../contribuciones/valor-en-aduana.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md) · [ANAM](anam.md)
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.
