@@ -1,6 +1,8 @@
+import io
 import shutil
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 
 from scripts import validate_repository as validator
@@ -79,6 +81,24 @@ class RepositoryValidatorTests(unittest.TestCase):
         validate_hygiene = getattr(validator, "validate_repository_hygiene", None)
         self.assertIsNotNone(validate_hygiene, "validate_repository_hygiene must exist")
         self.assertEqual(validate_hygiene(ROOT), [])
+
+    def test_real_repository_passes_composed_validator(self):
+        validate_all = getattr(validator, "validate_repository", None)
+        self.assertIsNotNone(validate_all, "validate_repository must exist")
+        self.assertEqual(validate_all(ROOT), [])
+
+    def test_cli_reports_successful_domains(self):
+        main = getattr(validator, "main", None)
+        self.assertIsNotNone(main, "main must exist")
+        stdout = io.StringIO()
+        with redirect_stdout(stdout):
+            exit_code = main([str(ROOT)])
+        self.assertEqual(exit_code, 0)
+        output = stdout.getvalue()
+        self.assertIn("PASS registry", output)
+        self.assertIn("PASS originals", output)
+        self.assertIn("PASS repository-hygiene", output)
+        self.assertIn("Repository validation passed", output)
 
 
 if __name__ == "__main__":
