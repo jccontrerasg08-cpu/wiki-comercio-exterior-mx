@@ -205,7 +205,31 @@ def build_report(root: Path) -> dict[str, object]:
 
 
 def render_json(report: dict[str, object]) -> str:
-    return json.dumps(report, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    """Render a compact machine-readable governance snapshot.
+
+    The internal report retains full per-page metadata for tests and Markdown rendering.
+    The committed JSON intentionally stores only aggregate metrics and pages that need
+    attention, avoiding a second verbose copy of the canonical page metadata registry.
+    """
+
+    attention_queue = [
+        {
+            "path": page["path"],
+            "section": page["section"],
+            "risk_reasons": page["risk_reasons"],
+        }
+        for page in report["pages"]
+        if page["risk_reasons"]
+    ]
+    snapshot = {
+        "schema_version": report["schema_version"],
+        "latest_reviewed_at": report["latest_reviewed_at"],
+        "summary": report["summary"],
+        "status_counts": report["status_counts"],
+        "sections": report["sections"],
+        "attention_queue": attention_queue,
+    }
+    return json.dumps(snapshot, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
 
 
 def _pct(value: int, total: int) -> str:
@@ -332,7 +356,10 @@ def _summary_line(report: dict[str, object]) -> str:
         f"reviewed={summary['legally_reviewed_pages']} "
         f"pending={summary['pending_legal_review_pages']} "
         f"non_current={summary['non_current_corpus_pages']} "
-        f"attention={summary['pages_needing_attention']}"
+        f"attention={summary['pages_needing_attention']} "
+        f"sourced={summary['pages_with_sources']} "
+        f"instrumented={summary['pages_with_instruments']} "
+        f"unknown_source={summary['unknown_source_status_pages']}"
     )
 
 
@@ -347,9 +374,14 @@ def run_check(root: Path) -> CheckResult:
 
     try:
         report = build_report(root)
+    except (OSError, UnicodeError, yaml.YAMLError, ValueError) as exc:
+        return CheckResult(1, f"coverage report invalid: {exc}")
+    summary = _summary_line(report)
+
+    try:
         policy = _load_policy(root)
     except (OSError, UnicodeError, yaml.YAMLError, ValueError) as exc:
-        return CheckResult(1, f"coverage configuration invalid: {exc}")
+        return CheckResult(1, summary + f"\ncoverage configuration invalid: {exc}")
 
     findings = list(evaluate_policy(report, policy))
     expected = {
@@ -365,7 +397,6 @@ def run_check(root: Path) -> CheckResult:
         if actual != expected_text:
             findings.append(f"generated drift: {relative_path.as_posix()}")
 
-    summary = _summary_line(report)
     if findings:
         return CheckResult(1, summary + "\n" + "\n".join(sorted(findings)))
     return CheckResult(0, summary + "\ncoverage policy and generated outputs are current")
