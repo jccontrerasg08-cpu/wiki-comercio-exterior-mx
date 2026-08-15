@@ -59,25 +59,35 @@ jobs:
           python -m scripts.legal_watch --date "$(TZ=America/Mexico_City date +%F)" --lookback-days 4 --output legal-watch.json
           count="$(python -c 'import json; print(len(json.load(open("legal-watch.json", encoding="utf-8"))))')"
           echo "candidates=$count" >> "$GITHUB_OUTPUT"
+      - name: Discover SNICE document intelligence
+        id: snice
+        continue-on-error: true
+        run: >-
+          python -m scripts.snice_discovery
+          --output-dir snice-intelligence
       - name: Upload monitoring reports
+        if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: official-source-health-${{ github.run_id }}
           path: |
             source-health.json
             legal-watch.json
+            snice-intelligence/*.json
             .source-health-state.yaml
           retention-days: 14
           if-no-files-found: warn
       - name: Open or update one review issue
-        if: steps.probe.outcome == 'failure' || steps.watch.outcome == 'failure' || steps.watch.outputs.candidates != '0'
+        if: steps.probe.outcome == 'failure' || steps.watch.outcome == 'failure' || steps.snice.outcome == 'failure' || steps.watch.outputs.candidates != '0'
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
           CANDIDATE_COUNT: ${{ steps.watch.outputs.candidates }}
+          SNICE_OUTCOME: ${{ steps.snice.outcome }}
         with:
           script: |
             const title = "[legal-monitor] Official source review required";
-            const body = `The bounded monitor found a transport problem, a discovery problem, or ${process.env.CANDIDATE_COUNT || "new"} SIDOF candidate(s). Review run ${context.runId}. Do not change legal status from this result alone.`;
+            const snice = process.env.SNICE_OUTCOME === "failure" ? " SNICE document discovery also failed." : "";
+            const body = `The bounded monitor found a transport problem, a discovery problem, or ${process.env.CANDIDATE_COUNT || "new"} SIDOF candidate(s).${snice} Review run ${context.runId}. Do not change legal status from this result alone.`;
             const { data } = await github.rest.issues.listForRepo({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -101,5 +111,5 @@ jobs:
               });
             }
       - name: Preserve technical failure status
-        if: steps.probe.outcome == 'failure' || steps.watch.outcome == 'failure'
+        if: steps.probe.outcome == 'failure' || steps.watch.outcome == 'failure' || steps.snice.outcome == 'failure'
         run: exit 1
