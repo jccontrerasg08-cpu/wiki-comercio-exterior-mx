@@ -24,7 +24,7 @@ REGISTRY = """sources:
     note_id: "1"
     authority: DOF
     evidence_class: primary_legal
-    instrument_id: law_one
+    instrument_ids: [law_one, program_one]
     publication_date: 2026-01-01
     allowed_hosts: [sidof.segob.gob.mx]
     media_types: [text/html]
@@ -38,6 +38,17 @@ INSTRUMENTS = """instruments:
     title: Law one
     instrument_type: law
     status: current
+    publication_date: 2026-01-01
+    effective_from: 2026-01-02
+    effective_to: null
+    current_through: 2026-01-02
+    consolidated_source_id: dof_source
+    events: []
+  - id: program_one
+    jurisdiction: MEX
+    title: Program one
+    instrument_type: program
+    status: partial
     publication_date: 2026-01-01
     effective_from: 2026-01-02
     effective_to: null
@@ -59,6 +70,8 @@ class CatalogGenerationTests(unittest.TestCase):
             second = render_registry(registry, instruments)
         self.assertEqual(first, second)
         self.assertLess(first.index("## DOF"), first.index("## SNICE"))
+        self.assertIn("law_one / current", first)
+        self.assertIn("program_one / partial", first)
         self.assertTrue(first.endswith("\n"))
         self.assertFalse(first.endswith("\n\n"))
 

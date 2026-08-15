@@ -61,6 +61,28 @@ class SchemaValidationTests(unittest.TestCase):
         findings = validate_instance(fixture, schema, "fixture")
         self.assertIn("SCHEMA_ADDITIONAL_PROPERTIES", {f.code for f in findings})
 
+    def test_primary_source_can_reference_multiple_instruments(self):
+        schema = load_local_schema(ROOT, "source.schema.json")
+        findings = validate_instance(
+            {
+                "id": "mx_sidof_joint_decree",
+                "jurisdiction": "MEX",
+                "title": "Joint legal decree",
+                "url": "https://sidof.segob.gob.mx/notas/1234567",
+                "note_id": "1234567",
+                "authority": "DOF / SIDOF",
+                "evidence_class": "primary_legal",
+                "instrument_ids": ["mx_ligie", "mx_programa_prosec"],
+                "publication_date": "2026-04-23",
+                "allowed_hosts": ["sidof.segob.gob.mx"],
+                "media_types": ["text/html"],
+                "harvest": False,
+            },
+            schema,
+            "source",
+        )
+        self.assertEqual(findings, [])
+
     def test_instrument_schema_accepts_local_event_relations(self):
         schema = load_local_schema(ROOT, "instrument.schema.json")
         findings = validate_instance(

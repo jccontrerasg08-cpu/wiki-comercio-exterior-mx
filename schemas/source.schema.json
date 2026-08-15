@@ -16,6 +16,12 @@
       "enum": ["primary_legal", "official_consolidated", "official_administrative", "official_data", "international_official", "catalog_only", "official_statistics", "official_operational", "intergovernmental", "secondary"]
     },
     "instrument_id": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+    "instrument_ids": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+      "minItems": 1,
+      "uniqueItems": true
+    },
     "publication_date": {"type": "string", "format": "date"},
     "content_valid_from": {"type": "string", "format": "date"},
     "content_valid_to": {"type": ["string", "null"], "format": "date"},
@@ -27,6 +33,9 @@
     "probe": {"$ref": "#/$defs/probe"}
   },
   "allOf": [
+    {
+      "not": {"required": ["instrument_id", "instrument_ids"]}
+    },
     {
       "if": {"properties": {"harvest": {"const": true}}, "required": ["harvest"]},
       "then": {"required": ["cadence_days", "probe"]}

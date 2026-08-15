@@ -34,6 +34,19 @@ class TemporalGraphTests(unittest.TestCase):
             ),
         )
 
+    def test_april_2026_joint_decree_amends_ligie_and_prosec(self):
+        instruments = {
+            item["id"]: item
+            for item in load_instruments(ROOT / "sources" / "instruments.yaml")
+        }
+        source_id = "mx_sidof_ligie_prosec_20260423"
+        cutoff = date(2026, 8, 15)
+        self.assertIn(source_id, sources_effective_on(instruments["mx_ligie"], cutoff))
+        self.assertIn(
+            source_id,
+            sources_effective_on(instruments["mx_programa_prosec"], cutoff),
+        )
+
     def test_real_graph_is_valid(self):
         self.assertEqual(validate_temporal_graph(ROOT), [])
 

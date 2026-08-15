@@ -31,6 +31,17 @@ def _display(value: object) -> str:
     return str(value).replace("|", "\\|")
 
 
+def _instrument_ids(source: dict[str, Any]) -> tuple[str, ...]:
+    declared: list[str] = []
+    single = source.get("instrument_id")
+    if isinstance(single, str):
+        declared.append(single)
+    multiple = source.get("instrument_ids")
+    if isinstance(multiple, list):
+        declared.extend(item for item in multiple if isinstance(item, str))
+    return tuple(dict.fromkeys(declared))
+
+
 def render_registry(registry_path: Path, instruments_path: Path) -> str:
     """Render one stable Markdown catalog grouped by authority."""
 
@@ -70,10 +81,13 @@ def render_registry(registry_path: Path, instruments_path: Path) -> str:
                 str(item.get("id", "")),
             ),
         ):
-            instrument_id = source.get("instrument_id")
-            instrument = _display(instrument_id)
-            if isinstance(instrument_id, str) and instrument_id in statuses:
-                instrument = f"{instrument_id} / {statuses[instrument_id]}"
+            instrument_parts = []
+            for instrument_id in _instrument_ids(source):
+                instrument = _display(instrument_id)
+                if instrument_id in statuses:
+                    instrument = f"{instrument_id} / {statuses[instrument_id]}"
+                instrument_parts.append(instrument)
+            instrument_display = "<br>".join(instrument_parts) if instrument_parts else "-"
             title = _display(source.get("title"))
             source_id = _display(source.get("id"))
             url = _display(source.get("url"))
@@ -84,7 +98,7 @@ def render_registry(registry_path: Path, instruments_path: Path) -> str:
                         f"`{source_id}`<br>{title}",
                         _display(source.get("jurisdiction")),
                         _display(source.get("evidence_class")),
-                        instrument,
+                        instrument_display,
                         _display(source.get("harvest")),
                         _display(source.get("cadence_days")),
                         _display(source.get("publication_date")),

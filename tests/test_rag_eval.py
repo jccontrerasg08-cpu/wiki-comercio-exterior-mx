@@ -1,5 +1,7 @@
+import tempfile
 import unittest
 from datetime import date
+from pathlib import Path
 
 from scripts.rag_eval import documents_from_repository, evaluate_cases, rank_documents, retrieve_case, tokenize
 
@@ -66,14 +68,42 @@ class RagEvaluationTests(unittest.TestCase):
         self.assertLess(report.temporal_accuracy, 1.0)
 
     def test_mutable_current_consolidation_is_not_backdated(self):
-        documents = documents_from_repository(__import__("pathlib").Path(__file__).resolve().parents[1])
+        documents = documents_from_repository(Path(__file__).resolve().parents[1])
         ranked = rank_documents("Ley de Comercio Exterior vigente", documents, date(1994, 1, 1), 10)
         self.assertNotIn("mx_diputados_lce_current", [item.source_id for item in ranked])
 
     def test_repository_documents_include_governed_content(self):
-        documents = documents_from_repository(__import__("pathlib").Path(__file__).resolve().parents[1])
+        documents = documents_from_repository(Path(__file__).resolve().parents[1])
         rla = next(item for item in documents if item["source_id"] == "mx_sidof_rla_reform_20260223")
         self.assertIn("agencias aduanales", rla["text"].casefold())
+
+    def test_repository_documents_exclude_stale_and_pending_text(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            (root / "sources").mkdir()
+            (root / "docs").mkdir()
+            (root / "sources" / "registry.yaml").write_text(
+                """sources:\n  - id: mx_example_source\n    jurisdiction: MEX\n    title: Example source\n    url: https://example.gob.mx/source\n    authority: Example\n    evidence_class: official_consolidated\n    instrument_id: mx_example_instrument\n    publication_date: 2026-01-01\n    content_valid_from: 2026-01-01\n    allowed_hosts: [example.gob.mx]\n    media_types: [text/html]\n    harvest: false\n""",
+                encoding="utf-8",
+            )
+            (root / "sources" / "instruments.yaml").write_text(
+                """instruments:\n  - id: mx_example_instrument\n    jurisdiction: MEX\n    title: Example instrument\n    instrument_type: law\n    status: current\n    publication_date: 2026-01-01\n    effective_from: 2026-01-01\n    effective_to: null\n    current_through: 2026-08-15\n    consolidated_source_id: mx_example_source\n    events: []\n""",
+                encoding="utf-8",
+            )
+            (root / "sources" / "page_metadata.yaml").write_text(
+                """pages:\n  - path: docs/reviewed.md\n    source_ids: [mx_example_source]\n    source_status: current\n    legal_review_status: reviewed\n    corpus_status: current\n  - path: docs/stale.md\n    source_ids: [mx_example_source]\n    source_status: current\n    legal_review_status: reviewed\n    corpus_status: stale\n  - path: docs/pending.md\n    source_ids: [mx_example_source]\n    source_status: current\n    legal_review_status: pending_review\n    corpus_status: current\n""",
+                encoding="utf-8",
+            )
+            (root / "docs" / "reviewed.md").write_text("eligible reviewed phrase", encoding="utf-8")
+            (root / "docs" / "stale.md").write_text("stale forbidden phrase", encoding="utf-8")
+            (root / "docs" / "pending.md").write_text("pending forbidden phrase", encoding="utf-8")
+
+            documents = documents_from_repository(root)
+            text = next(item for item in documents if item["source_id"] == "mx_example_source")["text"]
+
+        self.assertIn("eligible reviewed phrase", text)
+        self.assertNotIn("stale forbidden phrase", text)
+        self.assertNotIn("pending forbidden phrase", text)
 
     def test_retrieval_result_emits_citations_and_abstention_disclaimer(self):
         cited = retrieve_case(CASES[1], DOCUMENTS, k=3)

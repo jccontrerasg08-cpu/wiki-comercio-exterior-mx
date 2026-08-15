@@ -73,6 +73,16 @@ def _iso_date(value: object) -> date:
     return date.fromisoformat(str(value))
 
 
+def _page_is_currently_retrievable(page: dict) -> bool:
+    """Gate current-answer text on explicit review and freshness metadata."""
+
+    if page.get("legal_review_status") != "reviewed":
+        return False
+    if page.get("source_status") != "current":
+        return False
+    return page.get("corpus_status") in {None, "current", "not_applicable"}
+
+
 def rank_documents(
     query: str, documents: list[dict], cutoff: date, k: int
 ) -> tuple[RankedDocument, ...]:
@@ -188,7 +198,7 @@ def documents_from_repository(root: Path) -> list[dict]:
     metadata = yaml.safe_load((root / "sources" / "page_metadata.yaml").read_text(encoding="utf-8"))
     governed_text: dict[str, list[str]] = {}
     for page in metadata.get("pages", []):
-        if not isinstance(page, dict):
+        if not isinstance(page, dict) or not _page_is_currently_retrievable(page):
             continue
         path = root / str(page.get("path", ""))
         if not path.is_file() or path.suffix != ".md":
@@ -205,7 +215,13 @@ def documents_from_repository(root: Path) -> list[dict]:
             if consolidated_source.get("evidence_class") == "official_consolidated"
             else instrument["effective_from"]
         )
-        source_ids = [(instrument["consolidated_source_id"], consolidated_start, consolidated_source.get("content_valid_to") or instrument["effective_to"])]
+        source_ids = [
+            (
+                instrument["consolidated_source_id"],
+                consolidated_start,
+                consolidated_source.get("content_valid_to") or instrument["effective_to"],
+            )
+        ]
         source_ids.extend(
             (event["source_id"], event["effective_from"], event.get("effective_to"))
             for event in instrument.get("events", [])
