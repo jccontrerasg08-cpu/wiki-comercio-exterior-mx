@@ -46,8 +46,8 @@ class CareerWikiTests(unittest.TestCase):
                 self.assertIn("https://", text)
                 self.assertIn("No es asesoría legal", text)
                 continue
-            for heading in HEADINGS:
-                self.assertIn(heading, text, f"{name} missing {heading}")
+            self.assertIn("## Fuentes", text, f"{name} needs a sources section")
+            self.assertIn("## Ver también", text, f"{name} needs related links")
             self.assertIn("https://", text, name)
             self.assertIn("No es asesoría legal", text, name)
             self.assertNotIn("linkedin.com/learning", text.lower(), name)

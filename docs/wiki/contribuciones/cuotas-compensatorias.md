@@ -61,3 +61,7 @@ La omisión de una cuota que sí resulte aplicable puede generar consecuencias a
 [Aranceles](aranceles.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [PAMA e infracciones](../aduana/infracciones-pama.md)
 
 > Para decidir si una cuota aplica, usa la resolución vigente y sus modificaciones. Esta página no sustituye la determinación jurídica de alcance.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.

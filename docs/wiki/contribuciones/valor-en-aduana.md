@@ -139,3 +139,7 @@ Antes de cerrar el valor, pregunta:
 [Manifestación de Valor](../aduana/manifestacion-valor.md) · [Incoterms® 2020](../logistica/incoterms.md) · [Aranceles](aranceles.md) · [Documentos de comercio exterior](../aduana/documentos.md) · [Proceso de despacho](../aduana/proceso-despacho.md)
 
 > La valoración es una determinación jurídica y documental. Cuando el método de transacción no sea aceptable, debe aplicarse la secuencia legal; no se debe “forzar” la factura para conservar el método 1.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.

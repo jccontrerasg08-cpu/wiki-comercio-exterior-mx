@@ -56,3 +56,7 @@ De la misma forma, que una regla asigne al vendedor una obligación de despacho 
 [Valor en aduana](../contribuciones/valor-en-aduana.md) · [Manifestación de valor](../aduana/manifestacion-valor.md) · [Logística internacional](logistica-internacional.md) · [Pagos internacionales](pagos-internacionales.md)
 
 > Incoterms® es marca de ICC. Para interpretar una regla contractual debe consultarse su publicación oficial; esta página sólo conecta el concepto con el marco aduanero mexicano.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.

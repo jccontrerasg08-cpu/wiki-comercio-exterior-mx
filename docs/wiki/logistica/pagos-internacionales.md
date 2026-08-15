@@ -61,3 +61,7 @@ UCP 600 e Incoterms® son publicaciones de ICC; esta wiki no reproduce su texto 
 [Incoterms](incoterms.md) · [Documentos de comercio exterior](../aduana/documentos.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Reglas de origen](../programas/reglas-de-origen.md)
 
 > El pago bancario y el despacho aduanero deben revisarse como capas relacionadas pero distintas. La aceptación bancaria de documentos no certifica cumplimiento aduanero.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.

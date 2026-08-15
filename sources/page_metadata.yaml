@@ -35,13 +35,14 @@ pages:
     path: docs/wiki/aduana/anam.md
     title: Agencia Nacional de Aduanas de Mexico
     topic: aduana
-    source_ids: [mx_gob_anam]
+    source_ids: [mx_gob_anam, mx_diputados_ley_aduanera, mx_sidof_ventanilla_unica_20260504]
+    instrument_ids: [mx_ley_aduanera, mx_ventanilla_unica_2026]
   - <<: *wiki
     path: docs/wiki/aduana/documentos.md
     title: Documentos para el despacho aduanero
     topic: aduana
-    source_ids: [mx_diputados_ley_aduanera]
-    instrument_ids: [mx_ley_aduanera]
+    source_ids: [mx_diputados_ley_aduanera, mx_sidof_rgce_2026, mx_sidof_ventanilla_unica_20260504]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026, mx_ventanilla_unica_2026]
   - <<: *wiki
     path: docs/wiki/aduana/pedimento-rgce.md
     title: Pedimento y RGCE
@@ -69,7 +70,7 @@ pages:
     path: docs/wiki/contribuciones/aranceles.md
     title: Aranceles
     topic: contribuciones
-    source_ids: [mx_diputados_ligie_current]
+    source_ids: [mx_diputados_ligie_current, mx_sidof_ligie_prosec_20260423]
     instrument_ids: [mx_ligie]
   - <<: *wiki
     path: docs/wiki/contribuciones/cuotas-compensatorias.md
@@ -81,7 +82,7 @@ pages:
     path: docs/wiki/contribuciones/valor-en-aduana.md
     title: Valor en aduana
     topic: contribuciones
-    source_ids: [mx_diputados_ley_aduanera]
+    source_ids: [mx_diputados_ley_aduanera, global_wto_customs_valuation]
     instrument_ids: [mx_ley_aduanera]
   - <<: *wiki
     path: docs/wiki/fundamentos/padron-importadores.md
@@ -102,6 +103,7 @@ pages:
     path: docs/wiki/logistica/pagos-internacionales.md
     title: Pagos internacionales
     topic: logistica
+    source_ids: [global_icc_ucp_600]
   - <<: *wiki
     path: docs/wiki/programas/immex.md
     title: Programa IMMEX
@@ -463,8 +465,8 @@ pages:
     path: docs/wiki/aduana/cambios-2026.md
     title: Cambios relevantes de 2026
     topic: aduana
-    source_ids: [mx_sidof_rla_reform_20260223, mx_sidof_lce_reform_20260501, mx_sidof_rgce_2026_mod1, mx_sidof_reglas_se_mod_20260529]
-    instrument_ids: [mx_reglamento_ley_aduanera, mx_ley_comercio_exterior, mx_rgce_2026, mx_reglas_criterios_se]
+    source_ids: [mx_sidof_rla_reform_20260223, mx_sidof_lineamientos_159bis_20260331, mx_sidof_ligie_prosec_20260423, mx_sidof_lce_reform_20260501, mx_sidof_ventanilla_unica_20260504, mx_sidof_rgce_2026_mod1, mx_sidof_reglas_se_mod_20260529]
+    instrument_ids: [mx_reglamento_ley_aduanera, mx_lineamientos_159bis_2026, mx_ligie, mx_programa_prosec, mx_ley_comercio_exterior, mx_ventanilla_unica_2026, mx_rgce_2026, mx_reglas_criterios_se]
     source_status: current
     legal_review_status: reviewed
     current_through: 2026-08-15
@@ -477,3 +479,52 @@ pages:
     source_status: current
     legal_review_status: reviewed
     current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/aduana/vucem.md
+    title: Ventanilla Unica y VUCEM en 2026
+    topic: aduana
+    source_ids: [mx_sidof_ventanilla_unica_20260504, mx_vucem_portal, mx_diputados_ley_aduanera]
+    instrument_ids: [mx_ventanilla_unica_2026, mx_ley_aduanera]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/aduana/agente-agencia-aduanal.md
+    title: Agente aduanal y agencia aduanal
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_diputados_reg_ley_aduanera, mx_sidof_rla_reform_20260223, mx_sidof_lineamientos_159bis_20260331]
+    instrument_ids: [mx_ley_aduanera, mx_reglamento_ley_aduanera, mx_lineamientos_159bis_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/aduana/manifestacion-valor.md
+    title: Manifestacion de Valor
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_sidof_rgce_2026, mx_sidof_ventanilla_unica_20260504, mx_vucem_portal]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026, mx_ventanilla_unica_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/aduana/proceso-despacho.md
+    title: Proceso de despacho aduanero
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_sidof_rgce_2026, mx_gob_anam, mx_vucem_portal]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/aduana/infracciones-pama.md
+    title: Infracciones embargo precautorio y PAMA
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_sidof_rgce_2026]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed

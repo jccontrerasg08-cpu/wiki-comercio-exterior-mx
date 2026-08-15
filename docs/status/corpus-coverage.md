@@ -9,22 +9,22 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 70 |
-| Wiki | 27 |
+| Páginas gobernadas | 75 |
+| Wiki | 32 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 10 (14.3%) |
-| Con fuente referenciada | 63 (90.0%) |
-| Con instrumento referenciado | 60 (85.7%) |
-| Revisión jurídica `reviewed` | 10 (14.3%) |
+| Elegibles por estado para recuperación vigente | 15 (20.0%) |
+| Con fuente referenciada | 69 (92.0%) |
+| Con instrumento referenciado | 66 (88.0%) |
+| Revisión jurídica `reviewed` | 15 (20.0%) |
 | Requieren atención | 62 |
-| Fuentes distintas referenciadas | 38 |
-| Instrumentos distintos referenciados | 18 |
+| Fuentes distintas referenciadas | 44 |
+| Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección
 
 | Sección | Total | Elegibles | Reviewed | Atención |
 |---|---:|---:|---:|---:|
-| `aduana` | 5 | 2 | 2 | 3 |
+| `aduana` | 10 | 7 | 7 | 3 |
 | `clasificacion` | 3 | 0 | 0 | 3 |
 | `contribuciones` | 4 | 1 | 1 | 3 |
 | `corpus` | 43 | 2 | 2 | 43 |
@@ -40,7 +40,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `current` | 50 |
+| `current` | 55 |
 | `partial` | 19 |
 | `unknown` | 1 |
 
@@ -48,7 +48,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 28 |
+| `not_applicable` | 33 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -57,14 +57,14 @@
 |---|---:|
 | `not_applicable` | 1 |
 | `pending_review` | 59 |
-| `reviewed` | 10 |
+| `reviewed` | 15 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 28 |
+| `not_applicable` | 33 |
 | `partial` | 39 |
 | `stale` | 1 |
 
@@ -117,7 +117,7 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `data/corpus/requisitos-pais-ejemplo.csv` | `corpus` | `missing_source_reference`, `source_not_current` |
 | `data/corpus/rgce-2026.md` | `corpus` | `extraction_incomplete` |
 | `data/corpus/tigie-nico-notas.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `docs/wiki/aduana/anam.md` | `aduana` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
+| `docs/wiki/aduana/anam.md` | `aduana` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/aduana/documentos.md` | `aduana` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/aduana/pedimento-rgce.md` | `aduana` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/clasificacion/rrna.md` | `clasificacion` | `pending_legal_review`, `source_not_current` |
@@ -130,7 +130,7 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `docs/wiki/index.md` | `wiki` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/incoterms.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/logistica-internacional.md` | `logistica` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
-| `docs/wiki/logistica/pagos-internacionales.md` | `logistica` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
+| `docs/wiki/logistica/pagos-internacionales.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/drawback.md` | `programas` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/immex.md` | `programas` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/prosec.md` | `programas` | `pending_legal_review`, `source_not_current` |

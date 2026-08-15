@@ -47,3 +47,7 @@ El NICO ayuda a identificar estadísticamente la mercancía dentro de la fracci�
 [TIGIE y NICO](../clasificacion/tigie-nico.md) · [Valor en aduana](valor-en-aduana.md) · [TLC y T-MEC](../programas/tlc-tmec.md) · [PROSEC](../programas/prosec.md) · [Cuotas compensatorias](cuotas-compensatorias.md)
 
 > La tasa debe verificarse con la versión normativa aplicable a la fecha de la operación. Una tasa encontrada en una tabla no prueba por sí sola que se cumplan origen, programa o demás requisitos.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.

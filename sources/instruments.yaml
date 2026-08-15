@@ -370,3 +370,26 @@ instruments:
     current_through: 2026-08-15
     consolidated_source_id: sice_alianza_pacifico
     events: []
+  - id: mx_lineamientos_159bis_2026
+    jurisdiction: MEX
+    title: Lineamientos del articulo 159 bis de la Ley Aduanera
+    instrument_type: agreement
+    status: current
+    publication_date: 2026-03-31
+    effective_from: 2026-04-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_sidof_lineamientos_159bis_20260331
+    events: []
+
+  - id: mx_ventanilla_unica_2026
+    jurisdiction: MEX
+    title: Decreto de Ventanilla Unica de Tramites de Comercio Exterior
+    instrument_type: decree
+    status: current
+    publication_date: 2026-05-04
+    effective_from: 2026-05-05
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_sidof_ventanilla_unica_20260504
+    events: []

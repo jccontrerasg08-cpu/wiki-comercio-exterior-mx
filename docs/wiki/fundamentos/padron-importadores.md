@@ -9,7 +9,7 @@ description: Reglas generales, excepciones y padrones sectoriales para importar 
 
 Como regla general, los importadores obligados deben contar con inscripción vigente en el **Padrón de Importadores** y, cuando corresponda por la mercancía y la fracción arancelaria, en el **Padrón de Importadores de Sectores Específicos**. La obligación se relaciona con el artículo 59, fracción IV, de la Ley Aduanera y con el capítulo 1.3 de las Reglas Generales de Comercio Exterior (RGCE).
 
-Esto no significa que toda importación imaginable requiera necesariamente la misma inscripción. Las RGCE contemplan **excepciones y autorizaciones particulares**, entre ellas los supuestos de la regla **1.3.1**, las autorizaciones previstas en las reglas **1.3.5** y **1.3.6**, y mercancías identificadas en los **Anexos 7, 8 y 9** de las RGCE 2026. Por eso no es correcto reducir la revisión a la frase “sin padrón no hay pedimento”: primero debe identificarse el supuesto jurídico concreto.
+Esto no significa que toda importación imaginable requiera necesariamente la misma inscripción. Las RGCE contemplan **excepciones y autorizaciones particulares**, entre ellas los supuestos de la regla **1.3.1**, las autorizaciones previstas en las reglas **1.3.5** y **1.3.6**, y mercancías identificadas en el **Anexo 7, Anexo 8 y Anexo 9** de las RGCE 2026. Por eso no es correcto reducir la revisión a la frase “sin padrón no hay pedimento”: primero debe identificarse el supuesto jurídico concreto.
 
 ## Qué debes revisar antes de importar
 
@@ -51,3 +51,7 @@ En el corpus local, consulta `data/corpus/anexo-07-ejidatarios-sin-padron.md`, `
 [Proceso de despacho](../aduana/proceso-despacho.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md) · [RRNA](../rrna/index.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md)
 
 > Esta página organiza fuentes y reglas para estudio. La aplicabilidad debe corroborarse contra la versión vigente de la Ley Aduanera, RGCE, anexos y resoluciones correspondientes.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.

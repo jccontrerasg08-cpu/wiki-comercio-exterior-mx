@@ -391,7 +391,6 @@
     {
       "path": "docs/wiki/aduana/anam.md",
       "risk_reasons": [
-        "missing_instrument_reference",
         "pending_legal_review",
         "source_not_current"
       ],
@@ -503,7 +502,6 @@
       "path": "docs/wiki/logistica/pagos-internacionales.md",
       "risk_reasons": [
         "missing_instrument_reference",
-        "missing_source_reference",
         "pending_legal_review",
         "source_not_current"
       ],
@@ -554,11 +552,11 @@
   "schema_version": 1,
   "sections": [
     {
-      "legally_reviewed_pages": 2,
+      "legally_reviewed_pages": 7,
       "pages_needing_attention": 3,
-      "retrieval_eligible_pages": 2,
+      "retrieval_eligible_pages": 7,
       "section": "aduana",
-      "total_pages": 5
+      "total_pages": 10
     },
     {
       "legally_reviewed_pages": 0,
@@ -620,38 +618,38 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 28,
+      "not_applicable": 33,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 28,
+      "not_applicable": 33,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 59,
-      "reviewed": 10
+      "reviewed": 15
     },
     "source_status": {
-      "current": 50,
+      "current": 55,
       "partial": 19,
       "unknown": 1
     }
   },
   "summary": {
     "corpus_pages": 43,
-    "distinct_instrument_ids": 18,
-    "distinct_source_ids": 38,
-    "legally_reviewed_pages": 10,
+    "distinct_instrument_ids": 20,
+    "distinct_source_ids": 44,
+    "legally_reviewed_pages": 15,
     "non_current_corpus_pages": 40,
     "pages_needing_attention": 62,
-    "pages_with_instruments": 60,
-    "pages_with_sources": 63,
+    "pages_with_instruments": 66,
+    "pages_with_sources": 69,
     "pending_legal_review_pages": 59,
-    "retrieval_eligible_pages": 10,
-    "total_pages": 70,
+    "retrieval_eligible_pages": 15,
+    "total_pages": 75,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 27
+    "wiki_pages": 32
   }
 }

@@ -13,7 +13,7 @@ Esta línea de tiempo separa **fecha de publicación** y **entrada en vigor** cu
 
 | Publicación | Vigencia principal | Instrumento | Qué revisar |
 |---|---|---|---|
-| **23 de febrero** | 24-feb-2026 | Reforma al Reglamento de la Ley Aduanera | obligaciones, controles y adecuación reglamentaria al marco de agentes/agencias y operación aduanera |
+| **23 de febrero** | 24-feb-2026 | Reforma al Reglamento de la Ley Aduanera | obligaciones, controles y adecuación reglamentaria al marco de agentes y agencias aduanales y operación aduanera |
 | **31 de marzo** | 1-abr-2026 | Acuerdo 44/2026, lineamientos del artículo **159 bis** de la Ley Aduanera | asuntos que las autoridades aduaneras someten al Consejo sobre patente de agente aduanal, autorizaciones de agencia y otros permisos/concesiones |
 | **23 de abril** | 24-abr-2026 | Decreto LIGIE + PROSEC | modificación arancelaria sobre **185 fracciones** y cambios al decreto PROSEC |
 | **1 de mayo** | 2-may-2026 | Reforma a la Ley de Comercio Exterior | artículo 15 y restricciones vinculadas a determinadas exportaciones agropecuarias |

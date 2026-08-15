@@ -43,3 +43,7 @@ Consulta [Agente y agencia aduanal](agente-agencia-aduanal.md) para esta distinc
 [Ventanilla Única y VUCEM](vucem.md) · [Agente y agencia aduanal](agente-agencia-aduanal.md) · [Proceso de despacho](proceso-despacho.md) · [Pedimento y RGCE](pedimento-rgce.md)
 
 > La autoridad competente depende del acto concreto. Una interfaz tecnológica no sustituye la identificación del fundamento, autoridad emisora y fecha de vigencia del trámite.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.

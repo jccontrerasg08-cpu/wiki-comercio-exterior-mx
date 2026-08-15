@@ -70,3 +70,7 @@ En una auditoría interna conviene poder reconstruir:
 [Proceso de despacho](proceso-despacho.md) · [Pedimento y RGCE](pedimento-rgce.md) · [Manifestación de valor](manifestacion-valor.md) · [RRNA](../rrna/index.md) · [Padrón](../fundamentos/padron-importadores.md)
 
 > La tabla es un mapa de investigación, no una checklist universal. Antes del despacho, confirma la obligación exacta en la norma vigente para el régimen y mercancía concretos.
+
+Catálogo local: `docs/catalog/`.
+
+> No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.
