@@ -1,6 +1,6 @@
 """Offline-first intelligence primitives for the legacy SNICE document index.
 
-The module deliberately separates physical files from logical datasets.  It does
+The module deliberately separates physical files from logical datasets. It does
 not decide legal validity: transport/discovery metadata can identify versions,
 backfills and likely anomalies, while legal currentness remains governed by the
 repository's source and temporal-instrument layers.
@@ -10,10 +10,10 @@ from __future__ import annotations
 
 import calendar
 import html
-from dataclasses import dataclass, replace
+from dataclasses import asdict, dataclass, replace
 from datetime import date, datetime, timedelta
-from statistics import median
 import re
+from statistics import median
 import unicodedata
 from urllib.parse import unquote, urljoin, urlparse
 
@@ -176,7 +176,7 @@ def _fold(value: str) -> str:
     decomposed = unicodedata.normalize("NFKD", value)
     plain = "".join(ch for ch in decomposed if not unicodedata.combining(ch))
     folded = plain.upper().replace("\\", "-").replace("/", "-")
-    folded = re.sub(r"[^A-Z0-9*]+", "-", folded)
+    folded = re.sub(r"[^A-Z0-9]+", "-", folded)
     return re.sub(r"-+", "-", folded).strip("-")
 
 
@@ -208,7 +208,6 @@ def _period(semantic: str) -> tuple[int | None, int | None]:
         match = pattern.search(folded)
         if match:
             return int(match.group("year")), month_number
-    # Handle a separated month/year pair such as JUNIO-2026 after folding.
     parts = folded.split("-")
     for index, part in enumerate(parts[:-1]):
         month_number = next(
@@ -226,7 +225,6 @@ def _category(semantic: str, family: str) -> str:
             return marker
     if family == "ACUSE":
         return "ACUSE"
-    # Keep an interpretable collection category instead of the entire filename.
     return family
 
 
@@ -311,7 +309,7 @@ def parse_index_html(
     documents: list[SniceDocument] = []
     for row in _INDEX_ROW_RE.finditer(index_html):
         href = html.unescape(row.group("href")).strip()
-        if href.startswith("?") or href.startswith("/") and href.rstrip("/") == "":
+        if href.startswith("?") or (href.startswith("/") and href.rstrip("/") == ""):
             continue
         filename = unquote(urlparse(href).path.rsplit("/", 1)[-1])
         try:
@@ -323,7 +321,7 @@ def parse_index_html(
         )
         documents.append(
             SniceDocument(
-                **parsed.__dict__,
+                **asdict(parsed),
                 source_url=urljoin(base_url, href),
                 last_modified=last_modified,
                 discovered_at=discovered_at,
@@ -340,8 +338,6 @@ def _period_end(year: int, month: int) -> date:
 def _is_backfill(document: SniceDocument) -> bool:
     if document.period_year is None or document.period_month is None:
         return False
-    # A normal monthly publication may land in the following month.  Three
-    # months of lag is conservative enough to distinguish historic reloads.
     return document.last_modified.date() > (
         _period_end(document.period_year, document.period_month) + timedelta(days=90)
     )
@@ -388,7 +384,9 @@ def detect_missing_companions(documents: list[SniceDocument]) -> list[dict[str, 
         if doc.period_year is not None and doc.period_month is not None
     }
     findings: list[dict[str, object]] = []
-    for family, year, month in sorted(present, key=lambda item: (item[1] or 0, item[2] or 0, item[0])):
+    for family, year, month in sorted(
+        present, key=lambda item: (item[1] or 0, item[2] or 0, item[0])
+    ):
         for companion in _COMPANIONS.get(family, ()):
             if (companion, year, month) not in present:
                 findings.append(
