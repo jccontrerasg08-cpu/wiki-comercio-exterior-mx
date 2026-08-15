@@ -81,7 +81,9 @@ jobs:
         run: python -m pip install -r requirements-docs.txt
 
       - name: Generate reviewed Wave 1 outputs
-        run: python scripts/_wave1_bootstrap.py
+        run: |
+          sed -i 's/, "--write"//' scripts/_wave1_bootstrap.py
+          python scripts/_wave1_bootstrap.py
 
       - name: Verify patched workspace
         run: |
