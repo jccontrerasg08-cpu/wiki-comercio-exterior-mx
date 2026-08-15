@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 import json
 from pathlib import Path
 import tempfile
@@ -10,8 +10,11 @@ from scripts.schema_validation import load_local_schema, validate_instance
 from scripts.snice_discovery import (
     DiscoveryPolicy,
     build_payloads,
+    build_state,
     fetch_index_html,
+    load_state,
     write_payloads,
+    write_state,
 )
 
 
@@ -110,6 +113,9 @@ class SnicePayloadTests(unittest.TestCase):
         self.assertEqual(payloads["documents"]["schema_version"], "1.0")
         self.assertEqual(len(payloads["documents"]["documents"]), 4)
         self.assertEqual(len(payloads["series"]["series"]), 3)
+        self.assertEqual(payloads["documents"]["index_entry_count"], 4)
+        self.assertEqual(payloads["documents"]["unparsed_count"], 0)
+        self.assertRegex(payloads["documents"]["index_sha256"], r"^[0-9a-f]{64}$")
         immex = next(
             item
             for item in payloads["series"]["series"]
@@ -123,6 +129,65 @@ class SnicePayloadTests(unittest.TestCase):
         )
         self.assertTrue(siderurgico["is_backfill"])
         self.assertEqual(payloads["changes"]["changes"], [])
+
+    def test_unparseable_index_entries_are_reported_not_silently_dropped(self) -> None:
+        html = INDEX_HTML.replace(
+            "</pre>",
+            '<a href="legacy-without-terminal-dates.xlsx">legacy-without-terminal-dates.xlsx</a> 15-Aug-2026 10:10 12K\n</pre>',
+        )
+
+        payloads = build_payloads(
+            html,
+            source_url=INDEX_URL,
+            discovered_at=DISCOVERED_AT,
+        )
+
+        documents = payloads["documents"]
+        self.assertEqual(documents["index_entry_count"], 5)
+        self.assertEqual(documents["document_count"], 4)
+        self.assertEqual(documents["unparsed_count"], 1)
+        self.assertEqual(
+            documents["unparsed_entries"][0]["filename"],
+            "legacy-without-terminal-dates.xlsx",
+        )
+        self.assertIn("terminal date pair", documents["unparsed_entries"][0]["reason"])
+
+    def test_collection_state_emits_added_removed_and_metadata_changed_events(self) -> None:
+        first = build_payloads(
+            INDEX_HTML,
+            source_url=INDEX_URL,
+            discovered_at=DISCOVERED_AT,
+        )
+        previous_state = build_state(first)
+        second_time = DISCOVERED_AT + timedelta(days=1)
+        second_html = INDEX_HTML.replace(
+            '<a href="PROSEC_MAYO2026-DIRECTORIO_20260622-20260622.xlsx">PROSEC_MAYO2026-DIRECTORIO_20260622-20260622.xlsx</a> 22-Jun-2026 17:35 629K\n',
+            "",
+        ).replace(
+            "22-Jun-2026 17:34 848K",
+            "23-Jun-2026 17:34 900K",
+        ).replace(
+            "</pre>",
+            '<a href="AVISODISPONIBILIDAD-ACTUALIDAD_20260815-20260815.xlsx">AVISODISPONIBILIDAD-ACTUALIDAD_20260815-20260815.xlsx</a> 15-Aug-2026 12:00 291K\n</pre>',
+        )
+
+        second = build_payloads(
+            second_html,
+            source_url=INDEX_URL,
+            discovered_at=second_time,
+            previous_state=previous_state,
+        )
+
+        changes = second["changes"]["changes"]
+        self.assertEqual(
+            {item["change_type"] for item in changes},
+            {"document_added", "document_removed", "document_metadata_changed"},
+        )
+        for item in changes:
+            self.assertEqual(item["detected_at"], "2026-08-16T19:00:00Z")
+        changed = next(item for item in changes if item["change_type"] == "document_metadata_changed")
+        self.assertEqual(changed["previous"]["bytes"], 868_352)
+        self.assertEqual(changed["current"]["bytes"], 921_600)
 
     def test_payloads_validate_against_local_schemas(self) -> None:
         payloads = build_payloads(
@@ -157,6 +222,24 @@ class SnicePayloadTests(unittest.TestCase):
                 self.assertEqual(first[key].read_bytes(), second[key].read_bytes())
                 parsed = json.loads(first[key].read_text(encoding="utf-8"))
                 self.assertEqual(parsed["generated_at"], "2026-08-15T19:00:00Z")
+
+    def test_state_round_trip_is_deterministic(self) -> None:
+        payloads = build_payloads(
+            INDEX_HTML,
+            source_url=INDEX_URL,
+            discovered_at=DISCOVERED_AT,
+        )
+        state = build_state(payloads)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "snice-state.json"
+            write_state(state, path)
+            first = path.read_bytes()
+            loaded = load_state(path)
+            write_state(loaded, path)
+
+            self.assertEqual(path.read_bytes(), first)
+            self.assertEqual(loaded["index_sha256"], payloads["documents"]["index_sha256"])
+            self.assertEqual(len(loaded["documents"]), 4)
 
 
 if __name__ == "__main__":
