@@ -134,4 +134,8 @@ Antes de cerrar el valor, pregunta:
 - ¿el Incoterm se está usando como dato comercial y no como sustituto de la Ley?;
 - ¿la Manifestación de Valor y el pedimento son coherentes con el expediente?
 
+## Ver también
+
+[Manifestación de Valor](../aduana/manifestacion-valor.md) · [Incoterms® 2020](../logistica/incoterms.md) · [Aranceles](aranceles.md) · [Documentos de comercio exterior](../aduana/documentos.md) · [Proceso de despacho](../aduana/proceso-despacho.md)
+
 > La valoración es una determinación jurídica y documental. Cuando el método de transacción no sea aceptable, debe aplicarse la secuencia legal; no se debe “forzar” la factura para conservar el método 1.
