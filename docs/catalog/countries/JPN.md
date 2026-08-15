@@ -1,3 +1,8 @@
+---
+title: "JPN"
+description: "Fuentes oficiales de Japón para aduanas y comercio exterior, mantenidas como catálogo de referencia país."
+---
+
 # JPN
 
 - jurisdiction: `JPN`

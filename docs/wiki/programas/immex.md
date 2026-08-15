@@ -1,3 +1,8 @@
+---
+title: "IMMEX"
+description: "IMMEX: importación temporal para procesos de exportación, obligaciones, plazos y controles relacionados con RGCE."
+---
+
 # IMMEX
 
 ## Qué es

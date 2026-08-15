@@ -1,3 +1,8 @@
+---
+title: "CAN"
+description: "Fuentes oficiales de Canadá para aduanas y comercio exterior, mantenidas como catálogo de referencia país."
+---
+
 # CAN
 
 - jurisdiction: `CAN`

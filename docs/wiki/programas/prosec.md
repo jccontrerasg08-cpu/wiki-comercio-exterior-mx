@@ -1,3 +1,8 @@
+---
+title: "PROSEC"
+description: "PROSEC: tasas preferenciales de IGI por sector productivo, condiciones de uso y modificaciones vigentes del decreto."
+---
+
 # PROSEC
 
 ## Qué es

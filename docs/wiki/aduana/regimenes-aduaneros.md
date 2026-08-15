@@ -1,3 +1,8 @@
+---
+title: "Regímenes aduaneros"
+description: "Regímenes aduaneros en México: finalidades, efectos y puntos de control que cambian según el régimen previsto por la Ley Aduanera."
+---
+
 # Regímenes aduaneros
 
 **Revisado hasta:** 15-08-2026. Fuentes `mx_diputados_ley_aduanera` y `mx_sidof_rgce_2026`.
@@ -14,3 +19,11 @@ La Ley Aduanera distingue regímenes definitivos, temporales, depósito fiscal, 
 | RFE | ¿La operación cumple autorización, control y permanencia del régimen estratégico? |
 
 No elijas régimen solo por flujo de caja. Verifica finalidad real, plazo, padrón, programa, inventarios, garantías, retorno, regularización y causales de cambio de régimen.
+
+## Fuentes
+
+Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. Para seguirlos hasta su URL y estado de procedencia, consulta el [catálogo reproducible de fuentes](../../catalog/registry.md).
+
+## Ver también
+
+[Mapa de la wiki](../index.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)

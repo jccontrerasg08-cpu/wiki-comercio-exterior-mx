@@ -1,126 +1,50 @@
+---
+title: Mapa de la wiki
+description: Ruta de consulta por clasificación, RRNA, contribuciones, despacho, programas y logística en el comercio exterior mexicano.
+---
+
 # Wiki Comercio Exterior MX
 
-Wiki pedagógica en `docs/wiki/` para entrenamiento: qué es cada figura y cómo aparece en una operación de importación o exportación.
+Esta wiki está organizada para resolver una operación, no para memorizar un índice legal. Empieza por identificar **qué mercancía es, qué régimen se pretende utilizar, quién interviene y qué fecha gobierna la operación**. Después sigue la ruta de clasificación, regulaciones, contribuciones y despacho.
 
-No es SAT/DOF. Manifiestos y SHA-256 viven en `data/originals/`; los PDF oficiales salen en el GitHub Release `originals-*`. [arancel-mx](https://github.com/jccontrerasg08-cpu/arancel-mx) es el paquete público de tarifa.
+## Empieza por la decisión
 
-## Capas de este repositorio
+### 1. Clasificar la mercancía
 
-| Capa | Qué es | Qué no es |
-|---|---|---|
-| `docs/catalog/` | Catálogo de URLs oficiales | El DOF, ni PDFs |
-| `data/originals/` | Manifiestos + hashes (bytes en Release) | Resumen para RAG |
-| `data/corpus/` | Resúmenes Markdown (`official-not-relicensed`) | Texto vinculante |
-| `docs/wiki/` (esta wiki) | Notas pedagógicas | Asesoría legal, curso de negocio |
+La clasificación conecta el Sistema Armonizado con la fracción mexicana de ocho dígitos y, cuando corresponde, el NICO. Consulta [Sistema Armonizado](clasificacion/sistema-armonizado.md) y [TIGIE y NICO](clasificacion/tigie-nico.md).
 
-Cita vinculante: URL de SIDOF, Cámara de Diputados o SAT. `docs/catalog/` no sustituye al DOF.
+La wiki explica el contexto; la capa estructurada de fracciones pertenece a [`arancel-mx`](https://github.com/jccontrerasg08-cpu/arancel-mx).
 
-Incoterms®: citamos a la ICC. No copiamos el libro, el PDF, el wallchart ni las 11 reglas. Catálogo: [ICC](https://iccwbo.org/business-solutions/incoterms-rules/), [ICC México](https://iccmex.mx/seccion/incoterms-2020), [ICC 2go](https://2go.iccwbo.org). Página local: [Incoterms](logistica/incoterms.md).
+### 2. Revisar RRNA y padrones
 
-Notas explicativas del SA (OMA) y apps SNICE/INEGI: solo catálogo. No se scrapean ni se versionan aquí.
+Una tasa arancelaria no prueba que la mercancía pueda entrar o salir sin otras condiciones. Usa la [Guía de RRNA](rrna/index.md), [Anexo 2.2.1](rrna/anexo-2-2-1.md), [Anexo 2.4.1](rrna/anexo-2-4-1.md) y [Padrón de Importadores](fundamentos/padron-importadores.md).
 
-Fuentes oficiales (no scrapear): [SNICE LIGIE](https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html) (IMMEX, PROSEC, RRNA), [INEGI TIGIE–SCIAN](https://www.inegi.org.mx/app/tigie/). La URL [SNICE Mi Fracción](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html) sigue publicada, pero el 13-ago-2026 era un cascarón CMS vacío. Catálogo local: `docs/catalog/catalog.md`.
+Como regla general, determina primero si la operación cae en la obligación y después revisa excepciones, autorizaciones y vigencia del instrumento.
 
-## Temario vs este repo
+### 3. Determinar valor y contribuciones
 
-Temas que suelen aparecer en cursos comerciales de importación. Aquí solo hay lo que ya existe como URL oficial, bytes o nota pedagógica. El resto se marca hueco. No se inventa consejo de negocio con pinta de SAT.
+Para importación, separa la tasa de IGI del **valor en aduana** y de obligaciones distintas como cuotas compensatorias. Recorre [Valor en aduana](contribuciones/valor-en-aduana.md), [Aranceles](contribuciones/aranceles.md), [Impuestos de importación](contribuciones/impuestos-importacion.md) y [Cuotas compensatorias](contribuciones/cuotas-compensatorias.md).
 
-Estado: **cubierto** hay página o corpus. **solo catálogo** hay URL, sin texto de la obra. **hueco** no hay fuente oficial aquí.
+### 4. Preparar el despacho
 
-### Cómo importar desde cero
+[Proceso de despacho](aduana/proceso-despacho.md) integra clasificación, RRNA, valor, documentos, pedimento, validación y eventos posteriores. Para piezas específicas consulta [Documentos](aduana/documentos.md), [Manifestación de Valor](aduana/manifestacion-valor.md), [Pedimento y RGCE](aduana/pedimento-rgce.md) y [Ventanilla Única y VUCEM](aduana/vucem.md).
 
-| Tema | En este repo | Fuente oficial | Estado |
-|---|---|---|---|
-| Tipos de importación | [Pedimento y RGCE](aduana/pedimento-rgce.md), [IMMEX](programas/immex.md); corpus `data/corpus/ley-aduanera.md` (art. 90) y `anexo-29-regimenes-prohibidos.md` | [Ley Aduanera](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf), [RGCE 2026](https://sidof.segob.gob.mx/notas/5777199) | cubierto como regímenes legales, no como "estrategia comercial" |
-| Estrategias de importación | — | — | hueco |
-| Aduana | [ANAM](aduana/anam.md); corpus anexos 3, 4, 21 | [ANAM](https://anam.gob.mx/), SIDOF RGCE | cubierto (autoridad y recintos). ANAM no es una agencia aduanal privada |
-| Documentos | [Documentos de comercio exterior](aduana/documentos.md), [Pedimento y RGCE](aduana/pedimento-rgce.md); corpus `anexo-01-formatos-modelos.md`, `anexo-22.md`; originales `data/originals/vucem/` | SIDOF anexos 1 y 22, [VUCEM](https://www.ventanillaunica.gob.mx/) | cubierto para documentos aduaneros. Hueco para plantillas de contrato mercantil |
-| Cálculo de costos | [Valor en aduana](contribuciones/valor-en-aduana.md), [Aranceles](contribuciones/aranceles.md) | LA arts. 64-78, [LIGIE](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf) | cubierto para base gravable y arancel. Hueco para costo-beneficio o precio de reventa |
-| Contribuciones e impuestos | [Aranceles](contribuciones/aranceles.md), [Cuotas compensatorias](contribuciones/cuotas-compensatorias.md); corpus `anexo-13-multas-cantidades.md`, `anexo-27-fracciones-sin-iva.md`; RMF en `data/originals/sat/rmf-2026/` | LIGIE, RGCE, SAT RMF | cubierto (IGI, IVA en aduana, DTA, cuotas). RMF está en originales, sin página en esta wiki |
-| Cómo elegir agencia aduanal | [Pedimento y RGCE](aduana/pedimento-rgce.md); corpus LA arts. 54, 159, 167-D y `criterios-anam-sat.md` | [Ley Aduanera](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf) | cubierto como patente, agencia aduanal y responsabilidades. Hueco como directorio de despachadores |
-| Transporte y logística | [Logística internacional](logistica/logistica-internacional.md); corpus `anexos-riesgo-logistica.md` | ANAM, anexos RGCE de tránsito | cubierto a nivel figura y restricciones de ruta. Hueco para cotizar flete |
-| Formas de pago seguras | [Pagos internacionales](logistica/pagos-internacionales.md) | — | hueco. No hay guía SAT de "pago seguro". Esa página no es asesoría bancaria |
-| Ejemplos de productos: textiles, ropa, maquinaria, juguetes, autos, autopartes, coleccionables | [TIGIE y NICO](clasificacion/tigie-nico.md), [RRNA](clasificacion/rrna.md), [Padrón](fundamentos/padron-importadores.md); corpus `anexo-10-padron-sectorial.md` (textil caps. 50-63, automotriz), `anexo-28-mercancias-certificacion-iva-ieps.md`, `noms-comercio-exterior.md`, `tigie-nico-notas.md` | LIGIE, SNICE, Anexo 10 SIDOF | cubierto como fracción, NOM y padrón sectorial. Hueco como "qué producto conviene importar" |
+Si una incidencia activa una causal legal, [PAMA e infracciones](aduana/infracciones-pama.md) explica cómo distinguir una irregularidad de un supuesto de embargo precautorio.
 
-### Cómo iniciar un negocio de importación
+### 5. Aplicar programas, origen y logística
 
-| Tema | En este repo | Fuente oficial | Estado |
-|---|---|---|---|
-| ¿Es buen negocio? | — | — | hueco |
-| Productos buenos o malos | Mismos anexos de producto que arriba; [Cuotas](contribuciones/cuotas-compensatorias.md) | SNICE cuotas, Anexo 10, NOMs | cubierto como restricciones. Hueco como ranking comercial |
-| Proveedores confiables | — | — | hueco |
-| Investigación previa | [TIGIE y NICO](clasificacion/tigie-nico.md), [RRNA](clasificacion/rrna.md) | SNICE LIGIE, INEGI (solo catálogo) | cubierto para fracción y RRNA. Hueco para estudio de mercado |
-| Con cuánto dinero (costos vs ganancia) | — | — | hueco |
-| Tipos de negocios | [IMMEX](programas/immex.md), [PROSEC](programas/prosec.md), [Padrón](fundamentos/padron-importadores.md) | SNICE, RGCE | cubierto como programas legales. Hueco como modelos de negocio |
-| Aspectos legales al iniciar | [Padrón](fundamentos/padron-importadores.md); corpus LA art. 59, Anexo 1 formato A1 | [SAT Padrón](https://www.sat.gob.mx/minisitio/PadronImportadoresExportadores/index.html) | cubierto para inscripción aduanera. Hueco para constituir sociedad |
-| Operación (ventas y administración) | — | — | hueco, salvo despacho: [Pedimento y RGCE](aduana/pedimento-rgce.md) |
+Cuando la operación utilice un programa o preferencia, revisa [IMMEX](programas/immex.md), [PROSEC](programas/prosec.md), [Drawback](programas/drawback.md), [TLC y T-MEC](programas/tlc-tmec.md) y [Reglas de origen](programas/reglas-de-origen.md).
 
-### Otros cursos
+Para la capa comercial/logística consulta [Incoterms®](logistica/incoterms.md), [Logística internacional](logistica/logistica-internacional.md) y [Pagos internacionales](logistica/pagos-internacionales.md), recordando que esas figuras no sustituyen las obligaciones aduaneras mexicanas.
 
-| Tema | En este repo | Fuente oficial | Estado |
-|---|---|---|---|
-| Logística internacional | [Logística internacional](logistica/logistica-internacional.md) | ANAM | cubierto (figura). No es un diplomado de cadena de suministro |
-| Clasificación arancelaria | [TIGIE y NICO](clasificacion/tigie-nico.md), [Sistema Armonizado](clasificacion/sistema-armonizado.md); corpus `tigie-nico-notas.md`, `anexo-06-consejo-clasificacion-arancelaria.md` | LIGIE, [OMA nomenclatura](https://www.wcoomd.org/en/topics/nomenclature.aspx) | cubierto en TIGIE. Notas explicativas del SA: solo catálogo |
-| Operación aduanera | [Pedimento y RGCE](aduana/pedimento-rgce.md), [ANAM](aduana/anam.md); originales `data/originals/vucem/` | SIDOF RGCE, VUCEM | cubierto |
-| Documentos de comercio exterior | [Documentos de comercio exterior](aduana/documentos.md); corpus Anexo 1 y Anexo 22; VUCEM | SIDOF, VUCEM | cubierto |
-| Incoterms | [Incoterms](logistica/incoterms.md) | ICC (tres URLs arriba) | solo catálogo |
+## Revisa la fecha
 
-## Contents
+El comercio exterior cambia por decretos, resoluciones, anexos y modificaciones. [Cambios 2026](aduana/cambios-2026.md) resume eventos recientes, pero cada operación debe verificarse contra la publicación y sus transitorios.
 
-- [Fundamentos](#fundamentos)
-- [Aduana](#aduana)
-- [Clasificacion](#clasificacion)
-- [Contribuciones](#contribuciones)
-- [Programas](#programas)
-- [Logistica](#logistica)
+## ¿Qué falta?
 
-Un tema, una carpeta. No hay un quinto nivel.
+El [Roadmap de contenido](../status/content-roadmap.md) separa lo cubierto, parcial y pendiente. El catálogo reproducible de fuentes vive en `docs/catalog/` y puede recorrerse desde la [Guía del catálogo](../catalog/index.md). El [Estado del corpus](../status/corpus-coverage.md) muestra gobernanza y preparación para recuperación; **no es un porcentaje de certeza jurídica**.
 
-## Fundamentos
+> La wiki organiza conocimiento para consulta y estudio. Cuando una afirmación cambie una decisión real, sigue el enlace hasta la **fuente oficial** y verifica la vigencia aplicable.
 
-- [Marco jurídico](fundamentos/marco-juridico.md) - Jerarquía, fuentes y verificación.
-- [Padrón de importadores](fundamentos/padron-importadores.md) - Inscripción SAT.
-
-## Aduana
-
-- [Regímenes aduaneros](aduana/regimenes-aduaneros.md) - Finalidad, plazos y controles.
-- [Cambios 2026](aduana/cambios-2026.md) - RLA, LCE, RGCE y Reglas SE.
-- [Documentos de comercio exterior](aduana/documentos.md) - Pedimento, factura, transporte, MV, origen y RRNA.
-- [Pedimento y RGCE](aduana/pedimento-rgce.md) - Declaración aduanera y anexos SIDOF.
-- [ANAM](aduana/anam.md) - Agencia Nacional de Aduanas (autoridad), no agencia aduanal privada.
-
-## Clasificacion
-
-- [Sistema Armonizado](clasificacion/sistema-armonizado.md) - Nomenclatura WCO (HS 2022).
-- [TIGIE y NICO](clasificacion/tigie-nico.md) - Fracción de 8 dígitos y NICO de 10.
-- [RRNA](clasificacion/rrna.md) - Regulaciones y restricciones no arancelarias.
-
-## Contribuciones
-
-- [Impuestos de importación](contribuciones/impuestos-importacion.md) - IGI, IVA, IEPS, DTA y cuotas.
-- [Aranceles](contribuciones/aranceles.md) - IGI/IGE y cómo leer la tarifa.
-- [Valor en aduana](contribuciones/valor-en-aduana.md) - Base gravable (OMC).
-- [Cuotas compensatorias](contribuciones/cuotas-compensatorias.md) - Remedios comerciales (UPCI/SNICE).
-
-## Programas
-
-- [Drawback](programas/drawback.md) - Devolución de impuestos de importación a exportadores.
-- [TLC y T-MEC](programas/tlc-tmec.md) - Tratados y preferencia arancelaria.
-- [Reglas de origen](programas/reglas-de-origen.md) - Cómo califica una mercancía.
-- [PROSEC](programas/prosec.md) - IGI preferencial por sector.
-- [IMMEX](programas/immex.md) - Importación temporal para exportar.
-
-## Logistica
-
-- [Incoterms](logistica/incoterms.md) - Incoterms® 2020 (ICC). Solo catálogo; no hay texto de las reglas.
-- [Logística internacional](logistica/logistica-internacional.md) - Transporte, seguros, documentos.
-- [Pagos internacionales](logistica/pagos-internacionales.md) - Cartas de crédito y transferencias. No es guía de "pago seguro".
-
-> No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.
-
-## RRNA
-
-- [Guía de RRNA](rrna/index.md) - Flujo de verificación.
-- [Reglas y criterios SE](rrna/reglas-criterios-se.md) - Acuerdo base y modificaciones.
-- [Anexo 2.2.1](rrna/anexo-2-2-1.md) - Permisos y avisos.
-- [Anexo 2.4.1](rrna/anexo-2-4-1.md) - NOM en punto de entrada.
+**No es asesoría legal.** Verifica la fuente oficial y la vigencia aplicable antes de tomar una decisión operativa.

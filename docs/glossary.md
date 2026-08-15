@@ -1,3 +1,8 @@
+---
+title: "Glosario"
+description: "Glosario de siglas y conceptos frecuentes de comercio exterior, aduanas, tarifa y regulación mexicana."
+---
+
 # Glosario
 
 | Término | Significado operativo |

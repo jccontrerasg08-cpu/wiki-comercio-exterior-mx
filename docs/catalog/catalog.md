@@ -1,3 +1,8 @@
+---
+title: "Source catalog guide"
+description: "Catálogo curado de portales y documentos oficiales relevantes para comercio exterior mexicano y fuentes internacionales."
+---
+
 # Source catalog guide
 
 The canonical records live in `sources/registry.yaml`; the temporal instrument model lives in `sources/instruments.yaml`. The complete Markdown registry is generated from both files and must not be edited by hand.

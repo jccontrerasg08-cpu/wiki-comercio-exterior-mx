@@ -1,3 +1,8 @@
+---
+title: "Status model"
+description: "Modelo de estados independiente para fuente, extracción, revisión legal, corpus y salud de transporte."
+---
+
 # Status model
 
 This project never treats one green HTTP check as proof that legal content is current. Five independent dimensions prevent that shortcut.

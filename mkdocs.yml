@@ -97,6 +97,7 @@ extra_css:
 nav:
   - Inicio: index.md
   - Estado del corpus: status/corpus-coverage.md
+  - Roadmap de contenido: status/content-roadmap.md
   - Wiki:
     - Mapa: wiki/index.md
     - Fundamentos:
@@ -159,8 +160,13 @@ nav:
   - Metodología:
     - Proceso: methodology/index.md
     - Modelo de estados: methodology/status-model.md
+    - Política editorial: methodology/editorial-policy.md
+    - Política de citas: methodology/citation-policy.md
+    - Checklist de revisión: methodology/page-review-checklist.md
+    - Accesibilidad: methodology/accessibility.md
     - Patrones externos: methodology/external-patterns.md
     - Compatibilidad del motor: methodology/docs-engine-compatibility.md
     - Arquitectura: ARCHITECTURE.md
+  - Alcance: about/scope.md
   - Cambios: changes/index.md
   - Glosario: glossary.md

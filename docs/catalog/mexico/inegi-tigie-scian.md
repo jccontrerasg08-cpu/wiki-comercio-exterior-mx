@@ -1,3 +1,8 @@
+---
+title: "INEGI Catalogo TIGIE-SCIAN"
+description: "Referencia INEGI para TIGIE-SCIAN y su uso como herramienta estadística y de consulta, no como sustituto de la LIGIE."
+---
+
 # INEGI Catalogo TIGIE-SCIAN
 
 - jurisdiction: `MEX`

@@ -1,3 +1,8 @@
+---
+title: "DEU"
+description: "Fuentes oficiales de Alemania y la Unión Europea para aduanas y comercio exterior, como catálogo de referencia país."
+---
+
 # DEU
 
 Germany via EU TARIC.

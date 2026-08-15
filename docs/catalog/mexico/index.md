@@ -1,3 +1,8 @@
+---
+title: "Mexico"
+description: "Fuentes oficiales mexicanas para legislación aduanera, tarifa, RGCE, SNICE, SAT, ANAM y Ventanilla Única."
+---
+
 # Mexico
 
 Mexico is the deep archive. Binding citations are SIDOF, Cámara de Diputados, or SAT URLs. This page is a URL catalog, not a DOF dump.

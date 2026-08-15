@@ -1,3 +1,8 @@
+---
+title: "Pedimento y RGCE"
+description: "Pedimento y RGCE 2026: declaración electrónica, Anexo 22, documentos e identificadores para el despacho aduanero mexicano."
+---
+
 # Pedimento y RGCE
 
 ## Qué es

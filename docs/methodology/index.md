@@ -1,3 +1,8 @@
+---
+title: "Metodología"
+description: "Metodología de captura, provenance, revisión jurídica, vigencia temporal y publicación de Wiki Comercio Exterior MX."
+---
+
 # Metodología
 
 El repositorio aplica una cadena de evidencia reproducible:

@@ -1,3 +1,8 @@
+---
+title: "Logística internacional"
+description: "Logística internacional: transporte, seguros, documentos y controles que deben coordinarse con el despacho aduanero."
+---
+
 # Logística internacional
 
 ## Qué es

@@ -1,3 +1,8 @@
+---
+title: "Arancel TIGIE"
+description: "Fuentes oficiales y capa estructurada para consultar LIGIE, TIGIE, NICO y modificaciones arancelarias de México."
+---
+
 # Arancel TIGIE
 
 Structured TIGIE/NICO rates live in [arancel-mx](https://github.com/jccontrerasg08-cpu/arancel-mx). This wiki does not embed TIGIE JSON dumps.

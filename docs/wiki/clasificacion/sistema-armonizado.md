@@ -1,3 +1,8 @@
+---
+title: "Sistema Armonizado (OMA)"
+description: "Sistema Armonizado: estructura internacional de clasificación, versión HS 2022 y relación con la TIGIE mexicana."
+---
+
 # Sistema Armonizado (OMA)
 
 ## Qué es
