@@ -67,8 +67,8 @@ class MkDocsUxTests(unittest.TestCase):
             "wiki/clasificacion/tigie-nico.md",
             "wiki/rrna/index.md",
             "wiki/contribuciones/impuestos-importacion.md",
-            "wiki/aduana/pedimento-rgce.md",
-            "wiki/logistica/logistica-internacional.md",
+            "wiki/aduana/pedimento-rgce/",
+            "wiki/logistica/logistica-internacional/",
             "catalog/registry.md",
         ):
             self.assertIn(target, home)
