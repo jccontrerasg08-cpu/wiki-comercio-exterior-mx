@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/schemas/snice-change.schema.json",
+  "title": "SNICE collection change events",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_url",
+    "generated_at",
+    "previous_index_sha256",
+    "current_index_sha256",
+    "change_count",
+    "changes"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "previous_index_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "current_index_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "change_count": {"type": "integer", "minimum": 0},
+    "changes": {"type": "array", "items": {"$ref": "#/$defs/change"}}
+  },
+  "$defs": {
+    "metadata": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["bytes", "last_modified", "source_url"],
+      "properties": {
+        "bytes": {"type": "integer", "minimum": 0},
+        "last_modified": {"type": "string", "minLength": 19},
+        "source_url": {"type": "string", "format": "uri", "pattern": "^https?://"}
+      }
+    },
+    "change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "change_type",
+        "document_id",
+        "family",
+        "logical_dataset_id",
+        "filename",
+        "detected_at",
+        "previous",
+        "current"
+      ],
+      "properties": {
+        "change_type": {"enum": ["document_added", "document_removed", "document_metadata_changed"]},
+        "document_id": {"type": "string", "pattern": "^snice-url-[0-9a-f]{64}$"},
+        "family": {"type": "string", "minLength": 1},
+        "logical_dataset_id": {"type": "string", "minLength": 1},
+        "filename": {"type": "string", "minLength": 1},
+        "detected_at": {"type": "string", "format": "date-time"},
+        "previous": {"$ref": "#/$defs/metadata"},
+        "current": {"$ref": "#/$defs/metadata"}
+      }
+    }
+  }
+}

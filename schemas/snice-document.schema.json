@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/schemas/snice-document.schema.json",
+  "title": "SNICE discovered document inventory",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "source_url",
+    "generated_at",
+    "index_sha256",
+    "index_entry_count",
+    "document_count",
+    "unparsed_count",
+    "unparsed_entries",
+    "documents"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "index_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "index_entry_count": {"type": "integer", "minimum": 0},
+    "document_count": {"type": "integer", "minimum": 0},
+    "unparsed_count": {"type": "integer", "minimum": 0},
+    "unparsed_entries": {"type": "array", "items": {"$ref": "#/$defs/unparsed"}},
+    "documents": {"type": "array", "items": {"$ref": "#/$defs/document"}}
+  },
+  "$defs": {
+    "nullableYear": {"type": ["integer", "null"], "minimum": 1900, "maximum": 2200},
+    "nullableMonth": {"type": ["integer", "null"], "minimum": 1, "maximum": 12},
+    "nullableSha": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "unparsed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["filename", "source_url", "last_modified", "bytes", "reason"],
+      "properties": {
+        "filename": {"type": "string", "minLength": 1},
+        "source_url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+        "last_modified": {"type": "string", "minLength": 19},
+        "bytes": {"type": "integer", "minimum": 0},
+        "reason": {"type": "string", "minLength": 1}
+      }
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "document_id",
+        "logical_dataset_id",
+        "filename",
+        "normalized_name",
+        "family",
+        "category",
+        "period_year",
+        "period_month",
+        "filename_date",
+        "source_date",
+        "last_modified",
+        "last_modified_timezone_known",
+        "discovered_at",
+        "extension",
+        "bytes",
+        "sha256",
+        "version",
+        "is_replacement",
+        "is_backfill",
+        "is_anomaly",
+        "anomalies",
+        "source_url"
+      ],
+      "properties": {
+        "document_id": {"type": "string", "pattern": "^snice-url-[0-9a-f]{64}$"},
+        "logical_dataset_id": {"type": "string", "minLength": 1},
+        "filename": {"type": "string", "minLength": 1},
+        "normalized_name": {"type": "string", "minLength": 1},
+        "family": {"type": "string", "minLength": 1},
+        "category": {"type": "string", "minLength": 1},
+        "period_year": {"$ref": "#/$defs/nullableYear"},
+        "period_month": {"$ref": "#/$defs/nullableMonth"},
+        "filename_date": {"type": "string", "format": "date"},
+        "source_date": {"type": "string", "format": "date"},
+        "last_modified": {"type": "string", "minLength": 19},
+        "last_modified_timezone_known": {"type": "boolean"},
+        "discovered_at": {"type": "string", "format": "date-time"},
+        "extension": {"type": "string", "pattern": "^[a-z0-9]*$"},
+        "bytes": {"type": "integer", "minimum": 0},
+        "sha256": {"$ref": "#/$defs/nullableSha"},
+        "version": {"type": "integer", "minimum": 1},
+        "is_replacement": {"type": "boolean"},
+        "is_backfill": {"type": "boolean"},
+        "is_anomaly": {"type": "boolean"},
+        "anomalies": {
+          "type": "array",
+          "items": {"enum": ["zero_bytes", "size_outlier"]},
+          "uniqueItems": true
+        },
+        "source_url": {"type": "string", "format": "uri", "pattern": "^https?://"}
+      }
+    }
+  }
+}

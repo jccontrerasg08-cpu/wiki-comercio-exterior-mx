@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/schemas/snice-finding.schema.json",
+  "title": "SNICE discovery findings",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "source_url", "generated_at", "index_sha256", "finding_count", "findings"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "source_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+    "generated_at": {"type": "string", "format": "date-time"},
+    "index_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "finding_count": {"type": "integer", "minimum": 0},
+    "findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}}
+  },
+  "$defs": {
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["finding_type", "severity", "family", "message"],
+      "properties": {
+        "finding_type": {"enum": ["zero_bytes", "size_outlier", "missing_companion"]},
+        "severity": {"enum": ["info", "warning", "error"]},
+        "family": {"type": "string", "minLength": 1},
+        "logical_dataset_id": {"type": "string", "minLength": 1},
+        "filename": {"type": "string", "minLength": 1},
+        "missing_family": {"type": "string", "minLength": 1},
+        "period_year": {"type": ["integer", "null"], "minimum": 1900, "maximum": 2200},
+        "period_month": {"type": ["integer", "null"], "minimum": 1, "maximum": 12},
+        "message": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}
