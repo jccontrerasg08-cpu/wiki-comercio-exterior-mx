@@ -22,13 +22,16 @@ _DATE_SUFFIX_RE = re.compile(
     r"_(?P<filename_date>\d{8})-(?P<source_date>\d{8})(?P<tail>.*)$",
     re.IGNORECASE,
 )
-_INDEX_ROW_RE = re.compile(
-    r'<a\s+[^>]*href=["\'](?P<href>[^"\']+)["\'][^>]*>.*?</a>'
-    r"\s+(?P<day>\d{2}-[A-Za-z]{3}-\d{4})"
-    r"\s+(?P<time>\d{2}:\d{2})"
-    r"\s+(?P<size>\d+(?:\.\d+)?[KMGTP]?|-)",
-    re.IGNORECASE | re.DOTALL,
+_INDEX_ANCHOR_RE = re.compile(
+    r'<a\s+[^>]*href=["\'](?P<href>[^"\']+)["\'][^>]*>',
+    re.IGNORECASE,
 )
+_INDEX_TAIL_RE = re.compile(
+    r"(?P<day>\d{2}-[A-Za-z]{3}-\d{4})\s+"
+    r"(?P<time>\d{2}:\d{2})\s+"
+    r"(?P<size>\d+(?:\.\d+)?[KMGTP]?|-)"
+)
+_TAG_RE = re.compile(r"<[^>]+>")
 _YEAR_RE = re.compile(r"(?<!\d)(?:19|20)\d{2}(?!\d)")
 
 _MONTH_ALIASES: tuple[tuple[str, int], ...] = (
@@ -326,12 +329,16 @@ def parse_index_snapshot(
     documents: list[SniceDocument] = []
     unparsed: list[UnparsedSniceEntry] = []
     entry_count = 0
-    for row in _INDEX_ROW_RE.finditer(index_html):
-        href = html.unescape(row.group("href")).strip()
+    for anchor in _INDEX_ANCHOR_RE.finditer(index_html):
+        href = html.unescape(anchor.group("href")).strip()
         if href.startswith("?") or (href.startswith("/") and href.rstrip("/") == ""):
             continue
         filename = unquote(urlparse(href).path.rsplit("/", 1)[-1])
         if not filename:
+            continue
+        tail = _TAG_RE.sub(" ", index_html[anchor.end() : anchor.end() + 300])
+        row = _INDEX_TAIL_RE.search(re.sub(r"\s+", " ", tail).strip())
+        if row is None:
             continue
         entry_count += 1
         source_url = urljoin(base_url, href)
