@@ -1,0 +1,10 @@
+policy_version: 1
+minimums:
+  retrieval_eligible_pages: 0
+  pages_with_sources: 0
+  pages_with_instruments: 0
+  legally_reviewed_pages: 0
+maximums:
+  pending_legal_review_pages: 9999
+  non_current_corpus_pages: 9999
+  unknown_source_status_pages: 9999
