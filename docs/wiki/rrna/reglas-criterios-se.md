@@ -1,3 +1,8 @@
+---
+title: Reglas y criterios de la Secretaría de Economía
+description: Acuerdo de Reglas y criterios de la SE de 2022 y sus modificaciones registradas hasta mayo de 2026.
+---
+
 # Reglas y criterios de la Secretaría de Economía
 
 **Vigencia revisada hasta:** 30-05-2026. **Autoridad:** no autoritativa.
@@ -15,3 +20,17 @@ No basta consultar el acuerdo base. Para una fecha dada deben incorporarse únic
 ## Cómo verificar
 
 Usa la [Biblioteca Jurídica SNICE](https://www.snice.gob.mx/cs/avi/snice/biblioteca.juridica.html) para navegación y SIDOF para el acto publicado. Contrasta la fracción, descripción, acotación, régimen, país, finalidad, excepción y trámite VUCEM.
+
+## Fuentes oficiales
+
+- [Acuerdo base 2022](https://sidof.segob.gob.mx/notas/5651333)
+- [Modificación 02-09-2025](https://sidof.segob.gob.mx/notas/5767158)
+- [Modificación 12-02-2026](https://sidof.segob.gob.mx/notas/5779942)
+- [Modificación 02-04-2026](https://sidof.segob.gob.mx/notas/5783929)
+- [Modificaciones 28 y 29-05-2026](https://sidof.segob.gob.mx/notas/5788992)
+
+## Ver también
+
+[Guía de RRNA](index.md) · [Anexo 2.2.1](anexo-2-2-1.md) · [Anexo 2.4.1](anexo-2-4-1.md)
+
+> No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

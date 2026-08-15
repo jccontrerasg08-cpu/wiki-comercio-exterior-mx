@@ -1,3 +1,8 @@
+---
+title: TIGIE, NICO y fracción arancelaria
+description: Cómo la TIGIE extiende el Sistema Armonizado a ocho dígitos y el NICO a diez en México.
+---
+
 # TIGIE, NICO y fracción arancelaria
 
 ## Qué es

@@ -1,3 +1,8 @@
+---
+title: Marco jurídico del comercio exterior
+description: "Jerarquía del marco jurídico mexicano de comercio exterior: Constitución, leyes, reglamentos, RGCE y reglas de la SE."
+---
+
 # Marco jurídico del comercio exterior
 
 **Revisado hasta:** 15-08-2026. **Autoridad de esta página:** no autoritativa.
@@ -20,3 +25,18 @@ Una operación puede estar simultáneamente sujeta a clasificación arancelaria,
 2. Consulta LIGIE, RGCE y Reglas SE vigentes para la fecha de la operación.
 3. Revisa el acto DOF, sus transitorios y anexos.
 4. Confirma el trámite en VUCEM, SAT, ANAM o SNICE según la autoridad competente.
+
+## Fuentes oficiales
+
+- [Constitución](https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf)
+- [Ley Aduanera](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf)
+- [LIGIE](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf)
+- [Ley de Comercio Exterior](https://www.diputados.gob.mx/LeyesBiblio/pdf/LCE.pdf)
+- [RGCE 2026 y Anexo 13](https://sidof.segob.gob.mx/notas/5777199)
+- [Reglas y criterios SE 2022](https://sidof.segob.gob.mx/notas/5651333)
+
+## Ver también
+
+[Padrón de Importadores](padron-importadores.md) · [Guía de RRNA](../rrna/index.md) · [Cambios 2026](../aduana/cambios-2026.md)
+
+> No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

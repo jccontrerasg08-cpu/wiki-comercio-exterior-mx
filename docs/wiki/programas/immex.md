@@ -1,3 +1,8 @@
+---
+title: IMMEX
+description: "Programa IMMEX: importación temporal para manufactura de exportación, diferimiento y obligaciones de control."
+---
+
 # IMMEX
 
 ## Qué es

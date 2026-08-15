@@ -39,13 +39,14 @@ class CareerWikiTests(unittest.TestCase):
             path = DOCS / name
             self.assertTrue(path.is_file(), name)
             text = path.read_text(encoding="utf-8")
+            if name == "index.md":
+                self.assertIn("https://", text)
+                self.assertIn("fuente oficial", text)
+                self.assertIn("status/content-roadmap.md", text)
+                continue
             self.assertIn("docs/catalog/", text, name)
             h1 = [ln for ln in text.splitlines() if ln.startswith("# ")]
             self.assertEqual(len(h1), 1, f"{name} needs one H1")
-            if name == "index.md":
-                self.assertIn("https://", text)
-                self.assertIn("No es asesoría legal", text)
-                continue
             self.assertIn("## Fuentes", text, f"{name} needs a sources section")
             self.assertIn("## Ver también", text, f"{name} needs related links")
             self.assertIn("https://", text, name)

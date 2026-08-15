@@ -1,3 +1,8 @@
+---
+title: Pedimento y RGCE
+description: Qué es el pedimento aduanero, cómo las RGCE y el Anexo 22 regulan su llenado y quién lo transmite.
+---
+
 # Pedimento y RGCE
 
 ## Qué es

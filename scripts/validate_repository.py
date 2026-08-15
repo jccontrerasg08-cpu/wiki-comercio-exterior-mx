@@ -369,6 +369,7 @@ def validate_originals(originals_dir: Path) -> list[ValidationFinding]:
     actual_set = {
         path.relative_to(originals_dir).as_posix()
         for path in originals_dir.rglob("MANIFEST.yaml")
+        if path.name == "MANIFEST.yaml"
     }
 
     for fragment_value in sorted(listed_set - actual_set):

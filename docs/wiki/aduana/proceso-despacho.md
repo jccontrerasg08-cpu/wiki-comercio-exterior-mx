@@ -119,3 +119,7 @@ Para una empresa con operaciones recurrentes conviene ligar cada pedimento con:
 - [Ventanilla Única](https://www.ventanillaunica.gob.mx/)
 
 > El flujo sirve para investigar y auditar una operación. Los requisitos concretos deben validarse contra el régimen, mercancía, aduana y fecha efectivos.
+
+## Ver también
+
+[Documentos para el despacho](documentos.md) · [Regímenes aduaneros](regimenes-aduaneros.md) · [Pedimento y RGCE](pedimento-rgce.md) · [Valor en aduana](../contribuciones/valor-en-aduana.md)

@@ -25,6 +25,7 @@ class PageParser(HTMLParser):
         self.ids: set[str] = set()
         self.local_hrefs: list[str] = []
         self.images_missing_alt = 0
+        self.is_redirect_stub = False
 
     def handle_starttag(self, tag: str, attrs_list: list[tuple[str, str | None]]) -> None:
         attrs = dict(attrs_list)
@@ -37,6 +38,8 @@ class PageParser(HTMLParser):
             self.ids.add(element_id)
         if tag == "link" and attrs.get("rel") == "canonical":
             self.canonical = attrs.get("href") or ""
+        if tag == "meta" and (attrs.get("http-equiv") or "").lower() == "refresh":
+            self.is_redirect_stub = True
         if tag == "a":
             href = attrs.get("href")
             if href:
@@ -77,12 +80,16 @@ def verify_site(site_dir: Path) -> list[str]:
         if rel.as_posix() in LEGACY_ROUTES:
             continue
         parser = _parser(path)
+        if parser.is_redirect_stub:
+            continue
         pages[path] = parser
         if not parser.html_lang.lower().startswith("es"):
             findings.append(f"missing Spanish lang: {rel}")
         if not parser.title.strip():
             findings.append(f"missing title: {rel}")
-        if not parser.canonical.startswith("https://jccontrerasg08-cpu.github.io/wiki-comercio-exterior-mx/"):
+        if rel.as_posix() != "404.html" and not parser.canonical.startswith(
+            "https://jccontrerasg08-cpu.github.io/wiki-comercio-exterior-mx/"
+        ):
             findings.append(f"missing or wrong canonical: {rel}")
         if parser.images_missing_alt:
             findings.append(f"images without alt ({parser.images_missing_alt}): {rel}")

@@ -1,3 +1,8 @@
+---
+title: Sistema Armonizado
+description: Estructura del Sistema Armonizado de la OMA hasta seis dígitos y su conexión con la fracción mexicana.
+---
+
 # Sistema Armonizado (OMA)
 
 ## Qué es

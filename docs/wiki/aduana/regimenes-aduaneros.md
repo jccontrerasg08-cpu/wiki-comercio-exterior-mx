@@ -1,3 +1,8 @@
+---
+title: Regímenes aduaneros
+description: "Familias de regímenes aduaneros de la Ley Aduanera: definitivo, temporal, depósito fiscal, tránsito y recintos fiscalizados."
+---
+
 # Regímenes aduaneros
 
 **Revisado hasta:** 15-08-2026. Fuentes `mx_diputados_ley_aduanera` y `mx_sidof_rgce_2026`.
@@ -14,3 +19,16 @@ La Ley Aduanera distingue regímenes definitivos, temporales, depósito fiscal, 
 | RFE | ¿La operación cumple autorización, control y permanencia del régimen estratégico? |
 
 No elijas régimen solo por flujo de caja. Verifica finalidad real, plazo, padrón, programa, inventarios, garantías, retorno, regularización y causales de cambio de régimen.
+
+## Fuentes oficiales
+
+- [Ley Aduanera](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf)
+- [RGCE 2026 y Anexo 13](https://sidof.segob.gob.mx/notas/5777199)
+
+Catálogo local: `docs/catalog/mexico/ley-aduanera.md`.
+
+## Ver también
+
+[Proceso de despacho](proceso-despacho.md) · [IMMEX](../programas/immex.md) · [Pedimento y RGCE](pedimento-rgce.md)
+
+> No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

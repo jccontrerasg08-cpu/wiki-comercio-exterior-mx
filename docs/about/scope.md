@@ -5,7 +5,7 @@ description: Qué cubre Wiki Comercio Exterior MX, qué pertenece a arancel-mx y
 
 # Alcance del proyecto
 
-Wiki Comercio Exterior MX organiza conocimiento, fuentes y relaciones del marco de comercio exterior. **No sustituye una fuente oficial**, una resolución aplicable ni asesoría profesional sobre una operación concreta.
+Wiki Comercio Exterior MX organiza conocimiento, fuentes y relaciones del marco de comercio exterior. Este proyecto **no sustituye** una **fuente oficial**, una resolución aplicable ni asesoría profesional sobre una operación concreta.
 
 ## Esta wiki
 

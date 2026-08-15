@@ -1,3 +1,8 @@
+---
+title: Regulaciones y restricciones no arancelarias
+description: Qué son las RRNA y dónde se publican los permisos, avisos y NOM de la Secretaría de Economía.
+---
+
 # Regulaciones y restricciones no arancelarias (RRNA)
 
 ## Qué es

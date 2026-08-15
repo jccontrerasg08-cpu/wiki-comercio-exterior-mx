@@ -1,3 +1,8 @@
+---
+title: Logística internacional
+description: "Capa logística de una operación de comercio exterior: transporte, seguros y coordinación con el despacho."
+---
+
 # Logística internacional
 
 ## Qué es

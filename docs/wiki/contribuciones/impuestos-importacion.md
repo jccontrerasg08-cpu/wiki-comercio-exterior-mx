@@ -1,3 +1,8 @@
+---
+title: Impuestos y cargos en la importación
+description: Componentes de contribuciones en la importación — IGI, IVA, IEPS, DTA y cuotas compensatorias — y su secuencia de cálculo.
+---
+
 # Impuestos y cargos en la importación
 
 **Revisado hasta:** 15-08-2026. Fuentes consolidadas: LIGIE, Ley Aduanera, LIVA, LIEPS, LFD y CFF.
@@ -19,3 +24,17 @@
 5. Aplica DTA y, en su caso, cuotas compensatorias, garantías o actualizaciones.
 
 No uses una fórmula genérica sin revisar la fecha, fracción, régimen, tratado, programa y contribuciones específicas. Las tablas arancelarias estructuradas se mantienen en `arancel-mx`, no aquí.
+
+## Fuentes oficiales
+
+- [LIGIE](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf)
+- [LIVA](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf)
+- [LIEPS](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIEPS.pdf)
+- [Ley Federal de Derechos](https://www.diputados.gob.mx/LeyesBiblio/pdf/LFD.pdf)
+- [CFF](https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf)
+
+## Ver también
+
+[Aranceles](aranceles.md) · [Valor en aduana](valor-en-aduana.md) · [Cuotas compensatorias](cuotas-compensatorias.md)
+
+> No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.

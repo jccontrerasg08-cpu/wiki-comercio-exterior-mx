@@ -1,3 +1,8 @@
+---
+title: TLC y T-MEC
+description: Mapa de tratados comerciales de México con énfasis en el T-MEC y sus capítulos de origen y aduanas.
+---
+
 # TLC y T-MEC
 
 ## Qué es

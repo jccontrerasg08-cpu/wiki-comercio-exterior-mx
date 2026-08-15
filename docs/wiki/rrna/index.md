@@ -1,3 +1,8 @@
+---
+title: Guía de RRNA
+description: "Guía de regulaciones y restricciones no arancelarias mexicanas: anexos de la SE y verificación de vigencia."
+---
+
 # Regulaciones y restricciones no arancelarias
 
 **Revisado hasta:** 15-08-2026. **Autoridad:** no autoritativa.
@@ -16,3 +21,7 @@ Las RRNA son medidas distintas del arancel que condicionan importación o export
 Clasifica la mercancía, consulta el acuerdo y sus anexos por fracción/NICO, lee acotaciones y excepciones, identifica autoridad y trámite, y conserva evidencia válida al momento del despacho. Una herramienta de consulta orienta, pero el texto publicado y su fecha efectiva gobiernan.
 
 Continúa con [Reglas y criterios SE](reglas-criterios-se.md), [Anexo 2.2.1](anexo-2-2-1.md) y [Anexo 2.4.1](anexo-2-4-1.md).
+
+## Ver también
+
+[Clasificación: RRNA](../clasificacion/rrna.md) · [Padrón de Importadores](../fundamentos/padron-importadores.md) · [Documentos para el despacho](../aduana/documentos.md)

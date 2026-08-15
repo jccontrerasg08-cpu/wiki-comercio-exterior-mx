@@ -1,3 +1,8 @@
+---
+title: PROSEC
+description: "PROSEC: aranceles preferenciales para insumos de sectores autorizados y su relación con la TIGIE."
+---
+
 # PROSEC
 
 ## Qué es

@@ -1,3 +1,8 @@
+---
+title: Reglas de origen
+description: "Reglas de origen en tratados comerciales: cómo acreditar origen para aplicar preferencias arancelarias."
+---
+
 # Reglas de origen
 
 ## Qué es
