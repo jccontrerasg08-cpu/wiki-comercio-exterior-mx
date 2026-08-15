@@ -154,6 +154,7 @@ nav:
     - Proceso: methodology/index.md
     - Modelo de estados: methodology/status-model.md
     - Patrones externos: methodology/external-patterns.md
+    - Compatibilidad del motor: methodology/docs-engine-compatibility.md
     - Arquitectura: ARCHITECTURE.md
   - Cambios: changes/index.md
   - Glosario: glossary.md
