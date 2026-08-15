@@ -36,7 +36,7 @@ _DATE_PAIR = re.compile(r"_\d{8}-\d{8}", re.IGNORECASE)
 @dataclass(frozen=True, slots=True)
 class DiscoveryPolicy:
     timeout_s: float = 20.0
-    max_bytes: int = 4_000_000
+    max_bytes: int = 16 * 1024 * 1024
     chunk_size: int = 65_536
     allowed_hosts: tuple[str, ...] = ("www.snice.gob.mx", "snice.gob.mx")
 
