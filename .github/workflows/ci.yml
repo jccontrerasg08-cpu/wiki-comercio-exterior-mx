@@ -59,3 +59,45 @@ jobs:
 
       - name: Verify legacy public routes
         run: python -m scripts.verify_site site
+
+  wave1-bootstrap:
+    name: wave1-bootstrap
+    if: github.event_name == 'pull_request' && github.head_ref == 'feat/wiki-legal-depth-wave1'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install documentation dependencies
+        run: python -m pip install -r requirements-docs.txt
+
+      - name: Generate reviewed Wave 1 outputs
+        run: python scripts/_wave1_bootstrap.py
+
+      - name: Verify patched workspace
+        run: |
+          python -m unittest discover -s tests -v
+          python -m scripts.validate_repository
+          python -m scripts.build_catalog --check
+          python -m scripts.page_metadata --check
+          python -m scripts.coverage_report --check
+          python -m scripts.temporal_graph --check
+          python -m scripts.rag_eval --check
+          python -m mkdocs build --strict
+          python -m scripts.verify_site site
+
+      - name: Upload exact Wave 1 outputs
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: wave1-bootstrap-${{ github.run_id }}
+          path: wave1-out
+          retention-days: 1
