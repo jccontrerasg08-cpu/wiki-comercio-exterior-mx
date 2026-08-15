@@ -1,19 +1,52 @@
 site_name: Wiki Comercio Exterior MX
 site_description: Conocimiento temporal y verificable de comercio exterior mexicano.
+site_url: https://jccontrerasg08-cpu.github.io/wiki-comercio-exterior-mx/
 repo_url: https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx
 repo_name: wiki-comercio-exterior-mx
 docs_dir: docs
 exclude_docs: |
   superpowers/
+watch:
+  - includes
 theme:
   name: material
   language: es
+  font: false
+  icon:
+    logo: material/earth
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
     - content.tabs.link
+    - content.tooltips
     - search.suggest
     - search.highlight
+    - search.share
 plugins:
   - search
   - redirects:
@@ -45,15 +78,22 @@ plugins:
         rrna/index.md: wiki/rrna/index.md
         rrna/reglas-criterios-se.md: wiki/rrna/reglas-criterios-se.md
 markdown_extensions:
+  - abbr
   - admonition
   - attr_list
+  - md_in_html
   - tables
   - pymdownx.details
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - toc:
       permalink: true
+extra_css:
+  - stylesheets/extra.css
 nav:
   - Inicio: index.md
   - Wiki:
