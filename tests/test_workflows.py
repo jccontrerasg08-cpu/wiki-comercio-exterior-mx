@@ -42,7 +42,7 @@ def dump_workflow(value) -> str:
 
 class WorkflowPolicyTests(unittest.TestCase):
     def test_required_workflows_exist(self):
-        expected = {"ci.yml", "pages.yml", "source-health.yml", "links.yml", "codeql.yml"}
+        expected = {"ci.yml", "pages.yml", "source-health.yml", "links.yml"}
         self.assertTrue(expected.issubset({path.name for path in WORKFLOWS.glob("*.yml")}))
 
     def test_all_third_party_actions_are_sha_pinned(self):
@@ -75,10 +75,8 @@ class WorkflowPolicyTests(unittest.TestCase):
             self.assertLess(text.index(command), upload)
         self.assertLess(text.index("scripts.verify_site"), upload)
 
-    def test_codeql_scans_python_and_actions(self):
-        workflow = dump_workflow(load_workflow(WORKFLOWS / "codeql.yml"))
-        self.assertIn("python", workflow)
-        self.assertIn("actions", workflow)
+    def test_custom_codeql_is_absent_when_default_setup_is_enabled(self):
+        self.assertFalse((WORKFLOWS / "codeql.yml").exists())
 
     def test_legacy_routes_are_configured(self):
         config = load_workflow(ROOT / "mkdocs.yml")
