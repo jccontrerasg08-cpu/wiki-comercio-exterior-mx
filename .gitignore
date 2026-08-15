@@ -1,6 +1,7 @@
 .venv/
 venv/
 __pycache__/
+.worktrees/
 *.pyc
 .pytest_cache/
 site/
