@@ -11,6 +11,7 @@ La publicación de GitHub Pages permanece en:
 - `mkdocs==1.6.1`
 - `mkdocs-material==9.7.7`
 - `mkdocs-redirects==1.2.3`
+- `properdocs==1.6.7` como pin transitivo reproducible
 
 El build de producción debe seguir pasando `mkdocs build --strict` y `python -m scripts.verify_site` antes de subir el artefacto de Pages.
 
@@ -59,13 +60,15 @@ Una migración del motor sólo puede entrar a `main` cuando el candidato demuest
 
 Hasta que todos esos gates sean verdes, Zensical debe tratarse como **candidato experimental** y no como reemplazo de producción.
 
-## Dependencias que no forman parte del runtime
+## Pin transitivo de ProperDocs
 
-El paquete independiente `properdocs` no participa en los comandos, workflows ni scripts de publicación de esta wiki. `mkdocs-redirects` es un proyecto separado y se instala directamente. Por eso `properdocs` no debe mantenerse en `requirements-docs.txt` sólo por compartir organización de mantenimiento con el plugin de redirects.
+La verificación en un runner limpio muestra que `mkdocs-redirects==1.2.3` declara `properdocs>=1.6.5` y el resolver instala ProperDocs aunque no aparezca como comando directo de la wiki.
+
+Por reproducibilidad, este repositorio conserva `properdocs==1.6.7` como pin explícito de esa dependencia transitiva. El objetivo no es usar ProperDocs como motor alternativo, sino impedir que una versión transitiva flotante cambie el entorno de build sin revisión.
 
 ## Política de actualización
 
-- Mantener versiones del motor y plugins fijadas explícitamente en CI.
+- Mantener versiones del motor, plugins y dependencias transitivas sensibles fijadas explícitamente en CI.
 - Revisar nuevas versiones de Material sólo por correcciones relevantes mientras permanezca en maintenance mode.
 - No subir a MkDocs 2.x mientras Material siga siendo el tema de producción.
 - Reevaluar Zensical cuando cambie el estado de `zensical/backlog#23` o aparezca soporte equivalente de redirects.
