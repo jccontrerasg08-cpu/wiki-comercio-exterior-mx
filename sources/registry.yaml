@@ -103,6 +103,27 @@ sources:
       expected_title: Reglamento de la Ley Aduanera
       reject_if_contains: ["Access Denied", "Captcha", "Iniciar sesion"]
 
+  - id: mx_sidof_ley_aduanera_reform_20251119
+    jurisdiction: MEX
+    title: Decreto de reforma a la Ley Aduanera
+    url: https://sidof.segob.gob.mx/notas/5773357
+    note_id: "5773357"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_ley_aduanera
+    publication_date: 2025-11-19
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe:
+      method: GET
+      expected_status: [200]
+      min_bytes: 500
+      expected_path: /notas/5773357
+      expected_title: Ley Aduanera
+      reject_if_contains: ["Access Denied", "Captcha", "Iniciar sesion"]
+
   - id: mx_diputados_lce_current
     jurisdiction: MEX
     title: Ley de Comercio Exterior vigente

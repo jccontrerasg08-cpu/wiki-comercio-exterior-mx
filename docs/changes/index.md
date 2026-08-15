@@ -2,6 +2,8 @@
 
 ## 2026
 
+- **1 de enero:** entrada en vigor de la reforma a la Ley Aduanera publicada el 19-11-2025. Fuente `mx_sidof_ley_aduanera_reform_20251119`.
+
 - **2 de junio:** texto constitucional consolidado por Diputados con últimas reformas publicadas a esa fecha. Fuente `mx_diputados_constitucion`.
 - **30 de mayo:** entrada en vigor general de la modificación de 29 de mayo a las Reglas y criterios de la SE. Fuente `mx_sidof_reglas_se_mod_20260529`.
 - **29 de mayo:** modificación de 28 de mayo a las Reglas y criterios de la SE. Fuente `mx_sidof_reglas_se_mod_20260528`.

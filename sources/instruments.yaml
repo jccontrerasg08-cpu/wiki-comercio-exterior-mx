@@ -21,7 +21,10 @@ instruments:
     effective_to: null
     current_through: 2026-08-15
     consolidated_source_id: mx_diputados_ley_aduanera
-    events: []
+    events:
+      - source_id: mx_sidof_ley_aduanera_reform_20251119
+        relation: amends
+        effective_from: 2026-01-01
 
   - id: mx_reglamento_ley_aduanera
     jurisdiction: MEX

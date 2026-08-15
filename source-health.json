@@ -1,0 +1,202 @@
+[
+  {
+    "bytes_read": 3134465,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf",
+    "media_type": "application/pdf",
+    "sha256": "be7427b20d3552775ab42018f8f87578078770095bf8cf46322c25e36ee3aa7d",
+    "source_id": "mx_diputados_cff_current",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 3141703,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf",
+    "media_type": "application/pdf",
+    "sha256": "ca63a23a4b7444ebdbdad93759fbf46bd14c069e587c5878decf89fc9c12ca8e",
+    "source_id": "mx_diputados_constitucion",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 573351,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LCE.pdf",
+    "media_type": "application/pdf",
+    "sha256": "3f114f47007c21b4691bad502b786b45aa5e45c1571bd56dd8ca4f5af991b459",
+    "source_id": "mx_diputados_lce_current",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 2088249,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf",
+    "media_type": "application/pdf",
+    "sha256": "43927095d22ff7bc7780e78132d2160b5050b5f76026b539daec32be09d7341d",
+    "source_id": "mx_diputados_ley_aduanera",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 680036,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LICal_010720.pdf",
+    "media_type": "application/pdf",
+    "sha256": "a9f33bb2a633b8533f902808df4d75cff31a4c71e21728b12cde45b7e229be2a",
+    "source_id": "mx_diputados_ley_infraestructura_calidad",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 5171154,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LFD.pdf",
+    "media_type": "application/pdf",
+    "sha256": "64b08a1ff8e5c71759acf550cf9c8df7eb343ea679a2c2663d0eef3db19f10df",
+    "source_id": "mx_diputados_lfd_current",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 1775862,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIEPS.pdf",
+    "media_type": "application/pdf",
+    "sha256": "32639ede8448f91e6ddde556d4b8bceaf349b904bc21631f06e1c8a7a3d416f4",
+    "source_id": "mx_diputados_lieps_current",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 19154404,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf",
+    "media_type": "application/pdf",
+    "sha256": "a7688a47c8283f327b943e06ed948782feba2f5a0e16fe796d50d8340ce40ece",
+    "source_id": "mx_diputados_ligie_current",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 1241762,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/ref/ligie_2022/LIGIE_2022_ref02_29dic25.pdf",
+    "media_type": "application/pdf",
+    "sha256": "3c5285cf2b250af0175ae9f31d69d069915834acdfa7150c3449349f087690bf",
+    "source_id": "mx_diputados_ligie_reform_2025",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 1249332,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf",
+    "media_type": "application/pdf",
+    "sha256": "f2b5b1770441a6a4e48f3ade408f9ff7a3e9c81bd5d529e52484f49e4a8e91a6",
+    "source_id": "mx_diputados_liva_current",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 645727,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LCE.pdf",
+    "media_type": "application/pdf",
+    "sha256": "14d38a7a24e4d8e5093951b5e80a87f331fa3ea0be2164269573a8b9e4c291dd",
+    "source_id": "mx_diputados_reg_lce",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 903770,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAdua.pdf",
+    "media_type": "application/pdf",
+    "sha256": "bcdfcd9073014aec4aefbacc01c9dd5b1f97f0da0c4556f0f506d20f12d77812",
+    "source_id": "mx_diputados_reg_ley_aduanera",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 68045,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5777376",
+    "media_type": "text/html",
+    "sha256": "d143697eb84fa9f490b0de3b4414e2cc96b5c97d818c12fbcdcddbe1eeb9f838",
+    "source_id": "mx_sidof_decreto_20251229",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 67096,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5786538",
+    "media_type": "text/html",
+    "sha256": "24f014e346a67bdea015b5477e9b8964e68f258003d1895cd68fe0037c35b5cf",
+    "source_id": "mx_sidof_lce_reform_20260501",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 68179,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5785818",
+    "media_type": "text/html",
+    "sha256": "cef2c87ce63d34291fdf78a7f23004f3657737b950c2637c07e3235513784fc8",
+    "source_id": "mx_sidof_ligie_prosec_20260423",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 67412,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5783669",
+    "media_type": "text/html",
+    "sha256": "043d67d0d57f6cbe1f011dc042b527b6729f4e12d8f1ea1267aec2298e322029",
+    "source_id": "mx_sidof_lineamientos_159bis_20260331",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 67210,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5651333",
+    "media_type": "text/html",
+    "sha256": "0ad734dc2aa17a31c17f6aa9108ddad0a66c45af7edf5855f0ad3032090a4319",
+    "source_id": "mx_sidof_reglas_se_2022",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 68044,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5767158",
+    "media_type": "text/html",
+    "sha256": "df5e0fbc0c649d7792174358e9be541b0c4d7ea8b2e56dba3ea0d993749b8722",
+    "source_id": "mx_sidof_reglas_se_mod_20250902",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 68262,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5779942",
+    "media_type": "text/html",
+    "sha256": "3708803bd2085878ab5cd1001c045b17060ff2e87d383e0f3a07c0e227ea6ff2",
+    "source_id": "mx_sidof_reglas_se_mod_20260212",
+    "status_code": 200
+  },
+  {
+    "bytes_read": 66994,
+    "classification": "healthy_transport",
+    "detail": "transport only; legal status requires review",
+    "final_url": "https://sidof.segob.gob.mx/notas/5783929",
+    "media_type": "text/html",
+    "sha256": "935a1b21ff8ba99495af0b439ecf727f21d2b19438c0236f861087143cdc6e40",
+    "source_id": "mx_sidof_reglas_se_mod_20260402",
+    "status_code": 200
+  }
+]
