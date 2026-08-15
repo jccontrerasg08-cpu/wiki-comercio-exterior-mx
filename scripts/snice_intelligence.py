@@ -153,6 +153,22 @@ class SniceDocument:
 
 
 @dataclass(frozen=True, slots=True)
+class UnparsedSniceEntry:
+    filename: str
+    source_url: str
+    last_modified: datetime
+    bytes: int
+    reason: str
+
+
+@dataclass(frozen=True, slots=True)
+class SniceIndexSnapshot:
+    documents: tuple[SniceDocument, ...]
+    unparsed_entries: tuple[UnparsedSniceEntry, ...]
+    index_entry_count: int
+
+
+@dataclass(frozen=True, slots=True)
 class SniceSeries:
     logical_dataset_id: str
     family: str
@@ -295,40 +311,79 @@ def _parse_size(raw: str) -> int:
     return int(float(match.group("number")) * (1024**exponent))
 
 
+def parse_index_snapshot(
+    index_html: str,
+    *,
+    base_url: str,
+    discovered_at: datetime,
+) -> SniceIndexSnapshot:
+    """Parse every file-shaped autoindex row and preserve parse failures."""
+
+    parsed_base = urlparse(base_url)
+    if parsed_base.scheme not in {"https", "http"} or not parsed_base.hostname:
+        raise ValueError("base_url must be an absolute HTTP(S) URL")
+
+    documents: list[SniceDocument] = []
+    unparsed: list[UnparsedSniceEntry] = []
+    entry_count = 0
+    for row in _INDEX_ROW_RE.finditer(index_html):
+        href = html.unescape(row.group("href")).strip()
+        if href.startswith("?") or (href.startswith("/") and href.rstrip("/") == ""):
+            continue
+        filename = unquote(urlparse(href).path.rsplit("/", 1)[-1])
+        if not filename:
+            continue
+        entry_count += 1
+        source_url = urljoin(base_url, href)
+        last_modified = datetime.strptime(
+            f"{row.group('day')} {row.group('time')}", "%d-%b-%Y %H:%M"
+        )
+        size = _parse_size(row.group("size"))
+        try:
+            parsed = parse_snice_filename(filename)
+        except ValueError as exc:
+            unparsed.append(
+                UnparsedSniceEntry(
+                    filename=filename,
+                    source_url=source_url,
+                    last_modified=last_modified,
+                    bytes=size,
+                    reason=str(exc),
+                )
+            )
+            continue
+        documents.append(
+            SniceDocument(
+                **asdict(parsed),
+                source_url=source_url,
+                last_modified=last_modified,
+                discovered_at=discovered_at,
+                bytes=size,
+            )
+        )
+
+    return SniceIndexSnapshot(
+        documents=tuple(documents),
+        unparsed_entries=tuple(unparsed),
+        index_entry_count=entry_count,
+    )
+
+
 def parse_index_html(
     index_html: str,
     *,
     base_url: str,
     discovered_at: datetime,
 ) -> list[SniceDocument]:
-    """Parse Apache-style SNICE autoindex rows into normalized document records."""
+    """Compatibility wrapper returning only successfully normalized documents."""
 
-    parsed_base = urlparse(base_url)
-    if parsed_base.scheme not in {"https", "http"} or not parsed_base.hostname:
-        raise ValueError("base_url must be an absolute HTTP(S) URL")
-    documents: list[SniceDocument] = []
-    for row in _INDEX_ROW_RE.finditer(index_html):
-        href = html.unescape(row.group("href")).strip()
-        if href.startswith("?") or (href.startswith("/") and href.rstrip("/") == ""):
-            continue
-        filename = unquote(urlparse(href).path.rsplit("/", 1)[-1])
-        try:
-            parsed = parse_snice_filename(filename)
-        except ValueError:
-            continue
-        last_modified = datetime.strptime(
-            f"{row.group('day')} {row.group('time')}", "%d-%b-%Y %H:%M"
-        )
-        documents.append(
-            SniceDocument(
-                **asdict(parsed),
-                source_url=urljoin(base_url, href),
-                last_modified=last_modified,
-                discovered_at=discovered_at,
-                bytes=_parse_size(row.group("size")),
-            )
-        )
-    return documents
+    return list(
+        parse_index_snapshot(
+            index_html,
+            base_url=base_url,
+            discovered_at=discovered_at,
+        ).documents
+    )
 
 
 def _period_end(year: int, month: int) -> date:

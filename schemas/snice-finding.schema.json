@@ -4,16 +4,14 @@
   "title": "SNICE discovery findings",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schema_version", "source_url", "generated_at", "finding_count", "findings"],
+  "required": ["schema_version", "source_url", "generated_at", "index_sha256", "finding_count", "findings"],
   "properties": {
     "schema_version": {"const": "1.0"},
     "source_url": {"type": "string", "format": "uri", "pattern": "^https://"},
     "generated_at": {"type": "string", "format": "date-time"},
+    "index_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "finding_count": {"type": "integer", "minimum": 0},
-    "findings": {
-      "type": "array",
-      "items": {"$ref": "#/$defs/finding"}
-    }
+    "findings": {"type": "array", "items": {"$ref": "#/$defs/finding"}}
   },
   "$defs": {
     "finding": {

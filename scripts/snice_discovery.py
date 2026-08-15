@@ -18,12 +18,13 @@ from scripts.snice_intelligence import (
     build_series,
     detect_missing_companions,
     detect_size_anomaly,
-    parse_index_html,
+    parse_index_snapshot,
 )
 
 
 SNICE_INDEX_URL = "https://www.snice.gob.mx/~oracle/SNICE_DOCS/"
 SCHEMA_VERSION = "1.0"
+STATE_VERSION = "1.0"
 OUTPUT_NAMES = {
     "documents": "documents.json",
     "series": "series.json",
@@ -31,6 +32,7 @@ OUTPUT_NAMES = {
     "changes": "changes.json",
 }
 _DATE_PAIR = re.compile(r"_\d{8}-\d{8}", re.IGNORECASE)
+_STATE_METADATA_FIELDS = ("bytes", "last_modified", "source_url")
 
 
 @dataclass(frozen=True, slots=True)
@@ -149,6 +151,10 @@ def _utc_iso(value: datetime) -> str:
 
 def _local_iso(value: datetime) -> str:
     return value.replace(microsecond=0).isoformat()
+
+
+def _index_sha256(index_html: str) -> str:
+    return hashlib.sha256(index_html.encode("utf-8")).hexdigest()
 
 
 def _document_id(document: SniceDocument) -> str:
@@ -280,21 +286,136 @@ def _finding_records(
     )
 
 
+def _state_document(record: Mapping[str, object]) -> dict[str, object]:
+    return {
+        "document_id": record["document_id"],
+        "logical_dataset_id": record["logical_dataset_id"],
+        "family": record["family"],
+        "filename": record["filename"],
+        "source_url": record["source_url"],
+        "last_modified": record["last_modified"],
+        "bytes": record["bytes"],
+    }
+
+
+def build_state(payloads: Mapping[str, Mapping[str, object]]) -> dict[str, object]:
+    """Reduce output payloads to the minimal state needed for the next comparison."""
+
+    documents_payload = payloads.get("documents")
+    if not isinstance(documents_payload, Mapping):
+        raise ValueError("documents payload is required to build state")
+    documents_value = documents_payload.get("documents")
+    if not isinstance(documents_value, list):
+        raise ValueError("documents payload must contain a document list")
+    state_documents = [
+        _state_document(record)
+        for record in documents_value
+        if isinstance(record, Mapping)
+    ]
+    state_documents.sort(key=lambda item: str(item["document_id"]))
+    return {
+        "state_version": STATE_VERSION,
+        "source_url": documents_payload["source_url"],
+        "generated_at": documents_payload["generated_at"],
+        "index_sha256": documents_payload["index_sha256"],
+        "documents": state_documents,
+    }
+
+
+def _metadata(record: Mapping[str, object]) -> dict[str, object]:
+    return {field: record.get(field) for field in _STATE_METADATA_FIELDS}
+
+
+def _collection_changes(
+    previous_state: Mapping[str, object] | None,
+    current_state: Mapping[str, object],
+    *,
+    detected_at: str,
+) -> list[dict[str, object]]:
+    if previous_state is None:
+        return []
+    previous_documents = previous_state.get("documents")
+    current_documents = current_state.get("documents")
+    if not isinstance(previous_documents, list) or not isinstance(current_documents, list):
+        raise ValueError("SNICE state documents must be lists")
+
+    old = {
+        str(item["document_id"]): item
+        for item in previous_documents
+        if isinstance(item, Mapping) and "document_id" in item
+    }
+    new = {
+        str(item["document_id"]): item
+        for item in current_documents
+        if isinstance(item, Mapping) and "document_id" in item
+    }
+
+    changes: list[dict[str, object]] = []
+    for document_id in sorted(new.keys() - old.keys()):
+        current = new[document_id]
+        changes.append(
+            {
+                "change_type": "document_added",
+                "document_id": document_id,
+                "family": current["family"],
+                "logical_dataset_id": current["logical_dataset_id"],
+                "filename": current["filename"],
+                "detected_at": detected_at,
+                "previous": None,
+                "current": _metadata(current),
+            }
+        )
+    for document_id in sorted(old.keys() - new.keys()):
+        previous = old[document_id]
+        changes.append(
+            {
+                "change_type": "document_removed",
+                "document_id": document_id,
+                "family": previous["family"],
+                "logical_dataset_id": previous["logical_dataset_id"],
+                "filename": previous["filename"],
+                "detected_at": detected_at,
+                "previous": _metadata(previous),
+                "current": None,
+            }
+        )
+    for document_id in sorted(old.keys() & new.keys()):
+        previous = old[document_id]
+        current = new[document_id]
+        if _metadata(previous) == _metadata(current):
+            continue
+        changes.append(
+            {
+                "change_type": "document_metadata_changed",
+                "document_id": document_id,
+                "family": current["family"],
+                "logical_dataset_id": current["logical_dataset_id"],
+                "filename": current["filename"],
+                "detected_at": detected_at,
+                "previous": _metadata(previous),
+                "current": _metadata(current),
+            }
+        )
+    return changes
+
+
 def build_payloads(
     index_html: str,
     *,
     source_url: str = SNICE_INDEX_URL,
     discovered_at: datetime,
+    previous_state: Mapping[str, object] | None = None,
 ) -> dict[str, dict[str, object]]:
     """Build physical, logical and observation payloads from one index snapshot."""
 
     if discovered_at.tzinfo is None or discovered_at.utcoffset() is None:
         raise ValueError("discovered_at must be timezone-aware")
-    physical = parse_index_html(
+    parsed = parse_index_snapshot(
         index_html,
         base_url=source_url,
         discovered_at=discovered_at,
     )
+    physical = list(parsed.documents)
     logical = build_series(physical)
     versioned = [document for series in logical for document in series.documents]
     versioned.sort(key=lambda item: (item.last_modified, item.filename))
@@ -302,12 +423,27 @@ def build_payloads(
     for document in versioned:
         family_sizes.setdefault(document.family, []).append(document.bytes)
     generated_at = _utc_iso(discovered_at)
+    index_sha256 = _index_sha256(index_html)
+    unparsed_entries = [
+        {
+            "filename": item.filename,
+            "source_url": item.source_url,
+            "last_modified": _local_iso(item.last_modified),
+            "bytes": item.bytes,
+            "reason": item.reason,
+        }
+        for item in parsed.unparsed_entries
+    ]
 
     documents_payload: dict[str, object] = {
         "schema_version": SCHEMA_VERSION,
         "source_url": source_url,
         "generated_at": generated_at,
+        "index_sha256": index_sha256,
+        "index_entry_count": parsed.index_entry_count,
         "document_count": len(versioned),
+        "unparsed_count": len(unparsed_entries),
+        "unparsed_entries": unparsed_entries,
         "documents": [
             _document_record(document, family_sizes=family_sizes)
             for document in versioned
@@ -317,6 +453,7 @@ def build_payloads(
         "schema_version": SCHEMA_VERSION,
         "source_url": source_url,
         "generated_at": generated_at,
+        "index_sha256": index_sha256,
         "series_count": len(logical),
         "series": [_series_record(item) for item in logical],
     }
@@ -325,21 +462,38 @@ def build_payloads(
         "schema_version": SCHEMA_VERSION,
         "source_url": source_url,
         "generated_at": generated_at,
+        "index_sha256": index_sha256,
         "finding_count": len(findings),
         "findings": findings,
     }
+
+    provisional: dict[str, dict[str, object]] = {
+        "documents": documents_payload,
+        "series": series_payload,
+        "findings": findings_payload,
+        "changes": {},
+    }
+    current_state = build_state(provisional)
+    changes = _collection_changes(
+        previous_state,
+        current_state,
+        detected_at=generated_at,
+    )
     changes_payload: dict[str, object] = {
         "schema_version": SCHEMA_VERSION,
         "source_url": source_url,
         "generated_at": generated_at,
-        "changes": [],
+        "previous_index_sha256": (
+            previous_state.get("index_sha256")
+            if isinstance(previous_state, Mapping)
+            else None
+        ),
+        "current_index_sha256": index_sha256,
+        "change_count": len(changes),
+        "changes": changes,
     }
-    return {
-        "documents": documents_payload,
-        "series": series_payload,
-        "findings": findings_payload,
-        "changes": changes_payload,
-    }
+    provisional["changes"] = changes_payload
+    return provisional
 
 
 def write_payloads(
@@ -365,6 +519,30 @@ def write_payloads(
     return written
 
 
+def write_state(state: Mapping[str, object], path: Path) -> Path:
+    """Persist canonical comparison state for the next scheduled run."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    rendered = json.dumps(state, ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    path.write_text(rendered, encoding="utf-8", newline="\n")
+    return path
+
+
+def load_state(path: Path) -> dict[str, object]:
+    """Load and minimally validate comparison state."""
+
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(value, dict):
+        raise ValueError("SNICE state root must be an object")
+    if value.get("state_version") != STATE_VERSION:
+        raise ValueError(f"unsupported SNICE state version: {value.get('state_version')!r}")
+    if not isinstance(value.get("documents"), list):
+        raise ValueError("SNICE state must contain a document list")
+    if not re.fullmatch(r"[0-9a-f]{64}", str(value.get("index_sha256", ""))):
+        raise ValueError("SNICE state has invalid index_sha256")
+    return value
+
+
 def _parse_discovered_at(value: str | None) -> datetime:
     if value is None:
         return datetime.now(timezone.utc).replace(microsecond=0)
@@ -382,6 +560,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--url", default=SNICE_INDEX_URL)
     parser.add_argument("--input-html", type=Path)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--state", type=Path)
+    parser.add_argument("--state-output", type=Path)
     parser.add_argument("--max-bytes", type=int, default=DiscoveryPolicy().max_bytes)
     parser.add_argument("--timeout", type=float, default=DiscoveryPolicy().timeout_s)
     parser.add_argument("--discovered-at")
@@ -396,20 +576,34 @@ def main(argv: list[str] | None = None) -> int:
         policy = DiscoveryPolicy(timeout_s=args.timeout, max_bytes=args.max_bytes)
         with requests.Session() as session:
             index_html = fetch_index_html(session, args.url, policy=policy)
+
+    previous_state = None
+    if args.state and args.state.exists():
+        previous_state = load_state(args.state)
     payloads = build_payloads(
         index_html,
         source_url=args.url,
         discovered_at=discovered_at,
+        previous_state=previous_state,
     )
     written = write_payloads(payloads, args.output_dir)
+    state = build_state(payloads)
+    if args.state_output:
+        write_state(state, args.state_output)
+
     print(
         json.dumps(
             {
                 "source_url": args.url,
+                "index_sha256": payloads["documents"]["index_sha256"],
+                "index_entries": payloads["documents"]["index_entry_count"],
                 "documents": payloads["documents"]["document_count"],
+                "unparsed": payloads["documents"]["unparsed_count"],
                 "series": payloads["series"]["series_count"],
                 "findings": payloads["findings"]["finding_count"],
+                "changes": payloads["changes"]["change_count"],
                 "outputs": {key: str(path) for key, path in sorted(written.items())},
+                "state_output": str(args.state_output) if args.state_output else None,
             },
             ensure_ascii=False,
             sort_keys=True,
