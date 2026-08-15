@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,9 +54,26 @@ COUNTRIES = {
     "USA": "Fuentes oficiales de Estados Unidos para aduanas y comercio exterior, mantenidas como catálogo de referencia país.",
 }
 
+SOURCE_SECTION_PATHS = {
+    "docs/wiki/aduana/regimenes-aduaneros.md",
+    "docs/wiki/contribuciones/impuestos-importacion.md",
+    "docs/wiki/fundamentos/marco-juridico.md",
+    "docs/wiki/programas/drawback.md",
+    "docs/wiki/rrna/anexo-2-2-1.md",
+    "docs/wiki/rrna/anexo-2-4-1.md",
+    "docs/wiki/rrna/reglas-criterios-se.md",
+}
+
+
+def yaml_string(value: str) -> str:
+    """Return a deterministic double-quoted YAML scalar."""
+
+    return json.dumps(value, ensure_ascii=False)
+
 
 def set_description(path: Path, description: str) -> None:
     text = path.read_text(encoding="utf-8")
+    rendered = yaml_string(description)
     if text.startswith("---\n"):
         end = text.find("\n---\n", 4)
         if end < 0:
@@ -63,18 +81,39 @@ def set_description(path: Path, description: str) -> None:
         head = text[4:end]
         body = text[end + 5 :]
         if re.search(r"^description:\s*", head, flags=re.M):
-            head = re.sub(r"^description:.*$", f"description: {description}", head, count=1, flags=re.M)
+            head = re.sub(r"^description:.*$", f"description: {rendered}", head, count=1, flags=re.M)
         else:
             lines = head.splitlines()
             insert_at = 1 if lines and lines[0].startswith("title:") else len(lines)
-            lines.insert(insert_at, f"description: {description}")
+            lines.insert(insert_at, f"description: {rendered}")
             head = "\n".join(lines)
         path.write_text(f"---\n{head}\n---\n{body}", encoding="utf-8")
         return
 
     title_match = re.search(r"^#\s+(.+)$", text, flags=re.M)
     title = title_match.group(1).strip() if title_match else path.stem.replace("-", " ").title()
-    path.write_text(f"---\ntitle: {title}\ndescription: {description}\n---\n\n{text}", encoding="utf-8")
+    path.write_text(
+        f"---\ntitle: {yaml_string(title)}\ndescription: {rendered}\n---\n\n{text}",
+        encoding="utf-8",
+    )
+
+
+def ensure_sources(path: Path) -> None:
+    text = path.read_text(encoding="utf-8")
+    if re.search(r"^## Fuentes(?: oficiales| de referencia| oficiales y multilaterales)?\b", text, re.M):
+        return
+    section = (
+        "\n\n## Fuentes\n\n"
+        "Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. "
+        "Para seguirlos hasta su URL y estado de procedencia, consulta el "
+        "[catálogo reproducible de fuentes](../../catalog/registry.md).\n"
+    )
+    marker = "\n## Ver también"
+    if marker in text:
+        text = text.replace(marker, section.rstrip() + marker, 1)
+    else:
+        text = text.rstrip() + section
+    path.write_text(text, encoding="utf-8")
 
 
 def ensure_related(path: Path) -> None:
@@ -99,6 +138,9 @@ for rel, description in PUBLIC_DESCRIPTIONS.items():
 for code, description in COUNTRIES.items():
     set_description(ROOT / "docs" / "catalog" / "countries" / f"{code}.md", description)
 
+for rel in sorted(SOURCE_SECTION_PATHS):
+    ensure_sources(ROOT / rel)
+
 for path in sorted((ROOT / "docs" / "wiki").rglob("*.md")):
     if path.name != "index.md" or path.parent != ROOT / "docs" / "wiki":
         ensure_related(path)
@@ -113,12 +155,16 @@ replacement = (
 )
 if needle in text:
     text = text.replace(needle, replacement)
+if "No es asesoría legal" not in text:
+    text = text.rstrip() + "\n\n**No es asesoría legal.** Verifica la fuente oficial y la vigencia aplicable antes de tomar una decisión operativa.\n"
 index.write_text(text, encoding="utf-8")
 
 scope_test = ROOT / "tests" / "test_editorial_quality.py"
 text = scope_test.read_text(encoding="utf-8")
 old = "                    self.assertIn(marker, text)"
 new = "                    self.assertIn(marker.lower(), text.lower())"
-if old not in text:
+if old in text:
+    text = text.replace(old, new)
+elif new not in text:
     raise RuntimeError("editorial marker assertion changed")
-scope_test.write_text(text.replace(old, new), encoding="utf-8")
+scope_test.write_text(text, encoding="utf-8")
