@@ -1,3 +1,8 @@
+---
+title: "CHN"
+description: "Fuentes oficiales de China para aduanas y comercio exterior, mantenidas como catálogo de referencia país."
+---
+
 # CHN
 
 - jurisdiction: `CHN`

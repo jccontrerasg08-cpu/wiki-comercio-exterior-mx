@@ -1,3 +1,8 @@
+---
+title: "Marco jurídico del comercio exterior"
+description: "Marco jurídico del comercio exterior mexicano: jerarquía de leyes, reglamentos, reglas, decretos y fuentes oficiales para verificar vigencia."
+---
+
 # Marco jurídico del comercio exterior
 
 **Revisado hasta:** 15-08-2026. **Autoridad de esta página:** no autoritativa.
@@ -20,3 +25,11 @@ Una operación puede estar simultáneamente sujeta a clasificación arancelaria,
 2. Consulta LIGIE, RGCE y Reglas SE vigentes para la fecha de la operación.
 3. Revisa el acto DOF, sus transitorios y anexos.
 4. Confirma el trámite en VUCEM, SAT, ANAM o SNICE según la autoridad competente.
+
+## Fuentes
+
+Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. Para seguirlos hasta su URL y estado de procedencia, consulta el [catálogo reproducible de fuentes](../../catalog/registry.md).
+
+## Ver también
+
+[Mapa de la wiki](../index.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)

@@ -1,3 +1,8 @@
+---
+title: "TLC y T-MEC"
+description: "Tratados comerciales y T-MEC: preferencias arancelarias, origen, certificación y verificación sin confundir país de compra con origen."
+---
+
 # TLC y T-MEC
 
 ## Qué es

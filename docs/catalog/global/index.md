@@ -1,3 +1,8 @@
+---
+title: "Global"
+description: "Fuentes globales de comercio exterior: OMC, OMA, ICC y referencias multilaterales usadas por la wiki."
+---
+
 # Global
 
 Official portals and short notes. Not a second Comtrade warehouse. All rows `harvest: false`.

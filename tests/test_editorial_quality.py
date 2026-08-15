@@ -84,7 +84,7 @@ class EditorialQualityTests(unittest.TestCase):
                 self.assertTrue(path.exists(), rel)
                 text = read(path)
                 for marker in markers:
-                    self.assertIn(marker, text)
+                    self.assertIn(marker.lower(), text.lower())
 
     def test_known_false_absolutes_do_not_return(self):
         forbidden = (

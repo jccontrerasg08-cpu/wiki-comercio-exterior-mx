@@ -1,3 +1,8 @@
+---
+title: "Patrones externos revisados"
+description: "Patrones de proyectos externos adaptados a la wiki para provenance, documentación, validación y mantenimiento reproducible."
+---
+
 # Patrones externos revisados
 
 No se copió una implementación completa. Se adaptaron ideas pequeñas, con tests locales y contratos propios.

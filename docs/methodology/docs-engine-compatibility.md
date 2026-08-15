@@ -1,3 +1,8 @@
+---
+title: "Compatibilidad del motor de documentación"
+description: "Contrato de compatibilidad del motor documental, MkDocs Material, redirects y ruta futura de migración."
+---
+
 # Compatibilidad del motor de documentación
 
 Estado evaluado: **15 de agosto de 2026**.

@@ -1,3 +1,8 @@
+---
+title: "Anexo 2.2.1: permisos y avisos"
+description: "Anexo 2.2.1: permisos y avisos de la Secretaría de Economía vinculados con fracciones y supuestos de comercio exterior."
+---
+
 # Anexo 2.2.1: permisos y avisos
 
 **Vigencia revisada hasta:** 30-05-2026. **Fuente:** instrumento `mx_reglas_criterios_se`.
@@ -13,3 +18,11 @@ El Anexo 2.2.1 de las Reglas y criterios SE identifica mercancías sujetas a per
 5. Conserva resolución, vigencia, saldo y datos que deban declararse en pedimento.
 
 Esta página no reproduce la tabla, porque cambia mediante acuerdos y copiarla crearía una segunda base potencialmente obsoleta. Fuente de publicación más reciente registrada: `mx_sidof_reglas_se_mod_20260528` y `mx_sidof_reglas_se_mod_20260529`.
+
+## Fuentes
+
+Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. Para seguirlos hasta su URL y estado de procedencia, consulta el [catálogo reproducible de fuentes](../../catalog/registry.md).
+
+## Ver también
+
+[Mapa de la wiki](../index.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)

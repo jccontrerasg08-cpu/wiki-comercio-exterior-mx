@@ -1,3 +1,8 @@
+---
+title: "Regulaciones y restricciones no arancelarias (RRNA)"
+description: "Introducción a las regulaciones y restricciones no arancelarias que pueden activarse por mercancía, fracción, NICO y operación."
+---
+
 # Regulaciones y restricciones no arancelarias (RRNA)
 
 ## Qué es

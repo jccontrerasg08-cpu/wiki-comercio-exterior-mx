@@ -1,3 +1,8 @@
+---
+title: "USA"
+description: "Fuentes oficiales de Estados Unidos para aduanas y comercio exterior, mantenidas como catálogo de referencia país."
+---
+
 # USA
 
 - jurisdiction: `USA`

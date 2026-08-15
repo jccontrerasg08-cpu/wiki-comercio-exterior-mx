@@ -72,3 +72,7 @@ Las Reglas y criterios de carácter general en materia de comercio exterior de l
 - [SAT, Normatividad RGCE 2026](https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html)
 
 > Una fecha de publicación no siempre coincide con la fecha en que cada obligación comienza a surtir efectos. Para aplicar un cambio, revisa sus transitorios y la operación concreta.
+
+## Ver también
+
+[Mapa de la wiki](../index.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)

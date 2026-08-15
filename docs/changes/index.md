@@ -1,3 +1,8 @@
+---
+title: "Registro de cambios jurídicos"
+description: "Historial del proyecto y cambios relevantes en fuentes, metodología, contenido y controles de la wiki."
+---
+
 # Registro de cambios jurídicos
 
 ## 2026

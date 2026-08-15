@@ -1,3 +1,8 @@
+---
+title: "Reglas y criterios de la Secretaría de Economía"
+description: "Reglas y criterios de la Secretaría de Economía: acuerdo base, modificaciones y anexos que estructuran numerosas RRNA."
+---
+
 # Reglas y criterios de la Secretaría de Economía
 
 **Vigencia revisada hasta:** 30-05-2026. **Autoridad:** no autoritativa.
@@ -15,3 +20,11 @@ No basta consultar el acuerdo base. Para una fecha dada deben incorporarse únic
 ## Cómo verificar
 
 Usa la [Biblioteca Jurídica SNICE](https://www.snice.gob.mx/cs/avi/snice/biblioteca.juridica.html) para navegación y SIDOF para el acto publicado. Contrasta la fracción, descripción, acotación, régimen, país, finalidad, excepción y trámite VUCEM.
+
+## Fuentes
+
+Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. Para seguirlos hasta su URL y estado de procedencia, consulta el [catálogo reproducible de fuentes](../../catalog/registry.md).
+
+## Ver también
+
+[Mapa de la wiki](../index.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)

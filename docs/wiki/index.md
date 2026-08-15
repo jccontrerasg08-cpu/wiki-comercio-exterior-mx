@@ -43,6 +43,8 @@ El comercio exterior cambia por decretos, resoluciones, anexos y modificaciones.
 
 ## ¿Qué falta?
 
-El [Roadmap de contenido](../status/content-roadmap.md) separa lo cubierto, parcial y pendiente. El [Estado del corpus](../status/corpus-coverage.md) muestra gobernanza y preparación para recuperación; **no es un porcentaje de certeza jurídica**.
+El [Roadmap de contenido](../status/content-roadmap.md) separa lo cubierto, parcial y pendiente. El catálogo reproducible de fuentes vive en `docs/catalog/` y puede recorrerse desde la [Guía del catálogo](../catalog/index.md). El [Estado del corpus](../status/corpus-coverage.md) muestra gobernanza y preparación para recuperación; **no es un porcentaje de certeza jurídica**.
 
 > La wiki organiza conocimiento para consulta y estudio. Cuando una afirmación cambie una decisión real, sigue el enlace hasta la **fuente oficial** y verifica la vigencia aplicable.
+
+**No es asesoría legal.** Verifica la fuente oficial y la vigencia aplicable antes de tomar una decisión operativa.

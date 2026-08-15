@@ -1,3 +1,8 @@
+---
+title: "Architecture"
+description: "Arquitectura del repositorio: fuentes, originales, corpus, wiki, grafo temporal, validadores y recuperación RAG."
+---
+
 # Architecture
 
 The repository is a Mexico-first, provenance-first legal knowledge system. It is not SAT, ANAM, Secretaría de Economía, Cámara de Diputados, or DOF. Structured tariff rows remain in [`arancel-mx`](https://github.com/jccontrerasg08-cpu/arancel-mx).

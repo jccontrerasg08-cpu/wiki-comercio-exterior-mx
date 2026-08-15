@@ -1,3 +1,8 @@
+---
+title: "Ley Aduanera y Reglamento"
+description: "Fuentes oficiales para consultar la Ley Aduanera vigente, reformas y texto consolidado aplicable en México."
+---
+
 # Ley Aduanera y Reglamento
 
 Cámara de Diputados consolidations. Corroborate against the DOF. Not legal advice.

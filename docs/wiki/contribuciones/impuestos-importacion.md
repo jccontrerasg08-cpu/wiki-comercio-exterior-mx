@@ -1,3 +1,8 @@
+---
+title: "Impuestos y cargos en la importación"
+description: "Contribuciones de importación en México: relación entre IGI, IVA, IEPS, DTA, valor en aduana y otras obligaciones aplicables."
+---
+
 # Impuestos y cargos en la importación
 
 **Revisado hasta:** 15-08-2026. Fuentes consolidadas: LIGIE, Ley Aduanera, LIVA, LIEPS, LFD y CFF.
@@ -19,3 +24,11 @@
 5. Aplica DTA y, en su caso, cuotas compensatorias, garantías o actualizaciones.
 
 No uses una fórmula genérica sin revisar la fecha, fracción, régimen, tratado, programa y contribuciones específicas. Las tablas arancelarias estructuradas se mantienen en `arancel-mx`, no aquí.
+
+## Fuentes
+
+Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. Para seguirlos hasta su URL y estado de procedencia, consulta el [catálogo reproducible de fuentes](../../catalog/registry.md).
+
+## Ver también
+
+[Mapa de la wiki](../index.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)

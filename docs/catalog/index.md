@@ -1,3 +1,8 @@
+---
+title: "Official URL catalog"
+description: "Guía para usar el catálogo de fuentes oficiales y distinguir disponibilidad, autoridad, vigencia y evidencia local."
+---
+
 # Official URL catalog
 
 Mexico is the deep archive. Binding Mexican citations are SIDOF, Cámara de Diputados, or SAT URLs. This tree is not a DOF dump and does not ship official PDF bytes.

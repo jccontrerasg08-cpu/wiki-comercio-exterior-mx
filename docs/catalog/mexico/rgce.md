@@ -1,3 +1,8 @@
+---
+title: "RGCE y anexos (SIDOF)"
+description: "Fuentes oficiales de RGCE, resoluciones de modificaciones y anexos para verificar reglas aduaneras vigentes."
+---
+
 # RGCE y anexos (SIDOF)
 
 Notas del Diario Oficial vía SIDOF. El cuerpo legal vive en el iframe `https://sidof.segob.gob.mx/notas/docFuente/<id>`. Corroborado con Playwright el 2026-08-13. No hay Segunda Modificación RGCE 2026 en SIDOF a esa fecha.

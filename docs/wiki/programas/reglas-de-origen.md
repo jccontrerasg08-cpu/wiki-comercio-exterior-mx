@@ -1,3 +1,8 @@
+---
+title: "Reglas de origen"
+description: "Reglas de origen: criterios para determinar origen preferencial y sustentar beneficios arancelarios bajo el tratado aplicable."
+---
+
 # Reglas de origen
 
 ## Qué es
