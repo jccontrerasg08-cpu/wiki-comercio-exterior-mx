@@ -18,6 +18,16 @@ cases:
     query: Decreto reforma Reglamento Ley Aduanera 2026
     cutoff: 2026-02-24
     expected_source_ids: [mx_sidof_rla_reform_20260223]
+  - id: la-before-reform
+    query: Ley Aduanera vigente Camara de Diputados
+    cutoff: 2025-12-31
+    expected_source_ids: []
+    forbidden_source_ids: [mx_diputados_ley_aduanera, mx_sidof_ley_aduanera_reform_20251119]
+    required_disclaimer: no hay una manifestacion historica versionada
+  - id: la-after-reform
+    query: Decreto reforma Ley Aduanera 2026
+    cutoff: 2026-01-02
+    expected_source_ids: [mx_sidof_ley_aduanera_reform_20251119]
   - id: lce-before-reform
     query: Ley de Comercio Exterior vigente Camara de Diputados
     cutoff: 2026-05-01
