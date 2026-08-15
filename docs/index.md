@@ -63,53 +63,53 @@ Una forma práctica de recorrer la wiki. La secuencia real depende de la mercanc
 
 <div class="grid cards" markdown>
 
--   :material-barcode-scan:{ .lg .middle } **Clasificación y tarifa**
+-   **Clasificación y tarifa**
 
     ---
 
     Entiende Sistema Armonizado, TIGIE, fracción de 8 dígitos y NICO sin duplicar el dataset estructurado.
 
-    [:octicons-arrow-right-24: TIGIE y NICO](wiki/clasificacion/tigie-nico.md)
+    [TIGIE y NICO →](wiki/clasificacion/tigie-nico.md)
 
--   :material-shield-search:{ .lg .middle } **RRNA y cumplimiento**
+-   **RRNA y cumplimiento**
 
     ---
 
     Navega permisos, avisos, NOM y las Reglas y criterios de la Secretaría de Economía.
 
-    [:octicons-arrow-right-24: Revisar RRNA](wiki/rrna/index.md)
+    [Revisar RRNA →](wiki/rrna/index.md)
 
--   :material-bank:{ .lg .middle } **Aduana y RGCE**
+-   **Aduana y RGCE**
 
     ---
 
     Conecta regímenes, pedimento, anexos, documentos y autoridad aduanera.
 
-    [:octicons-arrow-right-24: Ir a Aduana](wiki/aduana/regimenes-aduaneros.md)
+    [Ir a Aduana →](wiki/aduana/regimenes-aduaneros.md)
 
--   :material-calculator-variant-outline:{ .lg .middle } **Contribuciones**
+-   **Contribuciones**
 
     ---
 
     Ubica las piezas jurídicas para arancel, valor en aduana, impuestos y cuotas compensatorias.
 
-    [:octicons-arrow-right-24: Impuestos de importación](wiki/contribuciones/impuestos-importacion.md)
+    [Impuestos de importación →](wiki/contribuciones/impuestos-importacion.md)
 
--   :material-factory:{ .lg .middle } **Programas y tratados**
+-   **Programas y tratados**
 
     ---
 
     Recorre IMMEX, PROSEC, Drawback, reglas de origen, TLC y T-MEC desde su función jurídica.
 
-    [:octicons-arrow-right-24: Ver programas](wiki/programas/immex.md)
+    [Ver programas →](wiki/programas/immex.md)
 
--   :material-source-branch:{ .lg .middle } **Fuentes y trazabilidad**
+-   **Fuentes y trazabilidad**
 
     ---
 
     Ve qué fuente respalda cada pieza, su autoridad, estado, publicación y relación con instrumentos jurídicos.
 
-    [:octicons-arrow-right-24: Catálogo de fuentes](catalog/registry.md)
+    [Catálogo de fuentes →](catalog/registry.md)
 
 </div>
 
