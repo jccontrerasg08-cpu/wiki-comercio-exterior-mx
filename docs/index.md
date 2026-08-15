@@ -1,18 +1,136 @@
-# Comercio exterior de México, con vigencia y fuente
+---
+title: Wiki Comercio Exterior MX
+description: Marco aduanero, arancelario y regulatorio mexicano con fuentes, vigencia y trazabilidad.
+hide:
+  - toc
+  - path
+---
 
-Esta documentación organiza el marco aduanero, arancelario y regulatorio mexicano alrededor de fuentes oficiales y fechas efectivas. No sustituye al DOF, SAT, ANAM, Secretaría de Economía ni asesoría profesional.
+<div class="trade-hero" markdown>
 
-## Empieza aquí
+<span class="trade-hero__eyebrow">México · conocimiento aduanero verificable</span>
 
-- [Mapa del marco jurídico](wiki/fundamentos/marco-juridico.md)
-- [Regulaciones y restricciones no arancelarias](wiki/rrna/index.md)
-- [Regímenes aduaneros](wiki/aduana/regimenes-aduaneros.md)
-- [Impuestos de importación](wiki/contribuciones/impuestos-importacion.md)
-- [Cambios jurídicos de 2026](wiki/aduana/cambios-2026.md)
-- [Catálogo completo de fuentes](catalog/registry.md)
+# Comercio exterior, de la fracción al despacho
 
-## Garantías de la información
+<p class="trade-hero__lede">Conecta clasificación arancelaria, RRNA, contribuciones, despacho y logística con la fuente oficial y la fecha que corresponden.</p>
 
-Cada fuente tiene un identificador estable. Las leyes consolidadas, eventos de publicación y portales operativos se distinguen entre sí. El sistema conserva instrumentos superseded para preguntas históricas, filtra eventos posteriores a la fecha consultada y nunca equipara un HTTP 200 con vigencia legal.
+<div class="trade-hero__actions" markdown>
+[Explorar la wiki](wiki/index.md){ .md-button .md-button--primary }
+[Ver cambios 2026](wiki/aduana/cambios-2026.md){ .md-button }
+</div>
 
-Consulta la [metodología](methodology/index.md), el [modelo de estados](methodology/status-model.md) y el [registro de cambios](changes/index.md).
+<div class="trade-hero__meta">
+<span>Fuente oficial primero</span>
+<span>Vigencia temporal</span>
+<span>Consulta local y reproducible</span>
+</div>
+
+</div>
+
+## Sigue una operación
+
+Una forma práctica de recorrer la wiki. La secuencia real depende de la mercancía, el régimen, el origen, el destino y las obligaciones aplicables.
+
+<div class="trade-route" aria-label="Ruta de una operación de comercio exterior">
+  <a class="trade-route__step" href="wiki/clasificacion/tigie-nico/">
+    <span class="trade-route__number">1</span>
+    <span class="trade-route__label">Clasificar</span>
+    <small>Ubica fracción arancelaria, NICO y contexto TIGIE.</small>
+  </a>
+  <a class="trade-route__step" href="wiki/rrna/">
+    <span class="trade-route__number">2</span>
+    <span class="trade-route__label">Revisar RRNA</span>
+    <small>Identifica permisos, avisos, NOM y otras restricciones.</small>
+  </a>
+  <a class="trade-route__step" href="wiki/contribuciones/impuestos-importacion/">
+    <span class="trade-route__number">3</span>
+    <span class="trade-route__label">Calcular</span>
+    <small>Conecta IGI, IVA, IEPS, DTA y cuotas cuando correspondan.</small>
+  </a>
+  <a class="trade-route__step" href="wiki/aduana/pedimento-rgce/">
+    <span class="trade-route__number">4</span>
+    <span class="trade-route__label">Despachar</span>
+    <small>Consulta pedimento, RGCE, anexos y documentación aduanera.</small>
+  </a>
+  <a class="trade-route__step" href="wiki/logistica/logistica-internacional/">
+    <span class="trade-route__number">5</span>
+    <span class="trade-route__label">Mover</span>
+    <small>Relaciona transporte, documentos, seguros y cadena logística.</small>
+  </a>
+</div>
+
+## Entra por el problema que estás resolviendo
+
+<div class="grid cards" markdown>
+
+-   :material-barcode-scan:{ .lg .middle } **Clasificación y tarifa**
+
+    ---
+
+    Entiende Sistema Armonizado, TIGIE, fracción de 8 dígitos y NICO sin duplicar el dataset estructurado.
+
+    [:octicons-arrow-right-24: TIGIE y NICO](wiki/clasificacion/tigie-nico.md)
+
+-   :material-shield-search:{ .lg .middle } **RRNA y cumplimiento**
+
+    ---
+
+    Navega permisos, avisos, NOM y las Reglas y criterios de la Secretaría de Economía.
+
+    [:octicons-arrow-right-24: Revisar RRNA](wiki/rrna/index.md)
+
+-   :material-bank:{ .lg .middle } **Aduana y RGCE**
+
+    ---
+
+    Conecta regímenes, pedimento, anexos, documentos y autoridad aduanera.
+
+    [:octicons-arrow-right-24: Ir a Aduana](wiki/aduana/regimenes-aduaneros.md)
+
+-   :material-calculator-variant-outline:{ .lg .middle } **Contribuciones**
+
+    ---
+
+    Ubica las piezas jurídicas para arancel, valor en aduana, impuestos y cuotas compensatorias.
+
+    [:octicons-arrow-right-24: Impuestos de importación](wiki/contribuciones/impuestos-importacion.md)
+
+-   :material-factory:{ .lg .middle } **Programas y tratados**
+
+    ---
+
+    Recorre IMMEX, PROSEC, Drawback, reglas de origen, TLC y T-MEC desde su función jurídica.
+
+    [:octicons-arrow-right-24: Ver programas](wiki/programas/immex.md)
+
+-   :material-source-branch:{ .lg .middle } **Fuentes y trazabilidad**
+
+    ---
+
+    Ve qué fuente respalda cada pieza, su autoridad, estado, publicación y relación con instrumentos jurídicos.
+
+    [:octicons-arrow-right-24: Catálogo de fuentes](catalog/registry.md)
+
+</div>
+
+## Qué significa “verificable” aquí
+
+<div class="trade-assurance">
+  <div class="trade-assurance__item">
+    <strong>Fuente identificable</strong>
+    <span>Cada registro usa un identificador estable y distingue texto consolidado, evento jurídico y portal operativo.</span>
+  </div>
+  <div class="trade-assurance__item">
+    <strong>Tiempo explícito</strong>
+    <span>El modelo conserva estados históricos y filtra eventos posteriores a la fecha consultada.</span>
+  </div>
+  <div class="trade-assurance__item">
+    <strong>Disponibilidad ≠ vigencia</strong>
+    <span>Una respuesta HTTP correcta prueba transporte, no que una disposición siga jurídicamente vigente.</span>
+  </div>
+</div>
+
+Consulta la [metodología](methodology/index.md), el [modelo de estados](methodology/status-model.md), los [cambios jurídicos de 2026](wiki/aduana/cambios-2026.md) y el [catálogo completo de fuentes](catalog/registry.md).
+
+!!! warning "Alcance"
+    Esta wiki organiza conocimiento y evidencia para consulta y estudio. No sustituye al DOF, SAT, ANAM, Secretaría de Economía ni asesoría profesional.
