@@ -55,6 +55,9 @@ instruments:
       - source_id: mx_sidof_decreto_20251229
         relation: amends
         effective_from: 2026-01-01
+      - source_id: mx_sidof_ligie_prosec_20260423
+        relation: amends
+        effective_from: 2026-04-24
 
   - id: mx_rgce_2025
     jurisdiction: MEX
@@ -267,7 +270,10 @@ instruments:
     effective_to: null
     current_through: 2026-08-15
     consolidated_source_id: mx_snice_prosec
-    events: []
+    events:
+      - source_id: mx_sidof_ligie_prosec_20260423
+        relation: amends
+        effective_from: 2026-04-24
 
   - id: mx_programa_drawback
     jurisdiction: MEX
