@@ -1,0 +1,479 @@
+templates:
+  wiki: &wiki
+    source_ids: []
+    instrument_ids: []
+    jurisdiction: MEX
+    effective_from: null
+    current_through: null
+    reviewed_at: 2026-08-15
+    source_status: partial
+    extraction_status: not_applicable
+    legal_review_status: pending_review
+    corpus_status: not_applicable
+    content_type: wiki_explainer
+    legal_authority: non_authoritative
+  corpus: &corpus
+    source_ids: []
+    instrument_ids: []
+    jurisdiction: MEX
+    effective_from: null
+    current_through: 2026-05-22
+    reviewed_at: 2026-08-15
+    source_status: current
+    extraction_status: partial
+    legal_review_status: pending_review
+    corpus_status: partial
+    content_type: explanatory_digest
+    legal_authority: official_not_relicensed
+
+pages:
+  - <<: *wiki
+    path: docs/wiki/index.md
+    title: Wiki de comercio exterior de Mexico
+    topic: fundamentos
+  - <<: *wiki
+    path: docs/wiki/aduana/anam.md
+    title: Agencia Nacional de Aduanas de Mexico
+    topic: aduana
+    source_ids: [mx_gob_anam]
+  - <<: *wiki
+    path: docs/wiki/aduana/documentos.md
+    title: Documentos para el despacho aduanero
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera]
+    instrument_ids: [mx_ley_aduanera]
+  - <<: *wiki
+    path: docs/wiki/aduana/pedimento-rgce.md
+    title: Pedimento y RGCE
+    topic: aduana
+    source_ids: [mx_sidof_rgce_2026, mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *wiki
+    path: docs/wiki/clasificacion/rrna.md
+    title: Regulaciones y restricciones no arancelarias
+    topic: rrna
+    source_ids: [mx_diputados_lce_current, mx_sidof_reglas_se_2022]
+    instrument_ids: [mx_ley_comercio_exterior, mx_reglas_criterios_se]
+  - <<: *wiki
+    path: docs/wiki/clasificacion/sistema-armonizado.md
+    title: Sistema Armonizado
+    topic: clasificacion
+    source_ids: [global_wco]
+  - <<: *wiki
+    path: docs/wiki/clasificacion/tigie-nico.md
+    title: TIGIE y NICO
+    topic: clasificacion
+    source_ids: [mx_diputados_ligie_current, mx_snice_ligie_info]
+    instrument_ids: [mx_ligie]
+  - <<: *wiki
+    path: docs/wiki/contribuciones/aranceles.md
+    title: Aranceles
+    topic: contribuciones
+    source_ids: [mx_diputados_ligie_current]
+    instrument_ids: [mx_ligie]
+  - <<: *wiki
+    path: docs/wiki/contribuciones/cuotas-compensatorias.md
+    title: Cuotas compensatorias
+    topic: contribuciones
+    source_ids: [mx_diputados_lce_current, mx_snice_cuotas]
+    instrument_ids: [mx_ley_comercio_exterior]
+  - <<: *wiki
+    path: docs/wiki/contribuciones/valor-en-aduana.md
+    title: Valor en aduana
+    topic: contribuciones
+    source_ids: [mx_diputados_ley_aduanera]
+    instrument_ids: [mx_ley_aduanera]
+  - <<: *wiki
+    path: docs/wiki/fundamentos/padron-importadores.md
+    title: Padron de importadores
+    topic: fundamentos
+    source_ids: [mx_sat_padron, mx_sidof_rgce_2026]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *wiki
+    path: docs/wiki/logistica/incoterms.md
+    title: Incoterms
+    topic: logistica
+    source_ids: [global_icc_incoterms]
+  - <<: *wiki
+    path: docs/wiki/logistica/logistica-internacional.md
+    title: Logistica internacional
+    topic: logistica
+  - <<: *wiki
+    path: docs/wiki/logistica/pagos-internacionales.md
+    title: Pagos internacionales
+    topic: logistica
+  - <<: *wiki
+    path: docs/wiki/programas/immex.md
+    title: Programa IMMEX
+    topic: programas
+    source_ids: [mx_snice_immex]
+    instrument_ids: [mx_programa_immex]
+  - <<: *wiki
+    path: docs/wiki/programas/prosec.md
+    title: Programas de Promocion Sectorial
+    topic: programas
+    source_ids: [mx_snice_prosec]
+    instrument_ids: [mx_programa_prosec]
+  - <<: *wiki
+    path: docs/wiki/programas/reglas-de-origen.md
+    title: Reglas de origen
+    topic: tratados
+    source_ids: [sice_tmec]
+    instrument_ids: [mx_tmec]
+  - <<: *wiki
+    path: docs/wiki/programas/tlc-tmec.md
+    title: Tratados comerciales y T-MEC
+    topic: tratados
+    source_ids: [sice_tmec, sice_tipat, sice_tlcuem]
+    instrument_ids: [mx_tmec, mx_tipat, mx_tlcuem]
+
+  - <<: *corpus
+    path: data/corpus/anexo-01-formatos-modelos.md
+    title: Anexo 1 formatos y modelos
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexo_1]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-02-tramites.md
+    title: Anexo 2 tramites
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexo_2]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-03-aduanas-pita.md
+    title: Anexo 3 aduanas PITA
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-04-horarios-aduanas.md
+    title: Anexo 4 horarios de aduanas
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-05-criterios-practicas-indebidas.md
+    title: Anexo 5 criterios y practicas indebidas
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20, mx_sidof_rgce_2026_mod1_anexos]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-06-consejo-clasificacion-arancelaria.md
+    title: Anexo 6 consejo de clasificacion arancelaria
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-07-ejidatarios-sin-padron.md
+    title: Anexo 7 ejidatarios sin padron
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md
+    title: Anexo 8 uso exclusivo del importador sin padron
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-09-exentos-igi-equipo-medico.md
+    title: Anexo 9 exentos de IGI y equipo medico
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-10-padron-sectorial.md
+    title: Anexo 10 padron sectorial
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-11-rutas-fiscales-transito.md
+    title: Anexo 11 rutas fiscales de transito
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-12-exportacion-temporal.md
+    title: Anexo 12 exportacion temporal
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-13-multas-cantidades.md
+    title: Anexo 13 multas y cantidades
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-14-hidrocarburos-petroliferos.md
+    title: Anexo 14 hidrocarburos y petroliferos
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-15-distancias-plazos-transito.md
+    title: Anexo 15 distancias y plazos de transito
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-16-aduanas-transito-norte-sur.md
+    title: Anexo 16 aduanas de transito norte sur
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-17-sin-transito-internacional.md
+    title: Anexo 17 mercancias sin transito internacional
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-18-sin-deposito-fiscal.md
+    title: Anexo 18 mercancias sin deposito fiscal
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-19-datos-inexactos-multa-184.md
+    title: Anexo 19 datos inexactos y multa del articulo 184
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-20-marcas-nominativas.md
+    title: Anexo 20 marcas nominativas
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-21-aduanas-exclusivas.md
+    title: Anexo 21 aduanas exclusivas
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-22.md
+    title: Anexo 22 instructivo del pedimento
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30, mx_sidof_rgce_2026_mod1_anexos]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-23-mercancias-peligrosas-muestreo.md
+    title: Anexo 23 mercancias peligrosas para muestreo
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-24-control-inventarios-immex.md
+    title: Anexo 24 control de inventarios IMMEX
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026, mx_programa_immex]
+  - <<: *corpus
+    path: data/corpus/anexo-25-puntos-revision-franja.md
+    title: Anexo 25 puntos de revision de franja
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-26-noms-informacion-comercial.md
+    title: Anexo 26 NOM de informacion comercial
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-27-fracciones-sin-iva.md
+    title: Anexo 27 fracciones sin IVA
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026, mx_ley_iva]
+  - <<: *corpus
+    path: data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md
+    title: Anexo 28 mercancias para certificacion IVA IEPS
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026, mx_ley_iva, mx_ley_ieps]
+  - <<: *corpus
+    path: data/corpus/anexo-29-regimenes-prohibidos.md
+    title: Anexo 29 mercancias en regimenes prohibidos
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30, mx_sidof_rgce_2026_mod1_anexos]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexo-30-scccyg.md
+    title: Anexo 30 sistema de control de creditos y garantias
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexos-formatos-tramites.md
+    title: Sintesis de formatos y tramites RGCE
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexo_1, mx_sidof_rgce_2026_anexo_2]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/anexos-riesgo-logistica.md
+    title: Sintesis de anexos de riesgo y logistica
+    topic: rgce-anexos
+    source_ids: [mx_sidof_rgce_2026_anexos_3_20, mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/casos-tipo-comex.md
+    title: Casos tipo de comercio exterior
+    topic: casos
+    legal_authority: non_authoritative
+  - <<: *corpus
+    path: data/corpus/criterios-anam-sat.md
+    title: Criterios ANAM y SAT
+    topic: aduana
+    source_ids: [mx_gob_anam, mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_rgce_2026]
+  - <<: *corpus
+    path: data/corpus/fuentes-oficiales-comex-mx.md
+    title: Fuentes oficiales de comercio exterior
+    topic: fuentes
+    legal_authority: non_authoritative
+  - <<: *corpus
+    path: data/corpus/ley-aduanera.md
+    title: Digest de la Ley Aduanera
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera]
+    instrument_ids: [mx_ley_aduanera]
+    current_through: 2025-11-19
+    corpus_status: stale
+  - <<: *corpus
+    path: data/corpus/noms-comercio-exterior.md
+    title: NOM en comercio exterior
+    topic: rrna
+    source_ids: [mx_sidof_reglas_se_2022, mx_diputados_ley_infraestructura_calidad]
+    instrument_ids: [mx_reglas_criterios_se, mx_ley_infraestructura_calidad]
+  - <<: *corpus
+    path: data/corpus/noms-maestro-anexo-241.md
+    title: Documento maestro del Anexo 2.4.1
+    topic: rrna
+    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260529]
+    instrument_ids: [mx_reglas_criterios_se]
+    current_through: 2026-05-30
+    legal_review_status: reviewed
+    corpus_status: current
+  - <<: *corpus
+    path: data/corpus/operacion-comex-base.md
+    title: Base operativa de comercio exterior
+    topic: operacion
+    legal_authority: non_authoritative
+  - <<: *corpus
+    path: data/corpus/reglamento-ley-aduanera.md
+    title: Digest del Reglamento de la Ley Aduanera
+    topic: aduana
+    source_ids: [mx_diputados_reg_ley_aduanera, mx_sidof_rla_reform_20260223]
+    instrument_ids: [mx_reglamento_ley_aduanera]
+    current_through: 2026-02-24
+  - <<: *corpus
+    path: data/corpus/requisitos-pais-ejemplo.csv
+    title: Requisitos por pais de ejemplo
+    topic: datos
+    source_ids: []
+    instrument_ids: []
+    source_status: unknown
+    extraction_status: not_applicable
+    legal_review_status: not_applicable
+    corpus_status: not_applicable
+    content_type: data_fixture
+    legal_authority: non_authoritative
+  - <<: *corpus
+    path: data/corpus/rgce-2026.md
+    title: Digest de RGCE 2026
+    topic: rgce
+    source_ids: [mx_sidof_rgce_2026, mx_sidof_rgce_2026_mod1, mx_sidof_rgce_2026_mod1_anexos]
+    instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-22
+    legal_review_status: reviewed
+    corpus_status: current
+  - <<: *corpus
+    path: data/corpus/tigie-nico-notas.md
+    title: TIGIE, NICO y notas
+    topic: clasificacion
+    source_ids: [mx_diputados_ligie_current, mx_diputados_ligie_reform_2025, mx_snice_ligie_info]
+    instrument_ids: [mx_ligie]
+
+  - <<: *wiki
+    path: docs/wiki/fundamentos/marco-juridico.md
+    title: Marco juridico del comercio exterior
+    topic: fundamentos
+    source_ids: [mx_diputados_constitucion, mx_diputados_ley_aduanera, mx_diputados_lce_current, mx_diputados_ligie_current]
+    instrument_ids: [mx_constitucion, mx_ley_aduanera, mx_ley_comercio_exterior, mx_ligie]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/rrna/index.md
+    title: Regulaciones y restricciones no arancelarias
+    topic: rrna
+    source_ids: [mx_diputados_lce_current, mx_diputados_reg_lce, mx_sidof_reglas_se_2022]
+    instrument_ids: [mx_ley_comercio_exterior, mx_reglamento_ley_comercio_exterior, mx_reglas_criterios_se]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/rrna/reglas-criterios-se.md
+    title: Reglas y criterios de la Secretaria de Economia
+    topic: rrna
+    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20250902, mx_sidof_reglas_se_mod_20260212, mx_sidof_reglas_se_mod_20260402, mx_sidof_reglas_se_mod_20260528, mx_sidof_reglas_se_mod_20260529]
+    instrument_ids: [mx_reglas_criterios_se]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/rrna/anexo-2-2-1.md
+    title: Anexo 2.2.1 permisos y avisos
+    topic: rrna
+    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260528, mx_sidof_reglas_se_mod_20260529]
+    instrument_ids: [mx_reglas_criterios_se]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/rrna/anexo-2-4-1.md
+    title: Anexo 2.4.1 NOM en punto de entrada
+    topic: rrna
+    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260529, mx_diputados_ley_infraestructura_calidad]
+    instrument_ids: [mx_reglas_criterios_se, mx_ley_infraestructura_calidad]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/programas/drawback.md
+    title: Drawback
+    topic: programas
+    source_ids: [mx_snice_drawback]
+    instrument_ids: [mx_programa_drawback]
+    source_status: partial
+  - <<: *wiki
+    path: docs/wiki/aduana/regimenes-aduaneros.md
+    title: Regimenes aduaneros
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_sidof_rgce_2026]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/aduana/cambios-2026.md
+    title: Cambios relevantes de 2026
+    topic: aduana
+    source_ids: [mx_sidof_rla_reform_20260223, mx_sidof_lce_reform_20260501, mx_sidof_rgce_2026_mod1, mx_sidof_reglas_se_mod_20260529]
+    instrument_ids: [mx_reglamento_ley_aduanera, mx_ley_comercio_exterior, mx_rgce_2026, mx_reglas_criterios_se]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/contribuciones/impuestos-importacion.md
+    title: Impuestos y cargos en la importacion
+    topic: contribuciones
+    source_ids: [mx_diputados_ligie_current, mx_diputados_ley_aduanera, mx_diputados_liva_current, mx_diputados_lieps_current, mx_diputados_lfd_current]
+    instrument_ids: [mx_ligie, mx_ley_aduanera, mx_ley_iva, mx_ley_ieps, mx_ley_federal_derechos]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15

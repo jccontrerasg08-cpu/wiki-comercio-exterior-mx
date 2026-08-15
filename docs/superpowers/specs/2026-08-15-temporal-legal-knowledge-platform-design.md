@@ -1,7 +1,7 @@
 # Temporal Legal Knowledge Platform Design
 
-**Status:** approved direction, implementation gated by this written specification  
-**Date:** 2026-08-15  
+**Status:** approved for integrated implementation
+**Date:** 2026-08-15
 **Repository:** `jccontrerasg08-cpu/wiki-comercio-exterior-mx`
 
 ## Objective
@@ -17,7 +17,7 @@ The work preserves the current four-layer architecture and the boundary with `ar
 3. Do not commit official binary payloads to Git. Store manifests and checksums in Git and payloads in immutable GitHub Releases.
 4. Treat DOF/SIDOF as publication authority, Diputados as a consolidated-text source, and SAT, ANAM, SE, SNICE, and VUCEM as administrative sources.
 5. Keep pull-request CI deterministic and offline. External-source checks run only in scheduled or manually dispatched workflows.
-6. Preserve the repository rule of one coherent legal or source event per pull request. Platform-only changes may use their own pull request.
+6. Use one integrated feature branch and pull request, with small commits grouped by platform capability or legal-source family. Repository-owner direction on 2026-08-15 supersedes the earlier one-event-per-PR convention.
 7. Use primary official sources for legal status. Secondary sources may aid discovery but never establish validity.
 8. Do not present the wiki or corpus as legal advice or as a substitute for the official publication.
 9. Keep international tariff coverage at HS6. National tariff extensions remain external catalog references except for Mexico-specific explanations.
@@ -25,22 +25,20 @@ The work preserves the current four-layer architecture and the boundary with `ar
 
 ## Delivery model
 
-The requested scope is a program of compatible pull requests, not one oversized change. Mixing unrelated legal events would contradict `CONTRIBUTING.md` and make review, rollback, and temporal attribution unreliable.
+The requested scope is delivered through one integrated branch and pull request. Traceability and rollback come from small dependency-ordered commits, canonical source IDs, instrument relationships, and focused tests rather than separate pull requests.
 
-### Pull request sequence
+### Commit sequence
 
-1. **Platform foundation:** schemas, temporal model, catalog generator, validators, front matter contract, deterministic CI, site integration, governance, and RAG evaluation harness.
-2. **Reglamento de la Ley Aduanera event:** DOF publication 5780677 dated 2026-02-23, consolidated-source relation, change digest, and currentness tests.
-3. **Ley de Comercio Exterior family:** law and regulation as separate instruments with consolidated-text metadata.
-4. **SE Rules baseline:** agreement published 2022-05-09 and its modification graph.
-5. **SE modification events:** one PR for each 2025-09-02, 2026-02-12, 2026-04-02, 2026-05-28, and 2026-05-29 publication.
-6. **Tax framework:** CFF, VAT, IEPS, and Federal Duties instruments, split by coherent source event where required.
-7. **Programs:** IMMEX, PROSEC, Drawback, certification schemes, and related source relationships.
-8. **RRNA authority families:** Economy, Health, Agriculture, Environment, Energy, Defense, Culture, and Telecommunications.
-9. **Treaties and origin:** one treaty family per PR, using existing captured evidence first.
-10. **Operational explainers:** customs regimes, clearance, valuation, enforcement, remedies, and electronic systems.
+1. **Platform foundation:** schemas, temporal model, catalog generator, validators, and front matter contract.
+2. **Current legal core:** Reglamento de la Ley Aduanera DOF publication 5780677, Ley de Comercio Exterior consolidated through 2026-05-01 and DOF publication 5786538, its Regulation, and the tax framework.
+3. **SE Rules family:** the 2022-05-09 agreement and its known modification graph through 2026-05-29.
+4. **Programs and RRNA:** IMMEX, PROSEC, Drawback, certification schemes, and authority-specific source families.
+5. **Treaties, origin, and operations:** treaty-family records, customs regimes, valuation, enforcement, remedies, and electronic systems.
+6. **Automation:** deterministic CI, external source health, legal discovery, Pages, link checking, and CodeQL.
+7. **Knowledge experience:** integrated MkDocs navigation, glossary, changes, status indicators, and governance.
+8. **RAG quality:** deterministic lexical retrieval baseline, temporal cutoffs, provenance metrics, and adversarial cases.
 
-Only the first pull request is created from this branch. Later legal-event branches must start from the merged platform foundation so they all use the same schema and validation rules.
+All commits land on `feat/temporal-legal-knowledge-platform`. The final draft PR must explain each source family and provide a complete verification matrix.
 
 ## Architecture
 
@@ -270,6 +268,19 @@ Tests must cover:
 - Add CodeQL for Python and Actions workflow scanning.
 - Keep secrets out of fork-triggered workflows and do not run untrusted PR code with write tokens.
 
+## External code and standards review
+
+Implementation must inspect and adapt specific upstream patterns while keeping this repository's code original and dependency-light:
+
+- OASIS LegalDocML/Akoma Ntoso for work, expression, manifestation, lifecycle, and amendment concepts. This project uses a deliberately smaller YAML model instead of copying the XML schema.
+- `python-jsonschema/jsonschema` for Draft 2020-12 validation and explicit format checking. Remote schema retrieval remains disabled.
+- `squidfunk/mkdocs-material` for Pages artifact deployment and documentation builds, adapted to SHA-pinned Actions and split build/deploy permissions.
+- `lycheeverse/lychee-action` for scheduled link reports, caching, bounded retries, and non-blocking external-link health.
+- GitHub CodeQL and OpenSSF Scorecard reference workflows for least-privilege security analysis and supply-chain posture.
+- RAG evaluation repositories and surveys for retrieval recall, reciprocal rank, source coverage, citation accuracy, and temporal correctness. CI uses a local lexical baseline rather than an online judge.
+
+The repository must record these influences in `docs/methodology/external-patterns.md` with direct links, adapted ideas, rejected ideas, and license notes.
+
 ## Verification and acceptance criteria
 
 The platform foundation is complete only when fresh evidence shows:
@@ -282,9 +293,9 @@ The platform foundation is complete only when fresh evidence shows:
 6. Workflow YAML parses and all Actions remain SHA pinned.
 7. External probes are covered by fixture tests and a bounded manual smoke test against official sources.
 8. The full diff contains no binaries, credentials, unrelated refactors, or accidental copied proprietary text.
-9. The pull request describes scope, source authority, test evidence, compatibility, and deferred legal-event PRs.
+9. The pull request describes scope, every included source family, authority, test evidence, compatibility, and genuinely deferred coverage.
 
-Each later legal-event PR must additionally prove that its official URL, publication identifier, date, effective date, relationship, digest status, and current-through date agree across registry, instrument graph, wiki/corpus metadata, and tests.
+Every legal event included in the integrated pull request must prove that its official URL, publication identifier, date, effective date, relationship, digest status, and current-through date agree across registry, instrument graph, wiki/corpus metadata, and tests.
 
 ## Explicit non-goals
 
@@ -301,6 +312,6 @@ Each later legal-event PR must additionally prove that its official URL, publica
 - RGCE 2026: DOF note `5777199`.
 - First RGCE 2026 modification: DOF note `5787425`, published 2026-05-14.
 - Customs Law Regulation reform: DOF note `5780677`, published 2026-02-23 and effective the following day.
+- Foreign Trade Law: consolidated Diputados text current through 2026-05-01; the latest event is SIDOF note `5786538` and became effective 2026-05-02.
 - Economy Ministry legal library: modification sequence through 2026-05-29.
 - SNICE IMMEX normative index and customs/foreign-trade legal library.
-

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/schemas/page-metadata.schema.json",
+  "title": "Knowledge page metadata",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["path", "title", "source_ids", "instrument_ids", "jurisdiction", "topic", "reviewed_at", "source_status", "extraction_status", "legal_review_status", "corpus_status", "content_type", "legal_authority"],
+  "properties": {
+    "path": {"type": "string", "pattern": "^(docs/wiki|data/corpus)/[^/].*\\.(md|csv)$"},
+    "title": {"type": "string", "minLength": 1},
+    "source_ids": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"}, "uniqueItems": true},
+    "instrument_ids": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"}, "uniqueItems": true},
+    "jurisdiction": {"type": "string", "pattern": "^(?:[A-Z]{3}|GLOBAL)$"},
+    "topic": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"},
+    "effective_from": {"type": ["string", "null"], "format": "date"},
+    "current_through": {"type": ["string", "null"], "format": "date"},
+    "reviewed_at": {"type": "string", "format": "date"},
+    "source_status": {"enum": ["current", "stale", "superseded", "partial", "pending_review", "withdrawn", "unknown"]},
+    "extraction_status": {"enum": ["complete", "partial", "not_applicable", "unknown"]},
+    "legal_review_status": {"enum": ["reviewed", "pending_review", "not_applicable"]},
+    "corpus_status": {"enum": ["current", "stale", "superseded", "partial", "not_applicable", "unknown"]},
+    "content_type": {"enum": ["wiki_explainer", "explanatory_digest", "data_fixture"]},
+    "legal_authority": {"enum": ["non_authoritative", "official_not_relicensed"]}
+  }
+}

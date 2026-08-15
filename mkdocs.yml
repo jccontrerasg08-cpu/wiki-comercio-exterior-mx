@@ -1,37 +1,119 @@
 site_name: Wiki Comercio Exterior MX
-site_description: Wiki de comercio exterior de México. No es SAT ni el Diario Oficial.
+site_description: Conocimiento temporal y verificable de comercio exterior mexicano.
 repo_url: https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx
 repo_name: wiki-comercio-exterior-mx
-docs_dir: docs/wiki
+docs_dir: docs
+exclude_docs: |
+  superpowers/
 theme:
   name: material
   language: es
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+plugins:
+  - search
+  - redirects:
+      redirect_maps:
+        aduana/anam.md: wiki/aduana/anam.md
+        aduana/cambios-2026.md: wiki/aduana/cambios-2026.md
+        aduana/documentos.md: wiki/aduana/documentos.md
+        aduana/pedimento-rgce.md: wiki/aduana/pedimento-rgce.md
+        aduana/regimenes-aduaneros.md: wiki/aduana/regimenes-aduaneros.md
+        clasificacion/rrna.md: wiki/clasificacion/rrna.md
+        clasificacion/sistema-armonizado.md: wiki/clasificacion/sistema-armonizado.md
+        clasificacion/tigie-nico.md: wiki/clasificacion/tigie-nico.md
+        contribuciones/aranceles.md: wiki/contribuciones/aranceles.md
+        contribuciones/cuotas-compensatorias.md: wiki/contribuciones/cuotas-compensatorias.md
+        contribuciones/impuestos-importacion.md: wiki/contribuciones/impuestos-importacion.md
+        contribuciones/valor-en-aduana.md: wiki/contribuciones/valor-en-aduana.md
+        fundamentos/marco-juridico.md: wiki/fundamentos/marco-juridico.md
+        fundamentos/padron-importadores.md: wiki/fundamentos/padron-importadores.md
+        logistica/incoterms.md: wiki/logistica/incoterms.md
+        logistica/logistica-internacional.md: wiki/logistica/logistica-internacional.md
+        logistica/pagos-internacionales.md: wiki/logistica/pagos-internacionales.md
+        programas/drawback.md: wiki/programas/drawback.md
+        programas/immex.md: wiki/programas/immex.md
+        programas/prosec.md: wiki/programas/prosec.md
+        programas/reglas-de-origen.md: wiki/programas/reglas-de-origen.md
+        programas/tlc-tmec.md: wiki/programas/tlc-tmec.md
+        rrna/anexo-2-2-1.md: wiki/rrna/anexo-2-2-1.md
+        rrna/anexo-2-4-1.md: wiki/rrna/anexo-2-4-1.md
+        rrna/index.md: wiki/rrna/index.md
+        rrna/reglas-criterios-se.md: wiki/rrna/reglas-criterios-se.md
 markdown_extensions:
   - admonition
+  - attr_list
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
   - toc:
       permalink: true
 nav:
   - Inicio: index.md
-  - Fundamentos:
-    - Padrón de importadores: fundamentos/padron-importadores.md
-  - Aduana:
-    - Documentos de comercio exterior: aduana/documentos.md
-    - Pedimento y RGCE: aduana/pedimento-rgce.md
-    - ANAM: aduana/anam.md
-  - Clasificación:
-    - Sistema Armonizado: clasificacion/sistema-armonizado.md
-    - TIGIE y NICO: clasificacion/tigie-nico.md
-    - RRNA: clasificacion/rrna.md
-  - Contribuciones:
-    - Aranceles: contribuciones/aranceles.md
-    - Valor en aduana: contribuciones/valor-en-aduana.md
-    - Cuotas compensatorias: contribuciones/cuotas-compensatorias.md
-  - Programas:
-    - TLC y T-MEC: programas/tlc-tmec.md
-    - Reglas de origen: programas/reglas-de-origen.md
-    - PROSEC: programas/prosec.md
-    - IMMEX: programas/immex.md
-  - Logística:
-    - Incoterms: logistica/incoterms.md
-    - Logística internacional: logistica/logistica-internacional.md
-    - Pagos internacionales: logistica/pagos-internacionales.md
+  - Wiki:
+    - Mapa: wiki/index.md
+    - Fundamentos:
+      - Marco juridico: wiki/fundamentos/marco-juridico.md
+      - Padron de importadores: wiki/fundamentos/padron-importadores.md
+    - Aduana:
+      - Regimenes aduaneros: wiki/aduana/regimenes-aduaneros.md
+      - Cambios 2026: wiki/aduana/cambios-2026.md
+      - Documentos: wiki/aduana/documentos.md
+      - Pedimento y RGCE: wiki/aduana/pedimento-rgce.md
+      - ANAM: wiki/aduana/anam.md
+    - Clasificacion:
+      - Sistema Armonizado: wiki/clasificacion/sistema-armonizado.md
+      - TIGIE y NICO: wiki/clasificacion/tigie-nico.md
+      - RRNA, nota existente: wiki/clasificacion/rrna.md
+    - RRNA:
+      - Guia: wiki/rrna/index.md
+      - Reglas y criterios SE: wiki/rrna/reglas-criterios-se.md
+      - Anexo 2.2.1: wiki/rrna/anexo-2-2-1.md
+      - Anexo 2.4.1: wiki/rrna/anexo-2-4-1.md
+    - Contribuciones:
+      - Impuestos de importacion: wiki/contribuciones/impuestos-importacion.md
+      - Aranceles: wiki/contribuciones/aranceles.md
+      - Valor en aduana: wiki/contribuciones/valor-en-aduana.md
+      - Cuotas compensatorias: wiki/contribuciones/cuotas-compensatorias.md
+    - Programas y tratados:
+      - Drawback: wiki/programas/drawback.md
+      - IMMEX: wiki/programas/immex.md
+      - PROSEC: wiki/programas/prosec.md
+      - TLC y T-MEC: wiki/programas/tlc-tmec.md
+      - Reglas de origen: wiki/programas/reglas-de-origen.md
+    - Logistica:
+      - Incoterms: wiki/logistica/incoterms.md
+      - Logistica internacional: wiki/logistica/logistica-internacional.md
+      - Pagos internacionales: wiki/logistica/pagos-internacionales.md
+  - Fuentes:
+    - Guia del catalogo: catalog/index.md
+    - Catalogo general: catalog/catalog.md
+    - Catalogo generado: catalog/registry.md
+    - Mexico:
+      - Indice: catalog/mexico/index.md
+      - Ley Aduanera: catalog/mexico/ley-aduanera.md
+      - Arancel: catalog/mexico/arancel.md
+      - INEGI, TIGIE y SCIAN: catalog/mexico/inegi-tigie-scian.md
+      - RGCE: catalog/mexico/rgce.md
+    - Global: catalog/global/index.md
+    - Paises:
+      - Brasil: catalog/countries/BRA.md
+      - Canada: catalog/countries/CAN.md
+      - China: catalog/countries/CHN.md
+      - Alemania: catalog/countries/DEU.md
+      - Japon: catalog/countries/JPN.md
+      - Paises Bajos: catalog/countries/NLD.md
+      - Estados Unidos: catalog/countries/USA.md
+  - Metodologia:
+    - Proceso: methodology/index.md
+    - Modelo de estados: methodology/status-model.md
+    - Patrones externos: methodology/external-patterns.md
+    - Arquitectura: ARCHITECTURE.md
+  - Cambios: changes/index.md
+  - Glosario: glossary.md

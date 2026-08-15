@@ -5,11 +5,14 @@ sources:
     url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf
     note_id: null
     authority: Camara de Diputados
-    evidence_class: primary_legal
+    evidence_class: official_consolidated
+    instrument_id: mx_ligie
+    publication_date: 2022-06-07
+    content_valid_from: 2025-12-29
     allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
     media_types: [application/pdf]
     harvest: true
-    cadence_days: 30
+    cadence_days: 7
     probe: &probe_pdf
       method: GET
       expected_status: [200]
@@ -23,6 +26,8 @@ sources:
     note_id: null
     authority: Camara de Diputados
     evidence_class: primary_legal
+    instrument_id: mx_ligie
+    publication_date: 2025-12-29
     allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
     media_types: [application/pdf]
     harvest: true
@@ -35,11 +40,14 @@ sources:
     url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
     note_id: null
     authority: Camara de Diputados
-    evidence_class: primary_legal
+    evidence_class: official_consolidated
+    instrument_id: mx_ley_aduanera
+    publication_date: 1995-12-15
+    content_valid_from: 2026-08-15
     allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
     media_types: [application/pdf]
     harvest: true
-    cadence_days: 30
+    cadence_days: 7
     probe: *probe_pdf
 
   - id: mx_diputados_reg_ley_aduanera
@@ -48,11 +56,184 @@ sources:
     url: https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAdua.pdf
     note_id: null
     authority: Camara de Diputados
-    evidence_class: primary_legal
+    evidence_class: official_consolidated
+    instrument_id: mx_reglamento_ley_aduanera
+    publication_date: 2015-04-20
+    content_valid_from: 2026-02-23
     allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
     media_types: [application/pdf]
     harvest: true
-    cadence_days: 30
+    cadence_days: 7
+    probe: *probe_pdf
+
+  - id: mx_diputados_constitucion
+    jurisdiction: MEX
+    title: Constitucion Politica de los Estados Unidos Mexicanos vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_constitucion
+    publication_date: 1917-02-05
+    content_valid_from: 2026-06-02
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
+    probe: *probe_pdf
+
+  - id: mx_sidof_rla_reform_20260223
+    jurisdiction: MEX
+    title: Decreto de reforma al Reglamento de la Ley Aduanera
+    url: https://sidof.segob.gob.mx/notas/5780677
+    note_id: "5780677"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_reglamento_ley_aduanera
+    publication_date: 2026-02-23
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe:
+      method: GET
+      expected_status: [200]
+      min_bytes: 500
+      expected_path: /notas/5780677
+      expected_title: Reglamento de la Ley Aduanera
+      reject_if_contains: ["Access Denied", "Captcha", "Iniciar sesion"]
+
+  - id: mx_diputados_lce_current
+    jurisdiction: MEX
+    title: Ley de Comercio Exterior vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LCE.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_ley_comercio_exterior
+    publication_date: 1993-07-27
+    content_valid_from: 2026-05-01
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
+    probe:
+      <<: *probe_pdf
+      expected_path: /LeyesBiblio/pdf/LCE.pdf
+
+  - id: mx_diputados_reg_lce
+    jurisdiction: MEX
+    title: Reglamento de la Ley de Comercio Exterior vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LCE.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_reglamento_ley_comercio_exterior
+    publication_date: 1993-12-30
+    content_valid_from: 2026-08-15
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
+    probe: *probe_pdf
+
+  - id: mx_sidof_lce_reform_20260501
+    jurisdiction: MEX
+    title: Decreto de reforma a la Ley de Comercio Exterior en materia agroexportadora
+    url: https://sidof.segob.gob.mx/notas/5786538
+    note_id: "5786538"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_ley_comercio_exterior
+    publication_date: 2026-05-01
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe:
+      method: GET
+      expected_status: [200]
+      min_bytes: 500
+      reject_if_contains: ["Access Denied", "Captcha", "Iniciar sesion"]
+
+  - id: mx_diputados_cff_current
+    jurisdiction: MEX
+    title: Codigo Fiscal de la Federacion vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/CFF.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_codigo_fiscal_federacion
+    publication_date: 1981-12-31
+    content_valid_from: 2026-08-15
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
+    probe: *probe_pdf
+
+  - id: mx_diputados_liva_current
+    jurisdiction: MEX
+    title: Ley del Impuesto al Valor Agregado vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_ley_iva
+    publication_date: 1978-12-29
+    content_valid_from: 2026-08-15
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
+    probe: *probe_pdf
+
+  - id: mx_diputados_lieps_current
+    jurisdiction: MEX
+    title: Ley del Impuesto Especial sobre Produccion y Servicios vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIEPS.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_ley_ieps
+    publication_date: 1980-12-30
+    content_valid_from: 2026-08-15
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
+    probe: *probe_pdf
+
+  - id: mx_diputados_lfd_current
+    jurisdiction: MEX
+    title: Ley Federal de Derechos vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LFD.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_ley_federal_derechos
+    publication_date: 1981-12-31
+    content_valid_from: 2026-08-15
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
+    probe: *probe_pdf
+
+  - id: mx_diputados_ley_infraestructura_calidad
+    jurisdiction: MEX
+    title: Ley de Infraestructura de la Calidad vigente
+    url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LICal_010720.pdf
+    note_id: null
+    authority: Camara de Diputados
+    evidence_class: official_consolidated
+    instrument_id: mx_ley_infraestructura_calidad
+    publication_date: 2020-07-01
+    content_valid_from: 2026-08-15
+    allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
+    media_types: [application/pdf]
+    harvest: true
+    cadence_days: 7
     probe: *probe_pdf
 
   # RGCE 2025 (SIDOF). Human index: docs/catalog/mexico/rgce.md
@@ -63,6 +244,8 @@ sources:
     note_id: "5746326"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2024-12-30
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -80,6 +263,8 @@ sources:
     note_id: "5746685"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-01-06
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -93,6 +278,8 @@ sources:
     note_id: "5746745"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-01-07
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -106,6 +293,8 @@ sources:
     note_id: "5746846"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-01-09
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -119,6 +308,8 @@ sources:
     note_id: "5747310"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-01-17
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -132,6 +323,8 @@ sources:
     note_id: "5754200"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-04-07
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -145,6 +338,8 @@ sources:
     note_id: "5757079"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-05-12
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -158,6 +353,8 @@ sources:
     note_id: "5758614"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-05-29
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -171,6 +368,8 @@ sources:
     note_id: "5763997"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-07-28
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -184,6 +383,8 @@ sources:
     note_id: "5770439"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-10-21
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -197,6 +398,8 @@ sources:
     note_id: "5770661"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-10-23
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -210,6 +413,8 @@ sources:
     note_id: "5776301"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2025
+    publication_date: 2025-12-16
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -224,6 +429,8 @@ sources:
     note_id: "5777376"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_ligie
+    publication_date: 2025-12-29
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -238,11 +445,16 @@ sources:
     note_id: "5777199"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2026
+    publication_date: 2025-12-27
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
     cadence_days: 365
-    probe: *probe_html
+    probe:
+      <<: *probe_html
+      expected_path: /notas/5777199
+      expected_title: Reglas Generales de Comercio Exterior para 2026
 
   - id: mx_sidof_rgce_2026_anexo_1
     jurisdiction: MEX
@@ -251,6 +463,8 @@ sources:
     note_id: "5777997"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2026
+    publication_date: 2026-01-08
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -264,6 +478,8 @@ sources:
     note_id: "5778101"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2026
+    publication_date: 2026-01-12
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -277,6 +493,8 @@ sources:
     note_id: "5778241"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2026
+    publication_date: 2026-01-14
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -290,6 +508,8 @@ sources:
     note_id: "5778300"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2026
+    publication_date: 2026-01-15
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -303,6 +523,8 @@ sources:
     note_id: "5787425"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2026
+    publication_date: 2026-05-14
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
@@ -316,10 +538,178 @@ sources:
     note_id: "5787982"
     authority: DOF / SIDOF
     evidence_class: primary_legal
+    instrument_id: mx_rgce_2026
+    publication_date: 2026-05-20
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
     cadence_days: 365
+    probe: *probe_html
+
+  # Reglas y criterios de la Secretaria de Economia. The event list is
+  # intentionally explicit so temporal retrieval does not collapse editions.
+  - id: mx_sidof_reglas_se_2022
+    jurisdiction: MEX
+    title: Reglas y criterios de comercio exterior de la Secretaria de Economia
+    url: https://sidof.segob.gob.mx/notas/5651333
+    note_id: "5651333"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_reglas_criterios_se
+    publication_date: 2022-05-09
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_reglas_se_mod_20250902
+    jurisdiction: MEX
+    title: Modificacion a Reglas y criterios SE de 2 de septiembre de 2025
+    url: https://sidof.segob.gob.mx/notas/5767158
+    note_id: "5767158"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_reglas_criterios_se
+    publication_date: 2025-09-02
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_reglas_se_mod_20260212
+    jurisdiction: MEX
+    title: Modificacion a Reglas y criterios SE de 12 de febrero de 2026
+    url: https://sidof.segob.gob.mx/notas/5779942
+    note_id: "5779942"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_reglas_criterios_se
+    publication_date: 2026-02-12
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_reglas_se_mod_20260402
+    jurisdiction: MEX
+    title: Modificacion a Reglas y criterios SE de 2 de abril de 2026
+    url: https://sidof.segob.gob.mx/notas/5783929
+    note_id: "5783929"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_reglas_criterios_se
+    publication_date: 2026-04-02
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_reglas_se_mod_20260528
+    jurisdiction: MEX
+    title: Modificacion a Reglas y criterios SE de 28 de mayo de 2026
+    url: https://sidof.segob.gob.mx/notas/5788843
+    note_id: "5788843"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_reglas_criterios_se
+    publication_date: 2026-05-28
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_reglas_se_mod_20260529
+    jurisdiction: MEX
+    title: Modificacion a Reglas y criterios SE de 29 de mayo de 2026
+    url: https://sidof.segob.gob.mx/notas/5788992
+    note_id: "5788992"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_reglas_criterios_se
+    publication_date: 2026-05-29
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_snice_biblioteca_juridica
+    jurisdiction: MEX
+    title: Biblioteca juridica de comercio exterior
+    url: https://www.snice.gob.mx/cs/avi/snice/biblioteca.juridica.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 7
+    probe:
+      <<: *probe_html
+      expected_path: /cs/avi/snice/biblioteca.juridica.html
+      expected_title: Tratados y Acuerdos Internacionales
+
+  - id: mx_snice_immex
+    jurisdiction: MEX
+    title: Programa IMMEX
+    url: https://www.snice.gob.mx/cs/avi/snice/immex.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    instrument_id: mx_programa_immex
+    publication_date: 2006-11-01
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_prosec
+    jurisdiction: MEX
+    title: Programas de Promocion Sectorial PROSEC
+    url: https://www.snice.gob.mx/cs/avi/snice/prosec.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    instrument_id: mx_programa_prosec
+    publication_date: 2002-08-02
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_drawback
+    jurisdiction: MEX
+    title: Devolucion de impuestos de importacion a exportadores Drawback
+    url: https://www.snice.gob.mx/cs/avi/snice/drawback.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    instrument_id: mx_programa_drawback
+    publication_date: 1995-05-11
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_vucem_portal
+    jurisdiction: MEX
+    title: Ventanilla Unica de Comercio Exterior Mexicana
+    url: https://www.ventanillaunica.gob.mx/vucem/index.html
+    note_id: null
+    authority: VUCEM
+    evidence_class: official_operational
+    allowed_hosts: [www.ventanillaunica.gob.mx, ventanillaunica.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
     probe: *probe_html
 
   - id: mx_inegi_tigie_scian
@@ -357,6 +747,111 @@ sources:
     evidence_class: intergovernmental
     allowed_hosts: [ttd.wto.org, www.wto.org]
     media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: sice_tmec
+    jurisdiction: GLOBAL
+    title: T-MEC, novedades y texto oficial de referencia
+    url: https://www.sice.oas.org/tpd/USMCA/USMCA_s.ASP
+    note_id: null
+    authority: OEA SICE
+    evidence_class: intergovernmental
+    instrument_id: mx_tmec
+    publication_date: 2020-06-29
+    allowed_hosts: [www.sice.oas.org, sice.oas.org]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: sice_tipat
+    jurisdiction: GLOBAL
+    title: TIPAT, texto legalmente verificado
+    url: https://www.sice.oas.org/Trade/TPP/CPTPP/Spanish/CPTPP_Index_s.asp
+    note_id: null
+    authority: OEA SICE
+    evidence_class: intergovernmental
+    instrument_id: mx_tipat
+    publication_date: 2018-11-29
+    allowed_hosts: [www.sice.oas.org, sice.oas.org]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: sice_tlcuem
+    jurisdiction: GLOBAL
+    title: Tratado de Libre Comercio Mexico Union Europea
+    url: https://www.sice.oas.org/trade/mex_eu/english/index_e.asp
+    note_id: null
+    authority: OEA SICE
+    evidence_class: intergovernmental
+    instrument_id: mx_tlcuem
+    publication_date: 2000-06-26
+    allowed_hosts: [www.sice.oas.org, sice.oas.org]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: sice_mexico_reino_unido
+    jurisdiction: GLOBAL
+    title: Acuerdo de continuidad comercial Mexico Reino Unido
+    url: https://www.sice.oas.org/TPD/MEX_GBR/MEX_GBR_e.ASP
+    note_id: null
+    authority: OEA SICE
+    evidence_class: intergovernmental
+    instrument_id: mx_acuerdo_reino_unido
+    publication_date: 2020-12-15
+    allowed_hosts: [www.sice.oas.org, sice.oas.org]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: sice_mexico_japon
+    jurisdiction: GLOBAL
+    title: Acuerdo para el fortalecimiento de la asociacion economica Mexico Japon
+    url: https://www.sice.oas.org/trade/mex_jpn_e/JPN_MEXind_e.asp
+    note_id: null
+    authority: OEA SICE
+    evidence_class: intergovernmental
+    instrument_id: mx_acuerdo_japon
+    publication_date: 2005-03-31
+    allowed_hosts: [www.sice.oas.org, sice.oas.org]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: sice_mexico_chile
+    jurisdiction: GLOBAL
+    title: Tratado de Libre Comercio Mexico Chile
+    url: https://www.sice.oas.org/TPD/CHL_MEX/CHL_MEX_e.asp
+    note_id: null
+    authority: OEA SICE
+    evidence_class: intergovernmental
+    instrument_id: mx_tlc_chile
+    publication_date: 1999-07-28
+    allowed_hosts: [www.sice.oas.org, sice.oas.org]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: sice_alianza_pacifico
+    jurisdiction: GLOBAL
+    title: Protocolo Adicional de la Alianza del Pacifico
+    url: https://www.sice.oas.org/Trade/PAC_ALL/Index_Pacific_Alliance_s.asp
+    note_id: null
+    authority: OEA SICE
+    evidence_class: intergovernmental
+    instrument_id: mx_alianza_pacifico
+    publication_date: 2016-04-29
+    allowed_hosts: [www.sice.oas.org, sice.oas.org]
+    media_types: [text/html, application/pdf]
     harvest: false
     cadence_days: 90
     probe: *probe_html

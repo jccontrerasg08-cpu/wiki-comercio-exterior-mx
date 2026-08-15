@@ -13,6 +13,11 @@ from urllib.parse import urlparse
 
 import yaml
 
+from scripts.build_catalog import run_check as check_catalog
+from scripts.page_metadata import validate_page_metadata
+from scripts.schema_validation import load_local_schema, validate_instance
+from scripts.temporal_graph import validate_temporal_graph
+
 
 @dataclass(frozen=True, slots=True)
 class ValidationFinding:
@@ -98,6 +103,10 @@ def validate_registry(path: Path) -> list[ValidationFinding]:
             )
         ]
 
+    schema_root = path.parent.parent
+    if not (schema_root / "schemas" / "source.schema.json").exists():
+        schema_root = Path(__file__).resolve().parents[1]
+    schema = load_local_schema(schema_root, "source.schema.json")
     seen: set[str] = set()
     for index, source in enumerate(data["sources"]):
         item_path = f"{path}:sources[{index}]"
@@ -108,6 +117,22 @@ def validate_registry(path: Path) -> list[ValidationFinding]:
                 )
             )
             continue
+
+        def normalize(value: Any) -> Any:
+            from datetime import date
+
+            if isinstance(value, date):
+                return value.isoformat()
+            if isinstance(value, dict):
+                return {key: normalize(item) for key, item in value.items()}
+            if isinstance(value, list):
+                return [normalize(item) for item in value]
+            return value
+
+        for finding in validate_instance(normalize(source), schema, item_path):
+            findings.append(
+                ValidationFinding("REGISTRY_SCHEMA", finding.path, finding.message)
+            )
 
         for field in _REQUIRED_SOURCE_FIELDS:
             if field not in source:
@@ -439,8 +464,32 @@ def validate_repository_hygiene(root: Path) -> list[ValidationFinding]:
 def _validation_domains(root: Path) -> list[tuple[str, list[ValidationFinding]]]:
     """Run each repository validation domain independently for clear reporting."""
 
+    temporal = [
+        ValidationFinding(item.code, item.path, item.message)
+        for item in validate_temporal_graph(root)
+    ]
+    page_metadata = [
+        ValidationFinding(item.code, item.path, item.message)
+        for item in validate_page_metadata(root)
+    ]
+    catalog_result = check_catalog(root)
+    catalog = (
+        []
+        if catalog_result.exit_code == 0
+        else [
+            ValidationFinding(
+                "GENERATED_CATALOG_DRIFT",
+                str(root / "docs" / "catalog" / "registry.md"),
+                catalog_result.message,
+            )
+        ]
+    )
+
     return [
         ("registry", validate_registry(root / "sources" / "registry.yaml")),
+        ("temporal-graph", temporal),
+        ("page-metadata", page_metadata),
+        ("generated-catalog", catalog),
         ("originals", validate_originals(root / "data" / "originals")),
         ("repository-hygiene", validate_repository_hygiene(root)),
     ]

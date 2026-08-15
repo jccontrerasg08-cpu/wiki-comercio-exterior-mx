@@ -1,0 +1,11 @@
+cache = true
+max_cache_age = "2d"
+max_retries = 2
+timeout = 20
+user_agent = "wiki-comercio-exterior-mx-link-check/1.0"
+accept = [200, 206, 429]
+exclude = [
+  "^https://www\\.sat\\.gob\\.mx/",
+  "^https://www\\.snice\\.gob\\.mx/cs/avi/snice/hce\\.mi\\.fraccion\\.arancelaria\\.html$",
+  "^https://2go\\.iccwbo\\.org/"
+]

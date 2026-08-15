@@ -1,0 +1,31 @@
+instruments:
+  - id: law_one
+    jurisdiction: MEX
+    title: Law one
+    instrument_type: law
+    status: superseded
+    publication_date: 2025-01-01
+    effective_from: 2025-01-02
+    effective_to: 2026-01-01
+    current_through: 2026-01-01
+    consolidated_source_id: source_one
+    events:
+      - source_id: source_one
+        relation: supersedes
+        target_instrument_id: law_two
+        effective_from: 2026-01-01
+  - id: law_two
+    jurisdiction: MEX
+    title: Law two
+    instrument_type: law
+    status: current
+    publication_date: 2026-01-01
+    effective_from: 2026-01-02
+    effective_to: null
+    current_through: 2026-01-02
+    consolidated_source_id: source_two
+    events:
+      - source_id: source_two
+        relation: supersedes
+        target_instrument_id: law_one
+        effective_from: 2026-01-02

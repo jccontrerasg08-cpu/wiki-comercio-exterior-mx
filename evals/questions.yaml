@@ -1,0 +1,56 @@
+cases:
+  - id: rgce-2025
+    query: RGCE 2025 y Anexo 13
+    cutoff: 2025-06-01
+    expected_source_ids: [mx_sidof_rgce_2025_body]
+    forbidden_source_ids: [mx_sidof_rgce_2026]
+  - id: rgce-2026
+    query: RGCE 2026 y Anexo 13
+    cutoff: 2026-01-15
+    expected_source_ids: [mx_sidof_rgce_2026]
+    forbidden_source_ids: [mx_sidof_rgce_2025_body]
+  - id: rla-before-reform
+    query: Reglamento de la Ley Aduanera Camara de Diputados
+    cutoff: 2026-02-23
+    expected_source_ids: [mx_diputados_reg_ley_aduanera]
+    forbidden_source_ids: [mx_sidof_rla_reform_20260223]
+  - id: rla-after-reform
+    query: Decreto reforma Reglamento Ley Aduanera 2026
+    cutoff: 2026-02-24
+    expected_source_ids: [mx_sidof_rla_reform_20260223]
+  - id: lce-before-reform
+    query: Ley de Comercio Exterior vigente Camara de Diputados
+    cutoff: 2026-05-01
+    expected_source_ids: [mx_diputados_lce_current]
+    forbidden_source_ids: [mx_sidof_lce_reform_20260501]
+  - id: lce-after-reform
+    query: Decreto reforma Ley de Comercio Exterior agroexportadora
+    cutoff: 2026-05-02
+    expected_source_ids: [mx_sidof_lce_reform_20260501]
+  - id: se-rules
+    query: Reglas y criterios comercio exterior Secretaria Economia
+    cutoff: 2022-05-10
+    expected_source_ids: [mx_sidof_reglas_se_2022]
+  - id: anexo-24
+    query: Anexos 21 30 RGCE 2026 control inventarios IMMEX
+    cutoff: 2026-03-01
+    expected_source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+  - id: anexo-30
+    query: Anexos 21 30 RGCE 2026 creditos garantias
+    cutoff: 2026-03-01
+    expected_source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+  - id: noms-latest-rules
+    query: Modificacion Reglas criterios SE 29 mayo 2026
+    cutoff: 2026-05-30
+    expected_source_ids: [mx_sidof_reglas_se_mod_20260529]
+  - id: abstention
+    query: regulacion lunar de antimateria inexistente
+    cutoff: 2026-08-15
+    expected_source_ids: []
+    required_disclaimer: no hay evidencia oficial pertinente
+  - id: historical-consolidation-gap
+    query: Ley de Comercio Exterior vigente en 1994
+    cutoff: 1994-01-01
+    expected_source_ids: []
+    forbidden_source_ids: [mx_diputados_lce_current]
+    required_disclaimer: no hay una manifestacion historica versionada

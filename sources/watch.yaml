@@ -1,0 +1,17 @@
+official_hosts:
+  - sidof.segob.gob.mx
+daily_api_template: https://sidof.segob.gob.mx/dof/sidof/notas/{date}
+diary_api_template: https://sidof.segob.gob.mx/dof/sidof/notas/obtenerNotasPorDiario/{diary_id}
+note_url_template: https://sidof.segob.gob.mx/notas/{note_id}
+max_diaries_per_day: 3
+keywords:
+  - comercio exterior
+  - ley de comercio exterior
+  - ley aduanera
+  - rgce
+  - reglas generales de comercio exterior
+  - tigie
+  - immex
+  - prosec
+  - anexo 2.2.1
+  - anexo 2.4.1

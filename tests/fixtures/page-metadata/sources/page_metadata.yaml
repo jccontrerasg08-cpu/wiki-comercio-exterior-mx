@@ -1,0 +1,16 @@
+pages:
+  - path: docs/wiki/missing.md
+    title: Missing
+    source_ids: []
+    instrument_ids: []
+    jurisdiction: MEX
+    topic: fixture
+    effective_from: null
+    current_through: null
+    reviewed_at: 2026-08-15
+    source_status: unknown
+    extraction_status: unknown
+    legal_review_status: pending_review
+    corpus_status: unknown
+    content_type: wiki_explainer
+    legal_authority: non_authoritative

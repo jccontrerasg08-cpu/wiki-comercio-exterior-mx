@@ -1,12 +1,46 @@
-name: Catalog URL
-description: Add or fix one official URL in docs/catalog or sources/registry.yaml
-title: "[catalog] "
+name: Official source or legal event
+description: Add, correct, or review one official source family
+title: "[source] "
 labels: []
 body:
-  - type: textarea
+  - type: input
+    id: source_id
+    attributes:
+      label: Proposed source ID
+      placeholder: mx_sidof_example_yyyymmdd
+    validations:
+      required: true
+  - type: input
+    id: instrument_id
+    attributes:
+      label: Instrument ID
+      placeholder: mx_example_instrument
+    validations:
+      required: true
+  - type: input
     id: url
     attributes:
       label: Official URL
-      description: One official URL. HTTP 200 is not enough. Do not scrape INEGI TIGIE–SCIAN or SNICE Mi Fracción.
+      description: HTTP 200 is not proof of legal currency.
+    validations:
+      required: true
+  - type: input
+    id: authority
+    attributes:
+      label: Issuing authority
+    validations:
+      required: true
+  - type: input
+    id: dates
+    attributes:
+      label: Publication and effective dates
+      placeholder: Published YYYY-MM-DD; effective YYYY-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Legal effect, affected pages, and evidence
+      description: Include transitory provisions, annexes, status, and copyright considerations.
     validations:
       required: true
