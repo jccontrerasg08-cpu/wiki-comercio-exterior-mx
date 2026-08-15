@@ -38,6 +38,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import json
+          import subprocess
           import yaml
 
           p = Path("sources/page_metadata.yaml")
@@ -56,7 +57,6 @@ jobs:
               text = text.replace(old, new)
           p.write_text(text, encoding="utf-8")
 
-          import subprocess
           subprocess.run(["python", "-m", "scripts.build_catalog"], check=True)
           subprocess.run(["python", "-m", "scripts.coverage_report"], check=True)
 
@@ -64,15 +64,15 @@ jobs:
           s = report["summary"]
           policy_path = Path("coverage-policy.yaml")
           policy = yaml.safe_load(policy_path.read_text(encoding="utf-8"))
-          floors = policy["floors"]
-          floors["retrieval_eligible_pages"] = s["retrieval_eligible_pages"]
-          floors["pages_with_sources"] = s["pages_with_sources"]
-          floors["pages_with_instruments"] = s["pages_with_instruments"]
-          floors["legally_reviewed_pages"] = s["legally_reviewed_pages"]
-          ceilings = policy["ceilings"]
-          ceilings["pending_legal_review_pages"] = s["pending_legal_review_pages"]
-          ceilings["non_current_corpus_pages"] = s["non_current_corpus_pages"]
-          ceilings["unknown_source_status_pages"] = s["unknown_source_status_pages"]
+          minimums = policy["minimums"]
+          minimums["retrieval_eligible_pages"] = s["retrieval_eligible_pages"]
+          minimums["pages_with_sources"] = s["pages_with_sources"]
+          minimums["pages_with_instruments"] = s["pages_with_instruments"]
+          minimums["legally_reviewed_pages"] = s["legally_reviewed_pages"]
+          maximums = policy["maximums"]
+          maximums["pending_legal_review_pages"] = s["pending_legal_review_pages"]
+          maximums["non_current_corpus_pages"] = s["non_current_corpus_pages"]
+          maximums["unknown_source_status_pages"] = s["unknown_source_status_pages"]
           policy_path.write_text(yaml.safe_dump(policy, sort_keys=False, allow_unicode=True), encoding="utf-8")
           PY
 
