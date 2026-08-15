@@ -55,11 +55,19 @@ class WorkflowPolicyTests(unittest.TestCase):
         ci = dump_workflow(load_workflow(WORKFLOWS / "ci.yml"))
         self.assertNotIn("source_health", ci)
         self.assertNotIn("legal_watch", ci)
+        self.assertNotIn("snice_discovery", ci)
 
     def test_scheduled_workflow_runs_due_monitor_and_legal_watch(self):
         workflow = dump_workflow(load_workflow(WORKFLOWS / "source-health.yml"))
         self.assertIn("--mode due", workflow)
         self.assertIn("scripts.legal_watch", workflow)
+
+    def test_scheduled_workflow_captures_snice_intelligence_as_artifact(self):
+        text = (WORKFLOWS / "source-health.yml").read_text(encoding="utf-8")
+        self.assertIn("python -m scripts.snice_discovery", text)
+        self.assertIn("--output-dir snice-intelligence", text)
+        self.assertIn("snice-intelligence/*.json", text)
+        self.assertIn("steps.snice.outcome == 'failure'", text)
 
     def test_pages_runs_deterministic_gate_before_upload(self):
         text = (WORKFLOWS / "pages.yml").read_text(encoding="utf-8")
