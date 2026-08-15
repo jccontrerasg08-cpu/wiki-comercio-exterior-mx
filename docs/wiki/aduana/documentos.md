@@ -1,57 +1,72 @@
+---
+title: Documentos de comercio exterior
+description: Matriz condicional de documentos del despacho aduanero mexicano conforme a Ley Aduanera, RGCE, VUCEM y el régimen aplicable.
+---
+
 # Documentos de comercio exterior
 
-## Qué es
+## No existe una lista universal para todas las operaciones
 
-El paquete que acompaña al pedimento cuando la mercancía entra o sale de México. No es lo mismo que mover mercancía **dentro** del país (eso es CFDI + complemento Carta Porte). Aquí se trata de importación y exportación frente al resto del mundo.
+La documentación de una importación o exportación depende de la **mercancía, régimen aduanero, tráfico, valor, origen, participantes, RRNA y supuesto jurídico concreto**. Los artículos 36 y 36-A de la Ley Aduanera establecen la transmisión del pedimento y de la información/documentación asociada, mientras que RGCE, sus anexos y otras disposiciones desarrollan formatos, datos e identificadores.
 
-Fundamento: Ley Aduanera arts. 36 y 36-A (anexos al pedimento), RGCE Anexo 1 (formatos) y Anexo 22 (instructivo). Transmisión electrónica en [VUCEM](https://www.ventanillaunica.gob.mx/).
+Por eso esta página usa una matriz de **documentos comunes según operación** y no una lista denominada “siempre”. Un documento frecuente puede tener excepciones, sustitutos electrónicos o no ser exigible en determinado régimen.
 
-## Cómo aplica en México
+## Documentos comunes según operación
 
-### Siempre (despacho definitivo)
+| Elemento | Cuándo suele intervenir | Fundamento o fuente a revisar |
+|---|---|---|
+| Pedimento | Cuando la operación deba documentarse mediante esta declaración electrónica | Ley Aduanera arts. 2-XVI, 36 y régimen aplicable; RGCE y Anexo 22 |
+| CFDI o documento equivalente | Para amparar comercialmente el valor/precio cuando el supuesto lo exige | Ley Aduanera 36-A y definición de documento equivalente |
+| Documento de transporte | Según tráfico y supuesto de importación/exportación | Ley Aduanera 36-A, reglas de transmisión y documentos del transportista |
+| COVE / información de valor y comercialización | Cuando deba transmitirse información de valor/comercialización conforme a las reglas aplicables | Sistema electrónico aduanero / Ventanilla Única |
+| E-documentos digitalizados | Cuando una disposición exige adjuntar o transmitir un documento digital | Ley Aduanera 6, 36-A y reglas aplicables |
+| Manifestación de valor | Para el importador en los supuestos de valoración previstos por Ley Aduanera y RGCE | Ley Aduanera 59-III y reglas vigentes sobre MV |
+| Evidencia de origen | Cuando se solicita trato arancelario preferencial o cuando otra disposición exige acreditar origen | Tratado/acuerdo o disposición aplicable |
+| Permiso, aviso, NOM u otra RRNA | Cuando la fracción, NICO o supuesto jurídico active la regulación | LCE, Reglas y criterios SE y demás regulación sectorial |
+| Garantía | Cuando el supuesto legal exige cuenta aduanera de garantía u otro mecanismo | Ley Aduanera y reglas correspondientes |
+| Datos del padrón | Cuando el importador/exportador esté obligado a la inscripción general o sectorial | RGCE capítulo 1.3 y Anexos 7-10 |
 
-| Documento | Importación | Exportación | Dónde |
-|---|---|---|---|
-| Pedimento | sí | sí | VUCEM; Anexo 22 |
-| CFDI o documento equivalente (factura) | sí | sí | art. 36-A, fracción a) |
-| Conocimiento de embarque, guía aérea o carta de porte | sí | sí | art. 36-A, fracción b) |
-| Manifestación de valor (formato E2 / MV) | sí (al agente o a la autoridad) | — | LA art. 59-III; VUCEM MV |
-| COVE / e-documentos digitalizados | cuando el despacho los exige | cuando el despacho los exige | VUCEM |
-| Inscripción en padrón | Padrón de importadores (y sectorial si aplica) | Padrón de exportadores sectorial si el producto lo pide | [SAT Padrón](https://www.sat.gob.mx/minisitio/PadronImportadoresExportadores/index.html) |
+## El expediente debe contar la misma operación
 
-El agente o apoderado transmite el pedimento. El importador/exportador guarda el expediente electrónico **cinco años** (LA art. 59-V).
+Aunque cada sistema use campos distintos, la operación debe ser coherente. Descripción comercial, cantidad, unidades, valor, origen, vendedor/comprador, transporte y régimen no deben contradecirse sin explicación documental.
 
-### Según la mercancía o el régimen
+Una discrepancia no implica automáticamente una infracción, porque puede existir una razón válida o un documento con función distinta. Sin embargo, cuanto más material sea la diferencia, más importante es poder reconstruir por qué el pedimento y sus anexos representan correctamente la operación.
 
-| Documento | Cuándo |
-|---|---|
-| Permisos, avisos o NOMs (RRNA) | La fracción/NICO lo activa (SNICE / Anexo 22 apéndice 8) |
-| Certificado o certificación de origen | Si pides preferencia de un TLC (T-MEC, Alianza, etc.) |
-| Garantía en cuenta aduanera | Valor declarado menor al precio estimado (art. 36-A, e) |
-| Documentos IMMEX / retorno | Importación o exportación temporal |
-| Cuotas compensatorias | Fracción sujeta a cuota UPCI/SNICE |
+## Importación y exportación no son espejos perfectos
 
-### No son documentos del despacho
+No debe suponerse que todo documento requerido a la importación se exige también a la exportación. La Ley Aduanera separa datos y documentos según el sentido del tráfico, y las RRNA pueden tener obligaciones sólo de entrada o sólo de salida.
 
-- Incoterms®: cláusula del contrato, no se “presenta” en VUCEM. Solo [ICC](https://iccwbo.org/business-solutions/incoterms-rules/).
-- Gafete de transportista o de agente: acceso al recinto, no anexa al pedimento.
-- WSDL/XSD de web service: insumos técnicos, no la operación.
+De la misma manera, una importación temporal IMMEX, un depósito fiscal, un tránsito o una importación definitiva tienen requisitos distintos. Antes de usar una plantilla debe identificarse el régimen del artículo 90 y sus disposiciones específicas.
 
-Lista de formatos (A1 padrón, relación de documentos, etc.): [Anexo 1 RGCE](https://sidof.segob.gob.mx/notas/5777997). Instructivo del pedimento: [Anexo 22](https://sidof.segob.gob.mx/notas/5778300).
+## Ventanilla Única y VUCEM en 2026
+
+El Decreto publicado el **4 de mayo de 2026** habilitó la **Ventanilla Única de Trámites de Comercio Exterior** y dispuso que su operación tecnológica se realice a través de VUCEM durante la transición institucional. Esto no cambia por sí solo el contenido jurídico de todos los documentos: el trámite sigue sujeto a la ley, regla, acuerdo o resolución que lo establece.
+
+Consulta [Ventanilla Única y VUCEM](vucem.md) para la distinción entre plataforma, autoridad y acto jurídico.
+
+## Conservación y trazabilidad
+
+El artículo 6 de la Ley Aduanera da valor jurídico y probatorio a los documentos electrónicos y digitales recibidos en el sistema electrónico aduanero y obliga a conservar documentación relacionada con las operaciones en los términos aplicables. Además, el importador tiene obligaciones específicas de expediente y valoración en el artículo 59.
+
+En una auditoría interna conviene poder reconstruir:
+
+1. qué versión normativa se utilizó;
+2. quién proporcionó cada dato;
+3. qué documento soporta valor, origen, clasificación y RRNA;
+4. qué acuse acredita transmisión o presentación;
+5. qué cambio posterior no estaba vigente en la fecha del despacho.
 
 ## Fuentes oficiales
 
-- [Ley Aduanera](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf) arts. 36, 36-A, 59
-- [RGCE 2026](https://sidof.segob.gob.mx/notas/5777199)
-- [Anexo 1](https://sidof.segob.gob.mx/notas/5777997)
-- [Anexo 22](https://sidof.segob.gob.mx/notas/5778300)
-- [VUCEM descargas](https://www.ventanillaunica.gob.mx/vucem/descargas.html)
-- [ANAM](https://anam.gob.mx/)
-
-Catálogo local: `docs/catalog/catalog.md`. Manifiestos: `data/originals/` (PDF en el Release).
+- [Ley Aduanera, Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf)
+- [RGCE 2026, SIDOF](https://sidof.segob.gob.mx/notas/5777199)
+- [SAT, Normatividad RGCE 2026](https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html)
+- [Anexo 1 RGCE 2026](https://sidof.segob.gob.mx/notas/5777997)
+- [Anexo 22 RGCE 2026](https://sidof.segob.gob.mx/notas/5778300)
+- [Ventanilla Única](https://www.ventanillaunica.gob.mx/)
 
 ## Ver también
 
-[Pedimento y RGCE](pedimento-rgce.md) · [Valor en aduana](../contribuciones/valor-en-aduana.md) · [Padrón](../fundamentos/padron-importadores.md) · [RRNA](../clasificacion/rrna.md) · [Reglas de origen](../programas/reglas-de-origen.md) · [Logística internacional](../logistica/logistica-internacional.md)
+[Proceso de despacho](proceso-despacho.md) · [Pedimento y RGCE](pedimento-rgce.md) · [Manifestación de valor](manifestacion-valor.md) · [RRNA](../rrna/index.md) · [Padrón](../fundamentos/padron-importadores.md)
 
-> No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.
+> La tabla es un mapa de investigación, no una checklist universal. Antes del despacho, confirma la obligación exacta en la norma vigente para el régimen y mercancía concretos.

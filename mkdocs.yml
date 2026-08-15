@@ -100,25 +100,30 @@ nav:
   - Wiki:
     - Mapa: wiki/index.md
     - Fundamentos:
-      - Marco juridico: wiki/fundamentos/marco-juridico.md
-      - Padron de importadores: wiki/fundamentos/padron-importadores.md
+      - Marco jurídico: wiki/fundamentos/marco-juridico.md
+      - Padrón de importadores: wiki/fundamentos/padron-importadores.md
     - Aduana:
-      - Regimenes aduaneros: wiki/aduana/regimenes-aduaneros.md
-      - Cambios 2026: wiki/aduana/cambios-2026.md
+      - Proceso de despacho: wiki/aduana/proceso-despacho.md
+      - Regímenes aduaneros: wiki/aduana/regimenes-aduaneros.md
       - Documentos: wiki/aduana/documentos.md
+      - Manifestación de Valor: wiki/aduana/manifestacion-valor.md
       - Pedimento y RGCE: wiki/aduana/pedimento-rgce.md
+      - Ventanilla Única y VUCEM: wiki/aduana/vucem.md
+      - Agente y agencia aduanal: wiki/aduana/agente-agencia-aduanal.md
       - ANAM: wiki/aduana/anam.md
-    - Clasificacion:
+      - PAMA e infracciones: wiki/aduana/infracciones-pama.md
+      - Cambios 2026: wiki/aduana/cambios-2026.md
+    - Clasificación:
       - Sistema Armonizado: wiki/clasificacion/sistema-armonizado.md
       - TIGIE y NICO: wiki/clasificacion/tigie-nico.md
       - RRNA, nota existente: wiki/clasificacion/rrna.md
     - RRNA:
-      - Guia: wiki/rrna/index.md
+      - Guía: wiki/rrna/index.md
       - Reglas y criterios SE: wiki/rrna/reglas-criterios-se.md
       - Anexo 2.2.1: wiki/rrna/anexo-2-2-1.md
       - Anexo 2.4.1: wiki/rrna/anexo-2-4-1.md
     - Contribuciones:
-      - Impuestos de importacion: wiki/contribuciones/impuestos-importacion.md
+      - Impuestos de importación: wiki/contribuciones/impuestos-importacion.md
       - Aranceles: wiki/contribuciones/aranceles.md
       - Valor en aduana: wiki/contribuciones/valor-en-aduana.md
       - Cuotas compensatorias: wiki/contribuciones/cuotas-compensatorias.md
@@ -128,30 +133,30 @@ nav:
       - PROSEC: wiki/programas/prosec.md
       - TLC y T-MEC: wiki/programas/tlc-tmec.md
       - Reglas de origen: wiki/programas/reglas-de-origen.md
-    - Logistica:
+    - Logística:
       - Incoterms: wiki/logistica/incoterms.md
-      - Logistica internacional: wiki/logistica/logistica-internacional.md
+      - Logística internacional: wiki/logistica/logistica-internacional.md
       - Pagos internacionales: wiki/logistica/pagos-internacionales.md
   - Fuentes:
-    - Guia del catalogo: catalog/index.md
-    - Catalogo general: catalog/catalog.md
-    - Catalogo generado: catalog/registry.md
-    - Mexico:
-      - Indice: catalog/mexico/index.md
+    - Guía del catálogo: catalog/index.md
+    - Catálogo general: catalog/catalog.md
+    - Catálogo generado: catalog/registry.md
+    - México:
+      - Índice: catalog/mexico/index.md
       - Ley Aduanera: catalog/mexico/ley-aduanera.md
       - Arancel: catalog/mexico/arancel.md
       - INEGI, TIGIE y SCIAN: catalog/mexico/inegi-tigie-scian.md
       - RGCE: catalog/mexico/rgce.md
     - Global: catalog/global/index.md
-    - Paises:
+    - Países:
       - Brasil: catalog/countries/BRA.md
-      - Canada: catalog/countries/CAN.md
+      - Canadá: catalog/countries/CAN.md
       - China: catalog/countries/CHN.md
       - Alemania: catalog/countries/DEU.md
-      - Japon: catalog/countries/JPN.md
-      - Paises Bajos: catalog/countries/NLD.md
+      - Japón: catalog/countries/JPN.md
+      - Países Bajos: catalog/countries/NLD.md
       - Estados Unidos: catalog/countries/USA.md
-  - Metodologia:
+  - Metodología:
     - Proceso: methodology/index.md
     - Modelo de estados: methodology/status-model.md
     - Patrones externos: methodology/external-patterns.md
