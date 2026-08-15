@@ -1,0 +1,80 @@
+pages:
+  - path: docs/wiki/aduana/current.md
+    title: Current customs page
+    source_ids: [mx_source_current]
+    instrument_ids: [mx_instrument_current]
+    jurisdiction: MEX
+    topic: aduana
+    effective_from: 2026-01-01
+    current_through: 2026-08-15
+    reviewed_at: 2026-08-15
+    source_status: current
+    extraction_status: complete
+    legal_review_status: reviewed
+    corpus_status: current
+    content_type: wiki_explainer
+    legal_authority: non_authoritative
+
+  - path: docs/wiki/aduana/pending.md
+    title: Pending customs page
+    source_ids: [mx_source_current]
+    instrument_ids: [mx_instrument_current]
+    jurisdiction: MEX
+    topic: aduana
+    effective_from: 2026-01-01
+    current_through: null
+    reviewed_at: 2026-08-10
+    source_status: current
+    extraction_status: partial
+    legal_review_status: pending_review
+    corpus_status: partial
+    content_type: wiki_explainer
+    legal_authority: non_authoritative
+
+  - path: docs/wiki/rrna/stale.md
+    title: Stale RRNA page
+    source_ids: [mx_source_stale]
+    instrument_ids: [mx_instrument_rrna]
+    jurisdiction: MEX
+    topic: rrna
+    effective_from: 2025-01-01
+    current_through: 2025-12-31
+    reviewed_at: 2026-08-01
+    source_status: stale
+    extraction_status: complete
+    legal_review_status: reviewed
+    corpus_status: stale
+    content_type: explanatory_digest
+    legal_authority: non_authoritative
+
+  - path: docs/wiki/logistica/missing-links.md
+    title: Missing provenance links
+    source_ids: []
+    instrument_ids: []
+    jurisdiction: MEX
+    topic: logistica
+    effective_from: null
+    current_through: 2026-08-12
+    reviewed_at: 2026-08-12
+    source_status: current
+    extraction_status: complete
+    legal_review_status: reviewed
+    corpus_status: current
+    content_type: wiki_explainer
+    legal_authority: non_authoritative
+
+  - path: data/corpus/reference.md
+    title: Current corpus reference
+    source_ids: [mx_source_current]
+    instrument_ids: []
+    jurisdiction: MEX
+    topic: corpus
+    effective_from: 2026-01-01
+    current_through: 2026-08-14
+    reviewed_at: 2026-08-14
+    source_status: current
+    extraction_status: complete
+    legal_review_status: reviewed
+    corpus_status: current
+    content_type: data_fixture
+    legal_authority: official_not_relicensed

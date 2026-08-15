@@ -1,0 +1,657 @@
+{
+  "attention_queue": [
+    {
+      "path": "data/corpus/anexo-01-formatos-modelos.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-02-tramites.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-03-aduanas-pita.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-04-horarios-aduanas.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-05-criterios-practicas-indebidas.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-06-consejo-clasificacion-arancelaria.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-07-ejidatarios-sin-padron.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-09-exentos-igi-equipo-medico.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-10-padron-sectorial.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-11-rutas-fiscales-transito.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-12-exportacion-temporal.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-13-multas-cantidades.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-14-hidrocarburos-petroliferos.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-15-distancias-plazos-transito.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-16-aduanas-transito-norte-sur.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-17-sin-transito-internacional.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-18-sin-deposito-fiscal.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-19-datos-inexactos-multa-184.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-20-marcas-nominativas.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-21-aduanas-exclusivas.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-22.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-23-mercancias-peligrosas-muestreo.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-24-control-inventarios-immex.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-25-puntos-revision-franja.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-26-noms-informacion-comercial.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-27-fracciones-sin-iva.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-29-regimenes-prohibidos.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexo-30-scccyg.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexos-formatos-tramites.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/anexos-riesgo-logistica.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/casos-tipo-comex.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "missing_instrument_reference",
+        "missing_source_reference",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/criterios-anam-sat.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/fuentes-oficiales-comex-mx.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "missing_instrument_reference",
+        "missing_source_reference",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/ley-aduanera.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/noms-comercio-exterior.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/noms-maestro-anexo-241.md",
+      "risk_reasons": [
+        "extraction_incomplete"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/operacion-comex-base.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "missing_instrument_reference",
+        "missing_source_reference",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/reglamento-ley-aduanera.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/requisitos-pais-ejemplo.csv",
+      "risk_reasons": [
+        "missing_source_reference",
+        "source_not_current"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/rgce-2026.md",
+      "risk_reasons": [
+        "extraction_incomplete"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "data/corpus/tigie-nico-notas.md",
+      "risk_reasons": [
+        "corpus_not_current",
+        "extraction_incomplete",
+        "pending_legal_review"
+      ],
+      "section": "corpus"
+    },
+    {
+      "path": "docs/wiki/aduana/anam.md",
+      "risk_reasons": [
+        "missing_instrument_reference",
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "aduana"
+    },
+    {
+      "path": "docs/wiki/aduana/documentos.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "aduana"
+    },
+    {
+      "path": "docs/wiki/aduana/pedimento-rgce.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "aduana"
+    },
+    {
+      "path": "docs/wiki/clasificacion/rrna.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "clasificacion"
+    },
+    {
+      "path": "docs/wiki/clasificacion/sistema-armonizado.md",
+      "risk_reasons": [
+        "missing_instrument_reference",
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "clasificacion"
+    },
+    {
+      "path": "docs/wiki/clasificacion/tigie-nico.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "clasificacion"
+    },
+    {
+      "path": "docs/wiki/contribuciones/aranceles.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "contribuciones"
+    },
+    {
+      "path": "docs/wiki/contribuciones/cuotas-compensatorias.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "contribuciones"
+    },
+    {
+      "path": "docs/wiki/contribuciones/valor-en-aduana.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "contribuciones"
+    },
+    {
+      "path": "docs/wiki/fundamentos/padron-importadores.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "fundamentos"
+    },
+    {
+      "path": "docs/wiki/index.md",
+      "risk_reasons": [
+        "missing_instrument_reference",
+        "missing_source_reference",
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "wiki"
+    },
+    {
+      "path": "docs/wiki/logistica/incoterms.md",
+      "risk_reasons": [
+        "missing_instrument_reference",
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "logistica"
+    },
+    {
+      "path": "docs/wiki/logistica/logistica-internacional.md",
+      "risk_reasons": [
+        "missing_instrument_reference",
+        "missing_source_reference",
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "logistica"
+    },
+    {
+      "path": "docs/wiki/logistica/pagos-internacionales.md",
+      "risk_reasons": [
+        "missing_instrument_reference",
+        "missing_source_reference",
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "logistica"
+    },
+    {
+      "path": "docs/wiki/programas/drawback.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "programas"
+    },
+    {
+      "path": "docs/wiki/programas/immex.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "programas"
+    },
+    {
+      "path": "docs/wiki/programas/prosec.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "programas"
+    },
+    {
+      "path": "docs/wiki/programas/reglas-de-origen.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "programas"
+    },
+    {
+      "path": "docs/wiki/programas/tlc-tmec.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "programas"
+    }
+  ],
+  "latest_reviewed_at": "2026-08-15",
+  "schema_version": 1,
+  "sections": [
+    {
+      "legally_reviewed_pages": 2,
+      "pages_needing_attention": 3,
+      "retrieval_eligible_pages": 2,
+      "section": "aduana",
+      "total_pages": 5
+    },
+    {
+      "legally_reviewed_pages": 0,
+      "pages_needing_attention": 3,
+      "retrieval_eligible_pages": 0,
+      "section": "clasificacion",
+      "total_pages": 3
+    },
+    {
+      "legally_reviewed_pages": 1,
+      "pages_needing_attention": 3,
+      "retrieval_eligible_pages": 1,
+      "section": "contribuciones",
+      "total_pages": 4
+    },
+    {
+      "legally_reviewed_pages": 2,
+      "pages_needing_attention": 43,
+      "retrieval_eligible_pages": 2,
+      "section": "corpus",
+      "total_pages": 43
+    },
+    {
+      "legally_reviewed_pages": 1,
+      "pages_needing_attention": 1,
+      "retrieval_eligible_pages": 1,
+      "section": "fundamentos",
+      "total_pages": 2
+    },
+    {
+      "legally_reviewed_pages": 0,
+      "pages_needing_attention": 3,
+      "retrieval_eligible_pages": 0,
+      "section": "logistica",
+      "total_pages": 3
+    },
+    {
+      "legally_reviewed_pages": 0,
+      "pages_needing_attention": 5,
+      "retrieval_eligible_pages": 0,
+      "section": "programas",
+      "total_pages": 5
+    },
+    {
+      "legally_reviewed_pages": 4,
+      "pages_needing_attention": 0,
+      "retrieval_eligible_pages": 4,
+      "section": "rrna",
+      "total_pages": 4
+    },
+    {
+      "legally_reviewed_pages": 0,
+      "pages_needing_attention": 1,
+      "retrieval_eligible_pages": 0,
+      "section": "wiki",
+      "total_pages": 1
+    }
+  ],
+  "status_counts": {
+    "corpus_status": {
+      "current": 2,
+      "not_applicable": 28,
+      "partial": 39,
+      "stale": 1
+    },
+    "extraction_status": {
+      "not_applicable": 28,
+      "partial": 42
+    },
+    "legal_review_status": {
+      "not_applicable": 1,
+      "pending_review": 59,
+      "reviewed": 10
+    },
+    "source_status": {
+      "current": 50,
+      "partial": 19,
+      "unknown": 1
+    }
+  },
+  "summary": {
+    "corpus_pages": 43,
+    "distinct_instrument_ids": 18,
+    "distinct_source_ids": 38,
+    "legally_reviewed_pages": 10,
+    "non_current_corpus_pages": 40,
+    "pages_needing_attention": 62,
+    "pages_with_instruments": 60,
+    "pages_with_sources": 63,
+    "pending_legal_review_pages": 59,
+    "retrieval_eligible_pages": 10,
+    "total_pages": 70,
+    "unknown_source_status_pages": 1,
+    "wiki_pages": 27
+  }
+}

@@ -72,6 +72,14 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIn(".snice-state.json", text)
         self.assertIn("steps.snice.outcome == 'failure'", text)
 
+    def test_coverage_gate_runs_after_provenance_in_ci_and_pages(self):
+        for workflow_name in ("ci.yml", "pages.yml"):
+            text = (WORKFLOWS / workflow_name).read_text(encoding="utf-8")
+            provenance = text.index("scripts.page_metadata --check")
+            coverage = text.index("scripts.coverage_report --check")
+            self.assertLess(provenance, coverage, workflow_name)
+            self.assertLess(coverage, text.index("scripts.temporal_graph --check"), workflow_name)
+
     def test_pages_runs_deterministic_gate_before_upload(self):
         text = (WORKFLOWS / "pages.yml").read_text(encoding="utf-8")
         upload = text.index("actions/upload-pages-artifact")
@@ -80,6 +88,7 @@ class WorkflowPolicyTests(unittest.TestCase):
             "scripts.validate_repository",
             "scripts.build_catalog --check",
             "scripts.page_metadata --check",
+            "scripts.coverage_report --check",
             "scripts.temporal_graph --check",
             "scripts.rag_eval --check",
         ):

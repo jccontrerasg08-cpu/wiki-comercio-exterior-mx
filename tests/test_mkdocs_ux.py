@@ -73,6 +73,11 @@ class MkDocsUxTests(unittest.TestCase):
         ):
             self.assertIn(target, home)
 
+    def test_corpus_status_dashboard_is_in_top_level_navigation(self):
+        nav = yaml.safe_dump(self.config["nav"], allow_unicode=True, sort_keys=False)
+        self.assertIn("Estado del corpus", nav)
+        self.assertIn("status/corpus-coverage.md", nav)
+
     def test_motion_is_decorative_and_respects_reduced_motion(self):
         css = (ROOT / "docs" / "stylesheets" / "extra.css").read_text(encoding="utf-8")
         self.assertIn("@keyframes trade-route-flow", css)

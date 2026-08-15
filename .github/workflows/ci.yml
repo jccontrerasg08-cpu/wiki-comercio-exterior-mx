@@ -45,6 +45,9 @@ jobs:
       - name: Check page provenance inventory
         run: python -m scripts.page_metadata --check
 
+      - name: Check corpus coverage dashboard
+        run: python -m scripts.coverage_report --check
+
       - name: Check temporal instrument graph
         run: python -m scripts.temporal_graph --check
 
