@@ -42,9 +42,9 @@
 
 ## Task 5: Repository and supply-chain best practices
 
-- [ ] Add a GitHub Dependency Review workflow using the current official GitHub action, SHA-pinned, after verifying current documentation/version.
+- [x] Add a GitHub Dependency Review workflow using the current official GitHub action, SHA-pinned, after verifying current documentation/version. `actions/dependency-review-action` v5.0.0 is pinned to `a1d282b36b6f3519aa1f3fc636f609c47dddb294`; the workflow passed on PR #33.
 - [x] Keep external link checking scheduled and separate from deterministic PR CI.
-- [ ] Evaluate the branch ruleset and require the stable `repository-ci` status check if the connector/API supports it safely without blocking Pages deployment.
+- [x] Evaluate the branch ruleset and require the stable `repository-ci` status check if the connector/API supports it safely without blocking Pages deployment. The active `main-protection` ruleset already requires PRs, resolved review conversations and CodeQL; it does not yet require a status check, and the available GitHub connector exposes no safe ruleset write mutation, so no administrative protection was changed from this implementation session.
 - [x] Preserve existing CodeQL and pull-request conversation-resolution protections.
 
 ## Task 6: Verification and merge
@@ -52,7 +52,7 @@
 - [x] Confirm RED for the new editorial regression tests.
 - [x] Run all tests, repository integrity, catalog, page metadata, coverage, temporal graph and RAG eval.
 - [x] Run MkDocs strict and legacy route verification.
-- [ ] Inspect PR scope and review threads.
+- [x] Inspect PR scope and review threads. The final pre-merge scope contains only editorial/methodology documentation, navigation/frontmatter/link improvements, static site verification/tests and the pinned Dependency Review workflow; no unresolved review threads are present.
 - [ ] Merge only after fresh CI is green.
 - [ ] Verify `main` CI and Pages on the merge SHA before starting Wave 3.
 
@@ -60,4 +60,4 @@
 
 The clean migrated workspace was verified on GitHub Actions run `31914613648` before its final commit. It completed **117 unit tests** plus repository integrity, generated catalog, page metadata, coverage policy, temporal graph, RAG evaluation, MkDocs strict build, legacy-route compatibility and static SEO/accessibility checks. RAG metrics were `1.0` for citation coverage, MRR, recall@k and temporal accuracy. Coverage remained at 75 governed pages, 15 reviewed, 15 retrieval-eligible, 69 sourced and 66 instrumented; editorial/SEO edits did not promote legal review status.
 
-The migration-only workflow and script were deleted from the committed branch state before this plan update. A normal pull-request CI run on the final user-authored head remains required before merge.
+The migration-only workflow and script were deleted from the committed branch state. On commit `5e50cc667b8bbdccb52356701430b00a1c0c412a`, both the normal `ci` workflow and the new `Dependency Review` workflow completed successfully. A final fresh run on the checklist-closing head is still required before merge.
