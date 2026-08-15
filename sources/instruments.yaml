@@ -1,0 +1,366 @@
+instruments:
+  - id: mx_constitucion
+    jurisdiction: MEX
+    title: Constitucion Politica de los Estados Unidos Mexicanos
+    instrument_type: constitution
+    status: current
+    publication_date: 1917-02-05
+    effective_from: 1917-05-01
+    effective_to: null
+    current_through: 2026-06-02
+    consolidated_source_id: mx_diputados_constitucion
+    events: []
+
+  - id: mx_ley_aduanera
+    jurisdiction: MEX
+    title: Ley Aduanera
+    instrument_type: law
+    status: current
+    publication_date: 1995-12-15
+    effective_from: 1996-04-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_ley_aduanera
+    events: []
+
+  - id: mx_reglamento_ley_aduanera
+    jurisdiction: MEX
+    title: Reglamento de la Ley Aduanera
+    instrument_type: regulation
+    status: current
+    publication_date: 2015-04-20
+    effective_from: 2015-06-20
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_reg_ley_aduanera
+    events:
+      - source_id: mx_sidof_rla_reform_20260223
+        relation: amends
+        effective_from: 2026-02-24
+
+  - id: mx_ligie
+    jurisdiction: MEX
+    title: Ley de los Impuestos Generales de Importacion y de Exportacion
+    instrument_type: law
+    status: current
+    publication_date: 2022-06-07
+    effective_from: 2022-12-12
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_ligie_current
+    events:
+      - source_id: mx_diputados_ligie_reform_2025
+        relation: amends
+        effective_from: 2026-01-01
+      - source_id: mx_sidof_decreto_20251229
+        relation: amends
+        effective_from: 2026-01-01
+
+  - id: mx_rgce_2025
+    jurisdiction: MEX
+    title: Reglas Generales de Comercio Exterior para 2025
+    instrument_type: administrative_rules
+    status: superseded
+    publication_date: 2024-12-30
+    effective_from: 2025-01-01
+    effective_to: 2025-12-31
+    current_through: 2025-12-31
+    consolidated_source_id: mx_sidof_rgce_2025_body
+    events:
+      - source_id: mx_sidof_rgce_2025
+        relation: has_annex
+        effective_from: 2025-01-06
+      - source_id: mx_sidof_rgce_2025_anexos_10_22_27
+        relation: has_annex
+        effective_from: 2025-01-07
+      - source_id: mx_sidof_rgce_2025_anexo_2
+        relation: has_annex
+        effective_from: 2025-01-09
+      - source_id: mx_sidof_rgce_2025_anexo_1
+        relation: has_annex
+        effective_from: 2025-01-17
+      - source_id: mx_sidof_rgce_2025_mod1
+        relation: amends
+        effective_from: 2025-04-08
+      - source_id: mx_sidof_rgce_2025_mod2
+        relation: amends
+        effective_from: 2025-05-13
+      - source_id: mx_sidof_rgce_2025_mod3
+        relation: amends
+        effective_from: 2025-05-30
+      - source_id: mx_sidof_rgce_2025_mod4
+        relation: amends
+        effective_from: 2025-09-01
+      - source_id: mx_sidof_rgce_2025_mod5
+        relation: amends
+        effective_from: 2025-11-21
+      - source_id: mx_sidof_rgce_2025_mod6
+        relation: amends
+        effective_from: 2025-11-25
+      - source_id: mx_sidof_rgce_2025_mod7
+        relation: amends
+        effective_from: 2025-12-17
+
+  - id: mx_rgce_2026
+    jurisdiction: MEX
+    title: Reglas Generales de Comercio Exterior para 2026
+    instrument_type: administrative_rules
+    status: current
+    publication_date: 2025-12-27
+    effective_from: 2026-01-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_sidof_rgce_2026
+    events:
+      - source_id: mx_sidof_rgce_2026_anexo_1
+        relation: has_annex
+        effective_from: 2026-01-08
+      - source_id: mx_sidof_rgce_2026_anexo_2
+        relation: has_annex
+        effective_from: 2026-01-12
+      - source_id: mx_sidof_rgce_2026_anexos_3_20
+        relation: has_annex
+        effective_from: 2026-01-14
+      - source_id: mx_sidof_rgce_2026_anexos_21_30
+        relation: has_annex
+        effective_from: 2026-01-15
+      - source_id: mx_sidof_rgce_2026_mod1
+        relation: amends
+        effective_from: 2026-05-15
+      - source_id: mx_sidof_rgce_2026_mod1_anexos
+        relation: has_annex
+        effective_from: 2026-05-22
+
+  - id: mx_ley_comercio_exterior
+    jurisdiction: MEX
+    title: Ley de Comercio Exterior
+    instrument_type: law
+    status: current
+    publication_date: 1993-07-27
+    effective_from: 1993-07-28
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_lce_current
+    events:
+      - source_id: mx_sidof_lce_reform_20260501
+        relation: amends
+        effective_from: 2026-05-02
+
+  - id: mx_reglamento_ley_comercio_exterior
+    jurisdiction: MEX
+    title: Reglamento de la Ley de Comercio Exterior
+    instrument_type: regulation
+    status: current
+    publication_date: 1993-12-30
+    effective_from: 1993-12-31
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_reg_lce
+    events: []
+
+  - id: mx_codigo_fiscal_federacion
+    jurisdiction: MEX
+    title: Codigo Fiscal de la Federacion
+    instrument_type: law
+    status: current
+    publication_date: 1981-12-31
+    effective_from: 1983-01-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_cff_current
+    events: []
+
+  - id: mx_ley_iva
+    jurisdiction: MEX
+    title: Ley del Impuesto al Valor Agregado
+    instrument_type: law
+    status: current
+    publication_date: 1978-12-29
+    effective_from: 1980-01-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_liva_current
+    events: []
+
+  - id: mx_ley_ieps
+    jurisdiction: MEX
+    title: Ley del Impuesto Especial sobre Produccion y Servicios
+    instrument_type: law
+    status: current
+    publication_date: 1980-12-30
+    effective_from: 1981-01-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_lieps_current
+    events: []
+
+  - id: mx_ley_federal_derechos
+    jurisdiction: MEX
+    title: Ley Federal de Derechos
+    instrument_type: law
+    status: current
+    publication_date: 1981-12-31
+    effective_from: 1982-01-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_lfd_current
+    events: []
+
+  - id: mx_ley_infraestructura_calidad
+    jurisdiction: MEX
+    title: Ley de Infraestructura de la Calidad
+    instrument_type: law
+    status: current
+    publication_date: 2020-07-01
+    effective_from: 2020-08-30
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_diputados_ley_infraestructura_calidad
+    events: []
+
+  - id: mx_reglas_criterios_se
+    jurisdiction: MEX
+    title: Reglas y criterios de caracter general en materia de comercio exterior de la SE
+    instrument_type: administrative_rules
+    status: current
+    publication_date: 2022-05-09
+    effective_from: 2022-05-10
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_sidof_reglas_se_2022
+    events:
+      - source_id: mx_sidof_reglas_se_mod_20250902
+        relation: amends
+        effective_from: 2025-09-03
+      - source_id: mx_sidof_reglas_se_mod_20260212
+        relation: amends
+        effective_from: 2026-02-13
+      - source_id: mx_sidof_reglas_se_mod_20260402
+        relation: amends
+        effective_from: 2026-04-03
+      - source_id: mx_sidof_reglas_se_mod_20260528
+        relation: amends
+        effective_from: 2026-05-29
+      - source_id: mx_sidof_reglas_se_mod_20260529
+        relation: amends
+        effective_from: 2026-05-30
+
+  - id: mx_programa_immex
+    jurisdiction: MEX
+    title: Programa IMMEX
+    instrument_type: program
+    status: partial
+    publication_date: 2006-11-01
+    effective_from: 2006-11-13
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_snice_immex
+    events: []
+
+  - id: mx_programa_prosec
+    jurisdiction: MEX
+    title: Programas de Promocion Sectorial
+    instrument_type: program
+    status: partial
+    publication_date: 2002-08-02
+    effective_from: 2002-08-03
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_snice_prosec
+    events: []
+
+  - id: mx_programa_drawback
+    jurisdiction: MEX
+    title: Devolucion de impuestos de importacion a exportadores
+    instrument_type: program
+    status: partial
+    publication_date: 1995-05-11
+    effective_from: 1995-05-12
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: mx_snice_drawback
+    events: []
+
+  - id: mx_tmec
+    jurisdiction: MEX
+    title: Tratado entre Mexico, Estados Unidos y Canada
+    instrument_type: treaty
+    status: partial
+    publication_date: 2020-06-29
+    effective_from: 2020-07-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: sice_tmec
+    events: []
+
+  - id: mx_tipat
+    jurisdiction: MEX
+    title: Tratado Integral y Progresista de Asociacion Transpacifico
+    instrument_type: treaty
+    status: partial
+    publication_date: 2018-11-29
+    effective_from: 2018-12-30
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: sice_tipat
+    events: []
+
+  - id: mx_tlcuem
+    jurisdiction: MEX
+    title: Tratado de Libre Comercio Mexico Union Europea
+    instrument_type: treaty
+    status: partial
+    publication_date: 2000-06-26
+    effective_from: 2000-07-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: sice_tlcuem
+    events: []
+
+  - id: mx_acuerdo_reino_unido
+    jurisdiction: MEX
+    title: Acuerdo de continuidad comercial Mexico Reino Unido
+    instrument_type: treaty
+    status: partial
+    publication_date: 2020-12-15
+    effective_from: 2021-06-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: sice_mexico_reino_unido
+    events: []
+
+  - id: mx_acuerdo_japon
+    jurisdiction: MEX
+    title: Acuerdo para el fortalecimiento de la asociacion economica Mexico Japon
+    instrument_type: treaty
+    status: partial
+    publication_date: 2005-03-31
+    effective_from: 2005-04-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: sice_mexico_japon
+    events: []
+
+  - id: mx_tlc_chile
+    jurisdiction: MEX
+    title: Tratado de Libre Comercio Mexico Chile
+    instrument_type: treaty
+    status: partial
+    publication_date: 1999-07-28
+    effective_from: 1999-08-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: sice_mexico_chile
+    events: []
+
+  - id: mx_alianza_pacifico
+    jurisdiction: MEX
+    title: Protocolo Adicional al Acuerdo Marco de la Alianza del Pacifico
+    instrument_type: treaty
+    status: partial
+    publication_date: 2016-04-29
+    effective_from: 2016-05-01
+    effective_to: null
+    current_through: 2026-08-15
+    consolidated_source_id: sice_alianza_pacifico
+    events: []

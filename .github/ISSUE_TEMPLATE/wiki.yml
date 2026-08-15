@@ -1,12 +1,41 @@
-name: Wiki page
-description: Change a pedagogical page in docs/wiki
+name: Wiki or corpus correction
+description: Improve an explainer while preserving legal provenance
 title: "[wiki] "
 labels: []
 body:
-  - type: textarea
-    id: page
+  - type: input
+    id: path
     attributes:
-      label: Page and change
-      description: Cite docs/catalog or a SIDOF/Diputados/SAT URL. No LinkedIn. No Tec syllabi. No Incoterms rule text.
+      label: Page path
+      placeholder: docs/wiki/...
     validations:
       required: true
+  - type: input
+    id: ids
+    attributes:
+      label: Source and instrument IDs
+    validations:
+      required: true
+  - type: input
+    id: current_through
+    attributes:
+      label: Current through
+      placeholder: YYYY-MM-DD or not applicable
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Problem, proposed correction, and official evidence
+      description: Explain authority, effective date, page status, and whether generated metadata changes.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Content safety
+      options:
+        - label: No proprietary Incoterms or WCO explanatory text is included
+          required: true
+        - label: No interactive INEGI or SNICE portal was scraped
+          required: true

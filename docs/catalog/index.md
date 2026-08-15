@@ -35,4 +35,4 @@ HTTP 200 is not a valid source. Structured TIGIE/NICO tables live in [arancel-mx
 
 ## Catalog
 
-Machine snapshot of every `registry.yaml` row: [catalog.md](catalog.md).
+Human guidance: [catalog.md](catalog.md). Generated snapshot of every canonical source: [registry.md](registry.md).

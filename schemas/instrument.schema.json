@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/schemas/instrument.schema.json",
+  "title": "Legal instrument record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "jurisdiction", "title", "instrument_type", "status", "publication_date", "effective_from", "effective_to", "current_through", "consolidated_source_id", "events"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+    "jurisdiction": {"type": "string", "pattern": "^(?:[A-Z]{3}|GLOBAL)$"},
+    "title": {"type": "string", "minLength": 1},
+    "instrument_type": {"enum": ["constitution", "law", "regulation", "administrative_rules", "decree", "agreement", "annex", "treaty", "program", "standard", "guidance"]},
+    "status": {"enum": ["current", "stale", "superseded", "partial", "pending_review", "withdrawn", "unknown"]},
+    "publication_date": {"type": "string", "format": "date"},
+    "effective_from": {"type": "string", "format": "date"},
+    "effective_to": {"type": ["string", "null"], "format": "date"},
+    "current_through": {"type": "string", "format": "date"},
+    "consolidated_source_id": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+    "events": {"type": "array", "items": {"$ref": "#/$defs/event"}}
+  },
+  "$defs": {
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "relation", "effective_from"],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+        "relation": {"enum": ["implements", "regulates", "amends", "repeals", "supersedes", "references", "has_annex", "applies_to", "interpreted_by", "corrected_by"]},
+        "target_instrument_id": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+        "effective_from": {"type": "string", "format": "date"},
+        "effective_to": {"type": ["string", "null"], "format": "date"}
+      }
+    }
+  }
+}

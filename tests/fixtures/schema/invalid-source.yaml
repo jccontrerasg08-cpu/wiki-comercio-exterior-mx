@@ -1,0 +1,7 @@
+id: valid_id
+title: Invalid extra property
+url: https://example.com/source
+authority: DOF
+evidence_class: primary_legal
+harvest: false
+unexpected: true

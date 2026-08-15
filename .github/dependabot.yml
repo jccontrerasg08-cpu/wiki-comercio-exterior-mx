@@ -6,6 +6,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
     open-pull-requests-limit: 5
     groups:
       docs-minor-patch:
@@ -20,4 +23,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "monday"
+    labels:
+      - "dependencies"
+      - "github_actions"
     open-pull-requests-limit: 5

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/schemas/source.schema.json",
+  "title": "Official source record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "jurisdiction", "title", "url", "authority", "evidence_class", "allowed_hosts", "media_types", "harvest"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+    "jurisdiction": {"type": "string", "pattern": "^(?:[A-Z]{3}|GLOBAL)$"},
+    "title": {"type": "string", "minLength": 1},
+    "url": {"type": "string", "format": "uri", "pattern": "^https?://"},
+    "note_id": {"type": ["string", "null"], "pattern": "^[0-9]+$"},
+    "authority": {"type": "string", "minLength": 1},
+    "evidence_class": {
+      "enum": ["primary_legal", "official_consolidated", "official_administrative", "official_data", "international_official", "catalog_only", "official_statistics", "official_operational", "intergovernmental", "secondary"]
+    },
+    "instrument_id": {"type": "string", "pattern": "^[a-z0-9]+(?:_[a-z0-9]+)*$"},
+    "publication_date": {"type": "string", "format": "date"},
+    "content_valid_from": {"type": "string", "format": "date"},
+    "content_valid_to": {"type": ["string", "null"], "format": "date"},
+    "retrieved_at": {"type": "string", "format": "date-time"},
+    "allowed_hosts": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "media_types": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "harvest": {"type": "boolean"},
+    "cadence_days": {"type": "integer", "minimum": 1, "maximum": 3650},
+    "probe": {"$ref": "#/$defs/probe"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"harvest": {"const": true}}, "required": ["harvest"]},
+      "then": {"required": ["cadence_days", "probe"]}
+    },
+    {
+      "if": {"properties": {"evidence_class": {"const": "official_consolidated"}}, "required": ["evidence_class"]},
+      "then": {"required": ["instrument_id", "publication_date", "content_valid_from"]}
+    }
+  ],
+  "$defs": {
+    "probe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "expected_status", "min_bytes"],
+      "properties": {
+        "method": {"enum": ["GET", "HEAD"]},
+        "expected_status": {"type": "array", "items": {"type": "integer", "minimum": 100, "maximum": 599}, "minItems": 1, "uniqueItems": true},
+        "min_bytes": {"type": "integer", "minimum": 0},
+        "max_bytes": {"type": "integer", "minimum": 1},
+        "expected_title": {"type": "string", "minLength": 1},
+        "expected_path": {"type": "string", "pattern": "^/"},
+        "reject_if_contains": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      }
+    }
+  }
+}

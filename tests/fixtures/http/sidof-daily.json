@@ -1,0 +1,16 @@
+{
+  "messageCode": 200,
+  "response": "OK",
+  "NotasExtraordinarias": [],
+  "NotasVespertinas": [],
+  "NotasMatutinas": [
+    {
+      "codNota": 5999999,
+      "codSeccion": "UNICA",
+      "fecha": "15-08-2026",
+      "codDiario": 399999,
+      "nombreCodOrgaUno": "PODER EJECUTIVO",
+      "codOrgaDos": "SECRETARIA DE ECONOMIA"
+    }
+  ]
+}

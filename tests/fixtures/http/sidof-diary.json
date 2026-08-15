@@ -1,0 +1,12 @@
+{
+  "messageCode": 200,
+  "response": "OK",
+  "Notas": [
+    {
+      "codNota": 5999999,
+      "titulo": "Acuerdo que modifica las Reglas Generales de Comercio Exterior",
+      "fecha": "15-08-2026",
+      "codDiario": 399999
+    }
+  ]
+}

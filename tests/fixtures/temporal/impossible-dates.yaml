@@ -1,0 +1,15 @@
+instruments:
+  - id: impossible_law
+    jurisdiction: MEX
+    title: Impossible law
+    instrument_type: law
+    status: current
+    publication_date: 2026-01-01
+    effective_from: 2026-01-02
+    effective_to: null
+    current_through: 2026-02-01
+    consolidated_source_id: source_one
+    events:
+      - source_id: source_two
+        relation: amends
+        effective_from: 2026-03-01

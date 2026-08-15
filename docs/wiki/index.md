@@ -78,10 +78,13 @@ Un tema, una carpeta. No hay un quinto nivel.
 
 ## Fundamentos
 
+- [Marco jurídico](fundamentos/marco-juridico.md) - Jerarquía, fuentes y verificación.
 - [Padrón de importadores](fundamentos/padron-importadores.md) - Inscripción SAT.
 
 ## Aduana
 
+- [Regímenes aduaneros](aduana/regimenes-aduaneros.md) - Finalidad, plazos y controles.
+- [Cambios 2026](aduana/cambios-2026.md) - RLA, LCE, RGCE y Reglas SE.
 - [Documentos de comercio exterior](aduana/documentos.md) - Pedimento, factura, transporte, MV, origen y RRNA.
 - [Pedimento y RGCE](aduana/pedimento-rgce.md) - Declaración aduanera y anexos SIDOF.
 - [ANAM](aduana/anam.md) - Agencia Nacional de Aduanas (autoridad), no agencia aduanal privada.
@@ -94,12 +97,14 @@ Un tema, una carpeta. No hay un quinto nivel.
 
 ## Contribuciones
 
+- [Impuestos de importación](contribuciones/impuestos-importacion.md) - IGI, IVA, IEPS, DTA y cuotas.
 - [Aranceles](contribuciones/aranceles.md) - IGI/IGE y cómo leer la tarifa.
 - [Valor en aduana](contribuciones/valor-en-aduana.md) - Base gravable (OMC).
 - [Cuotas compensatorias](contribuciones/cuotas-compensatorias.md) - Remedios comerciales (UPCI/SNICE).
 
 ## Programas
 
+- [Drawback](programas/drawback.md) - Devolución de impuestos de importación a exportadores.
 - [TLC y T-MEC](programas/tlc-tmec.md) - Tratados y preferencia arancelaria.
 - [Reglas de origen](programas/reglas-de-origen.md) - Cómo califica una mercancía.
 - [PROSEC](programas/prosec.md) - IGI preferencial por sector.
@@ -112,3 +117,10 @@ Un tema, una carpeta. No hay un quinto nivel.
 - [Pagos internacionales](logistica/pagos-internacionales.md) - Cartas de crédito y transferencias. No es guía de "pago seguro".
 
 > No es asesoría legal. Corrobora contra SIDOF, Diputados o SAT.
+
+## RRNA
+
+- [Guía de RRNA](rrna/index.md) - Flujo de verificación.
+- [Reglas y criterios SE](rrna/reglas-criterios-se.md) - Acuerdo base y modificaciones.
+- [Anexo 2.2.1](rrna/anexo-2-2-1.md) - Permisos y avisos.
+- [Anexo 2.4.1](rrna/anexo-2-4-1.md) - NOM en punto de entrada.

@@ -30,6 +30,19 @@ class RepositoryValidatorTests(unittest.TestCase):
         findings = validate_registry(ROOT / "sources" / "registry.yaml")
         self.assertEqual(findings, [])
 
+    def test_registry_uses_local_json_schema(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            (root / "sources").mkdir()
+            (root / "schemas").mkdir()
+            shutil.copyfile(ROOT / "schemas" / "source.schema.json", root / "schemas" / "source.schema.json")
+            (root / "sources" / "registry.yaml").write_text(
+                "sources:\n  - id: Bad ID\n    jurisdiction: mexico\n    title: Test\n    url: https://example.com\n    authority: Test\n    evidence_class: primary_legal\n    allowed_hosts: [example.com]\n    media_types: [text/html]\n    harvest: false\n    unexpected: true\n",
+                encoding="utf-8",
+            )
+            findings = validator.validate_registry(root / "sources" / "registry.yaml")
+        self.assertIn("REGISTRY_SCHEMA", {item.code for item in findings})
+
     def test_invalid_manifest_sha_is_rejected(self):
         validate_manifest = getattr(validator, "validate_manifest", None)
         self.assertIsNotNone(validate_manifest, "validate_manifest must exist")
@@ -98,6 +111,9 @@ class RepositoryValidatorTests(unittest.TestCase):
         self.assertIn("PASS registry", output)
         self.assertIn("PASS originals", output)
         self.assertIn("PASS repository-hygiene", output)
+        self.assertIn("PASS temporal-graph", output)
+        self.assertIn("PASS page-metadata", output)
+        self.assertIn("PASS generated-catalog", output)
         self.assertIn("Repository validation passed", output)
 
 
