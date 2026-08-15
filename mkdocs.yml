@@ -96,6 +96,7 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Inicio: index.md
+  - Estado del corpus: status/corpus-coverage.md
   - Wiki:
     - Mapa: wiki/index.md
     - Fundamentos:
