@@ -43,6 +43,7 @@ Transport availability is not a legal-status decision. Publication events are re
 
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
+| `mx_sidof_lineamientos_159bis_20260331`<br>Acuerdo 44/2026 lineamientos del articulo 159 bis de la Ley Aduanera | MEX | primary_legal | mx_lineamientos_159bis_2026 / current | yes | 365 | 2026-03-31 | [open](https://sidof.segob.gob.mx/notas/5783669) |
 | `mx_sidof_rgce_2025_anexo_1`<br>Anexo 1 RGCE 2025 | MEX | primary_legal | mx_rgce_2025 / superseded | yes | 365 | 2025-01-17 | [open](https://sidof.segob.gob.mx/notas/5747310) |
 | `mx_sidof_rgce_2026_anexo_1`<br>Anexo 1 RGCE 2026 | MEX | primary_legal | mx_rgce_2026 / current | yes | 365 | 2026-01-08 | [open](https://sidof.segob.gob.mx/notas/5777997) |
 | `mx_sidof_rgce_2025_anexo_2`<br>Anexo 2 RGCE 2025 | MEX | primary_legal | mx_rgce_2025 / superseded | yes | 365 | 2025-01-09 | [open](https://sidof.segob.gob.mx/notas/5746846) |
@@ -56,6 +57,7 @@ Transport availability is not a legal-status decision. Publication events are re
 | `mx_sidof_ligie_prosec_20260423`<br>Decreto de modificacion a la TIGIE y PROSEC de 23 de abril de 2026 | MEX | primary_legal | mx_ligie / current<br>mx_programa_prosec / partial | yes | 365 | 2026-04-23 | [open](https://sidof.segob.gob.mx/notas/5785818) |
 | `mx_sidof_lce_reform_20260501`<br>Decreto de reforma a la Ley de Comercio Exterior en materia agroexportadora | MEX | primary_legal | mx_ley_comercio_exterior / current | yes | 365 | 2026-05-01 | [open](https://sidof.segob.gob.mx/notas/5786538) |
 | `mx_sidof_rla_reform_20260223`<br>Decreto de reforma al Reglamento de la Ley Aduanera | MEX | primary_legal | mx_reglamento_ley_aduanera / current | yes | 365 | 2026-02-23 | [open](https://sidof.segob.gob.mx/notas/5780677) |
+| `mx_sidof_ventanilla_unica_20260504`<br>Decreto por el que se habilita la Ventanilla Unica de Tramites de Comercio Exterior | MEX | primary_legal | mx_ventanilla_unica_2026 / current | yes | 365 | 2026-05-04 | [open](https://sidof.segob.gob.mx/notas/5786598) |
 | `mx_sidof_decreto_20251229`<br>Decreto TIGIE 29 de diciembre de 2025 | MEX | primary_legal | mx_ligie / current | yes | 365 | 2025-12-29 | [open](https://sidof.segob.gob.mx/notas/5777376) |
 | `mx_sidof_reglas_se_mod_20260212`<br>Modificacion a Reglas y criterios SE de 12 de febrero de 2026 | MEX | primary_legal | mx_reglas_criterios_se / current | yes | 365 | 2026-02-12 | [open](https://sidof.segob.gob.mx/notas/5779942) |
 | `mx_sidof_reglas_se_mod_20260402`<br>Modificacion a Reglas y criterios SE de 2 de abril de 2026 | MEX | primary_legal | mx_reglas_criterios_se / current | yes | 365 | 2026-04-02 | [open](https://sidof.segob.gob.mx/notas/5783929) |
@@ -102,6 +104,7 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `global_icc_incoterms`<br>ICC Incoterms rules | GLOBAL | secondary | - | no | 90 | - | [open](https://iccwbo.org/business-solutions/incoterms-rules/) |
+| `global_icc_ucp_600`<br>ICC UCP 600 Uniform Rules for Documentary Credits | GLOBAL | secondary | - | no | - | - | [open](https://2go.iccwbo.org/explore-our-products/ebooks/ucp-600-uniform-rules-for-documentary-credits-config-1.html) |
 
 ## INEGI
 
@@ -197,4 +200,5 @@ Transport availability is not a legal-status decision. Publication events are re
 
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
+| `global_wto_customs_valuation`<br>WTO customs valuation technical information | GLOBAL | intergovernmental | - | no | - | - | [open](https://www.wto.org/spanish/tratop_s/cusval_s/cusval_info_s.htm) |
 | `global_wto_tariff_download`<br>WTO Tariff and Trade Data | GLOBAL | intergovernmental | - | no | 90 | - | [open](https://ttd.wto.org/en) |

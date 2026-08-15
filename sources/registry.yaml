@@ -1117,3 +1117,54 @@ sources:
     harvest: false
     cadence_days: 90
     probe: *probe_html
+  - id: mx_sidof_lineamientos_159bis_20260331
+    jurisdiction: MEX
+    title: Acuerdo 44/2026 lineamientos del articulo 159 bis de la Ley Aduanera
+    url: https://sidof.segob.gob.mx/notas/5783669
+    note_id: "5783669"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_lineamientos_159bis_2026
+    publication_date: 2026-03-31
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_ventanilla_unica_20260504
+    jurisdiction: MEX
+    title: Decreto por el que se habilita la Ventanilla Unica de Tramites de Comercio Exterior
+    url: https://sidof.segob.gob.mx/notas/5786598
+    note_id: "5786598"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_ventanilla_unica_2026
+    publication_date: 2026-05-04
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: global_icc_ucp_600
+    jurisdiction: GLOBAL
+    title: ICC UCP 600 Uniform Rules for Documentary Credits
+    url: https://2go.iccwbo.org/explore-our-products/ebooks/ucp-600-uniform-rules-for-documentary-credits-config-1.html
+    note_id: null
+    authority: ICC
+    evidence_class: secondary
+    allowed_hosts: [iccwbo.org, www.iccwbo.org, 2go.iccwbo.org]
+    media_types: [text/html]
+    harvest: false
+
+  - id: global_wto_customs_valuation
+    jurisdiction: GLOBAL
+    title: WTO customs valuation technical information
+    url: https://www.wto.org/spanish/tratop_s/cusval_s/cusval_info_s.htm
+    note_id: null
+    authority: WTO
+    evidence_class: intergovernmental
+    allowed_hosts: [www.wto.org, wto.org]
+    media_types: [text/html]
+    harvest: false
