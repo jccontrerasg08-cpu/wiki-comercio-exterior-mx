@@ -8,7 +8,7 @@ sources:
     evidence_class: official_consolidated
     instrument_id: mx_ligie
     publication_date: 2022-06-07
-    content_valid_from: 2025-12-29
+    content_valid_from: 2026-04-24
     allowed_hosts: [www.diputados.gob.mx, diputados.gob.mx]
     media_types: [application/pdf]
     harvest: true
@@ -431,6 +431,21 @@ sources:
     evidence_class: primary_legal
     instrument_id: mx_ligie
     publication_date: 2025-12-29
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_ligie_prosec_20260423
+    jurisdiction: MEX
+    title: Decreto de modificacion a la TIGIE y PROSEC de 23 de abril de 2026
+    url: https://sidof.segob.gob.mx/notas/5785818
+    note_id: "5785818"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_ids: [mx_ligie, mx_programa_prosec]
+    publication_date: 2026-04-23
     allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
     media_types: [text/html, application/pdf]
     harvest: true
