@@ -28,6 +28,7 @@ def load_instruments(path: Path) -> list[dict[str, object]]:
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     if not isinstance(data, dict) or not isinstance(data.get("instruments"), list):
         raise ValueError(f"{path}: expected top-level instruments list")
+
     def normalize(value: Any) -> Any:
         if isinstance(value, date):
             return value.isoformat()
@@ -60,6 +61,19 @@ def _sources(registry_path: Path) -> dict[str, dict[str, object]]:
         for item in data["sources"]
         if isinstance(item, dict) and isinstance(item.get("id"), str)
     }
+
+
+def _source_instrument_ids(source: dict[str, object]) -> tuple[str, ...]:
+    """Return the legal instruments explicitly governed by one source record."""
+
+    declared: list[str] = []
+    single = source.get("instrument_id")
+    if isinstance(single, str):
+        declared.append(single)
+    multiple = source.get("instrument_ids")
+    if isinstance(multiple, list):
+        declared.extend(item for item in multiple if isinstance(item, str))
+    return tuple(dict.fromkeys(declared))
 
 
 def _cycle_findings(instruments: list[dict[str, object]]) -> list[TemporalFinding]:
@@ -159,13 +173,13 @@ def validate_temporal_graph(path_or_root: Path) -> list[TemporalFinding]:
                 )
             )
         elif isinstance(consolidated, str) and consolidated in known_sources:
-            source_instrument = known_sources[consolidated].get("instrument_id")
-            if source_instrument != instrument_id:
+            source_instruments = _source_instrument_ids(known_sources[consolidated])
+            if instrument_id not in source_instruments:
                 findings.append(
                     TemporalFinding(
                         "SOURCE_INSTRUMENT_MISMATCH",
                         f"{item_path}.consolidated_source_id",
-                        f"source declares {source_instrument!r}, expected {instrument_id!r}",
+                        f"source declares {source_instruments!r}, expected {instrument_id!r}",
                     )
                 )
 
@@ -201,13 +215,13 @@ def validate_temporal_graph(path_or_root: Path) -> list[TemporalFinding]:
                 )
             elif isinstance(source_id, str) and source_id in known_sources:
                 source = known_sources[source_id]
-                source_instrument = source.get("instrument_id")
-                if source_instrument != instrument_id:
+                source_instruments = _source_instrument_ids(source)
+                if instrument_id not in source_instruments:
                     findings.append(
                         TemporalFinding(
                             "SOURCE_INSTRUMENT_MISMATCH",
                             f"{event_path}.source_id",
-                            f"source declares {source_instrument!r}, expected {instrument_id!r}",
+                            f"source declares {source_instruments!r}, expected {instrument_id!r}",
                         )
                     )
                 publication = _as_date(source.get("publication_date"))
