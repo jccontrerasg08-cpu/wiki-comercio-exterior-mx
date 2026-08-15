@@ -66,7 +66,10 @@ class WorkflowPolicyTests(unittest.TestCase):
         text = (WORKFLOWS / "source-health.yml").read_text(encoding="utf-8")
         self.assertIn("python -m scripts.snice_discovery", text)
         self.assertIn("--output-dir snice-intelligence", text)
+        self.assertIn("--state .snice-state.json", text)
+        self.assertIn("--state-output .snice-state.json", text)
         self.assertIn("snice-intelligence/*.json", text)
+        self.assertIn(".snice-state.json", text)
         self.assertIn("steps.snice.outcome == 'failure'", text)
 
     def test_pages_runs_deterministic_gate_before_upload(self):
