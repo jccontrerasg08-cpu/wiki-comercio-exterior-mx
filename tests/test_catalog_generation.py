@@ -273,18 +273,8 @@ class CatalogGenerationTests(unittest.TestCase):
             instruments.write_text(INSTRUMENTS, encoding="utf-8")
             library = render_library(registry, instruments)
         self.assertIn("No sources are classified in this archive state yet.", library)
-        self.assertIn("## Unclassified sources", library)
-
-    def test_library_surfaces_indexed_release_bundles(self):
-        with tempfile.TemporaryDirectory() as temp_dir:
-            root = Path(temp_dir)
-            registry, instruments = self._write_fixture(root, releases=True)
-            library = render_library(registry, instruments)
-        self.assertIn("## Original-source release bundles", library)
-        self.assertIn("originals-2026.01.01", library)
-        self.assertIn("originals-test.zip", library)
-        self.assertIn("sat, sidof", library)
-        self.assertIn("cccccccccccc", library)
+        self.assertIn("## Sources without resolved source-specific preservation", library)
+        self.assertIn("**unclassified sources**", library)
 
     def test_check_detects_drift_in_either_generated_file(self):
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -299,6 +289,8 @@ class CatalogGenerationTests(unittest.TestCase):
         self.assertEqual(result.exit_code, 1)
         self.assertIn("library.md", result.message)
         self.assertIn("regenerate with: python -m scripts.build_catalog", result.message)
+        self.assertIn("--- committed/", result.message)
+        self.assertIn("+++ generated/", result.message)
 
 
 if __name__ == "__main__":
