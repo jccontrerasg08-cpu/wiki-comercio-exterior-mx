@@ -183,13 +183,13 @@ def _render_archive_section(
 
 
 def render_library(registry_path: Path, instruments_path: Path) -> str:
-    """Render the human-facing archive library from source metadata."""
+    """Render the human-facing archive library from explicit archive metadata."""
 
     sources = _load_list(registry_path, "sources")
     statuses = _instrument_statuses(instruments_path)
     grouped = {
         status: [source for source in sources if archive_label(source) == status]
-        for status in ("local_git", "release_asset", "external_only", "unclassified")
+        for status in ("local_git", "release_asset", "external_only")
     }
 
     lines = [
@@ -206,10 +206,17 @@ def render_library(registry_path: Path, instruments_path: Path) -> str:
         ("Local Git originals", "local_git"),
         ("GitHub Release assets", "release_asset"),
         ("External-only references", "external_only"),
-        ("Unclassified sources", "unclassified"),
     )
     for title, status in sections:
         lines.extend(_render_archive_section(title, grouped[status], statuses))
+    lines.extend(
+        [
+            "## Unclassified sources",
+            "",
+            "Sources without an explicit `archive` block remain available in the canonical source registry but are intentionally omitted from the archive tables until their storage state has been verified.",
+            "",
+        ]
+    )
     return "\n".join(lines).rstrip() + "\n"
 
 
