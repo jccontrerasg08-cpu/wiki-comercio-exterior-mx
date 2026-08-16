@@ -1,0 +1,24 @@
+flowchart TD
+  classDef decision fill:#0f766e,color:#ffffff,stroke:#0f766e,stroke-width:2px
+  classDef support fill:#e0f2fe,color:#0f172a,stroke:#0284c7,stroke-width:1.5px
+  classDef system fill:#fef3c7,color:#0f172a,stroke:#d97706,stroke-width:1.5px
+  classDef evidence fill:#ede9fe,color:#0f172a,stroke:#7c3aed,stroke-width:1.5px
+
+  A[Mercancía y operación<br/>atributos, destino, fecha]:::decision
+  B[Decisiones de fondo<br/>fracción · régimen · valor · origen · RRNA]:::decision
+  C[Soportes comerciales y logísticos<br/>factura · empaque · transporte · permiso]:::support
+  D[Comprobación de consistencia<br/>datos, vigencia, referencias y versiones]:::support
+  E[Declaración y transmisión<br/>pedimento · documentos electrónicos · pagos]:::system
+  F[Evento de operación<br/>arribo · despacho · resultado de control]:::system
+  G[Expediente trazable<br/>documentos · acuses · versión · vínculo con operación<br/>no un acuse, pantalla o documento aislado]:::evidence
+  H[Reconciliación y cambio<br/>diferencia, corrección o nueva revisión]:::evidence
+
+  A --> B
+  A --> C
+  B --> D
+  C --> D
+  D --> E
+  E --> F
+  F --> G
+  G --> H
+  H -. cambio material .-> B

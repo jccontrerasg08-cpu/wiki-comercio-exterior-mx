@@ -11,6 +11,10 @@ Las **Reglas Generales de Comercio Exterior (RGCE)** y sus anexos desarrollan pr
 
 > El pedimento conecta una decisión con un evento de sistema. La decisión se forma antes —con mercancía, fracción, valor, origen, RRNA y régimen— y debe poder verificarse después con documentos, acuses y registros relacionados.
 
+![Flujo documental de una operación: mercancía y soportes convergen en comprobación, declaración, evento, expediente y reconciliación.](../../assets/images/flujo-documental-operacion.png)
+
+*Diagrama de lectura elaborado para esta wiki. Resume la relación entre datos, documentos, transmisión y evidencia; no reemplaza RGCE, Anexo 22, una autorización ni la revisión de una operación concreta.*
+
 ## Cuatro capas que intervienen en una declaración
 
 | Capa | Pregunta que responde | Ejemplos de fuente o soporte | Error que evita |
