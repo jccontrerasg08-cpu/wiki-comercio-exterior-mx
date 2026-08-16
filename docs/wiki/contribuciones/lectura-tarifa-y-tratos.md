@@ -28,6 +28,12 @@ La LIGIE/TIGIE se lee en capas. Cada capa contesta una pregunta diferente y ning
 
 SNICE pone a disposición rutas para LIGIE, NICO, notas nacionales, estudios arancelarios, programas de fomento y medidas no arancelarias. Esas rutas son útiles para orientarse y localizar material, pero la publicación jurídica y sus transitorios son los que prueban una modificación, su fecha y su alcance.[1] [2]
 
+![Infografía institucional de SNICE sobre el Decreto General y la armonización de instrumentos con la TIGIE 2022](../../assets/images/snice-decreto-general-2022.png)
+
+*Infografía institucional enlazada por [SNICE, LIGIE: Acerca de](https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html). La pieza se refiere expresamente al contexto de TIGIE 2022 y a la publicación de 18 de noviembre de 2022: ayuda a distinguir una armonización de instrumentos de una tasa vigente, pero no acredita aranceles, cupos ni medidas aplicables en una fecha posterior.*
+
+Una visualización oficial puede explicar el propósito de un instrumento, pero debe conservar su fecha, alcance y límite. En este caso, el Decreto General descrito por la pieza no convierte cada programa, cupo o medida temporal en una tarifa permanente. Para una operación actual o histórica, vuelve siempre al decreto, sus reformas, la lista de fracciones alcanzadas y los transitorios que correspondan.
+
 ## Ruta de lectura: de la mercancía al tratamiento
 
 La ruta comienza con la mercancía real, no con una tasa deseada. Una descripción de trabajo debería poder identificar, cuando sea relevante, composición, función, modo de presentación, grado de elaboración, capacidad, potencia, dimensiones, empaque, estado físico y uso objetivo. El conjunto exacto depende de la nomenclatura aplicable; el principio es que la clasificación debe ser revisable con datos técnicos, no sólo con una denominación comercial.
