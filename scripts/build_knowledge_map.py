@@ -27,11 +27,21 @@ def _text(value: object) -> str:
     return "" if value is None else str(value)
 
 
+def _instrument_index(root: Path) -> dict[str, dict[str, Any]]:
+    data = _load_yaml(root / "sources" / "instruments.yaml")
+    return {
+        str(item["id"]): item
+        for item in data.get("instruments", [])
+        if isinstance(item, dict) and item.get("id")
+    }
+
+
 def build_index(root: Path) -> list[dict[str, object]]:
     """Build stable wiki records from canonical repository metadata."""
 
     metadata = _load_yaml(root / "sources" / "page_metadata.yaml")
     registry = _load_yaml(root / "sources" / "registry.yaml")
+    instruments = _instrument_index(root)
     source_by_id = {
         str(item["id"]): item
         for item in registry.get("sources", [])
@@ -56,6 +66,12 @@ def build_index(root: Path) -> list[dict[str, object]]:
                     "url": _text(source.get("url")),
                 }
             )
+        instrument_ids = sorted(str(item) for item in page.get("instrument_ids", []))
+        unknown_instruments = [item for item in instrument_ids if item not in instruments]
+        if unknown_instruments:
+            raise ValueError(
+                f"{path}: unknown instrument_ids: {', '.join(unknown_instruments)}"
+            )
         records.append(
             {
                 "path": path,
@@ -64,7 +80,7 @@ def build_index(root: Path) -> list[dict[str, object]]:
                 "source_status": _text(page.get("source_status")),
                 "legal_review_status": _text(page.get("legal_review_status")),
                 "current_through": _text(page.get("current_through")),
-                "instrument_ids": sorted(str(item) for item in page.get("instrument_ids", [])),
+                "instrument_ids": instrument_ids,
                 "sources": sorted(sources, key=lambda item: item["id"]),
             }
         )
@@ -84,6 +100,7 @@ def render_knowledge_map(root: Path) -> str:
     """Render a deterministic Markdown knowledge map from the index."""
 
     records = build_index(root)
+    instruments = _instrument_index(root)
     by_topic: dict[str, list[dict[str, object]]] = defaultdict(list)
     by_instrument: dict[str, list[dict[str, object]]] = defaultdict(list)
     for record in records:
@@ -118,7 +135,12 @@ def render_knowledge_map(root: Path) -> str:
         for record in by_topic[topic]:
             title = _escape(record["title"] or record["path"])
             page = f"[{title}]({_page_link(str(record['path']))})"
-            instruments = ", ".join(f"`{_escape(item)}`" for item in record["instrument_ids"]) or "—"
+            instrument_links = []
+            for instrument_id in record["instrument_ids"]:
+                instrument = instruments[str(instrument_id)]
+                instrument_links.append(
+                    f"`{_escape(instrument_id)}` ({_escape(instrument.get('status'))})"
+                )
             source_links = []
             for source in record["sources"]:
                 source_id = _escape(source["id"])
@@ -132,7 +154,7 @@ def render_knowledge_map(root: Path) -> str:
                         _escape(record["source_status"]) or "—",
                         _escape(record["legal_review_status"]) or "—",
                         _escape(record["current_through"]) or "—",
-                        instruments,
+                        ", ".join(instrument_links) or "—",
                         ", ".join(source_links) or "—",
                     )
                 )
@@ -144,13 +166,31 @@ def render_knowledge_map(root: Path) -> str:
     if not by_instrument:
         lines.append("No hay instrumentos enlazados en los metadatos gobernados.")
     else:
-        lines.extend(["| Instrumento | Páginas relacionadas |", "|---|---|"])
+        lines.extend(
+            [
+                "| Instrumento | Estado | Vigente hasta | Páginas relacionadas |",
+                "|---|---|---|---|",
+            ]
+        )
         for instrument_id in sorted(by_instrument):
+            instrument = instruments[instrument_id]
+            title = _escape(instrument.get("title") or instrument_id)
             pages = ", ".join(
                 f"[{_escape(record['title'])}]({_page_link(str(record['path']))})"
                 for record in sorted(by_instrument[instrument_id], key=lambda item: str(item["title"]))
             )
-            lines.append(f"| `{_escape(instrument_id)}` | {pages} |")
+            lines.append(
+                "| "
+                + " | ".join(
+                    (
+                        f"{title} (`{_escape(instrument_id)}`)",
+                        _escape(instrument.get("status")) or "—",
+                        _escape(instrument.get("current_through")) or "—",
+                        pages,
+                    )
+                )
+                + " |"
+            )
     lines.extend(
         [
             "",

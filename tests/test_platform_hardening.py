@@ -71,7 +71,9 @@ class PlatformHardeningTests(unittest.TestCase):
 
         from scripts.build_knowledge_map import build_index, render_knowledge_map
 
-        self.assertEqual(page.read_text(encoding="utf-8"), render_knowledge_map(ROOT))
+        rendered = render_knowledge_map(ROOT)
+        self.assertEqual(page.read_text(encoding="utf-8"), rendered)
+        self.assertIn("Reglas Generales de Comercio Exterior para 2026", rendered)
         expected_json = json.dumps(
             build_index(ROOT), ensure_ascii=False, indent=2, sort_keys=True
         ) + "\n"
