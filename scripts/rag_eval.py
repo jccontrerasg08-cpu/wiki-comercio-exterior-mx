@@ -86,7 +86,12 @@ def _page_is_currently_retrievable(page: dict) -> bool:
 def rank_documents(
     query: str, documents: list[dict], cutoff: date, k: int
 ) -> tuple[RankedDocument, ...]:
-    """Rank eligible sources by stable lexical overlap."""
+    """Rank eligible sources by stable lexical overlap.
+
+    ``search_title`` may include governed page titles that map a bundled official
+    publication (for example, "Anexos 21-30") to the specific annex explainers
+    it supports. The displayed/cited title remains the official source title.
+    """
 
     query_terms = tokenize(query)
     ranked: list[RankedDocument] = []
@@ -96,8 +101,9 @@ def rank_documents(
         end = _iso_date(end_value) if end_value else None
         if start > cutoff or (end is not None and cutoff > end):
             continue
-        body_terms = tokenize(f"{document.get('title', '')} {document.get('text', '')}")
-        title_terms = tokenize(str(document.get("title", "")))
+        search_title = str(document.get("search_title") or document.get("title", ""))
+        body_terms = tokenize(f"{search_title} {document.get('text', '')}")
+        title_terms = tokenize(search_title)
         union = query_terms | body_terms
         jaccard = len(query_terms & body_terms) / len(union) if union else 0.0
         title_overlap = len(query_terms & title_terms) / len(query_terms) if query_terms else 0.0
@@ -197,6 +203,7 @@ def documents_from_repository(root: Path) -> list[dict]:
     sources = {item["id"]: item for item in registry["sources"]}
     metadata = yaml.safe_load((root / "sources" / "page_metadata.yaml").read_text(encoding="utf-8"))
     governed_text: dict[str, list[str]] = {}
+    governed_titles: dict[str, list[str]] = {}
     for page in metadata.get("pages", []):
         if not isinstance(page, dict) or not _page_is_currently_retrievable(page):
             continue
@@ -204,8 +211,12 @@ def documents_from_repository(root: Path) -> list[dict]:
         if not path.is_file() or path.suffix != ".md":
             continue
         text = path.read_text(encoding="utf-8")
+        page_title = str(page.get("title", "")).strip()
         for source_id in page.get("source_ids", []):
-            governed_text.setdefault(str(source_id), []).append(text)
+            source_key = str(source_id)
+            governed_text.setdefault(source_key, []).append(text)
+            if page_title:
+                governed_titles.setdefault(source_key, []).append(page_title)
 
     by_source: dict[str, dict] = {}
     for instrument in load_instruments(root / "sources" / "instruments.yaml"):
@@ -231,9 +242,12 @@ def documents_from_repository(root: Path) -> list[dict]:
             if not start:
                 continue
             body = "\n\n".join(governed_text.get(source_id, []))
+            related_titles = tuple(dict.fromkeys(governed_titles.get(source_id, [])))
+            search_title = " ".join((str(source["title"]), *related_titles)).strip()
             by_source[source_id] = {
                 "source_id": source_id,
                 "title": source["title"],
+                "search_title": search_title,
                 "text": body or f"{instrument['title']} {instrument['instrument_type']} {source.get('authority', '')}",
                 "effective_from": str(start),
                 "effective_to": str(end) if end else None,

@@ -29,7 +29,7 @@ Este roadmap muestra **qué explica hoy la wiki y qué sigue incompleto**. No es
 | IMMEX | parcial | [IMMEX](../wiki/programas/immex.md) | Secretaría de Economía / RGCE |
 | PROSEC | parcial | [PROSEC](../wiki/programas/prosec.md) | Decreto PROSEC / SNICE |
 | T-MEC y reglas de origen | parcial | [TLC y T-MEC](../wiki/programas/tlc-tmec.md) | texto del tratado / SNICE |
-| Anexos 24 y 30 | corpus disponible, guía pendiente | corpus de anexos | RGCE |
+| Anexos 24 y 30 | cubierto con guías operativas | [Anexo 24](../wiki/programas/anexo-24-control-inventarios.md) / [Anexo 30](../wiki/programas/anexo-30-scccyg.md) | RGCE 2026 / SAT |
 | exportación end-to-end | parcial | páginas dispersas | Ley Aduanera / RGCE / SE |
 | logística y pagos | parcial | [Logística](../wiki/logistica/logistica-internacional.md) | ICC cuando corresponda |
 
@@ -39,11 +39,11 @@ Preguntas como **“qué producto conviene importar”, “cuánto dinero necesi
 
 ## Próximas prioridades
 
-1. profundizar IMMEX, PROSEC, T-MEC y reglas de origen;
-2. crear una guía integrada de Anexos 24 y 30;
-3. construir una ruta de exportación equivalente a la ruta de importación;
-4. explicar DTA y otros conceptos de contribuciones con ejemplos condicionados;
-5. ampliar fuentes-país sólo cuando aporten valor real y no como páginas vacías.
+1. profundizar PROSEC, T-MEC y reglas de origen;
+2. construir una ruta de exportación equivalente a la ruta de importación;
+3. explicar DTA y otros conceptos de contribuciones con ejemplos condicionados;
+4. ampliar fuentes-país sólo cuando aporten valor real y no como páginas vacías;
+5. completar el historial versionado de reformas IMMEX anteriores a 2024 para consultas temporales más profundas.
 
 ## Fuente oficial y revisión
 

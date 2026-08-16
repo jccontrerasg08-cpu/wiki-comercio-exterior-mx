@@ -669,6 +669,51 @@ sources:
       expected_path: /cs/avi/snice/biblioteca.juridica.html
       expected_title: Tratados y Acuerdos Internacionales
 
+  - id: mx_sidof_immex_reform_20241219
+    jurisdiction: MEX
+    title: Decreto de reforma al Programa IMMEX de 19 de diciembre de 2024
+    url: https://sidof.segob.gob.mx/notas/5745788
+    note_id: "5745788"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_programa_immex
+    publication_date: 2024-12-19
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_immex_reform_20250828
+    jurisdiction: MEX
+    title: Decreto de reforma al Programa IMMEX de 28 de agosto de 2025
+    url: https://sidof.segob.gob.mx/notas/5766797
+    note_id: "5766797"
+    authority: DOF / SIDOF
+    evidence_class: primary_legal
+    instrument_id: mx_programa_immex
+    publication_date: 2025-08-28
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
+  - id: mx_sidof_immex_suspension_2026
+    jurisdiction: MEX
+    title: Aviso IMMEX de programas suspendidos por reporte anual 2025
+    url: https://sidof.segob.gob.mx/notas/5792091
+    note_id: "5792091"
+    authority: DOF / SIDOF
+    evidence_class: official_administrative
+    instrument_id: mx_programa_immex
+    publication_date: 2026-06-30
+    allowed_hosts: [sidof.segob.gob.mx, www.dof.gob.mx, dof.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: true
+    cadence_days: 365
+    probe: *probe_html
+
   - id: mx_snice_immex
     jurisdiction: MEX
     title: Programa IMMEX

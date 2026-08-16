@@ -77,6 +77,40 @@ class RagEvaluationTests(unittest.TestCase):
         rla = next(item for item in documents if item["source_id"] == "mx_sidof_rla_reform_20260223")
         self.assertIn("agencias aduanales", rla["text"].casefold())
 
+    def test_grouped_source_uses_governed_page_titles_for_search(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            (root / "sources").mkdir()
+            (root / "docs").mkdir()
+            (root / "sources" / "registry.yaml").write_text(
+                """sources:\n  - id: mx_bundle\n    jurisdiction: MEX\n    title: Anexos 21-30 RGCE 2026\n    url: https://example.gob.mx/bundle\n    authority: Example\n    evidence_class: primary_legal\n    instrument_id: mx_rules\n    publication_date: 2026-01-15\n    allowed_hosts: [example.gob.mx]\n    media_types: [text/html]\n    harvest: false\n  - id: mx_single\n    jurisdiction: MEX\n    title: Anexo 1 RGCE 2026\n    url: https://example.gob.mx/single\n    authority: Example\n    evidence_class: primary_legal\n    instrument_id: mx_rules\n    publication_date: 2026-01-08\n    allowed_hosts: [example.gob.mx]\n    media_types: [text/html]\n    harvest: false\n""",
+                encoding="utf-8",
+            )
+            (root / "sources" / "instruments.yaml").write_text(
+                """instruments:\n  - id: mx_rules\n    jurisdiction: MEX\n    title: Reglas ejemplo\n    instrument_type: administrative_rules\n    status: current\n    publication_date: 2025-12-27\n    effective_from: 2026-01-01\n    effective_to: null\n    current_through: 2026-08-15\n    consolidated_source_id: mx_single\n    events:\n      - source_id: mx_bundle\n        relation: has_annex\n        effective_from: 2026-01-15\n""",
+                encoding="utf-8",
+            )
+            (root / "sources" / "page_metadata.yaml").write_text(
+                """pages:\n  - path: docs/anexo24.md\n    title: Anexo 24 control de inventarios SECIIT\n    source_ids: [mx_bundle]\n    source_status: current\n    legal_review_status: reviewed\n    corpus_status: current\n""",
+                encoding="utf-8",
+            )
+            (root / "docs" / "anexo24.md").write_text(
+                "apartado B SECIIT sistema corporativo 24 horas",
+                encoding="utf-8",
+            )
+
+            documents = documents_from_repository(root)
+            bundle = next(item for item in documents if item["source_id"] == "mx_bundle")
+            ranked = rank_documents(
+                "Anexo 24 2026 apartado B SECIIT 24 horas sistema corporativo",
+                documents,
+                date(2026, 8, 15),
+                5,
+            )
+
+        self.assertIn("Anexo 24 control de inventarios SECIIT", bundle["search_title"])
+        self.assertEqual(ranked[0].source_id, "mx_bundle")
+
     def test_repository_documents_exclude_stale_and_pending_text(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

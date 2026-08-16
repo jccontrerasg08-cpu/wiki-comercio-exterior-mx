@@ -54,3 +54,19 @@ cases:
     expected_source_ids: []
     forbidden_source_ids: [mx_diputados_lce_current]
     required_disclaimer: no hay una manifestacion historica versionada
+
+
+  - id: anexo24-seciit-scope
+    query: Anexo 24 2026 apartado B SECIIT 24 horas sistema corporativo
+    cutoff: 2026-08-15
+    expected_source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+
+  - id: anexo24-rece-48h
+    query: Anexo 24 2026 apartado C RECE 48 horas control inventarios
+    cutoff: 2026-08-15
+    expected_source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+
+  - id: anexo30-scccyg-scope
+    query: Anexo 30 SCCCyG creditos garantias PEPS plazos presuntivos saldo resolucion definitiva
+    cutoff: 2026-08-15
+    expected_source_ids: [mx_sidof_rgce_2026_anexos_21_30]
