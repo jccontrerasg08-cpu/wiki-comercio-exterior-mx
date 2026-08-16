@@ -19,10 +19,10 @@ Consulta decreto y reformas, reglas SE aplicables, ficha SNICE/VUCEM, plazos, do
 
 ## Fuentes
 
-[1] [SNICE, *Devolución de impuestos de importación a exportadores: Drawback*](https://www.snice.gob.mx/cs/avi/snice/drawback.html), fuente administrativa para consulta operativa; revisar el decreto, reformas y reglas aplicables antes de solicitar el beneficio.
+[1] [SNICE, *Programa de Devolución de Impuestos a los Exportadores: Drawback*](https://www.snice.gob.mx/cs/avi/snice/programasdefom.drawback.html), micrositio administrativo con rutas de acerca de, normatividad, trámites y formatos; revisar el decreto, reformas y reglas aplicables antes de solicitar el beneficio.
 
 El [catálogo reproducible de fuentes](../../catalog/registry.md) conserva el identificador `mx_snice_drawback` y su estado de procedencia.
 
 ## Ver también
 
-[Mapa de la wiki](../index.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)
+[Programas de fomento y RAOCE](programas-fomento.md) · [IMMEX](immex.md) · [PROSEC](prosec.md) · [Proceso de despacho](../aduana/proceso-despacho.md) · [Estado del corpus](../../status/corpus-coverage.md)

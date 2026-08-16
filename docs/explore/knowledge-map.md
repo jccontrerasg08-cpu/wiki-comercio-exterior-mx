@@ -7,7 +7,7 @@ description: "Vista generada de páginas, fuentes, instrumentos y estado de revi
 
 Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml` y `sources/instruments.yaml`. Los estados describen **metadatos de revisión del repositorio**, no una opinión jurídica independiente ni sustituyen la fuente oficial.
 
-**Páginas gobernadas visibles:** 40
+**Páginas gobernadas visibles:** 41
 
 ## Por tema
 
@@ -69,9 +69,10 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 |---|---|---|---|---|
 | [Anexo 24 - control de inventarios](../wiki/programas/anexo-24-control-inventarios.md) | current · reviewed | 2026-01-15 | `mx_rgce_2026` | `mx_sidof_rgce_2026_anexos_21_30` |
 | [Anexo 30 - SCCCyG](../wiki/programas/anexo-30-scccyg.md) | current · reviewed | 2026-01-15 | `mx_rgce_2026` | `mx_sidof_rgce_2026_anexos_21_30` |
-| [Drawback](../wiki/programas/drawback.md) | partial · pending_review | — | `mx_programa_drawback` | `mx_snice_drawback` |
-| [Programa IMMEX](../wiki/programas/immex.md) | partial · reviewed | 2025-08-29 | `mx_programa_immex`, `mx_rgce_2026` | `mx_sidof_immex_reform_20241219`, `mx_sidof_immex_reform_20250828`, `mx_sidof_immex_suspension_2026`, `mx_snice_immex` |
-| [Programas de Promocion Sectorial](../wiki/programas/prosec.md) | partial · pending_review | — | `mx_programa_prosec` | `mx_snice_prosec` |
+| [Devolucion de impuestos de importacion a exportadores Drawback](../wiki/programas/drawback.md) | partial · reviewed | 2026-08-15 | `mx_programa_drawback` | `mx_snice_drawback` |
+| [Programa IMMEX](../wiki/programas/immex.md) | partial · reviewed | 2026-08-15 | `mx_programa_immex`, `mx_rgce_2026` | `mx_sidof_immex_reform_20241219`, `mx_sidof_immex_reform_20250828`, `mx_sidof_immex_suspension_2026`, `mx_snice_immex`, `mx_snice_raoce_2026` |
+| [Programas de Promocion Sectorial](../wiki/programas/prosec.md) | partial · reviewed | 2026-08-15 | `mx_programa_prosec` | `mx_sidof_ligie_prosec_20260423`, `mx_snice_prosec`, `mx_snice_raoce_2026` |
+| [Programas de fomento y RAOCE](../wiki/programas/programas-fomento.md) | partial · reviewed | 2026-08-15 | `mx_programa_drawback`, `mx_programa_immex`, `mx_programa_prosec` | `mx_snice_drawback`, `mx_snice_immex`, `mx_snice_programas_fomento_transparencia`, `mx_snice_prosec`, `mx_snice_raoce_2026` |
 
 ### rrna
 
@@ -104,9 +105,9 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | Ley del Impuesto al Valor Agregado (`mx_ley_iva`) | current | 2026-08-15 | [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md) |
 | Ley de los Impuestos Generales de Importacion y de Exportacion (`mx_ligie`) | current | 2026-08-15 | [Aranceles](../wiki/contribuciones/aranceles.md), [Biblioteca de instrumentos prioritarios](../wiki/fundamentos/biblioteca-instrumentos-prioritarios.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md), [Lectura de la tarifa y tratamientos arancelarios](../wiki/contribuciones/lectura-tarifa-y-tratos.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [TIGIE y NICO](../wiki/clasificacion/tigie-nico.md) |
 | Lineamientos del articulo 159 bis de la Ley Aduanera (`mx_lineamientos_159bis_2026`) | current | 2026-08-15 | [Agente aduanal y agencia aduanal](../wiki/aduana/agente-agencia-aduanal.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md) |
-| Devolucion de impuestos de importacion a exportadores (`mx_programa_drawback`) | partial | 2026-08-15 | [Drawback](../wiki/programas/drawback.md) |
-| Programa IMMEX (`mx_programa_immex`) | partial | 2026-08-15 | [Programa IMMEX](../wiki/programas/immex.md) |
-| Programas de Promocion Sectorial (`mx_programa_prosec`) | partial | 2026-08-15 | [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Lectura de la tarifa y tratamientos arancelarios](../wiki/contribuciones/lectura-tarifa-y-tratos.md), [Programas de Promocion Sectorial](../wiki/programas/prosec.md) |
+| Devolucion de impuestos de importacion a exportadores (`mx_programa_drawback`) | partial | 2026-08-15 | [Devolucion de impuestos de importacion a exportadores Drawback](../wiki/programas/drawback.md), [Programas de fomento y RAOCE](../wiki/programas/programas-fomento.md) |
+| Programa IMMEX (`mx_programa_immex`) | partial | 2026-08-15 | [Programa IMMEX](../wiki/programas/immex.md), [Programas de fomento y RAOCE](../wiki/programas/programas-fomento.md) |
+| Programas de Promocion Sectorial (`mx_programa_prosec`) | partial | 2026-08-15 | [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Lectura de la tarifa y tratamientos arancelarios](../wiki/contribuciones/lectura-tarifa-y-tratos.md), [Programas de Promocion Sectorial](../wiki/programas/prosec.md), [Programas de fomento y RAOCE](../wiki/programas/programas-fomento.md) |
 | Reglamento de la Ley Aduanera (`mx_reglamento_ley_aduanera`) | current | 2026-08-15 | [Agente aduanal y agencia aduanal](../wiki/aduana/agente-agencia-aduanal.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md) |
 | Reglamento de la Ley de Comercio Exterior (`mx_reglamento_ley_comercio_exterior`) | current | 2026-08-15 | [Ciclo de vida de una regulacion o restriccion no arancelaria](../wiki/rrna/ciclo-de-vida-rrna.md), [Regulaciones y restricciones no arancelarias](../wiki/rrna/index.md) |
 | Reglas y criterios de caracter general en materia de comercio exterior de la SE (`mx_reglas_criterios_se`) | current | 2026-08-15 | [Anexo 2.2.1 permisos y avisos](../wiki/rrna/anexo-2-2-1.md), [Anexo 2.4.1 NOM en punto de entrada](../wiki/rrna/anexo-2-4-1.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Ciclo de vida de una regulacion o restriccion no arancelaria](../wiki/rrna/ciclo-de-vida-rrna.md), [Reglas y criterios de la Secretaria de Economia](../wiki/rrna/reglas-criterios-se.md), [Regulaciones y restricciones no arancelarias](../wiki/clasificacion/rrna.md), [Regulaciones y restricciones no arancelarias](../wiki/rrna/index.md) |

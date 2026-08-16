@@ -60,12 +60,13 @@ Antes de concluir que una operación cumple, conviene cruzar al menos:
 ## Fuentes
 
 - Catálogo interno de fuentes: `docs/catalog/mexico/rgce.md`
-- [SNICE — Programa IMMEX](https://www.snice.gob.mx/cs/avi/snice/immex.html)
+- [SNICE — Programa IMMEX](https://www.snice.gob.mx/cs/avi/snice/programasdefom.immex.html)
 - [DOF/SIDOF — reforma IMMEX del 19 de diciembre de 2024](https://sidof.segob.gob.mx/notas/5745788)
 - [DOF/SIDOF — reforma IMMEX del 28 de agosto de 2025](https://sidof.segob.gob.mx/notas/5766797)
 - [DOF/SIDOF — aviso de programas IMMEX suspendidos, 30 de junio de 2026](https://sidof.segob.gob.mx/notas/5792091)
 - [DOF/SIDOF — RGCE 2026](https://sidof.segob.gob.mx/notas/5777199)
 - [DOF/SIDOF — Anexos 21 a 30 de las RGCE 2026](https://sidof.segob.gob.mx/notas/5778300)
+- [SNICE — Guía VUCEM RAOCE 2026 para Programas de Fomento](https://www.snice.gob.mx/~oracle/SNICE_DOCS/RAOCE-2026-PROGRAMAS-DE-FOMENTO_20260423-20260423.pdf), guía del ciclo 2026; no usarla como calendario permanente.
 
 ## Alcance de la guía
 
@@ -77,4 +78,4 @@ Revisión editorial/jurídica efectuada el **15 de agosto de 2026**. El grafo lo
 
 ## Ver también
 
-[Anexo 24](anexo-24-control-inventarios.md) · [Anexo 30](anexo-30-scccyg.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md) · [PROSEC](prosec.md)
+[Programas de fomento y RAOCE](programas-fomento.md) · [Anexo 24](anexo-24-control-inventarios.md) · [Anexo 30](anexo-30-scccyg.md) · [Pedimento y RGCE](../aduana/pedimento-rgce.md) · [TIGIE y NICO](../clasificacion/tigie-nico.md) · [PROSEC](prosec.md)

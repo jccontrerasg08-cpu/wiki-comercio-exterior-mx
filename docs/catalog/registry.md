@@ -166,12 +166,19 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_snice_biblioteca_juridica`<br>Biblioteca juridica de comercio exterior | MEX | official_administrative | - | no | 7 | - | [open](https://www.snice.gob.mx/cs/avi/snice/biblioteca.juridica.html) |
-| `mx_snice_drawback`<br>Devolucion de impuestos de importacion a exportadores Drawback | MEX | official_administrative | mx_programa_drawback / partial | no | 30 | 1995-05-11 | [open](https://www.snice.gob.mx/cs/avi/snice/drawback.html) |
-| `mx_snice_immex`<br>Programa IMMEX | MEX | official_administrative | mx_programa_immex / partial | no | 30 | 2006-11-01 | [open](https://www.snice.gob.mx/cs/avi/snice/immex.html) |
-| `mx_snice_prosec`<br>Programas de Promocion Sectorial PROSEC | MEX | official_administrative | mx_programa_prosec / partial | no | 30 | 2002-08-02 | [open](https://www.snice.gob.mx/cs/avi/snice/prosec.html) |
+| `mx_snice_drawback`<br>Devolucion de impuestos de importacion a exportadores Drawback | MEX | official_administrative | mx_programa_drawback / partial | no | 30 | 1995-05-11 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.drawback.html) |
+| `mx_snice_immex`<br>Programa IMMEX | MEX | official_administrative | mx_programa_immex / partial | no | 30 | 2006-11-01 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.immex.html) |
+| `mx_snice_prosec`<br>Programas de Promocion Sectorial PROSEC | MEX | official_administrative | mx_programa_prosec / partial | no | 30 | 2002-08-02 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.prosec.html) |
 | `mx_snice_cuotas`<br>SNICE cuotas compensatorias | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.cuotascomp.html) |
 | `mx_snice_ligie_info`<br>SNICE LIGIE IMMEX PROSEC RRNA | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html) |
 | `mx_snice_mi_fraccion`<br>SNICE Mi Fraccion Arancelaria | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html) |
+
+## SNICE / Secretaria de Economia
+
+| Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
+|---|---|---|---|---:|---:|---|---|
+| `mx_snice_programas_fomento_transparencia`<br>Directorios de beneficiarios de Programas de Fomento | MEX | official_administrative | mx_programa_immex / partial<br>mx_programa_prosec / partial | no | 30 | 2026-06-30 | [open](https://www.snice.gob.mx/cs/avi/snice/transparencia.programasfomento.html) |
+| `mx_snice_raoce_2026`<br>Guia VUCEM RAOCE 2026 para Programas de Fomento | MEX | official_administrative | mx_programa_immex / partial<br>mx_programa_prosec / partial | yes | 365 | 2026-04-23 | [open](https://www.snice.gob.mx/~oracle/SNICE_DOCS/RAOCE-2026-PROGRAMAS-DE-FOMENTO_20260423-20260423.pdf) |
 
 ## UNSD
 

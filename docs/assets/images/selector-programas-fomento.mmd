@@ -1,0 +1,15 @@
+flowchart TD
+  classDef start fill:#0f766e,color:#ffffff,stroke:#0f766e,stroke-width:2px
+  classDef step fill:#e0f2fe,color:#0f172a,stroke:#0284c7,stroke-width:1.5px
+  classDef check fill:#fef3c7,color:#0f172a,stroke:#d97706,stroke-width:1.5px
+  classDef warning fill:#fee2e2,color:#7f1d1d,stroke:#dc2626,stroke-width:1.5px
+
+  A[Define mercancía, proceso, fecha y efecto buscado]:::start
+  B[1. Si la necesidad es importación temporal para proceso o servicio de exportación: revisar IMMEX.<br/>Si no, continuar.]:::step
+  C[2. Si la necesidad es tratamiento arancelario para sector productivo autorizado: revisar PROSEC.<br/>Si no, continuar.]:::step
+  D[3. Si el IGI ya fue pagado en importación definitiva y hay exportación o retorno: revisar Drawback.<br/>Si no, continuar.]:::step
+  E[4. Si existe constancia ALTEX/ECEX previa vinculada a reporte: confirmar continuidad y RAOCE del ejercicio.]:::step
+  F[Si ninguna ruta encuadra, no presuponer programa: revisar régimen, tratado, RRNA u otra figura.]:::warning
+  G[En toda ruta: verificar autorización, fracción, fecha, requisitos paralelos y evidencia.]:::check
+
+  A --> B --> C --> D --> E --> F --> G

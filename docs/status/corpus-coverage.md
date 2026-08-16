@@ -9,15 +9,15 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 83 |
-| Wiki | 40 |
+| Páginas gobernadas | 84 |
+| Wiki | 41 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 23 (27.7%) |
-| Con fuente referenciada | 77 (92.8%) |
-| Con instrumento referenciado | 74 (89.2%) |
-| Revisión jurídica `reviewed` | 24 (28.9%) |
-| Requieren atención | 62 |
-| Fuentes distintas referenciadas | 52 |
+| Elegibles por estado para recuperación vigente | 23 (27.4%) |
+| Con fuente referenciada | 78 (92.9%) |
+| Con instrumento referenciado | 75 (89.3%) |
+| Revisión jurídica `reviewed` | 27 (32.1%) |
+| Requieren atención | 63 |
+| Fuentes distintas referenciadas | 54 |
 | Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección
@@ -31,7 +31,7 @@
 | `fundamentos` | 4 | 3 | 3 | 1 |
 | `logistica` | 3 | 0 | 0 | 3 |
 | `operacion` | 2 | 2 | 2 | 0 |
-| `programas` | 7 | 2 | 3 | 5 |
+| `programas` | 8 | 2 | 6 | 6 |
 | `rrna` | 5 | 5 | 5 | 0 |
 | `wiki` | 1 | 0 | 0 | 1 |
 
@@ -42,14 +42,14 @@
 | Estado | Páginas |
 |---|---:|
 | `current` | 63 |
-| `partial` | 19 |
+| `partial` | 20 |
 | `unknown` | 1 |
 
 ### `extraction_status`
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 41 |
+| `not_applicable` | 42 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -57,15 +57,15 @@
 | Estado | Páginas |
 |---|---:|
 | `not_applicable` | 1 |
-| `pending_review` | 58 |
-| `reviewed` | 24 |
+| `pending_review` | 56 |
+| `reviewed` | 27 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 41 |
+| `not_applicable` | 42 |
 | `partial` | 39 |
 | `stale` | 1 |
 
@@ -132,9 +132,10 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `docs/wiki/logistica/incoterms.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/logistica-internacional.md` | `logistica` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/pagos-internacionales.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
-| `docs/wiki/programas/drawback.md` | `programas` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/programas/drawback.md` | `programas` | `source_not_current` |
 | `docs/wiki/programas/immex.md` | `programas` | `source_not_current` |
-| `docs/wiki/programas/prosec.md` | `programas` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/programas/programas-fomento.md` | `programas` | `source_not_current` |
+| `docs/wiki/programas/prosec.md` | `programas` | `source_not_current` |
 | `docs/wiki/programas/reglas-de-origen.md` | `programas` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/tlc-tmec.md` | `programas` | `pending_legal_review`, `source_not_current` |
 

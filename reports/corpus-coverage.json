@@ -510,7 +510,6 @@
     {
       "path": "docs/wiki/programas/drawback.md",
       "risk_reasons": [
-        "pending_legal_review",
         "source_not_current"
       ],
       "section": "programas"
@@ -523,9 +522,15 @@
       "section": "programas"
     },
     {
+      "path": "docs/wiki/programas/programas-fomento.md",
+      "risk_reasons": [
+        "source_not_current"
+      ],
+      "section": "programas"
+    },
+    {
       "path": "docs/wiki/programas/prosec.md",
       "risk_reasons": [
-        "pending_legal_review",
         "source_not_current"
       ],
       "section": "programas"
@@ -600,11 +605,11 @@
       "total_pages": 2
     },
     {
-      "legally_reviewed_pages": 3,
-      "pages_needing_attention": 5,
+      "legally_reviewed_pages": 6,
+      "pages_needing_attention": 6,
       "retrieval_eligible_pages": 2,
       "section": "programas",
-      "total_pages": 7
+      "total_pages": 8
     },
     {
       "legally_reviewed_pages": 5,
@@ -624,38 +629,38 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 41,
+      "not_applicable": 42,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 41,
+      "not_applicable": 42,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
-      "pending_review": 58,
-      "reviewed": 24
+      "pending_review": 56,
+      "reviewed": 27
     },
     "source_status": {
       "current": 63,
-      "partial": 19,
+      "partial": 20,
       "unknown": 1
     }
   },
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 52,
-    "legally_reviewed_pages": 24,
+    "distinct_source_ids": 54,
+    "legally_reviewed_pages": 27,
     "non_current_corpus_pages": 40,
-    "pages_needing_attention": 62,
-    "pages_with_instruments": 74,
-    "pages_with_sources": 77,
-    "pending_legal_review_pages": 58,
+    "pages_needing_attention": 63,
+    "pages_with_instruments": 75,
+    "pages_with_sources": 78,
+    "pending_legal_review_pages": 56,
     "retrieval_eligible_pages": 23,
-    "total_pages": 83,
+    "total_pages": 84,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 40
+    "wiki_pages": 41
   }
 }
