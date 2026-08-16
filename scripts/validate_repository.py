@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import re
 import sys
 from collections import Counter
@@ -323,8 +324,62 @@ def _load_checksums(path: Path) -> tuple[dict[str, str], list[ValidationFinding]
     return checksums, findings
 
 
+def _validate_local_document(
+    originals_dir: Path,
+    expected_path: str,
+    document: dict[str, Any],
+    item_path: str,
+) -> list[ValidationFinding]:
+    """Verify one manifest-declared local original against its real bytes."""
+
+    findings: list[ValidationFinding] = []
+    candidate = (originals_dir / expected_path).resolve()
+    originals_root = originals_dir.resolve()
+    if candidate == originals_root or originals_root not in candidate.parents:
+        return [
+            ValidationFinding(
+                "ORIGINALS_LOCAL_PATH_ESCAPE",
+                item_path,
+                f"local_git file escapes data/originals: {expected_path}",
+            )
+        ]
+    if not candidate.is_file():
+        return [
+            ValidationFinding(
+                "ORIGINALS_LOCAL_FILE_MISSING",
+                item_path,
+                f"local_git file does not exist: {expected_path}",
+            )
+        ]
+
+    payload = candidate.read_bytes()
+    expected_bytes = document.get("bytes")
+    if isinstance(expected_bytes, int) and not isinstance(expected_bytes, bool):
+        if len(payload) != expected_bytes:
+            findings.append(
+                ValidationFinding(
+                    "ORIGINALS_LOCAL_BYTES_MISMATCH",
+                    item_path,
+                    f"local_git byte count differs for {expected_path}: expected {expected_bytes}, got {len(payload)}",
+                )
+            )
+
+    expected_sha = document.get("sha256")
+    if isinstance(expected_sha, str) and _SHA256_RE.fullmatch(expected_sha):
+        actual_sha = hashlib.sha256(payload).hexdigest()
+        if actual_sha != expected_sha:
+            findings.append(
+                ValidationFinding(
+                    "ORIGINALS_LOCAL_SHA256_MISMATCH",
+                    item_path,
+                    f"local_git sha256 differs for {expected_path}",
+                )
+            )
+    return findings
+
+
 def validate_originals(originals_dir: Path) -> list[ValidationFinding]:
-    """Cross-check manifest fragments and logical release checksums."""
+    """Cross-check manifest fragments, local bytes, and release checksums."""
 
     findings: list[ValidationFinding] = []
     root_manifest = originals_dir / "manifest.yaml"
@@ -419,8 +474,16 @@ def validate_originals(originals_dir: Path) -> list[ValidationFinding]:
                 continue
 
             expected_path = _resolve_logical_document_path(fragment_parent, file_name)
-            actual_digest = checksums.get(expected_path)
             item_path = f"{fragment_path}:documents[{index}]"
+            if document.get("storage") == "local_git":
+                findings.extend(
+                    _validate_local_document(
+                        originals_dir, expected_path, document, item_path
+                    )
+                )
+                continue
+
+            actual_digest = checksums.get(expected_path)
             if actual_digest is None:
                 findings.append(
                     ValidationFinding(
@@ -441,21 +504,59 @@ def validate_originals(originals_dir: Path) -> list[ValidationFinding]:
     return findings
 
 
+def _declared_local_git_paths(originals_dir: Path) -> set[Path]:
+    """Return binaries explicitly declared for local Git storage by listed manifests."""
+
+    root_manifest = originals_dir / "manifest.yaml"
+    data, findings = _load_yaml(root_manifest)
+    if findings or not isinstance(data, dict):
+        return set()
+    fragments = data.get("fragments")
+    if not isinstance(fragments, list):
+        return set()
+
+    declared: set[Path] = set()
+    originals_root = originals_dir.resolve()
+    for fragment_value in fragments:
+        if not isinstance(fragment_value, str) or not _is_safe_relative_path(fragment_value):
+            continue
+        fragment_path = originals_dir / fragment_value
+        manifest, manifest_findings = _load_yaml(fragment_path)
+        if manifest_findings or not isinstance(manifest, dict):
+            continue
+        documents = manifest.get("documents")
+        if not isinstance(documents, list):
+            continue
+        fragment_parent = fragment_path.parent.relative_to(originals_dir)
+        for document in documents:
+            if not isinstance(document, dict) or document.get("storage") != "local_git":
+                continue
+            file_name = document.get("file")
+            if not isinstance(file_name, str) or not _is_safe_relative_path(file_name):
+                continue
+            logical_path = _resolve_logical_document_path(fragment_parent, file_name)
+            candidate = (originals_dir / logical_path).resolve()
+            if candidate != originals_root and originals_root in candidate.parents:
+                declared.add(candidate)
+    return declared
+
+
 def validate_repository_hygiene(root: Path) -> list[ValidationFinding]:
-    """Reject original binary payloads that should live in GitHub Releases."""
+    """Reject binary originals unless a listed manifest explicitly allows local Git storage."""
 
     originals_dir = root / "data" / "originals"
     if not originals_dir.is_dir():
         return []
 
+    declared_local = _declared_local_git_paths(originals_dir)
     findings: list[ValidationFinding] = []
     for path in sorted(item for item in originals_dir.rglob("*") if item.is_file()):
-        if path.suffix.lower() in _BINARY_SUFFIXES:
+        if path.suffix.lower() in _BINARY_SUFFIXES and path.resolve() not in declared_local:
             findings.append(
                 ValidationFinding(
                     "REPOSITORY_BINARY_IN_GIT",
                     str(path),
-                    "official binary payload must live in a GitHub Release, not Git history",
+                    "official binary payload must be declared storage: local_git with verified manifest metadata or live in a GitHub Release",
                 )
             )
     return findings
