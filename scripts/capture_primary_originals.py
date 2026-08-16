@@ -95,7 +95,7 @@ def validate_payload(
             raise ValueError(
                 f"{source.get('id', '<unknown>')}: HTML payload is too small to preserve"
             )
-        folded = payload.casefold()
+        folded = payload.lower()
         if any(marker in folded for marker in BLOCK_MARKERS):
             raise ValueError(
                 f"{source.get('id', '<unknown>')}: HTML payload appears blocked"
