@@ -53,3 +53,18 @@ equivalences:
       - mx_sat_rgce_2026_anexo_29
       - mx_sat_rgce_2026_anexo_30
     basis: The grouped SIDOF publication is preserved through the corresponding official SAT PDFs for Annexes 21-30.
+
+  - source_id: mx_ligie_20251229
+    manifest_document_ids:
+      - mx_diputados_ligie_reform_2025
+    basis: The 29 December 2025 LIGIE amendment is preserved as the official Cámara de Diputados reform PDF for the same decree; the DOF/SIDOF source remains the publication-event authority.
+
+  - source_id: mx_sidof_rgce_2026_mod1_anexos
+    manifest_document_ids:
+      - mx_sidof_5787982
+    basis: The first 2026 modification to RGCE Annexes 5, 22 and 29 is already preserved as the original SIDOF document for note 5787982 with document-level checksum and byte size.
+
+  - source_id: mx_sec_immex_ref_20250828
+    manifest_document_ids:
+      - mx_snice_decreto_immex
+    basis: The 28 August 2025 IMMEX reform is incorporated in the official SNICE consolidated IMMEX decree whose manifest explicitly states that consolidation date; the DOF source remains the publication-event authority.
