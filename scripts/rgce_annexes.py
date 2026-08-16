@@ -1,11 +1,10 @@
-"""Validate and materialize the governed RGCE 2026 annex editorial contract."""
+"""Validate the governed RGCE 2026 annex editorial contract."""
 
 from __future__ import annotations
 
 import argparse
 from dataclasses import dataclass
 from pathlib import Path
-import re
 from typing import Any
 
 import yaml
@@ -39,78 +38,6 @@ def _load_yaml(path: Path) -> dict[str, Any]:
 
 def _as_date(value: object) -> str:
     return str(value) if value is not None else ""
-
-
-def _manifest_paths(root: Path) -> tuple[str, ...]:
-    manifest = _load_yaml(root / "sources" / "rgce_2026_annexes.yaml")
-    annexes = manifest.get("annexes")
-    if not isinstance(annexes, list):
-        return ()
-    return tuple(
-        str(item.get("corpus_path"))
-        for item in annexes
-        if isinstance(item, dict) and isinstance(item.get("corpus_path"), str)
-    )
-
-
-def _materialize_temporal_event(path: Path) -> None:
-    text = path.read_text(encoding="utf-8")
-    pattern = re.compile(
-        r"(      - source_id: mx_sidof_rgce_2026_mod1_anexos\n"
-        r"        relation: has_annex\n"
-        r"        effective_from: )2026-05-22(\n)"
-    )
-    updated, count = pattern.subn(r"\g<1>2026-05-20\2", text)
-    if count != 1:
-        raise ValueError(f"{path}: expected exactly one 2026-05-22 RGCE annex event, found {count}")
-    path.write_text(updated, encoding="utf-8")
-
-
-def _set_block_field(block: str, key: str, value: str) -> str:
-    field_pattern = re.compile(rf"^    {re.escape(key)}:.*$", re.MULTILINE)
-    replacement = f"    {key}: {value}"
-    if field_pattern.search(block):
-        return field_pattern.sub(replacement, block, count=1)
-    if not block.endswith("\n"):
-        block += "\n"
-    return block + replacement + "\n"
-
-
-def _materialize_page_metadata(path: Path, governed_paths: tuple[str, ...]) -> None:
-    text = path.read_text(encoding="utf-8")
-    for page_path in governed_paths:
-        block_pattern = re.compile(
-            rf"(^  - <<: \*corpus\n    path: {re.escape(page_path)}\n"
-            rf"(?:(?!^  - <<: ).*\n)*)",
-            re.MULTILINE,
-        )
-        match = block_pattern.search(text)
-        if match is None:
-            raise ValueError(f"{path}: unable to locate corpus metadata block for {page_path}")
-        block = match.group(1)
-        for key, value in (
-            ("current_through", REVIEWED_THROUGH),
-            ("source_status", "current"),
-            ("extraction_status", "partial"),
-            ("legal_review_status", "reviewed"),
-            ("corpus_status", "current"),
-        ):
-            block = _set_block_field(block, key, value)
-        text = text[: match.start(1)] + block + text[match.end(1) :]
-    path.write_text(text, encoding="utf-8")
-
-
-def materialize(root: Path) -> None:
-    """Apply only the deterministic temporal and page-metadata promotions in the review contract."""
-
-    paths = _manifest_paths(root)
-    if len(paths) != 30:
-        raise ValueError(f"expected 30 manifest corpus paths, got {len(paths)}")
-    _materialize_temporal_event(root / "sources" / "instruments.yaml")
-    _materialize_page_metadata(
-        root / "sources" / "page_metadata.yaml",
-        paths + COMPOSITES,
-    )
 
 
 def validate(root: Path) -> ValidationResult:
@@ -181,8 +108,7 @@ def validate(root: Path) -> ValidationResult:
         for item in metadata.get("pages", [])
         if isinstance(item, dict) and item.get("path")
     }
-    governed_paths = tuple(paths) + COMPOSITES
-    for path in governed_paths:
+    for path in tuple(paths) + COMPOSITES:
         page = pages.get(path)
         if page is None:
             findings.append(f"missing page metadata for {path}")
@@ -206,15 +132,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("root", nargs="?", type=Path, default=Path.cwd())
     parser.add_argument("--check", action="store_true", help="Validate and exit nonzero on findings")
-    parser.add_argument(
-        "--materialize",
-        action="store_true",
-        help="Apply the deterministic temporal and metadata promotions in place before validation",
-    )
     args = parser.parse_args(argv)
-
-    if args.materialize:
-        materialize(args.root)
 
     result = validate(args.root)
     if result.ok:
