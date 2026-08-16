@@ -97,7 +97,7 @@ def _page_link(path: str) -> str:
 
 
 def render_knowledge_map(root: Path) -> str:
-    """Render a deterministic Markdown knowledge map from the index."""
+    """Render a compact deterministic Markdown knowledge map from the index."""
 
     records = build_index(root)
     instruments = _instrument_index(root)
@@ -116,7 +116,7 @@ def render_knowledge_map(root: Path) -> str:
         "",
         "# Mapa de conocimiento",
         "",
-        "Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml` y `sources/instruments.yaml`. Los estados que aparecen aquí describen **metadatos de revisión del repositorio**, no una opinión jurídica independiente ni sustituyen la fuente oficial.",
+        "Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml` y `sources/instruments.yaml`. Los estados describen **metadatos de revisión del repositorio**, no una opinión jurídica independiente ni sustituyen la fuente oficial.",
         "",
         f"**Páginas gobernadas visibles:** {len(records)}",
         "",
@@ -128,34 +128,36 @@ def render_knowledge_map(root: Path) -> str:
             [
                 f"### {topic}",
                 "",
-                "| Página | Fuente | Revisión | Vigente hasta | Instrumentos | Fuentes oficiales |",
-                "|---|---|---|---|---|---|",
+                "| Página | Estado | Vigente hasta | Instrumentos | Fuentes |",
+                "|---|---|---|---|---|",
             ]
         )
         for record in by_topic[topic]:
             title = _escape(record["title"] or record["path"])
             page = f"[{title}]({_page_link(str(record['path']))})"
-            instrument_links = []
-            for instrument_id in record["instrument_ids"]:
-                instrument = instruments[str(instrument_id)]
-                instrument_links.append(
-                    f"`{_escape(instrument_id)}` ({_escape(instrument.get('status'))})"
+            state = " · ".join(
+                item
+                for item in (
+                    _escape(record["source_status"]),
+                    _escape(record["legal_review_status"]),
                 )
-            source_links = []
-            for source in record["sources"]:
-                source_id = _escape(source["id"])
-                url = _text(source["url"])
-                source_links.append(f"[`{source_id}`]({url})" if url else f"`{source_id}`")
+                if item
+            ) or "—"
+            instrument_ids = ", ".join(
+                f"`{_escape(item)}`" for item in record["instrument_ids"]
+            ) or "—"
+            source_ids = ", ".join(
+                f"`{_escape(source['id'])}`" for source in record["sources"]
+            ) or "—"
             lines.append(
                 "| "
                 + " | ".join(
                     (
                         page,
-                        _escape(record["source_status"]) or "—",
-                        _escape(record["legal_review_status"]) or "—",
+                        state,
                         _escape(record["current_through"]) or "—",
-                        ", ".join(instrument_links) or "—",
-                        ", ".join(source_links) or "—",
+                        instrument_ids,
+                        source_ids,
                     )
                 )
                 + " |"
@@ -196,15 +198,22 @@ def render_knowledge_map(root: Path) -> str:
             "",
             "## Uso por herramientas",
             "",
-            "La vista equivalente para máquinas está en [`knowledge-index.json`](../assets/data/knowledge-index.json). Un consumidor puede usarla para navegación o para preparar contexto, pero las respuestas sobre vigencia deben seguir pasando por los gates temporales y de revisión del repositorio.",
+            "El detalle completo, incluidas autoridades y URLs oficiales, está en [`knowledge-index.json`](../assets/data/knowledge-index.json). Un consumidor puede usarlo para navegación o para preparar contexto, pero las respuestas sobre vigencia deben seguir pasando por los gates temporales y de revisión del repositorio.",
             "",
         ]
     )
     return "\n".join(lines)
 
 
-def _json_text(root: Path) -> str:
-    return json.dumps(build_index(root), ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+def render_knowledge_json(root: Path) -> str:
+    """Render a compact, stable machine index."""
+
+    return json.dumps(
+        build_index(root),
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ) + "\n"
 
 
 def _diff(path: Path, actual: str, expected: str) -> str:
@@ -226,7 +235,7 @@ def main(argv: list[str] | None = None) -> int:
     root = args.root.resolve()
     expected = {
         root / MARKDOWN_PATH: render_knowledge_map(root),
-        root / JSON_PATH: _json_text(root),
+        root / JSON_PATH: render_knowledge_json(root),
     }
     if args.check:
         drift = False
