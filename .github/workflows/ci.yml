@@ -39,6 +39,9 @@ jobs:
       - name: Validate repository integrity
         run: python -m scripts.validate_repository
 
+      - name: Generate primary-source archive audit
+        run: python -m scripts.archive_audit
+
       - name: Check generated catalog
         run: python -m scripts.build_catalog --check
 
