@@ -84,6 +84,8 @@ class MkDocsUxTests(unittest.TestCase):
         self.assertIn("explore/index.md", nav)
         self.assertIn("Biblioteca de originales", nav)
         self.assertIn("catalog/library.md", nav)
+        self.assertIn("Originales faltantes", nav)
+        self.assertIn("status/missing-primary-sources.md", nav)
         for label in (
             "Aranceles",
             "Marco jurídico",
