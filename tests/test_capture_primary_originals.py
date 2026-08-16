@@ -3,6 +3,7 @@ import unittest
 from scripts.capture_primary_originals import (
     build_manifest_document,
     capture_url_for,
+    embedded_official_pdf_url,
     validate_payload,
 )
 
@@ -62,6 +63,20 @@ class CapturePrimaryOriginalsTests(unittest.TestCase):
                 "text/html",
                 (b"<html>Access Denied captcha</html>" + b"x" * 600),
             )
+
+    def test_sidof_visor_extracts_only_official_dof_pdf(self):
+        payload = b'''<html><body><iframe src="https://dof.gob.mx/2022/SEECO/SEDECO_090522.pdf"></iframe></body></html>'''
+        self.assertEqual(
+            embedded_official_pdf_url(payload),
+            "https://dof.gob.mx/2022/SEECO/SEDECO_090522.pdf",
+        )
+        hostile = b'''<html><body><iframe src="https://example.com/not-official.pdf"></iframe></body></html>'''
+        with self.assertRaisesRegex(ValueError, "embedded PDF host"):
+            embedded_official_pdf_url(hostile)
+
+    def test_normal_sidof_document_has_no_embedded_pdf(self):
+        payload = b"<html><body><h1>Full official act</h1>" + b"text" * 200 + b"</body></html>"
+        self.assertIsNone(embedded_official_pdf_url(payload))
 
     def test_manifest_document_is_deterministic_and_keeps_canonical_url(self):
         payload = b"%PDF-1.7\n" + b"official bytes" * 100
