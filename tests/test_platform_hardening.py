@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from datetime import date
-import json
 from pathlib import Path
 import tempfile
 import unittest
@@ -62,22 +61,27 @@ class PlatformHardeningTests(unittest.TestCase):
         self.assertIn("python -m scripts.verify_offline_site site-offline", workflow)
 
     def test_knowledge_map_is_generated_from_canonical_metadata(self) -> None:
-        script = ROOT / "scripts" / "build_knowledge_map.py"
-        page = ROOT / "docs" / "explore" / "knowledge-map.md"
-        index = ROOT / "docs" / "assets" / "data" / "knowledge-index.json"
-        self.assertTrue(script.is_file())
-        self.assertTrue(page.is_file())
-        self.assertTrue(index.is_file())
-
-        from scripts.build_knowledge_map import build_index, render_knowledge_map
+        from scripts.build_knowledge_map import (
+            build_index,
+            render_knowledge_json,
+            render_knowledge_map,
+        )
 
         rendered = render_knowledge_map(ROOT)
-        self.assertEqual(page.read_text(encoding="utf-8"), rendered)
+        records = build_index(ROOT)
+        self.assertEqual(rendered, render_knowledge_map(ROOT))
+        self.assertEqual(records, build_index(ROOT))
         self.assertIn("Reglas Generales de Comercio Exterior para 2026", rendered)
-        expected_json = json.dumps(
-            build_index(ROOT), ensure_ascii=False, indent=2, sort_keys=True
-        ) + "\n"
-        self.assertEqual(index.read_text(encoding="utf-8"), expected_json)
+        self.assertIn('"mx_sidof_rgce_2026_anexos_21_30"', render_knowledge_json(ROOT))
+        self.assertTrue(records)
+        self.assertTrue(
+            any(
+                source["url"].startswith("https://")
+                for record in records
+                for source in record["sources"]
+                if source["url"]
+            )
+        )
 
     def test_local_query_returns_source_backed_temporal_hits(self) -> None:
         script = ROOT / "scripts" / "query_knowledge.py"
