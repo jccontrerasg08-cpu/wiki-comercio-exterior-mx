@@ -9,7 +9,7 @@ Improve discovery, offline distribution, repository review ergonomics, and local
 - `sources/`, page metadata, instrument metadata, and official URLs remain the source of truth.
 - No LLM decides legal currentness. Local retrieval consumes only the same reviewed/current gates already enforced by `scripts.rag_eval`.
 - The normal GitHub Pages profile keeps fast web navigation. A separate profile provides true `file://` offline compatibility.
-- No external fonts, images, JavaScript, analytics, or runtime CDN dependencies are introduced.
+- No external fonts, images, JavaScript, analytics, or runtime CDN dependencies are introduced into the distributed offline artifact.
 - Structured tariff rows remain in `arancel-mx`.
 - The open RGCE annex PR is not modified or rebased by this work.
 
@@ -21,7 +21,7 @@ Enable Material's built-in `meta` and `tags` plugins with a small controlled hie
 
 ### Offline profile
 
-Add `mkdocs.offline.yml` inheriting from `mkdocs.yml`. It enables Material's built-in `offline` plugin, removes the repository link, and explicitly replaces fetch-dependent Instant Navigation features. CI builds and validates both web and offline artifacts.
+Add `mkdocs.offline.yml` inheriting from `mkdocs.yml`. It enables Material's built-in `privacy` and `offline` plugins, removes the repository link, and explicitly replaces fetch-dependent Instant Navigation features. The privacy plugin may fetch external assets during the build in order to vendor them into the output; the resulting offline artifact must contain no remote runtime asset references. CI builds and validates both web and offline artifacts.
 
 ### Knowledge map
 
@@ -41,7 +41,7 @@ Reapply the useful SNICE FancyIndex parser fix from superseded PR #35 with a reg
 - Generated knowledge-map checks fail when committed output drifts from canonical metadata.
 - Query CLI abstains when no evidence clears lexical and temporal eligibility.
 - SNICE parsing skips anchors without an adjacent valid date/time/size tuple and preserves filename parse failures as unparsed entries.
-- CI remains deterministic and network-free after dependency installation.
+- Repository-generated outputs remain deterministic and drift-checked. The offline build is allowed build-time network access only to let Material's privacy plugin vendor external assets; the final artifact is verified to be self-contained at runtime.
 
 ## Testing
 
