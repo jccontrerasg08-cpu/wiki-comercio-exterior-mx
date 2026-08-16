@@ -179,6 +179,7 @@ nav:
     - Accesibilidad: methodology/accessibility.md
     - Patrones externos: methodology/external-patterns.md
     - Compatibilidad del motor: methodology/docs-engine-compatibility.md
+    - Contratos entre repositorios: methodology/cross-repo-contracts.md
     - Arquitectura: ARCHITECTURE.md
   - Alcance: about/scope.md
   - Cambios: changes/index.md
