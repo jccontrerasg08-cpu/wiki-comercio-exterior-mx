@@ -103,6 +103,10 @@ jobs:
               "- [SNICE — Programa IMMEX](https://www.snice.gob.mx/cs/avi/snice/immex.html)\n",
               "- Catálogo interno de fuentes: `docs/catalog/mexico/rgce.md`\n- [SNICE — Programa IMMEX](https://www.snice.gob.mx/cs/avi/snice/immex.html)\n",
           )
+          text = text.replace(
+              "## Vigencia\n\nRevisión editorial/jurídica efectuada",
+              "## Alcance de la guía\n\nNo es asesoría legal. Para una operación concreta deben revisarse los hechos, documentos, fechas y disposiciones vigentes aplicables.\n\n## Vigencia\n\nRevisión editorial/jurídica efectuada",
+          )
           path.write_text(text, encoding="utf-8")
 
       - name: Apply Wave 3 production edits
