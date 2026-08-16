@@ -116,8 +116,17 @@ nav:
   - Estado del corpus: status/corpus-coverage.md
   - Roadmap de contenido: status/content-roadmap.md
   - Explorar:
+    - Mapa de exploración: explore/index.md
     - Temas: topics.md
     - Mapa de conocimiento: explore/knowledge-map.md
+    - Aranceles: explore/aranceles.md
+    - Marco jurídico: explore/marco-juridico.md
+    - RGCE y anexos: explore/rgce.md
+    - Tratados y origen: explore/tratados-origen.md
+    - Programas: explore/programas.md
+    - RRNA y NOM: explore/rrna-nom.md
+    - Aduanas y mapa: explore/mapa.md
+    - Fuentes oficiales: catalog/library.md
   - Wiki:
     - Mapa: wiki/index.md
     - Fundamentos:
@@ -162,6 +171,8 @@ nav:
       - Pagos internacionales: wiki/logistica/pagos-internacionales.md
   - Fuentes:
     - Guía del catálogo: catalog/index.md
+    - Biblioteca de originales: catalog/library.md
+    - Originales faltantes: status/missing-primary-sources.md
     - Catálogo general: catalog/catalog.md
     - Catálogo generado: catalog/registry.md
     - México:
@@ -188,6 +199,7 @@ nav:
     - Accesibilidad: methodology/accessibility.md
     - Patrones externos: methodology/external-patterns.md
     - Compatibilidad del motor: methodology/docs-engine-compatibility.md
+    - Contratos entre repositorios: methodology/cross-repo-contracts.md
     - Arquitectura: ARCHITECTURE.md
   - Alcance: about/scope.md
   - Cambios: changes/index.md

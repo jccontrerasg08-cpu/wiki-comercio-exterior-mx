@@ -1,8 +1,15 @@
 # Wiki Comercio Exterior MX
-Public wiki and official-URL catalog for Mexican foreign trade.
+Legal/documentary wiki, verifiable official-source archive, and operational explorers for Mexican foreign trade.
+Explore: docs/explore/ (aranceles, marco juridico, RGCE, tratados/origen, programas, RRNA/NOM, mapa, fuentes)
 Wiki: docs/wiki/ (fundamentos, aduana, clasificacion, contribuciones, programas, logistica)
-Catalog: docs/catalog/
+Official source library: docs/catalog/library.md
+Source catalog: docs/catalog/
 Corpus: data/corpus/
-Tariff tables: https://github.com/jccontrerasg08-cpu/arancel-mx
-Incoterms: ICC catalog URLs only (https://iccwbo.org/business-solutions/incoterms-rules/)
-Mexico TIGIE-SCIAN: https://www.inegi.org.mx/app/tigie/ (catalog; scrape)
+Original manifests and release index: data/originals/
+Legal source/instrument IDs: sources/registry.yaml and sources/instruments.yaml
+Tariff tables and structured HS/TIGIE/fraccion/NICO data: https://github.com/jccontrerasg08-cpu/arancel-mx
+Canonical geospatial data and advanced map application: https://github.com/jccontrerasg08-cpu/aduanamap-mx
+Cross-repository contracts: docs/methodology/cross-repo-contracts.md and data/contracts/aduanamap.yaml
+Incoterms: ICC reference URLs only; do not vendor ICC rule text.
+Mexico TIGIE-SCIAN: https://www.inegi.org.mx/app/tigie/ is an official interactive reference; preserve or ingest only through a documented reproducible source path.
+Archive presence, URL health, and checksums do not determine legal currentness.

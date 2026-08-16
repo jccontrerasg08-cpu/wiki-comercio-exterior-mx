@@ -30,6 +30,7 @@
     "media_types": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
     "harvest": {"type": "boolean"},
     "cadence_days": {"type": "integer", "minimum": 1, "maximum": 3650},
+    "archive": {"$ref": "#/$defs/archive"},
     "probe": {"$ref": "#/$defs/probe"}
   },
   "allOf": [
@@ -46,6 +47,36 @@
     }
   ],
   "$defs": {
+    "archive": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {"enum": ["local_git", "release_asset", "external_only"]},
+        "path": {"type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+"},
+        "release_tag": {"type": "string", "minLength": 1},
+        "asset_name": {"type": "string", "minLength": 1},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "size_bytes": {"type": "integer", "minimum": 1},
+        "mime_type": {"type": "string", "minLength": 1},
+        "captured_at": {"type": "string", "format": "date"},
+        "reason": {"type": "string", "minLength": 1}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"status": {"const": "local_git"}}, "required": ["status"]},
+          "then": {"required": ["path", "sha256", "size_bytes", "mime_type", "captured_at"]}
+        },
+        {
+          "if": {"properties": {"status": {"const": "release_asset"}}, "required": ["status"]},
+          "then": {"required": ["release_tag", "asset_name", "sha256", "size_bytes", "mime_type", "captured_at"]}
+        },
+        {
+          "if": {"properties": {"status": {"const": "external_only"}}, "required": ["status"]},
+          "then": {"required": ["reason"]}
+        }
+      ]
+    },
     "probe": {
       "type": "object",
       "additionalProperties": false,

@@ -1,0 +1,65 @@
+equivalences:
+  - source_id: mx_sidof_rgce_2026
+    manifest_document_ids:
+      - mx_sat_rgce_2026
+    basis: Same RGCE 2026 body preserved as an official SAT PDF; SIDOF remains the publication-event authority for chronology and legal effect.
+
+  - source_id: mx_sidof_rgce_2026_mod1
+    manifest_document_ids:
+      - mx_sat_rgce_2026_1ra_rm
+    basis: First RGCE 2026 modification preserved as an official SAT PDF; SIDOF remains the publication-event authority for chronology and legal effect.
+
+  - source_id: mx_sidof_rgce_2026_anexo_1
+    manifest_document_ids:
+      - mx_sat_rgce_2026_anexo_01
+    basis: Annex 1 is preserved as the official SAT annex PDF corresponding to the SIDOF publication event.
+
+  - source_id: mx_sidof_rgce_2026_anexo_2
+    manifest_document_ids:
+      - mx_sat_rgce_2026_anexo_02
+    basis: Annex 2 is preserved as the official SAT annex PDF corresponding to the SIDOF publication event.
+
+  - source_id: mx_sidof_rgce_2026_anexos_3_20
+    manifest_document_ids:
+      - mx_sat_rgce_2026_anexo_03
+      - mx_sat_rgce_2026_anexo_04
+      - mx_sat_rgce_2026_anexo_05
+      - mx_sat_rgce_2026_anexo_06
+      - mx_sat_rgce_2026_anexo_07
+      - mx_sat_rgce_2026_anexo_08
+      - mx_sat_rgce_2026_anexo_09
+      - mx_sat_rgce_2026_anexo_10
+      - mx_sat_rgce_2026_anexo_11
+      - mx_sat_rgce_2026_anexo_12
+      - mx_sat_rgce_2026_anexo_14
+      - mx_sat_rgce_2026_anexo_15
+      - mx_sat_rgce_2026_anexo_16
+      - mx_sat_rgce_2026_anexo_17
+      - mx_sat_rgce_2026_anexo_18
+      - mx_sat_rgce_2026_anexo_19
+      - mx_sat_rgce_2026_anexo_20
+    basis: The grouped SIDOF publication is preserved through the corresponding official SAT PDFs for Annexes 3-12 and 14-20; Annex 13 is part of the RGCE body publication.
+
+  - source_id: mx_sidof_rgce_2026_anexos_21_30
+    manifest_document_ids:
+      - mx_sat_rgce_2026_anexo_21
+      - mx_sat_rgce_2026_anexo_22
+      - mx_sat_rgce_2026_anexo_23
+      - mx_sat_rgce_2026_anexo_24
+      - mx_sat_rgce_2026_anexo_25
+      - mx_sat_rgce_2026_anexo_26
+      - mx_sat_rgce_2026_anexo_27
+      - mx_sat_rgce_2026_anexo_28
+      - mx_sat_rgce_2026_anexo_29
+      - mx_sat_rgce_2026_anexo_30
+    basis: The grouped SIDOF publication is preserved through the corresponding official SAT PDFs for Annexes 21-30.
+
+  - source_id: mx_sidof_decreto_20251229
+    manifest_document_ids:
+      - mx_diputados_ligie_reform_2025
+    basis: The 29 December 2025 LIGIE amendment is preserved as the official Cámara de Diputados copy of the same decree; the DOF/SIDOF source remains the publication-event authority.
+
+  - source_id: mx_sidof_rgce_2026_mod1_anexos
+    manifest_document_ids:
+      - mx_sidof_5787982
+    basis: The first 2026 modification to RGCE Annexes 5, 22 and 29 is preserved as the original SIDOF getDoc document for note 5787982 with document-level checksum and byte size.

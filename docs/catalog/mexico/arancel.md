@@ -5,7 +5,9 @@ description: "Fuentes oficiales y capa estructurada para consultar LIGIE, TIGIE,
 
 # Arancel TIGIE
 
-Structured TIGIE/NICO rates live in [arancel-mx](https://github.com/jccontrerasg08-cpu/arancel-mx). This wiki does not embed TIGIE JSON dumps.
+Structured TIGIE/NICO rates live in [arancel-mx](https://github.com/jccontrerasg08-cpu/arancel-mx). This wiki preserves the legal/documentary sources, provenance and relationships needed to explain the tariff system, but it does not maintain a second competing structured tariff database.
+
+Official originals used by this topic may be preserved through document manifests and GitHub Release bundles with SHA-256 verification. The issuing authority remains the official reference for legal effect and currentness.
 
 ## LIGIE (Cámara de Diputados)
 
@@ -15,10 +17,10 @@ Structured TIGIE/NICO rates live in [arancel-mx](https://github.com/jccontrerasg
 
 ## SNICE
 
-[Mi Fracción Arancelaria](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html) is catalog-only; as of 2026-08-13 it is an empty CMS shell (no tool UI). Do not scrape it.
+[Mi Fracción Arancelaria](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html) is retained as an official interactive/reference entry. A CMS shell or interactive portal is not treated as tariff evidence by itself; structured ingestion must come from a documented, reproducible official source or from the canonical `arancel-mx` pipeline.
 
-Look up aranceles, RRNAs, TLC, PROSEC, IMMEX, and notas explicativas on the live SNICE LIGIE page [LIGIE](https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html) and the [INEGI Catálogo TIGIE–SCIAN](inegi-tigie-scian.md). Do not scrape them.
+Use the live SNICE LIGIE page [LIGIE](https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html) for official interactive consultation of aranceles, RRNAs, TLC, PROSEC, IMMEX and explanatory material when available. Preserve downloadable source artifacts when doing so improves reproducibility, but do not infer a tariff record solely from portal presentation.
 
 ## INEGI TIGIE–SCIAN
 
-Relate fractions to SCIAN with the [INEGI Catálogo TIGIE–SCIAN](inegi-tigie-scian.md) ([official app](https://www.inegi.org.mx/app/tigie/)). Catalog-only; do not scrape.
+Relate fractions to SCIAN with the [INEGI Catálogo TIGIE–SCIAN](inegi-tigie-scian.md) and its [official app](https://www.inegi.org.mx/app/tigie/). The interactive app is a reference interface; reproducible data ingestion should use an identified official downloadable source with recorded provenance and checksums.
