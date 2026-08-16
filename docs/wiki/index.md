@@ -5,7 +5,7 @@ description: Ruta de consulta por clasificación, RRNA, contribuciones, despacho
 
 # Wiki Comercio Exterior MX
 
-Esta wiki está organizada para resolver una operación, no para memorizar un índice legal. Empieza por identificar **qué mercancía es, qué régimen se pretende utilizar, quién interviene y qué fecha gobierna la operación**. Después sigue la ruta de clasificación, regulaciones, contribuciones y despacho.
+Esta wiki está organizada para resolver una operación, no para memorizar un índice legal. Empieza por identificar **qué mercancía es, qué régimen se pretende utilizar, quién interviene y qué fecha gobierna la operación**. Después sigue la ruta de clasificación, regulaciones, contribuciones y despacho. Si necesitas primero entender cómo se conectan norma, datos, transmisión y expediente, consulta [Arquitectura de decisión y evidencia](fundamentos/arquitectura-decision-evidencia.md).
 
 ## Empieza por la decisión
 

@@ -602,3 +602,13 @@ pages:
     current_through: 2026-08-15
     source_status: current
     legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/fundamentos/arquitectura-decision-evidencia.md
+    title: Arquitectura de decision y evidencia por operacion
+    topic: fundamentos
+    source_ids: [mx_diputados_lce_current, mx_diputados_ley_aduanera, mx_vucem_portal]
+    instrument_ids: [mx_ley_comercio_exterior, mx_ley_aduanera, mx_ventanilla_unica_2026]
+    current_through: 2026-08-16
+    source_status: current
+    legal_review_status: reviewed
