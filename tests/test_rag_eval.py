@@ -139,6 +139,26 @@ class RagEvaluationTests(unittest.TestCase):
         self.assertNotIn("stale forbidden phrase", text)
         self.assertNotIn("pending forbidden phrase", text)
 
+    def test_long_query_with_only_one_generic_match_abstains(self):
+        documents = [
+            {
+                "source_id": "mx_example_rules",
+                "title": "Regulacion de comercio exterior",
+                "text": "regulacion permisos y restricciones comerciales",
+                "effective_from": "2026-01-01",
+                "effective_to": None,
+            }
+        ]
+
+        ranked = rank_documents(
+            "regulacion lunar de antimateria inexistente",
+            documents,
+            date(2026, 8, 15),
+            5,
+        )
+
+        self.assertEqual(ranked, ())
+
     def test_retrieval_result_emits_citations_and_abstention_disclaimer(self):
         cited = retrieve_case(CASES[1], DOCUMENTS, k=3)
         self.assertIn("mx_sidof_rla_reform_20260223", cited.cited_source_ids)

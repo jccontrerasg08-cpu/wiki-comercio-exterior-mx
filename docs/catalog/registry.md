@@ -103,6 +103,8 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_gob_tmec`<br>T-MEC | MEX | official_operational | - | no | 90 | - | [open](https://www.gob.mx/t-mec) |
+| `mx_gob_tmec_reglamentaciones_uniformes`<br>T-MEC textos finales de las reglamentaciones uniformes | MEX | official_operational | mx_tmec / partial | no | 90 | 2020-07-01 | [open](https://www.gob.mx/t-mec/acciones-y-programas/textos-finales-de-las-reglamentaciones-uniformes) |
+| `mx_gob_tmec_textos_finales`<br>T-MEC textos finales del Tratado entre Mexico Estados Unidos y Canada | MEX | official_operational | mx_tmec / partial | no | 90 | 2020-07-01 | [open](https://www.gob.mx/t-mec/acciones-y-programas/textos-finales-del-tratado-entre-mexico-estados-unidos-y-canada-t-mec-202730) |
 
 ## ICC
 

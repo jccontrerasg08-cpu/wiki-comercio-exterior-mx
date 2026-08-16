@@ -104,8 +104,16 @@ def rank_documents(
         search_title = str(document.get("search_title") or document.get("title", ""))
         body_terms = tokenize(f"{search_title} {document.get('text', '')}")
         title_terms = tokenize(search_title)
+        matched_terms = query_terms & body_terms
+        # A single broad title term (for example, "regulacion") cannot establish
+        # relevance for a longer, otherwise unrelated query.  Requiring two
+        # content-term matches for queries of three or more terms preserves
+        # precise multi-term retrieval while making abstention robust as the
+        # governed corpus gains broad explanatory pages.
+        if len(query_terms) >= 3 and len(matched_terms) < 2:
+            continue
         union = query_terms | body_terms
-        jaccard = len(query_terms & body_terms) / len(union) if union else 0.0
+        jaccard = len(matched_terms) / len(union) if union else 0.0
         title_overlap = len(query_terms & title_terms) / len(query_terms) if query_terms else 0.0
         score = jaccard + title_overlap
         if score < 0.05:

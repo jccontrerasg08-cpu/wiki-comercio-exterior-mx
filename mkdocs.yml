@@ -132,6 +132,7 @@ nav:
     - Fundamentos:
       - Marco jurídico: wiki/fundamentos/marco-juridico.md
       - Padrón de importadores: wiki/fundamentos/padron-importadores.md
+      - Biblioteca de instrumentos prioritarios: wiki/fundamentos/biblioteca-instrumentos-prioritarios.md
     - Aduana:
       - Proceso de despacho: wiki/aduana/proceso-despacho.md
       - Regímenes aduaneros: wiki/aduana/regimenes-aduaneros.md
@@ -149,12 +150,14 @@ nav:
       - RRNA, nota existente: wiki/clasificacion/rrna.md
     - RRNA:
       - Guía: wiki/rrna/index.md
+      - Ciclo de vida de una RRNA: wiki/rrna/ciclo-de-vida-rrna.md
       - Reglas y criterios SE: wiki/rrna/reglas-criterios-se.md
       - Anexo 2.2.1: wiki/rrna/anexo-2-2-1.md
       - Anexo 2.4.1: wiki/rrna/anexo-2-4-1.md
     - Contribuciones:
       - Impuestos de importación: wiki/contribuciones/impuestos-importacion.md
       - Aranceles: wiki/contribuciones/aranceles.md
+      - Lectura de tarifa y tratamientos: wiki/contribuciones/lectura-tarifa-y-tratos.md
       - Valor en aduana: wiki/contribuciones/valor-en-aduana.md
       - Cuotas compensatorias: wiki/contribuciones/cuotas-compensatorias.md
     - Programas y tratados:

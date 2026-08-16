@@ -565,11 +565,11 @@
       "total_pages": 3
     },
     {
-      "legally_reviewed_pages": 1,
+      "legally_reviewed_pages": 2,
       "pages_needing_attention": 3,
-      "retrieval_eligible_pages": 1,
+      "retrieval_eligible_pages": 2,
       "section": "contribuciones",
-      "total_pages": 4
+      "total_pages": 5
     },
     {
       "legally_reviewed_pages": 2,
@@ -579,11 +579,11 @@
       "total_pages": 43
     },
     {
-      "legally_reviewed_pages": 1,
+      "legally_reviewed_pages": 2,
       "pages_needing_attention": 1,
-      "retrieval_eligible_pages": 1,
+      "retrieval_eligible_pages": 2,
       "section": "fundamentos",
-      "total_pages": 2
+      "total_pages": 3
     },
     {
       "legally_reviewed_pages": 0,
@@ -607,11 +607,11 @@
       "total_pages": 7
     },
     {
-      "legally_reviewed_pages": 4,
+      "legally_reviewed_pages": 5,
       "pages_needing_attention": 0,
-      "retrieval_eligible_pages": 4,
+      "retrieval_eligible_pages": 5,
       "section": "rrna",
-      "total_pages": 4
+      "total_pages": 5
     },
     {
       "legally_reviewed_pages": 0,
@@ -624,21 +624,21 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 37,
+      "not_applicable": 40,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 37,
+      "not_applicable": 40,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 58,
-      "reviewed": 20
+      "reviewed": 23
     },
     "source_status": {
-      "current": 59,
+      "current": 62,
       "partial": 19,
       "unknown": 1
     }
@@ -646,16 +646,16 @@
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 49,
-    "legally_reviewed_pages": 20,
+    "distinct_source_ids": 52,
+    "legally_reviewed_pages": 23,
     "non_current_corpus_pages": 40,
     "pages_needing_attention": 62,
-    "pages_with_instruments": 70,
-    "pages_with_sources": 73,
+    "pages_with_instruments": 73,
+    "pages_with_sources": 76,
     "pending_legal_review_pages": 58,
-    "retrieval_eligible_pages": 19,
-    "total_pages": 79,
+    "retrieval_eligible_pages": 22,
+    "total_pages": 82,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 36
+    "wiki_pages": 39
   }
 }

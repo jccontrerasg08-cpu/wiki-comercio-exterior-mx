@@ -572,3 +572,33 @@ pages:
     current_through: 2026-08-15
     source_status: current
     legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/contribuciones/lectura-tarifa-y-tratos.md
+    title: Lectura de la tarifa y tratamientos arancelarios
+    topic: contribuciones
+    source_ids: [mx_diputados_ligie_current, mx_snice_ligie_info, mx_sidof_ligie_prosec_20260423, mx_gob_tmec, mx_gob_tmec_textos_finales]
+    instrument_ids: [mx_ligie, mx_programa_prosec, mx_tmec]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/rrna/ciclo-de-vida-rrna.md
+    title: Ciclo de vida de una regulacion o restriccion no arancelaria
+    topic: rrna
+    source_ids: [mx_diputados_lce_current, mx_diputados_reg_lce, mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260212, mx_snice_ligie_info, mx_snice_cuotas]
+    instrument_ids: [mx_ley_comercio_exterior, mx_reglamento_ley_comercio_exterior, mx_reglas_criterios_se]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/fundamentos/biblioteca-instrumentos-prioritarios.md
+    title: Biblioteca de instrumentos prioritarios
+    topic: fundamentos
+    source_ids: [mx_diputados_ligie_current, mx_diputados_ley_aduanera, mx_diputados_lce_current, mx_sidof_rgce_2026, mx_snice_ligie_info, mx_gob_tmec, mx_gob_tmec_textos_finales, mx_gob_tmec_reglamentaciones_uniformes]
+    instrument_ids: [mx_ligie, mx_ley_aduanera, mx_ley_comercio_exterior, mx_rgce_2026, mx_tmec]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed

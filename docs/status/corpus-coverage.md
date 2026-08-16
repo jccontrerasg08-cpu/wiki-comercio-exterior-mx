@@ -9,15 +9,15 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 79 |
-| Wiki | 36 |
+| Páginas gobernadas | 82 |
+| Wiki | 39 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 19 (24.1%) |
-| Con fuente referenciada | 73 (92.4%) |
-| Con instrumento referenciado | 70 (88.6%) |
-| Revisión jurídica `reviewed` | 20 (25.3%) |
+| Elegibles por estado para recuperación vigente | 22 (26.8%) |
+| Con fuente referenciada | 76 (92.7%) |
+| Con instrumento referenciado | 73 (89.0%) |
+| Revisión jurídica `reviewed` | 23 (28.0%) |
 | Requieren atención | 62 |
-| Fuentes distintas referenciadas | 49 |
+| Fuentes distintas referenciadas | 52 |
 | Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección
@@ -26,13 +26,13 @@
 |---|---:|---:|---:|---:|
 | `aduana` | 10 | 7 | 7 | 3 |
 | `clasificacion` | 3 | 0 | 0 | 3 |
-| `contribuciones` | 4 | 1 | 1 | 3 |
+| `contribuciones` | 5 | 2 | 2 | 3 |
 | `corpus` | 43 | 2 | 2 | 43 |
-| `fundamentos` | 2 | 1 | 1 | 1 |
+| `fundamentos` | 3 | 2 | 2 | 1 |
 | `logistica` | 3 | 0 | 0 | 3 |
 | `operacion` | 2 | 2 | 2 | 0 |
 | `programas` | 7 | 2 | 3 | 5 |
-| `rrna` | 4 | 4 | 4 | 0 |
+| `rrna` | 5 | 5 | 5 | 0 |
 | `wiki` | 1 | 0 | 0 | 1 |
 
 ## Estados
@@ -41,7 +41,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `current` | 59 |
+| `current` | 62 |
 | `partial` | 19 |
 | `unknown` | 1 |
 
@@ -49,7 +49,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 37 |
+| `not_applicable` | 40 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -58,14 +58,14 @@
 |---|---:|
 | `not_applicable` | 1 |
 | `pending_review` | 58 |
-| `reviewed` | 20 |
+| `reviewed` | 23 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 37 |
+| `not_applicable` | 40 |
 | `partial` | 39 |
 | `stale` | 1 |
 

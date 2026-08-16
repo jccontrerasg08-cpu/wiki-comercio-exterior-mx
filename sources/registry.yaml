@@ -1085,6 +1085,36 @@ sources:
     cadence_days: 90
     probe: *probe_html
 
+  - id: mx_gob_tmec_textos_finales
+    jurisdiction: MEX
+    title: T-MEC textos finales del Tratado entre Mexico Estados Unidos y Canada
+    url: https://www.gob.mx/t-mec/acciones-y-programas/textos-finales-del-tratado-entre-mexico-estados-unidos-y-canada-t-mec-202730
+    note_id: null
+    authority: Gobierno de Mexico
+    evidence_class: official_operational
+    instrument_id: mx_tmec
+    publication_date: 2020-07-01
+    allowed_hosts: [www.gob.mx, gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_gob_tmec_reglamentaciones_uniformes
+    jurisdiction: MEX
+    title: T-MEC textos finales de las reglamentaciones uniformes
+    url: https://www.gob.mx/t-mec/acciones-y-programas/textos-finales-de-las-reglamentaciones-uniformes
+    note_id: null
+    authority: Gobierno de Mexico
+    evidence_class: official_operational
+    instrument_id: mx_tmec
+    publication_date: 2020-07-01
+    allowed_hosts: [www.gob.mx, gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
   - id: mx_gob_anam
     jurisdiction: MEX
     title: ANAM

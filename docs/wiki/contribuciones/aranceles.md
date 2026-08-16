@@ -34,6 +34,8 @@ La tasa general que resulte de la TIGIE suele funcionar como punto de partida pa
 
 El NICO ayuda a identificar estadísticamente la mercancía dentro de la fracción mexicana, pero no debe tratarse como una “tasa adicional”. La obligación concreta se localiza en el instrumento que la establece.
 
+Para un método completo que conecte clasificación, reglas interpretativas, tasa general, cambios temporales, preferencias, PROSEC, cupos y medidas separadas, consulta [Lectura de la tarifa y tratamientos arancelarios](lectura-tarifa-y-tratos.md). La guía conserva la distinción entre una fuente de consulta y la publicación que prueba vigencia.
+
 ## Fuentes oficiales
 
 - [LIGIE vigente, Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf)
