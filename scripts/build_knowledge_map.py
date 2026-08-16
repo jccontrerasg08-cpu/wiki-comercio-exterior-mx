@@ -248,7 +248,7 @@ def render_knowledge_map(root: Path) -> str:
             "",
             "## Uso por herramientas",
             "",
-            "El detalle normalizado, incluidas autoridades y URLs oficiales, está en [`knowledge-index.json`](../assets/data/knowledge-index.json). Un consumidor puede usarlo para navegación o para preparar contexto, pero las respuestas sobre vigencia deben seguir pasando por los gates temporales y de revisión del repositorio.",
+            "El detalle completo, incluidas autoridades y URLs oficiales, está en [`knowledge-index.json`](../assets/data/knowledge-index.json). Un consumidor puede usarlo para navegación o para preparar contexto, pero las respuestas sobre vigencia deben seguir pasando por los gates temporales y de revisión del repositorio.",
             "",
         ]
     )
