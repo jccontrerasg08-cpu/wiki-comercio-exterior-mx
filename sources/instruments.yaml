@@ -132,7 +132,7 @@ instruments:
         effective_from: 2026-05-15
       - source_id: mx_sidof_rgce_2026_mod1_anexos
         relation: has_annex
-        effective_from: 2026-05-22
+        effective_from: 2026-05-20
 
   - id: mx_ley_comercio_exterior
     jurisdiction: MEX

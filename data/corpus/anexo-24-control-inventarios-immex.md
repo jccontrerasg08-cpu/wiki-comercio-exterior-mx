@@ -1,39 +1,21 @@
-# Anexo 24 RGCE 2026 — control automatizado de inventarios
+# Anexo 24 RGCE 2026 — Sistema automatizado de control de inventarios
 
-> Digest explicativo. No sustituye la publicación oficial ni constituye texto normativo consolidado.
+## Estado al 15-08-2026
 
-## Fuente primaria
+- Publicación oficial: DOF/SIDOF, 15-01-2026 (`mx_sidof_rgce_2026_anexos_21_30`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la primera modificación de anexos de esa fecha no incluyó el Anexo 24.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778300
 
-- DOF/SIDOF: [Anexos 21 a 30 de las RGCE 2026](https://sidof.segob.gob.mx/notas/5778300), publicado el 15 de enero de 2026.
+## Objeto y uso operativo
 
-## Alcance
+El Anexo 24 establece información mínima del sistema automatizado de control de inventarios en los supuestos a los que remiten las RGCE. La edición revisada distingue:
 
-El Anexo 24 establece la información mínima que debe contener el sistema automatizado de control de inventarios en los supuestos a los que remiten las RGCE. La edición 2026 distingue tres apartados:
+- **Apartado A:** información mínima vinculada con la regla 4.3.1, incluidos catálogos, entradas/salidas, materiales, productos, activo fijo y reportes;
+- **Apartado B:** información del **SECIIT** para el supuesto específico señalado por la regla 7.1.4 y el propio anexo; contempla recepción electrónica de información, acceso en línea y condiciones sobre campos recibidos del sistema corporativo, incluida la ventana de hasta 24 horas definida por el apartado;
+- **Apartado C:** información mínima para empresas con Registro en el Esquema de Certificación de Empresas, con la ventana de actualización de hasta 48 horas definida por ese apartado y acceso en línea para la autoridad.
 
-- **A:** información mínima del sistema automatizado vinculado a la regla 4.3.1;
-- **B:** información del **SECIIT** para el supuesto específico señalado en la regla 7.1.4 y el propio anexo;
-- **C:** información mínima para empresas con Registro en el Esquema de Certificación de Empresas.
+El anexo utiliza **PEPS** en la mecánica de descargos conforme al apartado y tipo de operación aplicables.
 
-## Componentes verificables
+## Límites del digest
 
-El apartado A contempla catálogos de datos generales, materiales y productos; información aduanera de entradas y salidas; materiales utilizados; activo fijo; y reportes de entradas, salidas, saldos y materiales utilizados.
-
-El apartado B integra información electrónica proveniente del sistema corporativo. La edición 2026 establece ventanas de recepción de información que incluyen un plazo que no excede **24 horas** para la información señalada por el propio apartado, acceso en línea para la autoridad y restricciones de modificación sobre campos concretos obtenidos electrónicamente del sistema corporativo.
-
-El apartado C prevé una ventana que no excede **48 horas** para la actualización definida por ese apartado y acceso en línea para la autoridad.
-
-## Descargos
-
-El Anexo 24 utiliza **Primeras Entradas Primeras Salidas (PEPS)** en su mecánica de descargos. La aplicación depende del apartado y del tipo de mercancía/operación descritos en la fuente oficial.
-
-## Límites de este digest
-
-Este resumen no afirma que:
-
-- toda empresa IMMEX deba operar SECIIT;
-- todo campo sea inmodificable;
-- exista una periodicidad anual de conciliación creada por el Anexo 24;
-- una diferencia produzca por sí misma PAMA, cancelación, multa o consecuencia penal;
-- el anexo obligue a contratar una marca o arquitectura de software concreta.
-
-Las consecuencias jurídicas de una diferencia deben fundarse en la disposición específica aplicable al hecho.
+Este **digest no reproduce** todos los campos, catálogos, reportes o reglas de descargo. No afirma que toda empresa IMMEX deba operar SECIIT, que todo campo sea inmodificable ni que una diferencia produzca por sí sola una consecuencia sancionadora. La obligación concreta debe reconstruirse con el apartado, regla, pedimentos y fuente DOF/SAT aplicables.

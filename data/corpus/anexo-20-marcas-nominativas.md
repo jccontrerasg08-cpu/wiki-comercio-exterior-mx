@@ -1,35 +1,15 @@
-# Anexo 20 — Mercancías Sujetas a la Declaración de Marcas Nominativas o Mixtas (RGCE 2026)
+# Anexo 20 RGCE 2026 — Mercancías sujetas a la declaración de marcas nominativas o mixtas
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo20delasRGCEpara2026.pdf
-**Publicado:** 14-01-2026 | **DOF:** 14-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Regla 3.x. de las RGCE 2026; Ley de la Propiedad Industrial
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se modificaron las fracciones o los datos que deben declararse.
+- Publicación oficial: DOF/SIDOF, 14-01-2026 (`mx_sidof_rgce_2026_anexos_3_20`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; el acto modificatorio de anexos de esa fecha no incluyó el Anexo 20.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778241
 
-## Contenido
-Lista de fracciones arancelarias para las cuales el importador/exportador **debe declarar en el pedimento la marca comercial** (nominativa o mixta) de las mercancías, en el campo correspondiente del pedimento (Apéndice 8 del Anexo 22 — identificador de marca).
+## Objeto y uso operativo
 
-### ¿Para qué sirve?
-- Permite a la autoridad aduanera verificar que la mercancía no es **piratería** ni viola derechos de propiedad industrial.
-- El IMPI (Instituto Mexicano de la Propiedad Industrial) tiene la facultad de solicitar la retención de mercancías en aduana cuando hay indicios de violación de derechos de propiedad industrial.
-- La declaración de marca es una RRNA (Regulación y Restricción No Arancelaria).
+El Anexo 20 identifica mercancías sujetas a declaración de marcas nominativas o mixtas en los supuestos de las RGCE. Se utiliza para determinar si la operación requiere capturar información de marca conforme a la clasificación y regla aplicables.
 
-### Categorías típicas (verificar PDF oficial)
-- Prendas de vestir y calzado de marca
-- Perfumes y cosméticos
-- Electrónicos de marca reconocida
-- Juguetes y productos de entretenimiento
-- Farmacéuticos bajo marca registrada
+## Límites del digest
 
-### Para el chatbot
-Si la fracción arancelaria de la mercancía aparece en el Anexo 20, se debe:
-1. Declarar la marca en el campo del pedimento (identificador Apéndice 8).
-2. Contar con la autorización del titular de la marca para importar/exportar (si aplica).
-3. No omitir este dato — su omisión está listada en el Anexo 26 (NOMs de información comercial) y puede generar sanción.
-
-### Dos regímenes del Anexo 20
-**I. Importación definitiva, importación temporal y depósito fiscal.**
-**II. Exportación definitiva.** (La obligación aplica también en exportación para proteger marcas nacionales.)
+Este **digest no reproduce** las mercancías o fracciones completas ni resuelve derechos de propiedad industrial. Consulte DOF/SAT y las disposiciones específicas de la operación.

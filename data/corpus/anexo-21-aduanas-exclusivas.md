@@ -1,42 +1,15 @@
-# Anexo 21 — Aduanas Exclusivas para Tramitar el Despacho Aduanero de Determinado Tipo de Mercancías (RGCE 2026)
+# Anexo 21 RGCE 2026 — Aduanas exclusivas para tramitar el despacho aduanero de mercancías
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo21delasRGCEpara2026.pdf
-**Publicado:** 15-01-2026 | **DOF:** 15-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Regla 2.4.x. de las RGCE 2026
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se agregaron mercancías o si cambiaron las aduanas exclusivas designadas.
+- Publicación oficial: DOF/SIDOF, 15-01-2026 (`mx_sidof_rgce_2026_anexos_21_30`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación publicada ese día no incluyó el Anexo 21.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778300
 
-## Contenido y lógica para el chatbot
+## Objeto y uso operativo
 
-### Árbol de decisión
-```
-Usuario quiere importar/exportar una mercancía específica:
-    ↓
-Obtener fracción arancelaria / NICO
-    ↓
-¿Aparece en el Anexo 21?
-    SÍ → Solo puede despacharse en la aduana exclusiva ahí designada.
-         Verificar su horario en el Anexo 4 (`anexo-04-horarios-aduanas.md`)
-         No aplica ni siquiera el beneficio de "cualquier aduana" del OEA
-    NO → Puede despacharse en la aduana de preferencia del importador
-         (o la de adscripción de su agente aduanal)
-```
+El Anexo 21 identifica aduanas exclusivas para el despacho de determinadas mercancías en los supuestos de las RGCE. Se utiliza para validar la aduana competente después de confirmar mercancía y clasificación.
 
-### Categorías típicas y sus aduanas exclusivas (verificar PDF oficial):
+## Límites del digest
 
-| Tipo de mercancía | Aduanas exclusivas habituales |
-|---|---|
-| Vehículos nuevos (importación definitiva por particular) | Manzanillo, Lázaro Cárdenas, Altamira, Veracruz + aduanas fronterizas designadas según país de origen |
-| Cigarros y tabacos labrados | Aduanas fronterizas designadas |
-| Bebidas alcohólicas (a granel) | Aduanas con instalaciones de control volumétrico |
-| Precursores químicos y químicos esenciales | Aduanas con capacidad de análisis químico (laboratorio SAT) |
-| Explosivos y materiales bélicos | Aduanas autorizadas por SEDENA |
-| Material radiactivo | Aduanas designadas (control SENER/CNSNS) |
-| Retorno de vehículos temporales de residentes en el extranjero | Cualquier aduana con sección habilitada para vehículos |
-| Importación de caballos de carrera | Aduanas específicas con instalaciones veterinarias |
-
-### Nota importante para OEA (Operador Económico Autorizado)
-El beneficio de "despacho en cualquier aduana" (regla 7.3.3., fracción I) no aplica cuando la fracción arancelaria aparece en el Anexo 21. Las empresas OEA también están obligadas a despachar en la aduana exclusiva designada para esas mercancías.
+Este **digest no reproduce** todos los pares mercancía-aduana ni sustituye las excepciones y reglas especiales. La selección de aduana debe verificarse en DOF/SAT y demás disposiciones aplicables.

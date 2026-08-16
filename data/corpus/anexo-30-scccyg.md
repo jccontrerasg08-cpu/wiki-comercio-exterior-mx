@@ -1,32 +1,17 @@
 # Anexo 30 RGCE 2026 — Sistema de Control de Cuentas de Créditos y Garantías (SCCCyG)
 
-> Digest explicativo. No sustituye la publicación oficial ni constituye texto normativo consolidado.
+## Estado al 15-08-2026
 
-## Fuente primaria
+- Publicación oficial: DOF/SIDOF, 15-01-2026 (`mx_sidof_rgce_2026_anexos_21_30`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación de anexos publicada ese día no incluyó el Anexo 30.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778300
 
-- DOF/SIDOF: [Anexos 21 a 30 de las RGCE 2026](https://sidof.segob.gob.mx/notas/5778300), publicado el 15 de enero de 2026.
+## Objeto y uso operativo
 
-## Alcance
+El Anexo 30 se refiere a la información del **Sistema de Control de Cuentas de Créditos y Garantías (SCCCyG)**. La sola existencia de un Programa IMMEX no determina que cada operación esté dentro del sistema.
 
-El Anexo 30 se refiere a la información del **Sistema de Control de Cuentas de Créditos y Garantías (SCCCyG)**. El sistema se conecta con los supuestos de créditos fiscales y garantías previstos por las RGCE; la sola existencia de un Programa IMMEX no determina por sí misma que cada operación esté dentro del SCCCyG.
+La estructura oficial contempla información para integrar y afectar cuentas, incluidos inventario inicial, cargos, informes de descargo, correcciones y saldo en el supuesto aplicable. La mecánica utiliza **PEPS** para afectar las cuentas conforme al anexo. Los plazos de retorno mostrados por el sistema pueden tener carácter presuntivo y el cómputo legal debe verificarse contra la disposición aplicable. Los saldos del sistema no equivalen por sí mismos a una resolución definitiva.
 
-## Mecánica resumida
+## Límites del digest
 
-La estructura oficial contempla información para integrar y afectar las cuentas del sistema, incluyendo inventario inicial, cargos, informes de descargo, correcciones y saldo en los términos del supuesto aplicable.
-
-Los descargos utilizan **PEPS** para afectar las fracciones/cuentas de cargo conforme a la mecánica prevista por el anexo.
-
-El SCCCyG puede mostrar plazos de retorno de forma **presuntiva**; el cómputo legal debe hacerse con las disposiciones vigentes aplicables a la operación.
-
-Los saldos reflejados en el sistema **no implican resolución definitiva** y quedan a salvo las facultades de comprobación de la autoridad.
-
-## Límites de este digest
-
-Este resumen no convierte:
-
-- una merma en cancelación automática de un saldo;
-- un saldo positivo en prueba automática de mercancía no declarada;
-- una discrepancia en un procedimiento sancionador automático;
-- una estructura histórica de archivo o manual técnico en requisito vigente sin verificar su versión aplicable.
-
-Para evaluar una diferencia deben reconstruirse el cargo, los informes de descargo, las correcciones, los pedimentos y la regla que originó la cuenta.
+Este **digest no reproduce** todos los campos, reglas o mecánicas del SCCCyG. No convierte una merma, saldo o discrepancia en una consecuencia automática. Para evaluar una cuenta deben reconstruirse cargos, descargos, correcciones, pedimentos, régimen y fuente DOF/SAT aplicables.

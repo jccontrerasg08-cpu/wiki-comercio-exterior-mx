@@ -39,6 +39,9 @@ jobs:
       - name: Run repository tests
         run: python -m unittest discover -s tests -v
 
+      - name: Check RGCE annex review contract
+        run: python -m scripts.rgce_annexes --check
+
       - name: Check committed knowledge map
         run: git diff --exit-code -- docs/explore/knowledge-map.md docs/assets/data/knowledge-index.json
 

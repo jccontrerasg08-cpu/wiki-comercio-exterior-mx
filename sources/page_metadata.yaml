@@ -159,192 +159,352 @@ pages:
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexo_1]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-02-tramites.md
     title: Anexo 2 tramites
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexo_2]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-03-aduanas-pita.md
     title: Anexo 3 aduanas PITA
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-04-horarios-aduanas.md
     title: Anexo 4 horarios de aduanas
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-05-criterios-practicas-indebidas.md
     title: Anexo 5 criterios y practicas indebidas
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20, mx_sidof_rgce_2026_mod1_anexos]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-06-consejo-clasificacion-arancelaria.md
     title: Anexo 6 consejo de clasificacion arancelaria
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-07-ejidatarios-sin-padron.md
     title: Anexo 7 ejidatarios sin padron
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md
     title: Anexo 8 uso exclusivo del importador sin padron
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-09-exentos-igi-equipo-medico.md
     title: Anexo 9 exentos de IGI y equipo medico
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-10-padron-sectorial.md
     title: Anexo 10 padron sectorial
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-11-rutas-fiscales-transito.md
     title: Anexo 11 rutas fiscales de transito
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-12-exportacion-temporal.md
     title: Anexo 12 exportacion temporal
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-13-multas-cantidades.md
     title: Anexo 13 multas y cantidades
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-14-hidrocarburos-petroliferos.md
     title: Anexo 14 hidrocarburos y petroliferos
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-15-distancias-plazos-transito.md
     title: Anexo 15 distancias y plazos de transito
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-16-aduanas-transito-norte-sur.md
     title: Anexo 16 aduanas de transito norte sur
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-17-sin-transito-internacional.md
     title: Anexo 17 mercancias sin transito internacional
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-18-sin-deposito-fiscal.md
     title: Anexo 18 mercancias sin deposito fiscal
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-19-datos-inexactos-multa-184.md
     title: Anexo 19 datos inexactos y multa del articulo 184
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-20-marcas-nominativas.md
     title: Anexo 20 marcas nominativas
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-21-aduanas-exclusivas.md
     title: Anexo 21 aduanas exclusivas
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-22.md
     title: Anexo 22 instructivo del pedimento
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30, mx_sidof_rgce_2026_mod1_anexos]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-23-mercancias-peligrosas-muestreo.md
     title: Anexo 23 mercancias peligrosas para muestreo
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-24-control-inventarios-immex.md
     title: Anexo 24 control de inventarios IMMEX
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026, mx_programa_immex]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-25-puntos-revision-franja.md
     title: Anexo 25 puntos de revision de franja
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-26-noms-informacion-comercial.md
     title: Anexo 26 NOM de informacion comercial
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-27-fracciones-sin-iva.md
     title: Anexo 27 fracciones sin IVA
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026, mx_ley_iva]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md
     title: Anexo 28 mercancias para certificacion IVA IEPS
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026, mx_ley_iva, mx_ley_ieps]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-29-regimenes-prohibidos.md
     title: Anexo 29 mercancias en regimenes prohibidos
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30, mx_sidof_rgce_2026_mod1_anexos]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexo-30-scccyg.md
     title: Anexo 30 sistema de control de creditos y garantias
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexos-formatos-tramites.md
     title: Sintesis de formatos y tramites RGCE
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexo_1, mx_sidof_rgce_2026_anexo_2]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/anexos-riesgo-logistica.md
     title: Sintesis de anexos de riesgo y logistica
     topic: rgce-anexos
     source_ids: [mx_sidof_rgce_2026_anexos_3_20, mx_sidof_rgce_2026_anexos_21_30]
     instrument_ids: [mx_rgce_2026]
+    current_through: 2026-05-20
+    source_status: current
+    extraction_status: partial
+    legal_review_status: reviewed
+    corpus_status: current
   - <<: *corpus
     path: data/corpus/casos-tipo-comex.md
     title: Casos tipo de comercio exterior

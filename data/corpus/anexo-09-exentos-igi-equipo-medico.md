@@ -1,27 +1,15 @@
-# Anexo 9 — Mercancías Exentas de IGI y Equipo Médico sin Obligación de Inscripción al Padrón de Importadores (RGCE 2026)
+# Anexo 9 RGCE 2026 — Mercancías por las que no se está obligado al pago del IGI y equipo médico que no requiere inscripción en padrones de importadores
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo9delasRGCEpara2026.pdf
-**Publicado:** 14-01-2026 | **DOF:** 14-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Art. 61 de la Ley Aduanera; regla 3.3.1. de las RGCE 2026
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se agregaron o eliminaron fracciones arancelarias de la lista.
-3. Si hay nuevas fracciones en la TIGIE (reformas al LIGIE), verificar si aplican a este Anexo.
+- Publicación oficial: DOF/SIDOF, 14-01-2026 (`mx_sidof_rgce_2026_anexos_3_20`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación publicada ese día no incluyó el Anexo 9.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778241
 
-## Contenido y uso para el chatbot
+## Objeto y uso operativo
 
-Contiene dos listas:
+El Anexo 9 delimita mercancías dentro de los supuestos indicados por su título y por las reglas que remiten a él. Se usa para verificar si una mercancía y operación encajan en el tratamiento específico antes de calcular contribuciones o requisitos de padrón.
 
-**Lista I — Mercancías exentas de IGI:**
-Fracciones arancelarias de la TIGIE por cuya importación definitiva **no se paga el Impuesto General de Importación** (art. 61 de la LA o reglas específicas).
+## Límites del digest
 
-**Lista II — Equipo médico sin obligación de inscripción al Padrón de Importadores:**
-Fracciones arancelarias de equipo médico que pueden importarse sin inscripción al Padrón de Importadores cuando el importador es una institución de salud o similar.
-
-**Lógica de uso del motor de cálculo:**
-- Verificar primero el Anexo 9 (exención de IGI) antes de calcular el IGI.
-- Si la fracción aparece en Lista I → IGI = $0.
-- Si la fracción no aparece aquí pero sí en el Anexo 27 → IVA = $0 (son cálculos independientes).
-- Puede ser exento de IGI pero pagar IVA, o viceversa, o ninguno de los dos, o ambos.
+Este **digest no reproduce** fracciones, descripciones ni condiciones exhaustivas y no declara exención de IGI por similitud comercial. Deben confirmarse clasificación, regla, supuesto y texto oficial DOF/SAT; la tabla arancelaria estructurada corresponde a `arancel-mx`.

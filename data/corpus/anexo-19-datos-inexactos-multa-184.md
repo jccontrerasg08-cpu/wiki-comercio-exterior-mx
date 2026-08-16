@@ -1,47 +1,15 @@
-# Anexo 19 — Datos Inexactos, Falsos u Omitidos que Actualizan la Infracción del Artículo 184, Fracción III de la Ley Aduanera (RGCE 2026)
+# Anexo 19 RGCE 2026 — Datos inexactos, falsos u omitidos para efectos del art. 184 fr. III LA
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo19delasRGCEpara2026.pdf
-**Publicado:** 14-01-2026 | **DOF:** 14-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Art. 184, fracción III y art. 185, fracción II de la Ley Aduanera; regla 3.7.25. segundo párrafo de las RGCE 2026
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se agregaron nuevos datos — es relativamente estable, pero puede cambiar con reformas a la LA.
+- Publicación oficial: DOF/SIDOF, 14-01-2026 (`mx_sidof_rgce_2026_anexos_3_20`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación de anexos de esa fecha no incluyó el Anexo 19.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778241
 
-## Contenido
-Lista de **campos específicos del pedimento** que, si son declarados con datos inexactos, falsos u omitidos, activan automáticamente la infracción del art. 184, fracción III y la multa del art. 185, fracción II (porcentaje del valor de las mercancías).
+## Objeto y uso operativo
 
-### Datos del pedimento que típicamente activan la multa
-Los siguientes datos están en el Anexo 19 (verificar PDF oficial para el texto exacto):
-- Valor en aduana de la mercancía
-- Descripción de la mercancía
-- Fracción arancelaria declarada
-- Número de identificación comercial (NICO)
-- País de origen
-- País de procedencia
-- Nombre o razón social del importador/exportador
-- RFC del importador/exportador
-- Nombre o razón social del proveedor extranjero
-- Domicilio del proveedor extranjero
-- Número de factura
-- Número de bultos / peso bruto
-- Número de candado oficial
+El Anexo 19 identifica datos relevantes para el supuesto referido al artículo 184, fracción III, de la Ley Aduanera. Se usa para contrastar la información declarada con el catálogo aplicable antes de analizar una posible infracción.
 
-### Lógica de uso crítica para el chatbot
-```
-¿El usuario quiere rectificar un dato en el pedimento?
-    ↓
-¿Está en el Anexo 19?
-    SÍ → La rectificación conlleva la multa del art. 185-II
-         (no hay corrección espontánea sin sanción para estos datos)
-         Excepción: si la rectificación ocurre ANTES de activar
-         el mecanismo de selección automatizado (art. 89 LA)
-         → en ese caso SÍ es libre de multa.
-    NO → Puede rectificarse espontáneamente sin sanción
-         (art. 89 LA, rectificación antes o después del despacho
-         sin que sea detectada por facultades de comprobación)
-```
+## Límites del digest
 
-### Consecuencia práctica (criterio 4/LA/PI — ver `anexo-05-criterios-practicas-indebidas.md`)
-El criterio 4/LA/PI sobre calzado hace explícita referencia al Anexo 19: declarar en el pedimento un valor diferente al del CFDI/documento equivalente activa la multa de este Anexo 19 + el posible delito de defraudación fiscal (art. 108 CFF).
+Este **digest no reproduce** el catálogo completo ni concluye automáticamente que una diferencia configure infracción o multa. Deben analizarse dato, pedimento, disposición legal, hechos y fuente DOF/SAT.

@@ -1,34 +1,15 @@
-# Anexo 18 — Mercancías que NO pueden ser Objeto del Régimen Aduanero de Depósito Fiscal (RGCE 2026)
+# Anexo 18 RGCE 2026 — Mercancías que no pueden ser objeto de depósito fiscal
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo18delasRGCEpara2026.pdf
-**Publicado:** 14-01-2026 | **DOF:** 14-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Art. 123 de la Ley Aduanera; regla 4.5.x. de las RGCE 2026
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se agregaron fracciones. La fracción 3811.21.07 (aditivos para aceites lubricantes a granel) se añadió para el depósito fiscal en 2026.
+- Publicación oficial: DOF/SIDOF, 14-01-2026 (`mx_sidof_rgce_2026_anexos_3_20`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación de anexos publicada ese día no incluyó el Anexo 18.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778241
 
-## Contenido y uso para el chatbot
-Lista de fracciones arancelarias de la TIGIE que **no pueden destinarse al régimen de depósito fiscal** (arts. 119-123 de la Ley Aduanera).
+## Objeto y uso operativo
 
-### Lógica de uso
-```
-¿El usuario quiere destinar mercancías a depósito fiscal?
-    ↓
-Verificar fracción arancelaria / NICO contra Anexo 18
-    SÍ aparece → NO puede ser depósito fiscal
-    NO aparece → Procede el depósito fiscal
-                 (verificar también el Anexo 29 para otros regímenes)
-```
+El Anexo 18 delimita mercancías que no pueden ser objeto de depósito fiscal en los términos de las RGCE. Se utiliza como filtro de régimen después de confirmar clasificación y características de la mercancía.
 
-### Novedad 2026
-Se incorporó la fracción **3811.21.07** (Aditivos para aceites lubricantes cuando se presenten a granel) como mercancía que no puede destinarse al régimen de depósito fiscal. Esta restricción aparece en la sección F.II del Anexo 29, pero también se refleja en el Anexo 18.
+## Límites del digest
 
-### Categorías típicas excluidas del depósito fiscal
-- Petrolíferos y petroquímicos (excepciones en el Anexo 14)
-- Mercancías peligrosas sin instalaciones especiales
-- Residuos y desechos peligrosos
-- Armas, explosivos y materiales bélicos
-- Ciertos aditivos y químicos a granel
-(Verificar lista completa en el PDF oficial)
+Este **digest no reproduce** la lista completa ni sustituye el análisis de excepciones o modalidades específicas. La decisión de régimen debe sustentarse en el texto oficial DOF/SAT y demás disposiciones aplicables.

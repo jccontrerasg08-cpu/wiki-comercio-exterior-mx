@@ -1,36 +1,15 @@
-# Anexo 17 — Mercancías por las que NO Procederá el Tránsito Internacional por Territorio Nacional (RGCE 2026)
+# Anexo 17 RGCE 2026 — Mercancías por las que no procede el tránsito internacional
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo17delasRGCEpara2026.pdf
-**Publicado:** 14-01-2026 | **DOF:** 14-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Art. 131 de la Ley Aduanera; regla 4.6.1. de las RGCE 2026
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se agregan o eliminan fracciones arancelarias — común cuando hay nuevas cuotas compensatorias o permisos de exportación.
+- Publicación oficial: DOF/SIDOF, 14-01-2026 (`mx_sidof_rgce_2026_anexos_3_20`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación publicada ese día no incluyó el Anexo 17.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778241
 
-## Contenido y uso para el chatbot
-Lista de fracciones arancelarias de la TIGIE que **no pueden circular en tránsito internacional** por territorio nacional.
+## Objeto y uso operativo
 
-### Árbol de decisión
-```
-¿El usuario quiere hacer tránsito internacional de una mercancía?
-    ↓
-Obtener fracción arancelaria / NICO
-    ↓
-¿Aparece en el Anexo 17?
-    SÍ → NO procede el tránsito internacional.
-         La mercancía debe importarse definitivamente o destinarse
-         a otro régimen; no puede transitar entre fronteras.
-    NO → Procede el tránsito (sujeto a Anexo 11/16 para rutas
-         y Anexo 15 para plazos).
-```
+El Anexo 17 identifica mercancías para las que el tránsito internacional no procede en el alcance de las RGCE. Funciona como control negativo que debe aplicarse sobre una clasificación y descripción técnica verificadas.
 
-### Categorías típicas en el Anexo 17 (verificar PDF oficial):
-- Ropa usada (fracciones 6309.xx) — cuotas compensatorias activas
-- Calzado usado — idem
-- Ciertos productos textiles sujetos a cuotas anti-dumping
-- Mercancías de importación prohibida o con restricciones severas
-- Residuos peligrosos (Convenio de Basilea)
-- Materiales radioactivos (control SENER/CNSNS)
-- Armas y explosivos sin autorización SEDENA
+## Límites del digest
+
+Este **digest no reproduce** la lista completa ni extiende la restricción a mercancías por simple semejanza. La clasificación, alcance, excepciones y regla aplicable deben verificarse en DOF/SAT.

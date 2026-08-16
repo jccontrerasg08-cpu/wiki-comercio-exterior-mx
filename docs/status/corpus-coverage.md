@@ -12,10 +12,10 @@
 | Páginas gobernadas | 77 |
 | Wiki | 34 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 17 (22.1%) |
+| Elegibles por estado para recuperación vigente | 49 (63.6%) |
 | Con fuente referenciada | 71 (92.2%) |
 | Con instrumento referenciado | 68 (88.3%) |
-| Revisión jurídica `reviewed` | 18 (23.4%) |
+| Revisión jurídica `reviewed` | 50 (64.9%) |
 | Requieren atención | 62 |
 | Fuentes distintas referenciadas | 47 |
 | Instrumentos distintos referenciados | 20 |
@@ -27,7 +27,7 @@
 | `aduana` | 10 | 7 | 7 | 3 |
 | `clasificacion` | 3 | 0 | 0 | 3 |
 | `contribuciones` | 4 | 1 | 1 | 3 |
-| `corpus` | 43 | 2 | 2 | 43 |
+| `corpus` | 43 | 34 | 34 | 43 |
 | `fundamentos` | 2 | 1 | 1 | 1 |
 | `logistica` | 3 | 0 | 0 | 3 |
 | `programas` | 7 | 2 | 3 | 5 |
@@ -56,16 +56,16 @@
 | Estado | Páginas |
 |---|---:|
 | `not_applicable` | 1 |
-| `pending_review` | 58 |
-| `reviewed` | 18 |
+| `pending_review` | 26 |
+| `reviewed` | 50 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
-| `current` | 2 |
+| `current` | 34 |
 | `not_applicable` | 35 |
-| `partial` | 39 |
+| `partial` | 7 |
 | `stale` | 1 |
 
 ## Cola de atención
@@ -74,38 +74,38 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 
 | Página | Sección | Señales |
 |---|---|---|
-| `data/corpus/anexo-01-formatos-modelos.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-02-tramites.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-03-aduanas-pita.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-04-horarios-aduanas.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-05-criterios-practicas-indebidas.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-06-consejo-clasificacion-arancelaria.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-07-ejidatarios-sin-padron.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-09-exentos-igi-equipo-medico.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-10-padron-sectorial.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-11-rutas-fiscales-transito.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-12-exportacion-temporal.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-13-multas-cantidades.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-14-hidrocarburos-petroliferos.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-15-distancias-plazos-transito.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-16-aduanas-transito-norte-sur.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-17-sin-transito-internacional.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-18-sin-deposito-fiscal.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-19-datos-inexactos-multa-184.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-20-marcas-nominativas.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-21-aduanas-exclusivas.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-22.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-23-mercancias-peligrosas-muestreo.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-24-control-inventarios-immex.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-25-puntos-revision-franja.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-26-noms-informacion-comercial.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-27-fracciones-sin-iva.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-29-regimenes-prohibidos.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexo-30-scccyg.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexos-formatos-tramites.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
-| `data/corpus/anexos-riesgo-logistica.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
+| `data/corpus/anexo-01-formatos-modelos.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-02-tramites.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-03-aduanas-pita.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-04-horarios-aduanas.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-05-criterios-practicas-indebidas.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-06-consejo-clasificacion-arancelaria.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-07-ejidatarios-sin-padron.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-09-exentos-igi-equipo-medico.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-10-padron-sectorial.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-11-rutas-fiscales-transito.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-12-exportacion-temporal.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-13-multas-cantidades.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-14-hidrocarburos-petroliferos.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-15-distancias-plazos-transito.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-16-aduanas-transito-norte-sur.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-17-sin-transito-internacional.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-18-sin-deposito-fiscal.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-19-datos-inexactos-multa-184.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-20-marcas-nominativas.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-21-aduanas-exclusivas.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-22.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-23-mercancias-peligrosas-muestreo.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-24-control-inventarios-immex.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-25-puntos-revision-franja.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-26-noms-informacion-comercial.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-27-fracciones-sin-iva.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-29-regimenes-prohibidos.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexo-30-scccyg.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexos-formatos-tramites.md` | `corpus` | `extraction_incomplete` |
+| `data/corpus/anexos-riesgo-logistica.md` | `corpus` | `extraction_incomplete` |
 | `data/corpus/casos-tipo-comex.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review` |
 | `data/corpus/criterios-anam-sat.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `pending_legal_review` |
 | `data/corpus/fuentes-oficiales-comex-mx.md` | `corpus` | `corpus_not_current`, `extraction_incomplete`, `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review` |

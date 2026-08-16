@@ -1,10 +1,10 @@
 policy_version: 1
 minimums:
-  retrieval_eligible_pages: 15
-  pages_with_sources: 69
-  pages_with_instruments: 66
-  legally_reviewed_pages: 15
+  retrieval_eligible_pages: 49
+  pages_with_sources: 71
+  pages_with_instruments: 68
+  legally_reviewed_pages: 50
 maximums:
-  pending_legal_review_pages: 59
-  non_current_corpus_pages: 40
+  pending_legal_review_pages: 26
+  non_current_corpus_pages: 8
   unknown_source_status_pages: 1

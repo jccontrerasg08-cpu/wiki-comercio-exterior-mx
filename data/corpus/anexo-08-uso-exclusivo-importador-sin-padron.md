@@ -1,26 +1,15 @@
-# Anexo 8 — Mercancías de Uso Exclusivo del Importador que no Requieren Inscripción en el Padrón de Importadores (RGCE 2026)
+# Anexo 8 RGCE 2026 — Mercancías para uso exclusivo del importador que no requiere inscripción en padrones de importadores
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo8delasRGCEpara2026.pdf
-**Publicado:** 14-01-2026 | **DOF:** 14-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Art. 59, fracción IV de la Ley Aduanera; art. 82 del Reglamento; regla 1.3.1. de las RGCE 2026
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se agregaron o eliminaron fracciones arancelarias de la lista.
-3. Si hay nuevas fracciones en la TIGIE (reformas al LIGIE), verificar si aplican a este Anexo.
+- Publicación oficial: DOF/SIDOF, 14-01-2026 (`mx_sidof_rgce_2026_anexos_3_20`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación de anexos de esa fecha no incluyó el Anexo 8.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778241
 
-## Contenido y uso para el chatbot
+## Objeto y uso operativo
 
-**Mercancías de uso exclusivo del importador:** mercancías que una empresa importa **para uso propio** (no para reventa ni comercialización). Pueden ser importadas sin inscripción al Padrón de Importadores.
+El Anexo 8 delimita mercancías para uso exclusivo del importador en los supuestos en que las RGCE prevén tratamiento respecto de padrones. Se usa para contrastar mercancía, destino y regla habilitante.
 
-**Lógica de uso:**
-- Si el importador va a usar la mercancía internamente (no para venta), verificar si la fracción arancelaria está en el Anexo 8.
-- Si SÍ → no requiere inscribirse al Padrón de Importadores para esa importación.
-- Si NO → requiere inscripción al Padrón General.
+## Límites del digest
 
-**Categorías típicas incluidas** (verificar PDF oficial):
-- Muestras sin valor comercial
-- Publicaciones periódicas importadas para suscriptores
-- Bienes de capital de uso propio
-- Material de laboratorio para uso interno
+Este **digest no reproduce** el listado completo ni convierte el concepto de “uso exclusivo” en una dispensa general. La aplicación exige verificar todos los elementos de la regla y la fuente DOF/SAT.
