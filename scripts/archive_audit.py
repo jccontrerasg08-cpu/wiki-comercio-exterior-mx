@@ -1,4 +1,4 @@
-"""Conservatively audit whether important legal sources have preserved originals."""
+"""Conservatively audit whether important active legal sources have preserved originals."""
 
 from __future__ import annotations
 
@@ -96,10 +96,90 @@ def _manifest_match(
     return None
 
 
-def _is_target(source: dict[str, Any]) -> bool:
+def _instrument_source_sets(root: Path) -> tuple[set[str], set[str]]:
+    path = root / "sources" / "instruments.yaml"
+    if not path.is_file():
+        return set(), set()
+    data = _load_yaml(path)
+    instruments = data.get("instruments", []) if isinstance(data, dict) else []
+    active: set[str] = set()
+    superseded: set[str] = set()
+
+    for instrument in instruments:
+        if not isinstance(instrument, dict):
+            continue
+        target = superseded if instrument.get("status") == "superseded" else active
+        consolidated = instrument.get("consolidated_source_id")
+        if isinstance(consolidated, str) and consolidated:
+            target.add(consolidated)
+        events = instrument.get("events")
+        if isinstance(events, list):
+            for event in events:
+                if not isinstance(event, dict):
+                    continue
+                source_id = event.get("source_id")
+                if isinstance(source_id, str) and source_id:
+                    target.add(source_id)
+
+    return active, superseded - active
+
+
+def _load_equivalences(
+    root: Path, manifest_by_id: dict[str, str]
+) -> dict[str, tuple[tuple[str, ...], str]]:
+    path = root / "data" / "originals" / "equivalents.yaml"
+    if not path.is_file():
+        return {}
+    data = _load_yaml(path)
+    entries = data.get("equivalences", []) if isinstance(data, dict) else []
+    result: dict[str, tuple[tuple[str, ...], str]] = {}
+
+    for index, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            raise ValueError(f"equivalents.yaml entry {index} must be a mapping")
+        source_id = entry.get("source_id")
+        ids = entry.get("manifest_document_ids")
+        basis = entry.get("basis")
+        if not isinstance(source_id, str) or not source_id:
+            raise ValueError(f"equivalents.yaml entry {index} missing source_id")
+        if source_id in result:
+            raise ValueError(f"equivalents.yaml duplicate source_id: {source_id}")
+        if not isinstance(ids, list) or not ids or not all(isinstance(item, str) and item for item in ids):
+            raise ValueError(f"{source_id}: manifest_document_ids must be a non-empty string list")
+        if not isinstance(basis, str) or not basis.strip():
+            raise ValueError(f"{source_id}: equivalence basis is required")
+        missing_ids = sorted(item for item in ids if item not in manifest_by_id)
+        if missing_ids:
+            raise ValueError(
+                f"{source_id}: equivalence references unknown manifest document(s): {', '.join(missing_ids)}"
+            )
+        result[source_id] = (tuple(dict.fromkeys(ids)), basis.strip())
+    return result
+
+
+def _equivalent_description(
+    source_id: str,
+    equivalents: dict[str, tuple[tuple[str, ...], str]],
+    manifest_by_id: dict[str, str],
+) -> str | None:
+    equivalent = equivalents.get(source_id)
+    if equivalent is None:
+        return None
+    document_ids, basis = equivalent
+    locations = sorted(
+        {
+            f"{document_id} ({manifest_by_id[document_id]})"
+            for document_id in document_ids
+        }
+    )
+    return f"Verified official equivalent(s): {', '.join(locations)}. Basis: {basis}"
+
+
+def _is_target(source: dict[str, Any], source_id: str, active_source_ids: set[str]) -> bool:
     return (
         source.get("evidence_class") in TARGET_EVIDENCE_CLASSES
         and bool(_instrument_ids(source))
+        and source_id in active_source_ids
     )
 
 
@@ -107,7 +187,21 @@ def audit_registry(root: Path) -> list[AuditRow]:
     registry = _load_yaml(root / "sources" / "registry.yaml")
     sources = registry.get("sources", []) if isinstance(registry, dict) else []
     by_id, by_url = _manifest_index(root)
+    active_source_ids, superseded_only_ids = _instrument_source_sets(root)
+    equivalents = _load_equivalences(root, by_id)
     rows: list[AuditRow] = []
+
+    registry_ids = {
+        str(source.get("id"))
+        for source in sources
+        if isinstance(source, dict) and isinstance(source.get("id"), str)
+    }
+    unknown_equivalence_sources = sorted(set(equivalents) - registry_ids)
+    if unknown_equivalence_sources:
+        raise ValueError(
+            "equivalents.yaml references unknown registry source(s): "
+            + ", ".join(unknown_equivalence_sources)
+        )
 
     for source in sources:
         if not isinstance(source, dict):
@@ -120,6 +214,7 @@ def audit_registry(root: Path) -> list[AuditRow]:
         instruments = _instrument_ids(source)
         archive_state = archive_label(source)
         manifest_fragment = _manifest_match(source, by_id, by_url)
+        equivalent_description = _equivalent_description(source_id, equivalents, by_id)
 
         if archive_state == "external_only":
             archive = source.get("archive")
@@ -138,16 +233,26 @@ def audit_registry(root: Path) -> list[AuditRow]:
             what_repo_has = f"Document-level original in data/originals/{manifest_fragment}."
             missing = "Nothing."
             why_needed = "The original is already represented by a manifest with provenance/checksum."
-        elif _is_target(source):
+        elif equivalent_description:
+            status = "archived_equivalent"
+            what_repo_has = equivalent_description
+            missing = "Nothing."
+            why_needed = "The publication event remains separately traceable while equivalent official bytes are already preserved."
+        elif source_id in superseded_only_ids:
+            status = "superseded_only"
+            what_repo_has = "Canonical historical source registry entry linked only to a superseded instrument."
+            missing = "Nothing requested automatically."
+            why_needed = "Historical preservation remains useful, but it is not an automatic current-source request."
+        elif _is_target(source, source_id, active_source_ids):
             status = "missing_primary"
-            what_repo_has = "Canonical source registry entry and official URL, but no matching original manifest or explicit archive state."
-            missing = "A preserved primary/consolidated original or an explicit documented storage exception."
-            why_needed = "Needed to make this legal source reproducible and auditable without relying only on an external URL."
+            what_repo_has = "Canonical source registry entry and official URL, but no matching manifest, verified official equivalence, or explicit archive state."
+            missing = "A preserved primary/consolidated original, verified official equivalent, or explicit documented storage exception."
+            why_needed = "Needed to make this active legal source reproducible and auditable without relying only on an external URL."
         else:
             status = "not_target"
             what_repo_has = "Canonical source registry entry."
             missing = "Nothing requested automatically."
-            why_needed = "This conservative audit only auto-flags primary legal or consolidated sources linked to an instrument."
+            why_needed = "This conservative audit only auto-flags active primary legal or consolidated sources referenced by the temporal instrument graph."
 
         rows.append(
             AuditRow(
@@ -164,7 +269,10 @@ def audit_registry(root: Path) -> list[AuditRow]:
             )
         )
 
-    return sorted(rows, key=lambda row: (row.status, row.authority.casefold(), row.title.casefold(), row.source_id))
+    return sorted(
+        rows,
+        key=lambda row: (row.status, row.authority.casefold(), row.title.casefold(), row.source_id),
+    )
 
 
 def _escape(value: object) -> str:
@@ -182,15 +290,17 @@ def render_missing_report(rows: list[AuditRow]) -> str:
         "",
         "<!-- Generated by python -m scripts.archive_audit. Do not edit manually. -->",
         "",
-        "This is a conservative request queue, not a legal-currentness report. A source is listed only when it is primary legal or an official consolidated text, is linked to a known instrument, and has neither an explicit archive state nor an equivalent document in the existing originals manifests.",
+        "This is a conservative request queue, not a legal-currentness report. A source is listed only when it is an active primary legal or official consolidated source referenced by the temporal instrument graph and has no explicit archive state, direct manifest match, or declared verified official equivalent.",
         "",
-        "Before asking the repository owner for a document, re-check the official source, manifests, current uploads and equivalent/newer versions. Do not request documents merely because a wiki page is incomplete.",
+        "Before asking the repository owner for a document, re-check the official source, manifests, declared equivalents, current uploads and equivalent/newer versions. Do not request documents merely because a wiki page is incomplete.",
         "",
         "## Audit summary",
         "",
         f"- Archived by document manifest: {counts.get('archived_manifest', 0)}",
+        f"- Archived through verified official equivalence: {counts.get('archived_equivalent', 0)}",
         f"- Explicit source archive metadata: {counts.get('explicit_archive', 0)}",
         f"- Explicit external-only decisions: {counts.get('external_only', 0)}",
+        f"- Superseded-only sources kept out of auto-request: {counts.get('superseded_only', 0)}",
         f"- Outside conservative auto-request scope: {counts.get('not_target', 0)}",
         f"- Missing primary originals requiring review: {len(missing)}",
         "",
@@ -212,7 +322,10 @@ def render_missing_report(rows: list[AuditRow]) -> str:
                 "|---|---|---|---|---|---|---|",
             ]
         )
-        for row in sorted(missing, key=lambda item: (item.authority.casefold(), item.publication_date, item.source_id)):
+        for row in sorted(
+            missing,
+            key=lambda item: (item.authority.casefold(), item.publication_date, item.source_id),
+        ):
             instruments = ", ".join(row.instruments) or "-"
             lines.append(
                 "| "
@@ -234,6 +347,8 @@ def render_missing_report(rows: list[AuditRow]) -> str:
     lines.extend(
         [
             "## Interpretation",
+            "",
+            "A SIDOF/DOF publication event and an official consolidated or SAT/SE copy can serve different provenance roles. Declared equivalence means the repository has verified official bytes for the same bounded material; it never replaces the publication event as the authority for chronology or legal effect.",
             "",
             "The absence of a preserved copy does not mean the official source is invalid, and preservation does not prove that a source is legally current. Those decisions remain governed by the separate legal-review and temporal-instrument model.",
             "",
