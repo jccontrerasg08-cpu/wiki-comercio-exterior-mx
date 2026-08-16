@@ -33,18 +33,6 @@ jobs:
       - name: Install documentation dependencies
         run: python -m pip install -r requirements-docs.txt
 
-      - name: Materialize scoped RGCE annex metadata
-        run: python -m scripts.rgce_annexes --materialize
-
-      - name: Upload RGCE materialized metadata
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
-        with:
-          name: rgce-annex-materialized-${{ github.run_id }}
-          path: |
-            sources/instruments.yaml
-            sources/page_metadata.yaml
-          retention-days: 1
-
       - name: Generate knowledge map for drift detection
         run: python -m scripts.build_knowledge_map
 
