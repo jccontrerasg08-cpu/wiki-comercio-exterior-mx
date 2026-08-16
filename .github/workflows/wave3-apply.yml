@@ -76,6 +76,26 @@ jobs:
           assert "modificacion anexo 30 de las rgce 2026" not in sat_text
           print("Official 2026 Annex 24/30 preflight verified")
 
+      - name: Align one-shot migration with current nested navigation
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path("scripts/_wave3_apply.py")
+          text = path.read_text(encoding="utf-8")
+          for name in ("old_nav", "new_nav"):
+              prefix = f'{name} = """'
+              start = text.index(prefix) + len(prefix)
+              end = text.index('"""', start)
+              block = text[start:end]
+              if block.startswith("- Programas y tratados:\n"):
+                  block = "".join(
+                      ("    " + line) if line.strip() else line
+                      for line in block.splitlines(keepends=True)
+                  )
+                  text = text[:start] + block + text[end:]
+          path.write_text(text, encoding="utf-8")
+
       - name: Apply Wave 3 production edits
         run: python scripts/_wave3_apply.py
 
