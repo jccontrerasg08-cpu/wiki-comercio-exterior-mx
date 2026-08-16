@@ -3,7 +3,13 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import yaml
+
 from scripts.archive_metadata import archive_label, validate_archive
+from scripts.schema_validation import load_local_schema, validate_instance
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class ArchiveMetadataTests(unittest.TestCase):
@@ -97,6 +103,62 @@ class ArchiveMetadataTests(unittest.TestCase):
 
     def test_unclassified_source_has_explicit_label(self):
         self.assertEqual(archive_label({"id": "mx_test"}), "unclassified")
+
+    def test_source_schema_accepts_release_asset_archive(self):
+        schema = load_local_schema(ROOT, "source.schema.json")
+        findings = validate_instance(
+            {
+                "id": "mx_test",
+                "jurisdiction": "MEX",
+                "title": "Test source",
+                "url": "https://example.gob.mx/test.pdf",
+                "authority": "Example authority",
+                "evidence_class": "primary_legal",
+                "allowed_hosts": ["example.gob.mx"],
+                "media_types": ["application/pdf"],
+                "harvest": False,
+                "archive": {
+                    "status": "release_asset",
+                    "release_tag": "sources-2026-08-15",
+                    "asset_name": "test.pdf",
+                    "sha256": "a" * 64,
+                    "size_bytes": 123,
+                    "mime_type": "application/pdf",
+                    "captured_at": "2026-08-15",
+                },
+            },
+            schema,
+            "source",
+        )
+        self.assertEqual(findings, [])
+
+    def test_source_schema_rejects_external_only_without_reason(self):
+        schema = load_local_schema(ROOT, "source.schema.json")
+        findings = validate_instance(
+            {
+                "id": "mx_test",
+                "jurisdiction": "MEX",
+                "title": "Test source",
+                "url": "https://example.gob.mx/portal",
+                "authority": "Example authority",
+                "evidence_class": "official_operational",
+                "allowed_hosts": ["example.gob.mx"],
+                "media_types": ["text/html"],
+                "harvest": False,
+                "archive": {"status": "external_only"},
+            },
+            schema,
+            "source",
+        )
+        self.assertTrue(any(finding.path.startswith("source.archive") for finding in findings))
+
+    def test_all_declared_registry_archive_blocks_are_valid(self):
+        data = yaml.safe_load((ROOT / "sources" / "registry.yaml").read_text(encoding="utf-8"))
+        errors: list[str] = []
+        for source in data["sources"]:
+            if isinstance(source, dict) and "archive" in source:
+                errors.extend(validate_archive(source, ROOT))
+        self.assertEqual(errors, [])
 
 
 if __name__ == "__main__":
