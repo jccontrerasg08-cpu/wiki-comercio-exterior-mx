@@ -30,6 +30,18 @@ An exception requires a documented official API or downloadable dataset, terms t
 - Project explainers are non-authoritative and must paraphrase, cite official sources, state a review date, and separate facts from operational guidance.
 - Superseded material may remain for historical retrieval but must be labeled.
 
+## Reviewing Markdown on GitHub
+
+Use GitHub's **Rendered prose** diff when a Markdown change is mainly editorial. Switch back to the source diff when reviewing front matter, links, generated sections, or code fences.
+
+- Prefer **relative links** for references to other files in this repository so forks and branches remain navigable.
+- Use **permanent links** to an exact commit when a review comment cites code or repository evidence that must not move with `main`.
+- Use the PR Files changed and Commits views to keep review scoped to the relevant source family or capability.
+- Use a Markdown **task list** for multi-step verification when the PR needs explicit evidence before merge.
+- A green CI check proves the tested repository behavior. It does not by itself prove that a legal source is current.
+
+These practices retain the useful review ergonomics popularized by GitHub cheat sheets while avoiding legacy Travis CI, Jekyll-only, or `hub`-specific workflows that do not belong to this repository.
+
 ## Required local verification
 
 ```bash
@@ -37,9 +49,14 @@ python -m unittest discover -s tests -v
 python -m scripts.validate_repository
 python -m scripts.build_catalog --check
 python -m scripts.page_metadata --check
+python -m scripts.coverage_report --check
+python -m scripts.build_knowledge_map --check
 python -m scripts.temporal_graph --check
 python -m scripts.rag_eval --check
 python -m mkdocs build --strict
+python -m scripts.verify_site site
+python -m mkdocs build --strict -f mkdocs.offline.yml -d site-offline
+python -m scripts.verify_offline_site site-offline
 git diff --check
 ```
 

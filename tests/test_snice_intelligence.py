@@ -77,6 +77,27 @@ class SniceIndexTests(unittest.TestCase):
         self.assertEqual(entries[1].bytes, 187_392)
         self.assertTrue(entries[2].source_url.endswith("ACUSE-3617-ACUSE_20260813-20260813.pdf"))
 
+    def test_parses_fancyindex_table_entries(self) -> None:
+        html = """
+        <html><body><table>
+          <tr>
+            <td><a href="VALIDADOS-ETIQUETADO_20260814-20260814.xlsx">VALIDADOS-ETIQUETADO_20260814-20260814.xlsx</a></td>
+            <td>13-Aug-2026 22:17</td>
+            <td>1.5M</td>
+          </tr>
+        </table></body></html>
+        """
+
+        entries = parse_index_html(
+            html,
+            base_url="https://www.snice.gob.mx/~oracle/SNICE_DOCS/",
+            discovered_at=datetime(2026, 8, 15, 18, 0, tzinfo=timezone.utc),
+        )
+
+        self.assertEqual(len(entries), 1)
+        self.assertEqual(entries[0].family, "VALIDADOS")
+        self.assertEqual(entries[0].bytes, 1_572_864)
+
 
 class SniceSeriesTests(unittest.TestCase):
     def _docs(self):
