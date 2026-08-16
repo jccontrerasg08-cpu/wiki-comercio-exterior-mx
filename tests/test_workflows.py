@@ -72,6 +72,13 @@ class WorkflowPolicyTests(unittest.TestCase):
         self.assertIn(".snice-state.json", text)
         self.assertIn("steps.snice.outcome == 'failure'", text)
 
+    def test_archive_and_cross_repo_gates_run_in_ci_and_pages(self):
+        for workflow_name in ("ci.yml", "pages.yml"):
+            text = (WORKFLOWS / workflow_name).read_text(encoding="utf-8")
+            self.assertIn("python -m scripts.validate_data_contracts", text, workflow_name)
+            self.assertIn("python -m scripts.archive_audit --check", text, workflow_name)
+            self.assertNotIn("python -m scripts.archive_audit\n", text, workflow_name)
+
     def test_coverage_gate_runs_after_provenance_in_ci_and_pages(self):
         for workflow_name in ("ci.yml", "pages.yml"):
             text = (WORKFLOWS / workflow_name).read_text(encoding="utf-8")
@@ -88,6 +95,8 @@ class WorkflowPolicyTests(unittest.TestCase):
         for command in (
             "unittest discover",
             "scripts.validate_repository",
+            "scripts.validate_data_contracts",
+            "scripts.archive_audit --check",
             "scripts.build_catalog --check",
             "scripts.page_metadata --check",
             "scripts.coverage_report --check",
