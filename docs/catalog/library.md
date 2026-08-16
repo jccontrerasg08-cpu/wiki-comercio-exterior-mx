@@ -6,11 +6,25 @@ This library records how official sources are preserved for reproducibility and 
 
 Large originals may be stored as GitHub Release assets. Interactive or redundant sources may remain external-only when the reason is documented.
 
-## Local Git originals
+## Original-source release bundles
+
+The manifest layer preserves document-level SHA256 values. These release assets preserve the corresponding original bytes in domain bundles outside Git history.
+
+| Snapshot | Domains | Release asset | Bytes | SHA256 |
+|---|---|---|---:|---|
+| 2026-08-13 | diputados | [originals-diputados.zip](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/originals-2026.08.13/originals-diputados.zip) | 26301138 | `9ce0958107bab45858a29a57fb41e7007f64cc19594a7762df2d22d20ac7eff4` |
+| 2026-08-13 | sat | [originals-sat.zip](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/originals-2026.08.13/originals-sat.zip) | 120079036 | `2845d93953e8a242b48d07aa960895116364903ba5dd173aa5ad833e735f7fef` |
+| 2026-08-13 | se | [originals-se.zip](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/originals-2026.08.13/originals-se.zip) | 17565588 | `0a8c15e05b671e7be7f55868e5f4354d5989ff67f8d303235029e6f7e04a1a55` |
+| 2026-08-13 | sidof | [originals-sidof.zip](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/originals-2026.08.13/originals-sidof.zip) | 5290833 | `a5da2087ef4ce139e2df8e7e50db115f4e0334e5febf3de002ac44da20d302ae` |
+| 2026-08-13 | snice, tigie, wto | [originals-snice-tigie-wto.zip](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/originals-2026.08.13/originals-snice-tigie-wto.zip) | 11496458 | `d40f28c691c757ffd4fbf3391da4c37e4c55b5425a5298563db89fadb8057e8a` |
+| 2026-08-13 | tlc, tmec | [originals-tlc-tmec.zip](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/originals-2026.08.13/originals-tlc-tmec.zip) | 44401414 | `b01939a33b803fe7e237b77c6c4fcd97c7f35f12164cb0fa09db0299a7a4a170` |
+| 2026-08-13 | vucem | [originals-vucem.zip](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/originals-2026.08.13/originals-vucem.zip) | 41980421 | `558bb248733eb14c704af76db857eecdc7ec445a5f803dd22bdfa2fed49c6fc1` |
+
+## Source-specific Local Git originals
 
 No sources are classified in this archive state yet.
 
-## GitHub Release assets
+## Source-specific GitHub Release assets
 
 No sources are classified in this archive state yet.
 
@@ -20,4 +34,4 @@ No sources are classified in this archive state yet.
 
 ## Unclassified sources
 
-Sources without an explicit `archive` block remain available in the canonical source registry but are intentionally omitted from the archive tables until their storage state has been verified.
+Sources without an explicit `archive` block remain available in the canonical source registry but are intentionally omitted from the source-specific archive tables until their storage state has been verified. Existing document manifests and release bundles remain authoritative for archived bytes.
