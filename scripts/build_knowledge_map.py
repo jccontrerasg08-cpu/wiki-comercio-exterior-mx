@@ -87,6 +87,56 @@ def build_index(root: Path) -> list[dict[str, object]]:
     return sorted(records, key=lambda item: (str(item["topic"]), str(item["title"]), str(item["path"])))
 
 
+def build_machine_index(root: Path) -> dict[str, object]:
+    """Normalize page, source, and instrument nodes for lightweight consumers."""
+
+    records = build_index(root)
+    instruments = _instrument_index(root)
+    pages: list[dict[str, object]] = []
+    source_catalog: dict[str, dict[str, str]] = {}
+    used_instruments: set[str] = set()
+
+    for record in records:
+        source_ids: list[str] = []
+        for source in record["sources"]:
+            source_id = str(source["id"])
+            source_ids.append(source_id)
+            source_catalog[source_id] = {
+                "authority": str(source["authority"]),
+                "title": str(source["title"]),
+                "url": str(source["url"]),
+            }
+        instrument_ids = [str(item) for item in record["instrument_ids"]]
+        used_instruments.update(instrument_ids)
+        pages.append(
+            {
+                "path": record["path"],
+                "title": record["title"],
+                "topic": record["topic"],
+                "source_status": record["source_status"],
+                "legal_review_status": record["legal_review_status"],
+                "current_through": record["current_through"],
+                "instrument_ids": instrument_ids,
+                "source_ids": source_ids,
+            }
+        )
+
+    instrument_catalog = {
+        instrument_id: {
+            "title": _text(instruments[instrument_id].get("title")),
+            "status": _text(instruments[instrument_id].get("status")),
+            "current_through": _text(instruments[instrument_id].get("current_through")),
+        }
+        for instrument_id in sorted(used_instruments)
+    }
+    return {
+        "schema_version": 1,
+        "pages": pages,
+        "sources": {key: source_catalog[key] for key in sorted(source_catalog)},
+        "instruments": instrument_catalog,
+    }
+
+
 def _escape(value: object) -> str:
     return _text(value).replace("|", "\\|").replace("\n", " ")
 
@@ -198,7 +248,7 @@ def render_knowledge_map(root: Path) -> str:
             "",
             "## Uso por herramientas",
             "",
-            "El detalle completo, incluidas autoridades y URLs oficiales, está en [`knowledge-index.json`](../assets/data/knowledge-index.json). Un consumidor puede usarlo para navegación o para preparar contexto, pero las respuestas sobre vigencia deben seguir pasando por los gates temporales y de revisión del repositorio.",
+            "El detalle normalizado, incluidas autoridades y URLs oficiales, está en [`knowledge-index.json`](../assets/data/knowledge-index.json). Un consumidor puede usarlo para navegación o para preparar contexto, pero las respuestas sobre vigencia deben seguir pasando por los gates temporales y de revisión del repositorio.",
             "",
         ]
     )
@@ -206,10 +256,10 @@ def render_knowledge_map(root: Path) -> str:
 
 
 def render_knowledge_json(root: Path) -> str:
-    """Render a compact, stable machine index."""
+    """Render a compact normalized machine index."""
 
     return json.dumps(
-        build_index(root),
+        build_machine_index(root),
         ensure_ascii=False,
         sort_keys=True,
         separators=(",", ":"),
