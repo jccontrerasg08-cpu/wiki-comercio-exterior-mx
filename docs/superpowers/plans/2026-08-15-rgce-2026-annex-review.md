@@ -17,13 +17,13 @@ Tests must require:
 - unique official title and corpus path;
 - publication source IDs match the official publication blocks;
 - only 5, 22 and 29 include `mx_sidof_rgce_2026_mod1_anexos` as a published modification;
-- Anexo 2 has no published modification entry;
+- Anexos 1 and 2 have no published modification entry despite later anticipated versions in SAT;
 - `mx_sidof_rgce_2026_mod1_anexos` has temporal event `2026-05-20`;
 - all 30 individual digests and two composite digests have current source, partial extraction, reviewed legal status, current corpus, and `current_through: 2026-05-20`;
 - every individual digest contains a source/currentness block and an explicit non-exhaustive disclosure;
 - forbidden stale phrases do not appear.
 
-Open a draft PR with the test-only RED state and confirm CI fails for missing manifest/status/content, not syntax.
+The test-only RED state must fail for missing manifest/status/content, not syntax.
 
 ## Task 2 — add the canonical editorial annex manifest
 
@@ -48,7 +48,7 @@ Official title list follows the SAT 2026 index. Publication mapping:
 - A21–30 -> `mx_sidof_rgce_2026_anexos_21_30`
 - A5/A22/A29 additionally -> `mx_sidof_rgce_2026_mod1_anexos`
 
-`reviewed_through` is `2026-05-20` for every record because the review explicitly checks the first modification’s scope and confirms whether the annex was affected.
+`reviewed_through` is `2026-05-20` for every record because the review explicitly checks the first modification’s scope and confirms whether the annex was affected. Later anticipated SAT files are tracked in digest text but do not promote legal currentness.
 
 ## Task 3 — validator/helper
 
@@ -56,12 +56,12 @@ Create `scripts/rgce_annexes.py`.
 
 Responsibilities:
 
-- load/validate manifest shape without new dependencies;
+- load/validate manifest shape without new runtime dependencies;
 - verify number coverage and uniqueness;
 - verify source IDs exist in `sources/registry.yaml`;
 - verify corpus paths exist;
 - verify modification set is exactly {5, 22, 29};
-- cross-check page metadata status and source IDs;
+- cross-check page metadata status;
 - emit deterministic findings;
 - support `--check`.
 
@@ -92,9 +92,9 @@ Each file contains:
 
 Special corrections:
 
-- A1: remove nonexistent published/anticipated “1ra modification” claim from local digest unless it is actually present in SAT’s current anticipated section at the cutoff;
-- A2: record that an anticipated future modification exists but is not DOF-published/current law;
-- A5: describe 2026-05-20 first modification; do not call its prior anticipated versions a second modification;
+- A1: record the third anticipated version of its first modification shown by SAT on 2026-07-31, but keep it explicitly non-DOF/non-current;
+- A2: record the second anticipated version of its first modification shown by SAT on 2026-06-04, also non-DOF/non-current;
+- A5: describe the 2026-05-20 first modification; do not call prior anticipated versions a second modification;
 - A6: use official title “Reglas de operación de clasificación arancelaria”, not an invented council title.
 
 ## Task 6 — rewrite Anexos 11–20
@@ -111,6 +111,8 @@ Use exact SAT official titles:
 18. Mercancías que no pueden ser objeto de depósito fiscal
 19. Datos inexactos, falsos u omitidos para efectos del art. 184 fr. III LA
 20. Mercancías sujetas a declaración de marcas nominativas o mixtas
+
+For A13 retain verified currentness facts that already have regression coverage: factor `1.1321` / `13.21%`, and original RGCE rule 1.8.3 prevalidation amount `$350.00 = $330.00 + $20.00`; do not attribute that amount to the First RMRGCE.
 
 Do not retain absolute decision trees that infer legal consequences beyond each annex.
 
@@ -129,7 +131,7 @@ Special handling:
 
 `anexos-formatos-tramites.md`:
 - map A1/A2 publication state;
-- explain the anticipated A2 distinction;
+- explain both anticipated/non-DOF distinctions;
 - link individual digests.
 
 `anexos-riesgo-logistica.md`:
@@ -151,17 +153,18 @@ Preserve/increase source IDs; never remove a published modification from A5/A22/
 
 ## Task 10 — RAG and coverage
 
-Add representative evals for A1, A2, A5, A13, A22, A29 and A30.
+Add representative evals for A1, A2, A5, A13, A22, A24, A29 and A30.
 
-Regenerate:
+Regenerate when required by deterministic drift gates:
 
 - `docs/status/corpus-coverage.md`
 - `reports/corpus-coverage.json`
-- `docs/catalog/registry.md` if temporal/source rendering changes.
+- knowledge-map outputs
+- catalog output if temporal/source rendering changes.
 
 Update `coverage-policy.yaml` only as a ratchet improvement: raise minimum reviewed/current metrics and lower maximum pending/non-current metrics to the newly verified baseline. Never relax a threshold.
 
-## Task 11 — full verification and merge
+## Task 11 — full verification and handoff
 
 Final gates:
 
@@ -175,18 +178,12 @@ Final gates:
 8. `scripts.rag_eval --check`;
 9. `mkdocs build --strict`;
 10. `scripts.verify_site site`;
-11. Dependency Review;
-12. fresh PR CI on exact head;
-13. squash merge with expected SHA;
-14. main CI and Pages green on merge SHA.
+11. offline build and verifier inherited from current main;
+12. Dependency Review / CodeQL;
+13. fresh PR CI on exact head.
 
-## Task 12 — handoff to PR B
+Merge remains a separate maintainer decision after the final SHA is green.
 
-After merge, create a fresh branch from main for:
+## Task 12 — handoff to separate work
 
-- other corpus digests;
-- 19 wiki pages;
-- source/instrument refs for authored/synthetic material;
-- selected non-overlapping fixes salvaged from closed PR #35.
-
-Do not carry PR A’s temporary migration scaffolding into main.
+After an authorized merge, other corpus digests and remaining wiki-page work should start from updated main. The archive/explorer work in PR #38 remains a separate PR and must not be folded into this legal-corpus branch.
