@@ -17,11 +17,7 @@ class DocsEngineCompatibilityTests(unittest.TestCase):
 
     def test_legacy_redirects_remain_a_production_contract(self):
         config = yaml.safe_load((ROOT / "mkdocs.yml").read_text(encoding="utf-8"))
-        redirects = next(
-            item["redirects"]
-            for item in config["plugins"]
-            if isinstance(item, dict) and "redirects" in item
-        )
+        redirects = config["plugins"]["redirects"]
         redirect_maps = redirects["redirect_maps"]
         self.assertGreaterEqual(len(redirect_maps), 20)
         self.assertEqual(

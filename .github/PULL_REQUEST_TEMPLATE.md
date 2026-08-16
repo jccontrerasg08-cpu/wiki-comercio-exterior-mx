@@ -13,9 +13,10 @@
 ## Verification
 
 - [ ] Full unit-test discovery passes
-- [ ] Repository, temporal graph, page metadata, generated catalog, and RAG checks pass
-- [ ] MkDocs strict build passes
-- [ ] Generated catalog was updated
+- [ ] Repository, temporal graph, page metadata, corpus coverage, generated catalog, knowledge map, and RAG checks pass
+- [ ] MkDocs strict web build and `scripts.verify_site` pass
+- [ ] Offline MkDocs build and `scripts.verify_offline_site` pass when documentation/runtime behavior changes
+- [ ] Generated outputs were updated where applicable
 - [ ] No official binary, secret, PII, ICC rule text, WCO explanatory note, or scraped interactive portal content was committed
 - [ ] Copyright and redistribution boundaries were reviewed
 

@@ -33,8 +33,14 @@ jobs:
       - name: Install documentation dependencies
         run: python -m pip install -r requirements-docs.txt
 
+      - name: Generate knowledge map for drift detection
+        run: python -m scripts.build_knowledge_map
+
       - name: Run repository tests
         run: python -m unittest discover -s tests -v
+
+      - name: Check committed knowledge map
+        run: git diff --exit-code -- docs/explore/knowledge-map.md docs/assets/data/knowledge-index.json
 
       - name: Validate repository integrity
         run: python -m scripts.validate_repository
@@ -48,6 +54,9 @@ jobs:
       - name: Check corpus coverage dashboard
         run: python -m scripts.coverage_report --check
 
+      - name: Check generated knowledge map
+        run: python -m scripts.build_knowledge_map --check
+
       - name: Check temporal instrument graph
         run: python -m scripts.temporal_graph --check
 
@@ -59,3 +68,9 @@ jobs:
 
       - name: Verify legacy public routes
         run: python -m scripts.verify_site site
+
+      - name: Build offline documentation
+        run: python -m mkdocs build --strict -f mkdocs.offline.yml -d site-offline
+
+      - name: Verify offline documentation
+        run: python -m scripts.verify_offline_site site-offline
