@@ -28,6 +28,15 @@ def words(text: str) -> int:
     return len(re.findall(r"\b[\wÁÉÍÓÚÜÑáéíóúüñ-]+\b", body))
 
 
+def sources_section(text: str) -> str:
+    match = re.search(
+        r"^## Fuentes(?: oficiales(?: y de referencia| y multilaterales)?| de referencia)?\s*$\n(?P<section>.*?)(?=^## |\Z)",
+        text,
+        flags=re.M | re.S,
+    )
+    return match.group("section") if match else ""
+
+
 class EditorialQualityTests(unittest.TestCase):
     def test_every_public_wiki_page_has_specific_description(self):
         descriptions = {}
@@ -50,8 +59,10 @@ class EditorialQualityTests(unittest.TestCase):
             if path in exceptions:
                 continue
             text = read(path)
-            if not re.search(r"^## Fuentes(?: oficiales| de referencia| oficiales y multilaterales)?\b", text, re.M):
+            if not re.search(r"^## Fuentes(?: oficiales(?: y de referencia| y multilaterales)?| de referencia)?\s*$", text, re.M):
                 failures.append(f"{path.relative_to(ROOT)}: sources")
+            elif not re.search(r"\]\(https?://", sources_section(text)):
+                failures.append(f"{path.relative_to(ROOT)}: direct source URL")
             if "## Ver también" not in text:
                 failures.append(f"{path.relative_to(ROOT)}: related")
         self.assertEqual([], failures)

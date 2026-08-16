@@ -7,7 +7,7 @@ description: "Reglas y criterios de la Secretaría de Economía: acuerdo base, m
 
 **Vigencia revisada hasta:** 30-05-2026. **Autoridad:** no autoritativa.
 
-El acuerdo base se publicó el 9 de mayo de 2022 (`mx_sidof_reglas_se_2022`). El grafo registra modificaciones del 2 de septiembre de 2025 y del 12 de febrero, 2 de abril, 28 y 29 de mayo de 2026. La modificación más reciente registrada es `mx_sidof_reglas_se_mod_20260529`.
+El acuerdo base se publicó el 9 de mayo de 2022.[1] El grafo registra modificaciones del 2 de septiembre de 2025 y del 12 de febrero, 2 de abril, 28 y 29 de mayo de 2026. La modificación más reciente registrada para esta página es la del 29 de mayo de 2026.[2]
 
 ## Qué regulan
 
@@ -23,7 +23,13 @@ Usa la [Biblioteca Jurídica SNICE](https://www.snice.gob.mx/cs/avi/snice/biblio
 
 ## Fuentes
 
-Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. Para seguirlos hasta su URL y estado de procedencia, consulta el [catálogo reproducible de fuentes](../../catalog/registry.md).
+[1] [SIDOF, *Reglas y criterios de comercio exterior de la Secretaría de Economía*](https://sidof.segob.gob.mx/notas/5651333), publicación base del 9 de mayo de 2022.
+
+[2] [SIDOF, modificación de 29 de mayo de 2026](https://sidof.segob.gob.mx/notas/5788992), revisión más reciente registrada; verificar anexos, transitorios y fecha efectiva antes de aplicarla.
+
+[3] [SNICE, Biblioteca Jurídica](https://www.snice.gob.mx/cs/avi/snice/biblioteca.juridica.html), herramienta para navegación que no sustituye el acto publicado.
+
+El [catálogo reproducible de fuentes](../../catalog/registry.md) conserva identificadores y estado de procedencia a nivel de repositorio.
 
 ## Ver también
 
