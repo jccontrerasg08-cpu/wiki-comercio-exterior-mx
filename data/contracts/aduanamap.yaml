@@ -1,0 +1,32 @@
+contract_version: 1
+canonical_repository: jccontrerasg08-cpu/aduanamap-mx
+reviewed_at: 2026-08-15
+visibility_at_review: private
+purpose: >-
+  Define the reproducible boundary between the legal/documentary wiki and the
+  canonical geospatial datasets maintained by AduanaMap MX. The wiki does not
+  vendor a manually maintained duplicate of canonical geometry.
+datasets:
+  - id: world_countries_50m
+    canonical_path: data/geojson/countries-50m.geojson
+    generator_path: tools/map-build/build-countries.mjs
+    observed_commit: 26cca3462b7d66a558b3595b1b9cffcaf62684c0
+    source: Natural Earth 1:50m
+    srid: 4326
+    geometry_type: MultiPolygon
+    schema_fields:
+      - iso2
+      - iso3
+      - name_es
+      - name_en
+      - region
+    ownership: canonical_geospatial
+    consumption:
+      mode: contract_only_until_public_artifact
+      public_artifact: null
+      fallback: text_links
+      embed_ready: false
+    notes: >-
+      AduanaMap versions and generates this dataset deterministically. The wiki
+      may link to or consume a future immutable/checksum-verifiable public
+      artifact, but it must not maintain a divergent manual GeoJSON copy.
