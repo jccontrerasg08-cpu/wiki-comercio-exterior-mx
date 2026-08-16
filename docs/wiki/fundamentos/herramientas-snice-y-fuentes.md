@@ -38,6 +38,16 @@ El enlace **Mapa de RRNAs y As** dirige a la Base Única LIGIE en formato `.xlsb
 
 **Fuentes estadísticas de Comercio Exterior** agrupa BANXICO, INEGI y fuentes internacionales como Trade Map y ComtradePlus. La página explica que el Cubo de BANXICO permite análisis mensual por país, sección, capítulo, partida, subpartida y fracción.[9] Es un recurso de análisis, no de determinación jurídica. **MoCA Mx** se especializa en comercio de productos siderúrgicos: publica categorías, productos, flujos y origen/destino, con actualización mensual y un desfase de dos meses; declara que su contenido es exclusivamente informativo y estadístico.[10] Por ello, MoCA no prueba la clasificación, el alcance de una cuota compensatoria, un aviso automático o una tasa de acero.
 
+## Calculadoras, clasificadores y consultas operativas
+
+La **Calculadora de Origen** de SNICE es un apoyo específico para reglas de origen del T-MEC. Su página indica que un cuestionario genera un reporte sobre origen y arancel para importaciones a Estados Unidos o Canadá; solicita datos de la mercancía —valor de transacción, costo neto, precio franco fábrica, descripción y fracción— y de los insumos, como valor, país de origen y fracción.[15] Antes de usar un reporte, confirma la fracción, la regla de origen específica, el método de cálculo aplicable, la versión del tratado y los soportes de producción/costo. Un resultado de cuestionario no sustituye certificación de origen, expediente de insumos o responsabilidad del certificador.
+
+El **Buscador de fracciones arancelarias** de VUCEM se presenta como ruta oficial de búsqueda; durante la revisión, la página de entrada mostró “Cargando clasificador” y redirigió a una aplicación cuya extracción sólo expuso búsqueda y ayuda.[16] SNICE enlaza **Mi Fracción Arancelaria** como una aproximación basada en características de producto, pero su ruta cargó vacía en Chrome durante esta auditoría.[15] Ambos recursos son útiles para iniciar hipótesis; ninguno convierte por sí solo una coincidencia textual o una aproximación en clasificación jurídica. Para cerrar la clasificación conserva ficha técnica, fotografías cuando aporten hecho técnico, composición, uso, presentación, reglas/notas aplicables, texto vigente y razonamiento.
+
+La ruta de **Calculadora de Aranceles o Contribuciones** de VUCEM se publicó como herramienta oficial, pero el contenido recuperado el 2026-08-16 muestra “en construcción”.[17] La wiki no presenta una fórmula ni recomienda usarla para estimar un pago actual. Para una estimación reproducible parte de fracción, régimen, valor en aduana, fecha, origen, incrementables/disminuibles, contribución, exención o programa y fuente vigente; consulta después la guía de contribuciones y el instrumento aplicable.
+
+Las consultas de seguimiento responden preguntas distintas. **DODA** pide un número de integración y expone un estatus de pedimento.[18] La consulta rápida **SOIA/ANAM** explica que permite buscar por pedimento/aduana/año, VIN/año o contenedor/aduana/año, y devolver estatus, datos principales o último movimiento, según la entrada.[19] No introduzcas en documentos de ejemplo identificadores de terceros. En una operación propia, conserva el resultado con fecha y contexto, pero contrástalo con pedimento, acuse, documentos de transporte, evidencia de arribo o retorno y datos declarados: un estatus no reemplaza el expediente.
+
 ## Normatividad: localizar no equivale a concluir
 
 La **Biblioteca Jurídica** organiza Tratados y Acuerdos Internacionales, Códigos y Leyes, Reglamentos, Decretos, Acuerdos, Resoluciones y Reglas.[11] Es la ruta adecuada para descubrir el tipo de instrumento, pero una conclusión exige abrir el texto, confirmar fecha de publicación y entrada en vigor, leer transitorios y ubicar el supuesto concreto. Cuando exista una versión consolidada oficial, también debe contrastarse contra eventos posteriores.
@@ -56,6 +66,9 @@ Cuando uses un recurso SNICE, conserva una ficha breve. Debe responder qué preg
 | ¿Qué comportamiento tiene una fracción? | BANXICO, INEGI, MoCA o SIAVI histórico | Periodo, metodología, rezago y instrumento vigente separado | Consulta, período, filtros y fuente estadística. |
 | ¿Qué instrumento o antecedente buscar? | Biblioteca Jurídica, Históricos u oficio | Texto oficial, fecha efectiva, transitorios y alcance | URL, versión, publicación y pasaje/supuesto usado. |
 | ¿Qué requisito debe cumplir una operación? | Base Única, Mapa RRNA, LIGIE o micrositio de medida | Acuerdo, anexo, resolución, trámite, régimen y fecha | Fracción, instrumento, documento, folio/acuse y pedimento. |
+| ¿Puede obtenerse una preferencia T-MEC? | Calculadora de Origen SNICE | Regla específica, clasificación, método, versión del tratado e insumos | Reporte, BOM/costos, regla usada y soporte de origen. |
+| ¿Qué fracción es una hipótesis inicial? | Clasificador VUCEM o Mi Fracción Arancelaria | Ficha técnica, reglas/notas, texto vigente y razonamiento | Consulta fechada y expediente de clasificación. |
+| ¿Qué revela una consulta de seguimiento? | DODA o SOIA/ANAM | Pedimento, acuse, transporte/arribo y datos declarados | Captura o resultado fechado, identificador propio y expediente relacionado. |
 
 ## Fuentes oficiales y de referencia
 
@@ -86,6 +99,16 @@ Cuando uses un recurso SNICE, conserva una ficha breve. Debe responder qué preg
 [13] [SNICE, *Resoluciones Anticipadas*](https://www.snice.gob.mx/cs/avi/snice/normatividad.res.anticip.html), publicaciones de oficios de la DGFCCE.
 
 [14] [SNICE, *Aviso de Disponibilidad*](https://www.snice.gob.mx/cs/avi/snice/aviso.disponibilidad.html), archivo administrativo con fecha de actualización.
+
+[15] [SNICE, *Calculadora de Origen*](https://www.snice.gob.mx/cs/avi/snice/hce.calc.origen2020.html), cuestionario y reportes orientativos de reglas de origen T-MEC; revisar manual, glosario y regla específica.
+
+[16] [VUCEM, *Buscador de fracciones arancelarias*](https://www.ventanillaunica.gob.mx/vucem/Clasificador.html), ruta oficial de acceso al clasificador; disponibilidad dinámica observada el 2026-08-16.
+
+[17] [VUCEM, *Calculadora de Aranceles*](https://www.ventanillaunica.gob.mx/vucem/calculadora.html), contenido publicado como “en construcción” al 2026-08-16.
+
+[18] [VUCEM, *Estatus de pedimentos DODA*](https://www.ventanillaunica.gob.mx/vucem/doda.html), consulta por número de integración; no sustituye el expediente documental.
+
+[19] [ANAM, *Consulta Rápida de Pedimentos de Vehículos y Contenedores*](https://www.anam.gob.mx/consulta-rapida-de-pedimentos-de-vehiculos-y-contenedores/), descripción oficial de consultas SOIA por pedimento, VIN o contenedor.
 
 El [catálogo reproducible de fuentes](../../catalog/registry.md) conserva identificadores y estado de procedencia a nivel de repositorio.
 

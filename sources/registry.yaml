@@ -1473,3 +1473,69 @@ sources:
     harvest: false
     cadence_days: 30
     probe: *probe_html
+
+
+  - id: mx_snice_calculadora_origen
+    jurisdiction: MEX
+    title: SNICE Calculadora de Origen T-MEC
+    url: https://www.snice.gob.mx/cs/avi/snice/hce.calc.origen2020.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_vucem_calculadora_contribuciones
+    jurisdiction: MEX
+    title: VUCEM Calculadora de Aranceles o Contribuciones
+    url: https://www.ventanillaunica.gob.mx/vucem/calculadora.html
+    note_id: null
+    authority: VUCEM
+    evidence_class: official_administrative
+    allowed_hosts: [www.ventanillaunica.gob.mx, ventanillaunica.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_vucem_clasificador
+    jurisdiction: MEX
+    title: VUCEM Buscador de fracciones arancelarias
+    url: https://www.ventanillaunica.gob.mx/vucem/Clasificador.html
+    note_id: null
+    authority: VUCEM
+    evidence_class: official_administrative
+    allowed_hosts: [www.ventanillaunica.gob.mx, ventanillaunica.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_vucem_doda
+    jurisdiction: MEX
+    title: VUCEM Estatus de pedimentos DODA
+    url: https://www.ventanillaunica.gob.mx/vucem/doda.html
+    note_id: null
+    authority: VUCEM
+    evidence_class: official_administrative
+    allowed_hosts: [www.ventanillaunica.gob.mx, ventanillaunica.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_anam_soia_consulta_rapida
+    jurisdiction: MEX
+    title: ANAM Consulta Rapida de Pedimentos de Vehiculos y Contenedores SOIA
+    url: https://www.anam.gob.mx/consulta-rapida-de-pedimentos-de-vehiculos-y-contenedores/
+    note_id: null
+    authority: ANAM
+    evidence_class: official_administrative
+    allowed_hosts: [www.anam.gob.mx, anam.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html

@@ -17,7 +17,7 @@
 | Con instrumento referenciado | 76 (88.4%) |
 | Revisión jurídica `reviewed` | 29 (33.7%) |
 | Requieren atención | 64 |
-| Fuentes distintas referenciadas | 68 |
+| Fuentes distintas referenciadas | 73 |
 | Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección

@@ -644,7 +644,7 @@ pages:
     path: docs/wiki/fundamentos/herramientas-snice-y-fuentes.md
     title: Herramientas SNICE consulta normatividad y evidencia
     topic: fundamentos
-    source_ids: [mx_snice_aprende_importar, mx_snice_aprende_exportar, mx_snice_comercio_datos, mx_snice_siavi, mx_snice_fuentes_estadisticas, mx_snice_moca, mx_snice_biblioteca_juridica, mx_snice_historicos, mx_snice_resoluciones_anticipadas, mx_snice_aviso_disponibilidad]
+    source_ids: [mx_snice_aprende_importar, mx_snice_aprende_exportar, mx_snice_comercio_datos, mx_snice_siavi, mx_snice_fuentes_estadisticas, mx_snice_moca, mx_snice_biblioteca_juridica, mx_snice_historicos, mx_snice_resoluciones_anticipadas, mx_snice_aviso_disponibilidad, mx_snice_calculadora_origen, mx_vucem_calculadora_contribuciones, mx_vucem_clasificador, mx_vucem_doda, mx_anam_soia_consulta_rapida]
     instrument_ids: []
     current_through: 2026-08-16
     source_status: current

@@ -9,6 +9,7 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_gob_anam`<br>ANAM | MEX | official_operational | - | no | 90 | - | [open](https://anam.gob.mx/) |
+| `mx_anam_soia_consulta_rapida`<br>ANAM Consulta Rapida de Pedimentos de Vehiculos y Contenedores SOIA | MEX | official_administrative | - | no | 30 | - | [open](https://www.anam.gob.mx/consulta-rapida-de-pedimentos-de-vehiculos-y-contenedores/) |
 | `mx_anam_documentos_electronicos_pedimento`<br>ANAM Documentos electronicos o digitales anexos al pedimento de importacion | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/documentos-electronicos-o-digitales-que-se-deben-transmitir-como-anexos-al-pedimento-de-importacion/) |
 | `mx_anam_obligaciones_importadores`<br>ANAM Obligaciones de los importadores | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/obligaciones-de-los-importadores/) |
 
@@ -174,6 +175,7 @@ Transport availability is not a legal-status decision. Publication events are re
 | `mx_snice_aprende_exportar`<br>SNICE Aprende a Exportar | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.exportar.html) |
 | `mx_snice_aprende_importar`<br>SNICE Aprende a Importar | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.importar.html) |
 | `mx_snice_aviso_disponibilidad`<br>SNICE Aviso de Disponibilidad | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/aviso.disponibilidad.html) |
+| `mx_snice_calculadora_origen`<br>SNICE Calculadora de Origen T-MEC | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/hce.calc.origen2020.html) |
 | `mx_snice_cuotas`<br>SNICE cuotas compensatorias | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.cuotascomp.html) |
 | `mx_snice_comercio_datos`<br>SNICE Datos sobre Comercio Exterior | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comerciointernacional.html) |
 | `mx_snice_fuentes_estadisticas`<br>SNICE Fuentes estadisticas de Comercio Exterior | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/fuentesestadisticas.html) |
@@ -210,6 +212,9 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_vucem_portal`<br>Ventanilla Unica de Comercio Exterior Mexicana | MEX | official_operational | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/index.html) |
+| `mx_vucem_clasificador`<br>VUCEM Buscador de fracciones arancelarias | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/Clasificador.html) |
+| `mx_vucem_calculadora_contribuciones`<br>VUCEM Calculadora de Aranceles o Contribuciones | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/calculadora.html) |
+| `mx_vucem_doda`<br>VUCEM Estatus de pedimentos DODA | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/doda.html) |
 
 ## WCO
 
