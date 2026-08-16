@@ -78,6 +78,24 @@ class MkDocsUxTests(unittest.TestCase):
         self.assertIn("Estado del corpus", nav)
         self.assertIn("status/corpus-coverage.md", nav)
 
+    def test_explorer_and_document_library_are_discoverable(self):
+        nav = yaml.safe_dump(self.config["nav"], allow_unicode=True, sort_keys=False)
+        self.assertIn("Explorar", nav)
+        self.assertIn("explore/index.md", nav)
+        self.assertIn("Biblioteca de originales", nav)
+        self.assertIn("catalog/library.md", nav)
+        for label in (
+            "Aranceles",
+            "Marco jurídico",
+            "RGCE y anexos",
+            "Tratados y origen",
+            "Programas",
+            "RRNA y NOM",
+            "Aduanas y mapa",
+            "Fuentes oficiales",
+        ):
+            self.assertIn(label, nav)
+
     def test_motion_is_decorative_and_respects_reduced_motion(self):
         css = (ROOT / "docs" / "stylesheets" / "extra.css").read_text(encoding="utf-8")
         self.assertIn("@keyframes trade-route-flow", css)
