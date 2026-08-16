@@ -76,7 +76,7 @@ jobs:
           assert "modificacion anexo 30 de las rgce 2026" not in sat_text
           print("Official 2026 Annex 24/30 preflight verified")
 
-      - name: Align one-shot migration with current nested navigation
+      - name: Align one-shot migration with current repository contracts
         shell: python
         run: |
           from pathlib import Path
@@ -94,6 +94,15 @@ jobs:
                       for line in block.splitlines(keepends=True)
                   )
                   text = text[:start] + block + text[end:]
+
+          text = text.replace(
+              "Ser titular de un Programa IMMEX, por sí solo, **no significa que el SCCCyG aplique a toda operación**.",
+              "El SCCCyG **no aplica automáticamente** a toda empresa u operación IMMEX; ser titular de un Programa IMMEX, por sí solo, no determina su aplicación.",
+          )
+          text = text.replace(
+              "- [SNICE — Programa IMMEX](https://www.snice.gob.mx/cs/avi/snice/immex.html)\n",
+              "- Catálogo interno de fuentes: `docs/catalog/mexico/rgce.md`\n- [SNICE — Programa IMMEX](https://www.snice.gob.mx/cs/avi/snice/immex.html)\n",
+          )
           path.write_text(text, encoding="utf-8")
 
       - name: Apply Wave 3 production edits
