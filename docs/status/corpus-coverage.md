@@ -9,15 +9,15 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 85 |
-| Wiki | 42 |
+| Páginas gobernadas | 86 |
+| Wiki | 43 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 24 (28.2%) |
-| Con fuente referenciada | 79 (92.9%) |
-| Con instrumento referenciado | 76 (89.4%) |
-| Revisión jurídica `reviewed` | 28 (32.9%) |
-| Requieren atención | 63 |
-| Fuentes distintas referenciadas | 58 |
+| Elegibles por estado para recuperación vigente | 25 (29.1%) |
+| Con fuente referenciada | 80 (93.0%) |
+| Con instrumento referenciado | 76 (88.4%) |
+| Revisión jurídica `reviewed` | 29 (33.7%) |
+| Requieren atención | 64 |
+| Fuentes distintas referenciadas | 68 |
 | Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección
@@ -28,7 +28,7 @@
 | `clasificacion` | 3 | 0 | 0 | 3 |
 | `contribuciones` | 5 | 2 | 2 | 3 |
 | `corpus` | 43 | 2 | 2 | 43 |
-| `fundamentos` | 4 | 3 | 3 | 1 |
+| `fundamentos` | 5 | 4 | 4 | 2 |
 | `logistica` | 3 | 0 | 0 | 3 |
 | `operacion` | 2 | 2 | 2 | 0 |
 | `programas` | 8 | 2 | 6 | 6 |
@@ -41,7 +41,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `current` | 64 |
+| `current` | 65 |
 | `partial` | 20 |
 | `unknown` | 1 |
 
@@ -49,7 +49,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 43 |
+| `not_applicable` | 44 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -58,14 +58,14 @@
 |---|---:|
 | `not_applicable` | 1 |
 | `pending_review` | 56 |
-| `reviewed` | 28 |
+| `reviewed` | 29 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 43 |
+| `not_applicable` | 44 |
 | `partial` | 39 |
 | `stale` | 1 |
 
@@ -127,6 +127,7 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `docs/wiki/contribuciones/aranceles.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/contribuciones/cuotas-compensatorias.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/contribuciones/valor-en-aduana.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/fundamentos/herramientas-snice-y-fuentes.md` | `fundamentos` | `missing_instrument_reference` |
 | `docs/wiki/fundamentos/padron-importadores.md` | `fundamentos` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/index.md` | `wiki` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/incoterms.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |

@@ -1355,3 +1355,121 @@ sources:
     allowed_hosts: [www.wto.org, wto.org]
     media_types: [text/html]
     harvest: false
+
+
+  - id: mx_snice_aprende_importar
+    jurisdiction: MEX
+    title: SNICE Aprende a Importar
+    url: https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.importar.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_aprende_exportar
+    jurisdiction: MEX
+    title: SNICE Aprende a Exportar
+    url: https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.exportar.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_comercio_datos
+    jurisdiction: MEX
+    title: SNICE Datos sobre Comercio Exterior
+    url: https://www.snice.gob.mx/cs/avi/snice/comerciointernacional.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_siavi
+    jurisdiction: MEX
+    title: Sistema de Informacion Arancelaria Via Internet SIAVI
+    url: https://www.snice.gob.mx/cs/avi/snice/hce.siavi.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_fuentes_estadisticas
+    jurisdiction: MEX
+    title: SNICE Fuentes estadisticas de Comercio Exterior
+    url: https://www.snice.gob.mx/cs/avi/snice/fuentesestadisticas.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_moca
+    jurisdiction: MEX
+    title: MoCA Mx Monitor de Comercio de Acero en Mexico
+    url: https://www.snice.gob.mx/cs/avi/snice/mca.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_historicos
+    jurisdiction: MEX
+    title: SNICE Historicos de normatividad y actualidad
+    url: https://www.snice.gob.mx/cs/avi/snice/historicos.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_resoluciones_anticipadas
+    jurisdiction: MEX
+    title: SNICE Resoluciones anticipadas
+    url: https://www.snice.gob.mx/cs/avi/snice/normatividad.res.anticip.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
+  - id: mx_snice_aviso_disponibilidad
+    jurisdiction: MEX
+    title: SNICE Aviso de Disponibilidad
+    url: https://www.snice.gob.mx/cs/avi/snice/aviso.disponibilidad.html
+    note_id: null
+    authority: SNICE
+    evidence_class: official_administrative
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html

@@ -7,7 +7,7 @@ description: "Vista generada de páginas, fuentes, instrumentos y estado de revi
 
 Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml` y `sources/instruments.yaml`. Los estados describen **metadatos de revisión del repositorio**, no una opinión jurídica independiente ni sustituyen la fuente oficial.
 
-**Páginas gobernadas visibles:** 42
+**Páginas gobernadas visibles:** 43
 
 ## Por tema
 
@@ -51,6 +51,7 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 |---|---|---|---|---|
 | [Arquitectura de decision y evidencia por operacion](../wiki/fundamentos/arquitectura-decision-evidencia.md) | current · reviewed | 2026-08-16 | `mx_ley_aduanera`, `mx_ley_comercio_exterior`, `mx_ventanilla_unica_2026` | `mx_diputados_lce_current`, `mx_diputados_ley_aduanera`, `mx_vucem_portal` |
 | [Biblioteca de instrumentos prioritarios](../wiki/fundamentos/biblioteca-instrumentos-prioritarios.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_ley_comercio_exterior`, `mx_ligie`, `mx_rgce_2026`, `mx_tmec` | `mx_diputados_lce_current`, `mx_diputados_ley_aduanera`, `mx_diputados_ligie_current`, `mx_gob_tmec`, `mx_gob_tmec_reglamentaciones_uniformes`, `mx_gob_tmec_textos_finales`, `mx_sidof_rgce_2026`, `mx_snice_ligie_info` |
+| [Herramientas SNICE consulta normatividad y evidencia](../wiki/fundamentos/herramientas-snice-y-fuentes.md) | current · reviewed | 2026-08-16 | — | `mx_snice_aprende_exportar`, `mx_snice_aprende_importar`, `mx_snice_aviso_disponibilidad`, `mx_snice_biblioteca_juridica`, `mx_snice_comercio_datos`, `mx_snice_fuentes_estadisticas`, `mx_snice_historicos`, `mx_snice_moca`, `mx_snice_resoluciones_anticipadas`, `mx_snice_siavi` |
 | [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md) | current · reviewed | 2026-08-15 | `mx_constitucion`, `mx_ley_aduanera`, `mx_ley_comercio_exterior`, `mx_ligie` | `mx_diputados_constitucion`, `mx_diputados_lce_current`, `mx_diputados_ley_aduanera`, `mx_diputados_ligie_current` |
 | [Padron de importadores](../wiki/fundamentos/padron-importadores.md) | partial · pending_review | — | `mx_rgce_2026` | `mx_sat_padron`, `mx_sidof_rgce_2026` |
 | [Wiki de comercio exterior de Mexico](../wiki/index.md) | partial · pending_review | — | — | — |

@@ -167,11 +167,20 @@ Transport availability is not a legal-status decision. Publication events are re
 |---|---|---|---|---:|---:|---|---|
 | `mx_snice_biblioteca_juridica`<br>Biblioteca juridica de comercio exterior | MEX | official_administrative | - | no | 7 | - | [open](https://www.snice.gob.mx/cs/avi/snice/biblioteca.juridica.html) |
 | `mx_snice_drawback`<br>Devolucion de impuestos de importacion a exportadores Drawback | MEX | official_administrative | mx_programa_drawback / partial | no | 30 | 1995-05-11 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.drawback.html) |
+| `mx_snice_moca`<br>MoCA Mx Monitor de Comercio de Acero en Mexico | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/mca.html) |
 | `mx_snice_immex`<br>Programa IMMEX | MEX | official_administrative | mx_programa_immex / partial | no | 30 | 2006-11-01 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.immex.html) |
 | `mx_snice_prosec`<br>Programas de Promocion Sectorial PROSEC | MEX | official_administrative | mx_programa_prosec / partial | no | 30 | 2002-08-02 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.prosec.html) |
+| `mx_snice_siavi`<br>Sistema de Informacion Arancelaria Via Internet SIAVI | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/hce.siavi.html) |
+| `mx_snice_aprende_exportar`<br>SNICE Aprende a Exportar | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.exportar.html) |
+| `mx_snice_aprende_importar`<br>SNICE Aprende a Importar | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.importar.html) |
+| `mx_snice_aviso_disponibilidad`<br>SNICE Aviso de Disponibilidad | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/aviso.disponibilidad.html) |
 | `mx_snice_cuotas`<br>SNICE cuotas compensatorias | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.cuotascomp.html) |
+| `mx_snice_comercio_datos`<br>SNICE Datos sobre Comercio Exterior | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comerciointernacional.html) |
+| `mx_snice_fuentes_estadisticas`<br>SNICE Fuentes estadisticas de Comercio Exterior | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/fuentesestadisticas.html) |
+| `mx_snice_historicos`<br>SNICE Historicos de normatividad y actualidad | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/historicos.html) |
 | `mx_snice_ligie_info`<br>SNICE LIGIE IMMEX PROSEC RRNA | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html) |
 | `mx_snice_mi_fraccion`<br>SNICE Mi Fraccion Arancelaria | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html) |
+| `mx_snice_resoluciones_anticipadas`<br>SNICE Resoluciones anticipadas | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/normatividad.res.anticip.html) |
 
 ## SNICE / Secretaria de Economia
 

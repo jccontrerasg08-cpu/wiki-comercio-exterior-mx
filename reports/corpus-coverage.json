@@ -462,6 +462,13 @@
       "section": "contribuciones"
     },
     {
+      "path": "docs/wiki/fundamentos/herramientas-snice-y-fuentes.md",
+      "risk_reasons": [
+        "missing_instrument_reference"
+      ],
+      "section": "fundamentos"
+    },
+    {
       "path": "docs/wiki/fundamentos/padron-importadores.md",
       "risk_reasons": [
         "pending_legal_review",
@@ -584,11 +591,11 @@
       "total_pages": 43
     },
     {
-      "legally_reviewed_pages": 3,
-      "pages_needing_attention": 1,
-      "retrieval_eligible_pages": 3,
+      "legally_reviewed_pages": 4,
+      "pages_needing_attention": 2,
+      "retrieval_eligible_pages": 4,
       "section": "fundamentos",
-      "total_pages": 4
+      "total_pages": 5
     },
     {
       "legally_reviewed_pages": 0,
@@ -629,21 +636,21 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 43,
+      "not_applicable": 44,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 43,
+      "not_applicable": 44,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 56,
-      "reviewed": 28
+      "reviewed": 29
     },
     "source_status": {
-      "current": 64,
+      "current": 65,
       "partial": 20,
       "unknown": 1
     }
@@ -651,16 +658,16 @@
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 58,
-    "legally_reviewed_pages": 28,
+    "distinct_source_ids": 68,
+    "legally_reviewed_pages": 29,
     "non_current_corpus_pages": 40,
-    "pages_needing_attention": 63,
+    "pages_needing_attention": 64,
     "pages_with_instruments": 76,
-    "pages_with_sources": 79,
+    "pages_with_sources": 80,
     "pending_legal_review_pages": 56,
-    "retrieval_eligible_pages": 24,
-    "total_pages": 85,
+    "retrieval_eligible_pages": 25,
+    "total_pages": 86,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 42
+    "wiki_pages": 43
   }
 }
