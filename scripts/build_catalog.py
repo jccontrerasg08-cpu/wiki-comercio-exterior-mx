@@ -1,4 +1,4 @@
-"""Generate the official-source catalog from canonical YAML."""
+"""Generate deterministic official-source catalog pages from canonical YAML."""
 
 from __future__ import annotations
 
@@ -8,6 +8,8 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+
+from scripts.archive_metadata import archive_label
 
 
 @dataclass(frozen=True, slots=True)
@@ -42,16 +44,29 @@ def _instrument_ids(source: dict[str, Any]) -> tuple[str, ...]:
     return tuple(dict.fromkeys(declared))
 
 
+def _instrument_statuses(instruments_path: Path) -> dict[str, object]:
+    return {
+        item.get("id"): item.get("status")
+        for item in _load_list(instruments_path, "instruments")
+        if isinstance(item.get("id"), str)
+    }
+
+
+def _instrument_display(source: dict[str, Any], statuses: dict[str, object]) -> str:
+    parts: list[str] = []
+    for instrument_id in _instrument_ids(source):
+        instrument = _display(instrument_id)
+        if instrument_id in statuses:
+            instrument = f"{instrument_id} / {statuses[instrument_id]}"
+        parts.append(instrument)
+    return "<br>".join(parts) if parts else "-"
+
+
 def render_registry(registry_path: Path, instruments_path: Path) -> str:
     """Render one stable Markdown catalog grouped by authority."""
 
     sources = _load_list(registry_path, "sources")
-    instruments = _load_list(instruments_path, "instruments")
-    statuses = {
-        item.get("id"): item.get("status")
-        for item in instruments
-        if isinstance(item.get("id"), str)
-    }
+    statuses = _instrument_statuses(instruments_path)
     grouped: dict[str, list[dict[str, Any]]] = {}
     for source in sources:
         grouped.setdefault(str(source.get("authority", "Unknown")), []).append(source)
@@ -81,13 +96,6 @@ def render_registry(registry_path: Path, instruments_path: Path) -> str:
                 str(item.get("id", "")),
             ),
         ):
-            instrument_parts = []
-            for instrument_id in _instrument_ids(source):
-                instrument = _display(instrument_id)
-                if instrument_id in statuses:
-                    instrument = f"{instrument_id} / {statuses[instrument_id]}"
-                instrument_parts.append(instrument)
-            instrument_display = "<br>".join(instrument_parts) if instrument_parts else "-"
             title = _display(source.get("title"))
             source_id = _display(source.get("id"))
             url = _display(source.get("url"))
@@ -98,7 +106,7 @@ def render_registry(registry_path: Path, instruments_path: Path) -> str:
                         f"`{source_id}`<br>{title}",
                         _display(source.get("jurisdiction")),
                         _display(source.get("evidence_class")),
-                        instrument_display,
+                        _instrument_display(source, statuses),
                         _display(source.get("harvest")),
                         _display(source.get("cadence_days")),
                         _display(source.get("publication_date")),
@@ -111,19 +119,128 @@ def render_registry(registry_path: Path, instruments_path: Path) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def run_check(root: Path) -> CheckResult:
-    expected = render_registry(
-        root / "sources" / "registry.yaml", root / "sources" / "instruments.yaml"
+def _archive_location(source: dict[str, Any]) -> str:
+    archive = source.get("archive")
+    if not isinstance(archive, dict):
+        return "-"
+    status = archive_label(source)
+    if status == "local_git":
+        return f"`{_display(archive.get('path'))}`"
+    if status == "release_asset":
+        return f"{_display(archive.get('release_tag'))} / {_display(archive.get('asset_name'))}"
+    if status == "external_only":
+        return _display(archive.get("reason"))
+    return "-"
+
+
+def _render_archive_section(
+    title: str,
+    sources: list[dict[str, Any]],
+    statuses: dict[str, object],
+) -> list[str]:
+    lines = [f"## {title}", ""]
+    if not sources:
+        lines.extend(["No sources are classified in this archive state yet.", ""])
+        return lines
+
+    lines.extend(
+        [
+            "| Source | Authority | Published | Instrument / status | Archive location | SHA256 | Captured | Official URL |",
+            "|---|---|---|---|---|---|---|---|",
+        ]
     )
-    output = root / "docs" / "catalog" / "registry.md"
-    try:
-        actual = output.read_text(encoding="utf-8")
-    except OSError:
-        actual = ""
-    if actual != expected:
+    for source in sorted(
+        sources,
+        key=lambda item: (
+            str(item.get("authority", "")).casefold(),
+            str(item.get("title", "")).casefold(),
+            str(item.get("id", "")),
+        ),
+    ):
+        archive = source.get("archive") if isinstance(source.get("archive"), dict) else {}
+        source_id = _display(source.get("id"))
+        title_text = _display(source.get("title"))
+        url = _display(source.get("url"))
+        sha256 = _display(archive.get("sha256"))
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    f"`{source_id}`<br>{title_text}",
+                    _display(source.get("authority")),
+                    _display(source.get("publication_date")),
+                    _instrument_display(source, statuses),
+                    _archive_location(source),
+                    f"`{sha256}`" if sha256 != "-" else "-",
+                    _display(archive.get("captured_at")),
+                    f"[official]({url})",
+                ]
+            )
+            + " |"
+        )
+    lines.append("")
+    return lines
+
+
+def render_library(registry_path: Path, instruments_path: Path) -> str:
+    """Render the human-facing archive library from source metadata."""
+
+    sources = _load_list(registry_path, "sources")
+    statuses = _instrument_statuses(instruments_path)
+    grouped = {
+        status: [source for source in sources if archive_label(source) == status]
+        for status in ("local_git", "release_asset", "external_only", "unclassified")
+    }
+
+    lines = [
+        "# Official document library",
+        "",
+        "<!-- Generated by python -m scripts.build_catalog. Do not edit manually. -->",
+        "",
+        "This library records how official sources are preserved for reproducibility and auditability. Archive presence is evidence preservation only; it does not determine legal validity or currentness.",
+        "",
+        "Large originals may be stored as GitHub Release assets. Interactive or redundant sources may remain external-only when the reason is documented.",
+        "",
+    ]
+    sections = (
+        ("Local Git originals", "local_git"),
+        ("GitHub Release assets", "release_asset"),
+        ("External-only references", "external_only"),
+        ("Unclassified sources", "unclassified"),
+    )
+    for title, status in sections:
+        lines.extend(_render_archive_section(title, grouped[status], statuses))
+    return "\n".join(lines).rstrip() + "\n"
+
+
+def _expected_outputs(root: Path) -> dict[Path, str]:
+    registry_path = root / "sources" / "registry.yaml"
+    instruments_path = root / "sources" / "instruments.yaml"
+    return {
+        root / "docs" / "catalog" / "registry.md": render_registry(
+            registry_path, instruments_path
+        ),
+        root / "docs" / "catalog" / "library.md": render_library(
+            registry_path, instruments_path
+        ),
+    }
+
+
+def run_check(root: Path) -> CheckResult:
+    stale: list[str] = []
+    for output, expected in _expected_outputs(root).items():
+        try:
+            actual = output.read_text(encoding="utf-8")
+        except OSError:
+            actual = ""
+        if actual != expected:
+            stale.append(output.name)
+    if stale:
         return CheckResult(
             1,
-            "generated catalog is stale; regenerate with: python -m scripts.build_catalog",
+            "generated catalog is stale for "
+            + ", ".join(stale)
+            + "; regenerate with: python -m scripts.build_catalog",
         )
     return CheckResult(0, "generated catalog is current")
 
@@ -137,16 +254,11 @@ def main(argv: list[str] | None = None) -> int:
         result = run_check(args.root)
         print(result.message)
         return result.exit_code
-    output = args.root / "docs" / "catalog" / "registry.md"
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(
-        render_registry(
-            args.root / "sources" / "registry.yaml",
-            args.root / "sources" / "instruments.yaml",
-        ),
-        encoding="utf-8",
-    )
-    print(f"wrote {output}")
+
+    for output, content in _expected_outputs(args.root).items():
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(content, encoding="utf-8")
+        print(f"wrote {output}")
     return 0
 
 
