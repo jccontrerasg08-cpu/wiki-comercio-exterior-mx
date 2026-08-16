@@ -3,288 +3,224 @@
     {
       "path": "data/corpus/anexo-01-formatos-modelos.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-02-tramites.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-03-aduanas-pita.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-04-horarios-aduanas.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-05-criterios-practicas-indebidas.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-06-consejo-clasificacion-arancelaria.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-07-ejidatarios-sin-padron.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-09-exentos-igi-equipo-medico.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-10-padron-sectorial.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-11-rutas-fiscales-transito.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-12-exportacion-temporal.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-13-multas-cantidades.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-14-hidrocarburos-petroliferos.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-15-distancias-plazos-transito.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-16-aduanas-transito-norte-sur.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-17-sin-transito-internacional.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-18-sin-deposito-fiscal.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-19-datos-inexactos-multa-184.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-20-marcas-nominativas.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-21-aduanas-exclusivas.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-22.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-23-mercancias-peligrosas-muestreo.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-24-control-inventarios-immex.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-25-puntos-revision-franja.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-26-noms-informacion-comercial.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-27-fracciones-sin-iva.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-29-regimenes-prohibidos.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexo-30-scccyg.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexos-formatos-tramites.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
     {
       "path": "data/corpus/anexos-riesgo-logistica.md",
       "risk_reasons": [
-        "corpus_not_current",
-        "extraction_incomplete",
-        "pending_legal_review"
+        "extraction_incomplete"
       ],
       "section": "corpus"
     },
@@ -572,9 +508,9 @@
       "total_pages": 4
     },
     {
-      "legally_reviewed_pages": 2,
+      "legally_reviewed_pages": 34,
       "pages_needing_attention": 43,
-      "retrieval_eligible_pages": 2,
+      "retrieval_eligible_pages": 34,
       "section": "corpus",
       "total_pages": 43
     },
@@ -616,9 +552,9 @@
   ],
   "status_counts": {
     "corpus_status": {
-      "current": 2,
+      "current": 34,
       "not_applicable": 35,
-      "partial": 39,
+      "partial": 7,
       "stale": 1
     },
     "extraction_status": {
@@ -627,8 +563,8 @@
     },
     "legal_review_status": {
       "not_applicable": 1,
-      "pending_review": 58,
-      "reviewed": 18
+      "pending_review": 26,
+      "reviewed": 50
     },
     "source_status": {
       "current": 57,
@@ -640,13 +576,13 @@
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
     "distinct_source_ids": 47,
-    "legally_reviewed_pages": 18,
-    "non_current_corpus_pages": 40,
+    "legally_reviewed_pages": 50,
+    "non_current_corpus_pages": 8,
     "pages_needing_attention": 62,
     "pages_with_instruments": 68,
     "pages_with_sources": 71,
-    "pending_legal_review_pages": 58,
-    "retrieval_eligible_pages": 17,
+    "pending_legal_review_pages": 26,
+    "retrieval_eligible_pages": 49,
     "total_pages": 77,
     "unknown_source_status_pages": 1,
     "wiki_pages": 34
