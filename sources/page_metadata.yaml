@@ -108,8 +108,32 @@ pages:
     path: docs/wiki/programas/immex.md
     title: Programa IMMEX
     topic: programas
-    source_ids: [mx_snice_immex]
-    instrument_ids: [mx_programa_immex]
+    source_ids: [mx_snice_immex, mx_sidof_immex_reform_20241219, mx_sidof_immex_reform_20250828, mx_sidof_immex_suspension_2026]
+    instrument_ids: [mx_programa_immex, mx_rgce_2026]
+    effective_from: 2006-11-13
+    current_through: 2025-08-29
+    source_status: partial
+    legal_review_status: reviewed
+  - <<: *wiki
+    path: docs/wiki/programas/anexo-24-control-inventarios.md
+    title: Anexo 24 - control de inventarios
+    topic: programas
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+    effective_from: 2026-01-15
+    current_through: 2026-01-15
+    source_status: current
+    legal_review_status: reviewed
+  - <<: *wiki
+    path: docs/wiki/programas/anexo-30-scccyg.md
+    title: Anexo 30 - SCCCyG
+    topic: programas
+    source_ids: [mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_rgce_2026]
+    effective_from: 2026-01-15
+    current_through: 2026-01-15
+    source_status: current
+    legal_review_status: reviewed
   - <<: *wiki
     path: docs/wiki/programas/prosec.md
     title: Programas de Promocion Sectorial

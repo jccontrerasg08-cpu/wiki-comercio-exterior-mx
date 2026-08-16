@@ -9,15 +9,15 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 75 |
-| Wiki | 32 |
+| Páginas gobernadas | 77 |
+| Wiki | 34 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 15 (20.0%) |
-| Con fuente referenciada | 69 (92.0%) |
-| Con instrumento referenciado | 66 (88.0%) |
-| Revisión jurídica `reviewed` | 15 (20.0%) |
+| Elegibles por estado para recuperación vigente | 17 (22.1%) |
+| Con fuente referenciada | 71 (92.2%) |
+| Con instrumento referenciado | 68 (88.3%) |
+| Revisión jurídica `reviewed` | 18 (23.4%) |
 | Requieren atención | 62 |
-| Fuentes distintas referenciadas | 44 |
+| Fuentes distintas referenciadas | 47 |
 | Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección
@@ -30,7 +30,7 @@
 | `corpus` | 43 | 2 | 2 | 43 |
 | `fundamentos` | 2 | 1 | 1 | 1 |
 | `logistica` | 3 | 0 | 0 | 3 |
-| `programas` | 5 | 0 | 0 | 5 |
+| `programas` | 7 | 2 | 3 | 5 |
 | `rrna` | 4 | 4 | 4 | 0 |
 | `wiki` | 1 | 0 | 0 | 1 |
 
@@ -40,7 +40,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `current` | 55 |
+| `current` | 57 |
 | `partial` | 19 |
 | `unknown` | 1 |
 
@@ -48,7 +48,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 33 |
+| `not_applicable` | 35 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -56,15 +56,15 @@
 | Estado | Páginas |
 |---|---:|
 | `not_applicable` | 1 |
-| `pending_review` | 59 |
-| `reviewed` | 15 |
+| `pending_review` | 58 |
+| `reviewed` | 18 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 33 |
+| `not_applicable` | 35 |
 | `partial` | 39 |
 | `stale` | 1 |
 
@@ -132,7 +132,7 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `docs/wiki/logistica/logistica-internacional.md` | `logistica` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/pagos-internacionales.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/drawback.md` | `programas` | `pending_legal_review`, `source_not_current` |
-| `docs/wiki/programas/immex.md` | `programas` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/programas/immex.md` | `programas` | `source_not_current` |
 | `docs/wiki/programas/prosec.md` | `programas` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/reglas-de-origen.md` | `programas` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/tlc-tmec.md` | `programas` | `pending_legal_review`, `source_not_current` |

@@ -518,7 +518,6 @@
     {
       "path": "docs/wiki/programas/immex.md",
       "risk_reasons": [
-        "pending_legal_review",
         "source_not_current"
       ],
       "section": "programas"
@@ -594,11 +593,11 @@
       "total_pages": 3
     },
     {
-      "legally_reviewed_pages": 0,
+      "legally_reviewed_pages": 3,
       "pages_needing_attention": 5,
-      "retrieval_eligible_pages": 0,
+      "retrieval_eligible_pages": 2,
       "section": "programas",
-      "total_pages": 5
+      "total_pages": 7
     },
     {
       "legally_reviewed_pages": 4,
@@ -618,21 +617,21 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 33,
+      "not_applicable": 35,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 33,
+      "not_applicable": 35,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
-      "pending_review": 59,
-      "reviewed": 15
+      "pending_review": 58,
+      "reviewed": 18
     },
     "source_status": {
-      "current": 55,
+      "current": 57,
       "partial": 19,
       "unknown": 1
     }
@@ -640,16 +639,16 @@
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 44,
-    "legally_reviewed_pages": 15,
+    "distinct_source_ids": 47,
+    "legally_reviewed_pages": 18,
     "non_current_corpus_pages": 40,
     "pages_needing_attention": 62,
-    "pages_with_instruments": 66,
-    "pages_with_sources": 69,
-    "pending_legal_review_pages": 59,
-    "retrieval_eligible_pages": 15,
-    "total_pages": 75,
+    "pages_with_instruments": 68,
+    "pages_with_sources": 71,
+    "pending_legal_review_pages": 58,
+    "retrieval_eligible_pages": 17,
+    "total_pages": 77,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 32
+    "wiki_pages": 34
   }
 }

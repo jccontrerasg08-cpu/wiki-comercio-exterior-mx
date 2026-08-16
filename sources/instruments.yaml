@@ -258,7 +258,13 @@ instruments:
     effective_to: null
     current_through: 2026-08-15
     consolidated_source_id: mx_snice_immex
-    events: []
+    events:
+      - source_id: mx_sidof_immex_reform_20241219
+        relation: amends
+        effective_from: 2024-12-20
+      - source_id: mx_sidof_immex_reform_20250828
+        relation: amends
+        effective_from: 2025-08-29
 
   - id: mx_programa_prosec
     jurisdiction: MEX
