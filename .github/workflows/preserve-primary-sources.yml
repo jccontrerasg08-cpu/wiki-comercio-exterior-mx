@@ -41,15 +41,25 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
+          import yaml
 
           path = Path("data/originals/manifest.yaml")
-          entry = "- primary-2026-08-16/MANIFEST.yaml"
-          text = path.read_text(encoding="utf-8")
-          if entry not in text.splitlines():
-              if not text.endswith("\n"):
-                  text += "\n"
-              text += entry + "\n"
-              path.write_text(text, encoding="utf-8")
+          data = yaml.safe_load(path.read_text(encoding="utf-8"))
+          if not isinstance(data, dict) or not isinstance(data.get("fragments"), list):
+              raise SystemExit("data/originals/manifest.yaml must contain a fragments list")
+          fragment = "primary-2026-08-16/MANIFEST.yaml"
+          if fragment not in data["fragments"]:
+              data["fragments"].append(fragment)
+          data["redistribution"] = (
+              "Official Mexican government or treaty publication. Not relicensed as original authorship. "
+              "Binding cite is the official URL. Bytes are preserved either in GitHub Release "
+              "originals-YYYY.MM.DD for release-backed fragments or directly in this clone when a "
+              "document declares storage: local_git and passes byte/hash validation."
+          )
+          path.write_text(
+              yaml.safe_dump(data, allow_unicode=True, sort_keys=False, width=1000),
+              encoding="utf-8",
+          )
           PY
 
       - name: Regenerate archive surfaces
