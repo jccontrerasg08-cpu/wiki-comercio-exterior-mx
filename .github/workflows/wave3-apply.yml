@@ -147,7 +147,7 @@ jobs:
         run: python -m scripts.verify_site site
 
       - name: Remove one-shot migration infrastructure
-        run: git rm scripts/_wave3_apply.py .github/workflows/wave3-apply.yml
+        run: git rm -f scripts/_wave3_apply.py .github/workflows/wave3-apply.yml
 
       - name: Commit verified Wave 3 state
         run: |
