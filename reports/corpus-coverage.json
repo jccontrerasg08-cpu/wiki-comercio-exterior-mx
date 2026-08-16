@@ -593,6 +593,13 @@
       "total_pages": 3
     },
     {
+      "legally_reviewed_pages": 2,
+      "pages_needing_attention": 0,
+      "retrieval_eligible_pages": 2,
+      "section": "operacion",
+      "total_pages": 2
+    },
+    {
       "legally_reviewed_pages": 3,
       "pages_needing_attention": 5,
       "retrieval_eligible_pages": 2,
@@ -617,21 +624,21 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 35,
+      "not_applicable": 37,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 35,
+      "not_applicable": 37,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 58,
-      "reviewed": 18
+      "reviewed": 20
     },
     "source_status": {
-      "current": 57,
+      "current": 59,
       "partial": 19,
       "unknown": 1
     }
@@ -639,16 +646,16 @@
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 47,
-    "legally_reviewed_pages": 18,
+    "distinct_source_ids": 49,
+    "legally_reviewed_pages": 20,
     "non_current_corpus_pages": 40,
     "pages_needing_attention": 62,
-    "pages_with_instruments": 68,
-    "pages_with_sources": 71,
+    "pages_with_instruments": 70,
+    "pages_with_sources": 73,
     "pending_legal_review_pages": 58,
-    "retrieval_eligible_pages": 17,
-    "total_pages": 77,
+    "retrieval_eligible_pages": 19,
+    "total_pages": 79,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 34
+    "wiki_pages": 36
   }
 }

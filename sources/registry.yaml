@@ -1098,6 +1098,32 @@ sources:
     cadence_days: 90
     probe: *probe_html
 
+  - id: mx_anam_obligaciones_importadores
+    jurisdiction: MEX
+    title: ANAM Obligaciones de los importadores
+    url: https://www.anam.gob.mx/obligaciones-de-los-importadores/
+    note_id: null
+    authority: ANAM
+    evidence_class: official_operational
+    allowed_hosts: [anam.gob.mx, www.anam.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_anam_documentos_electronicos_pedimento
+    jurisdiction: MEX
+    title: ANAM Documentos electronicos o digitales anexos al pedimento de importacion
+    url: https://www.anam.gob.mx/documentos-electronicos-o-digitales-que-se-deben-transmitir-como-anexos-al-pedimento-de-importacion/
+    note_id: null
+    authority: ANAM
+    evidence_class: official_operational
+    allowed_hosts: [anam.gob.mx, www.anam.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
   - id: mx_sat_padron
     jurisdiction: MEX
     title: SAT Padron de Importadores y Exportadores

@@ -169,6 +169,9 @@ nav:
       - Incoterms: wiki/logistica/incoterms.md
       - Logística internacional: wiki/logistica/logistica-internacional.md
       - Pagos internacionales: wiki/logistica/pagos-internacionales.md
+    - Operación y evidencia:
+      - Trazabilidad de evidencia: wiki/operacion/trazabilidad-evidencia.md
+      - Reconciliación y control de cambios: wiki/operacion/reconciliacion-control-cambios.md
   - Fuentes:
     - Guía del catálogo: catalog/index.md
     - Biblioteca de originales: catalog/library.md

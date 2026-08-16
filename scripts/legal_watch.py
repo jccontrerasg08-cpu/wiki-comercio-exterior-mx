@@ -75,7 +75,10 @@ def normalize_candidates(
         if (
             not re.fullmatch(r"[0-9]+", note_id)
             or parsed.scheme != "https"
+            or parsed.username is not None
+            or parsed.password is not None
             or parsed.hostname not in official_hosts
+            or parsed.port not in {None, 443}
             or parsed.path.rstrip("/") != f"/notas/{note_id}"
         ):
             continue

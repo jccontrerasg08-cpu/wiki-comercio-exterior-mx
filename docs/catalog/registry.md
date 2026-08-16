@@ -9,6 +9,8 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_gob_anam`<br>ANAM | MEX | official_operational | - | no | 90 | - | [open](https://anam.gob.mx/) |
+| `mx_anam_documentos_electronicos_pedimento`<br>ANAM Documentos electronicos o digitales anexos al pedimento de importacion | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/documentos-electronicos-o-digitales-que-se-deben-transmitir-como-anexos-al-pedimento-de-importacion/) |
+| `mx_anam_obligaciones_importadores`<br>ANAM Obligaciones de los importadores | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/obligaciones-de-los-importadores/) |
 
 ## Camara de Diputados
 

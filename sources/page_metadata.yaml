@@ -552,3 +552,23 @@ pages:
     current_through: 2026-08-15
     source_status: current
     legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/operacion/trazabilidad-evidencia.md
+    title: Trazabilidad de evidencia por operacion
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_anam_obligaciones_importadores, mx_anam_documentos_electronicos_pedimento, mx_vucem_portal]
+    instrument_ids: [mx_ley_aduanera, mx_ventanilla_unica_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/operacion/reconciliacion-control-cambios.md
+    title: Reconciliacion y control de cambios
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_anam_documentos_electronicos_pedimento, mx_vucem_portal]
+    instrument_ids: [mx_ley_aduanera, mx_ventanilla_unica_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed

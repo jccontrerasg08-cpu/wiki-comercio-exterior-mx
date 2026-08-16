@@ -65,6 +65,23 @@ class LegalWatchTests(unittest.TestCase):
         ]
         self.assertEqual(normalize_candidates(payload, self.config), ())
 
+    def test_candidate_urls_require_canonical_https_authority(self):
+        payload = [
+            {
+                "note_id": "3",
+                "title": "RGCE",
+                "publication_date": "2026-08-15",
+                "url": "https://user@sidof.segob.gob.mx/notas/3",
+            },
+            {
+                "note_id": "4",
+                "title": "RGCE",
+                "publication_date": "2026-08-15",
+                "url": "https://sidof.segob.gob.mx:8443/notas/4",
+            },
+        ]
+        self.assertEqual(normalize_candidates(payload, self.config), ())
+
     def test_official_daily_shape_is_enriched_from_per_diary_api(self):
         daily = json.loads(DAILY_FIXTURE.read_text(encoding="utf-8"))
         diary = json.loads(DIARY_FIXTURE.read_text(encoding="utf-8"))

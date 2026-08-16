@@ -31,7 +31,11 @@ Para importación, separa la tasa de IGI del **valor en aduana** y de obligacion
 
 Si una incidencia activa una causal legal, [PAMA e infracciones](aduana/infracciones-pama.md) explica cómo distinguir una irregularidad de un supuesto de embargo precautorio.
 
-### 5. Aplicar programas, origen y logística
+### 5. Conservar evidencia y reconciliar cambios
+
+Después del despacho, enlaza cada decisión con sus soportes, acuses y cambios posteriores. Consulta [Trazabilidad de evidencia](operacion/trazabilidad-evidencia.md) y [Reconciliación y control de cambios](operacion/reconciliacion-control-cambios.md) para estructurar esa revisión sin confundir un acuse con la comprobación sustantiva del requisito.
+
+### 6. Aplicar programas, origen y logística
 
 Cuando la operación utilice un programa o preferencia, revisa [IMMEX](programas/immex.md), [PROSEC](programas/prosec.md), [Drawback](programas/drawback.md), [TLC y T-MEC](programas/tlc-tmec.md) y [Reglas de origen](programas/reglas-de-origen.md).
 

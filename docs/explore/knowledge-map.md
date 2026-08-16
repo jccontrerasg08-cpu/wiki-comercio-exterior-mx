@@ -7,7 +7,7 @@ description: "Vista generada de páginas, fuentes, instrumentos y estado de revi
 
 Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml` y `sources/instruments.yaml`. Los estados describen **metadatos de revisión del repositorio**, no una opinión jurídica independiente ni sustituyen la fuente oficial.
 
-**Páginas gobernadas visibles:** 34
+**Páginas gobernadas visibles:** 36
 
 ## Por tema
 
@@ -23,7 +23,9 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_rgce_2026`, `mx_ventanilla_unica_2026` | `mx_diputados_ley_aduanera`, `mx_sidof_rgce_2026`, `mx_sidof_ventanilla_unica_20260504`, `mx_vucem_portal` |
 | [Pedimento y RGCE](../wiki/aduana/pedimento-rgce.md) | partial · pending_review | — | `mx_rgce_2026` | `mx_sidof_rgce_2026`, `mx_sidof_rgce_2026_anexos_21_30` |
 | [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_rgce_2026` | `mx_diputados_ley_aduanera`, `mx_gob_anam`, `mx_sidof_rgce_2026`, `mx_vucem_portal` |
+| [Reconciliacion y control de cambios](../wiki/operacion/reconciliacion-control-cambios.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_ventanilla_unica_2026` | `mx_anam_documentos_electronicos_pedimento`, `mx_diputados_ley_aduanera`, `mx_vucem_portal` |
 | [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_rgce_2026` | `mx_diputados_ley_aduanera`, `mx_sidof_rgce_2026` |
+| [Trazabilidad de evidencia por operacion](../wiki/operacion/trazabilidad-evidencia.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_ventanilla_unica_2026` | `mx_anam_documentos_electronicos_pedimento`, `mx_anam_obligaciones_importadores`, `mx_diputados_ley_aduanera`, `mx_vucem_portal` |
 | [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_ventanilla_unica_2026` | `mx_diputados_ley_aduanera`, `mx_sidof_ventanilla_unica_20260504`, `mx_vucem_portal` |
 
 ### clasificacion
@@ -90,7 +92,7 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | Instrumento | Estado | Vigente hasta | Páginas relacionadas |
 |---|---|---|---|
 | Constitucion Politica de los Estados Unidos Mexicanos (`mx_constitucion`) | current | 2026-06-02 | [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md) |
-| Ley Aduanera (`mx_ley_aduanera`) | current | 2026-08-15 | [Agencia Nacional de Aduanas de Mexico](../wiki/aduana/anam.md), [Agente aduanal y agencia aduanal](../wiki/aduana/agente-agencia-aduanal.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md), [Infracciones embargo precautorio y PAMA](../wiki/aduana/infracciones-pama.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md), [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md), [Valor en aduana](../wiki/contribuciones/valor-en-aduana.md), [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) |
+| Ley Aduanera (`mx_ley_aduanera`) | current | 2026-08-15 | [Agencia Nacional de Aduanas de Mexico](../wiki/aduana/anam.md), [Agente aduanal y agencia aduanal](../wiki/aduana/agente-agencia-aduanal.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md), [Infracciones embargo precautorio y PAMA](../wiki/aduana/infracciones-pama.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md), [Reconciliacion y control de cambios](../wiki/operacion/reconciliacion-control-cambios.md), [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md), [Trazabilidad de evidencia por operacion](../wiki/operacion/trazabilidad-evidencia.md), [Valor en aduana](../wiki/contribuciones/valor-en-aduana.md), [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) |
 | Ley de Comercio Exterior (`mx_ley_comercio_exterior`) | current | 2026-08-15 | [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Cuotas compensatorias](../wiki/contribuciones/cuotas-compensatorias.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [Regulaciones y restricciones no arancelarias](../wiki/clasificacion/rrna.md), [Regulaciones y restricciones no arancelarias](../wiki/rrna/index.md) |
 | Ley Federal de Derechos (`mx_ley_federal_derechos`) | current | 2026-08-15 | [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md) |
 | Ley del Impuesto Especial sobre Produccion y Servicios (`mx_ley_ieps`) | current | 2026-08-15 | [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md) |
@@ -108,7 +110,7 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | Tratado Integral y Progresista de Asociacion Transpacifico (`mx_tipat`) | partial | 2026-08-15 | [Tratados comerciales y T-MEC](../wiki/programas/tlc-tmec.md) |
 | Tratado de Libre Comercio Mexico Union Europea (`mx_tlcuem`) | partial | 2026-08-15 | [Tratados comerciales y T-MEC](../wiki/programas/tlc-tmec.md) |
 | Tratado entre Mexico, Estados Unidos y Canada (`mx_tmec`) | partial | 2026-08-15 | [Reglas de origen](../wiki/programas/reglas-de-origen.md), [Tratados comerciales y T-MEC](../wiki/programas/tlc-tmec.md) |
-| Decreto de Ventanilla Unica de Tramites de Comercio Exterior (`mx_ventanilla_unica_2026`) | current | 2026-08-15 | [Agencia Nacional de Aduanas de Mexico](../wiki/aduana/anam.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) |
+| Decreto de Ventanilla Unica de Tramites de Comercio Exterior (`mx_ventanilla_unica_2026`) | current | 2026-08-15 | [Agencia Nacional de Aduanas de Mexico](../wiki/aduana/anam.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Reconciliacion y control de cambios](../wiki/operacion/reconciliacion-control-cambios.md), [Trazabilidad de evidencia por operacion](../wiki/operacion/trazabilidad-evidencia.md), [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) |
 
 ## Uso por herramientas
 
