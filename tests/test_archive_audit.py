@@ -239,7 +239,7 @@ class ArchiveAuditTests(unittest.TestCase):
             root = Path(temp_dir)
             self._write_fixture(root)
             manifest = root / "data" / "originals" / "example" / "MANIFEST.yaml"
-            manifest.write_text(FRAGMENT.replace(LOCAL_SHA256, "0" * 64), encoding="utf-8")
+            manifest.write_text(FRAGMENT.replace(LOCAL_SHA256, "f" * 64), encoding="utf-8")
             with self.assertRaisesRegex(ValueError, "sha256 mismatch"):
                 audit_registry(root)
 
