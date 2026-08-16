@@ -1,22 +1,15 @@
-# Anexo 16 — Aduanas Autorizadas para Tránsito Internacional Frontera Norte–Frontera Sur y Rutas Fiscales (RGCE 2026)
+# Anexo 16 RGCE 2026 — Aduanas para tránsito de la frontera norte a la frontera sur y viceversa
 
-**URL oficial:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2026/rgce/anexos/Anexo16delasRGCEpara2026.pdf
-**Publicado:** 14-01-2026 | **DOF:** 14-01-2026
-**Portal de actualizaciones:** https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/normatividad_rmf_rgce2026.html
-**Fundamento:** Arts. 130-133 de la Ley Aduanera; regla 4.6.1. de las RGCE 2026
+## Estado al 15-08-2026
 
-## Cómo actualizar
-1. Descargar el PDF desde la URL oficial.
-2. Verificar si se modificaron las aduanas autorizadas o las rutas fiscales interiores.
+- Publicación oficial: DOF/SIDOF, 14-01-2026 (`mx_sidof_rgce_2026_anexos_3_20`).
+- Revisión de publicaciones vigentes: hasta 20-05-2026; la modificación de anexos de esa fecha no incluyó el Anexo 16.
+- Fuente primaria: https://sidof.segob.gob.mx/notas/5778241
 
-## Contenido
-Especifica las **aduanas de la frontera norte** (EUA) y las **aduanas de la frontera sur** (Guatemala/Belice) autorizadas para el tránsito internacional a través del territorio nacional, y las **rutas fiscales autorizadas** (carreteras/ferrocarriles designados) para ese tránsito.
+## Objeto y uso operativo
 
-### ¿Para qué sirve?
-Para el tránsito internacional de mercancías entre EUA y Centroamérica (o viceversa) que cruza México, la autoridad aduanera debe autorizar la operación, se deben usar las rutas fiscales de este Anexo 16, y los plazos del Anexo 15.
+El Anexo 16 identifica aduanas relevantes para los tránsitos norte-sur y sur-norte contemplados por las RGCE. Sirve para validar la combinación de aduanas permitida junto con ruta fiscal, régimen y requisitos del tránsito.
 
-### Complementario con:
-- **Anexo 11**: rutas específicas Ensenada/Guaymas → EUA
-- **Anexo 15**: plazos máximos de traslado
-- **Anexo 17**: mercancías excluidas del tránsito internacional
-- **Art. 188 Reglamento LA**: aviso de arribo extemporáneo
+## Límites del digest
+
+Este **digest no reproduce** todas las combinaciones ni autoriza por sí mismo una ruta. Deben verificarse las aduanas, reglas y condiciones oficiales en DOF/SAT.
