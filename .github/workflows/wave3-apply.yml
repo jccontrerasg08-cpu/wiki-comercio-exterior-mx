@@ -58,7 +58,7 @@ jobs:
           a24_start = text.index("anexo 24 de las reglas generales de comercio exterior para 2026")
           a25_start = text.index("anexo 25 de las reglas generales de comercio exterior para 2026")
           a24 = text[a24_start:a25_start]
-          for marker in ("seciit", "24 horas", "48 horas", "primeras entradas primeras salidas"):
+          for marker in ("seciit", "24 horas", "48 horas", "metodo de control de inventarios peps"):
               assert marker in a24, f"Annex 24 current-text marker missing: {marker}"
 
           a30_start = text.index("anexo 30 de las reglas generales de comercio exterior para 2026")
