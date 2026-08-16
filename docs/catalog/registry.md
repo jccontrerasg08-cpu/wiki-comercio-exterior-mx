@@ -179,6 +179,10 @@ Transport availability is not a legal-status decision. Publication events are re
 |---|---|---|---|---:|---:|---|---|
 | `mx_snice_programas_fomento_transparencia`<br>Directorios de beneficiarios de Programas de Fomento | MEX | official_administrative | mx_programa_immex / partial<br>mx_programa_prosec / partial | no | 30 | 2026-06-30 | [open](https://www.snice.gob.mx/cs/avi/snice/transparencia.programasfomento.html) |
 | `mx_snice_raoce_2026`<br>Guia VUCEM RAOCE 2026 para Programas de Fomento | MEX | official_administrative | mx_programa_immex / partial<br>mx_programa_prosec / partial | yes | 365 | 2026-04-23 | [open](https://www.snice.gob.mx/~oracle/SNICE_DOCS/RAOCE-2026-PROGRAMAS-DE-FOMENTO_20260423-20260423.pdf) |
+| `mx_snice_avisos_permisos_tramites`<br>SNICE Avisos y Permisos Tramites | MEX | official_operational | mx_ley_comercio_exterior / current<br>mx_reglas_criterios_se / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.avisosypermisos.tramites.html) |
+| `mx_snice_cupos_acerca`<br>SNICE Cupos Acerca de | MEX | official_operational | mx_ley_comercio_exterior / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.cupos.acercade.html) |
+| `mx_snice_rrna_documentos`<br>SNICE Documentos que avalen RRNA | MEX | official_operational | mx_ligie / current<br>mx_ley_comercio_exterior / current<br>mx_reglas_criterios_se / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.exportar.rrnas.html) |
+| `mx_snice_noms_normatividad`<br>SNICE NOMs Normatividad y Anexo 2.4.1 | MEX | official_operational | mx_reglas_criterios_se / current<br>mx_ley_infraestructura_calidad / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/seguridad.normatividad.html) |
 
 ## UNSD
 

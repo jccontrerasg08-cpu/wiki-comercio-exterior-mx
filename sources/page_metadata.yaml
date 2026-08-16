@@ -488,8 +488,17 @@ pages:
     path: docs/wiki/rrna/anexo-2-4-1.md
     title: Anexo 2.4.1 NOM en punto de entrada
     topic: rrna
-    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260529, mx_diputados_ley_infraestructura_calidad]
+    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260529, mx_diputados_ley_infraestructura_calidad, mx_snice_noms_normatividad]
     instrument_ids: [mx_reglas_criterios_se, mx_ley_infraestructura_calidad]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
+  - <<: *wiki
+    path: docs/wiki/rrna/mapa-medidas-arancelarias-rrna.md
+    title: Medidas arancelarias RRNA y evidencia
+    topic: rrna
+    source_ids: [mx_snice_rrna_documentos, mx_snice_cupos_acerca, mx_snice_avisos_permisos_tramites, mx_snice_noms_normatividad, mx_snice_cuotas, mx_diputados_ligie_current, mx_diputados_lce_current, mx_sidof_reglas_se_2022]
+    instrument_ids: [mx_ligie, mx_ley_comercio_exterior, mx_reglas_criterios_se, mx_ley_infraestructura_calidad]
     source_status: current
     legal_review_status: reviewed
     current_through: 2026-08-15

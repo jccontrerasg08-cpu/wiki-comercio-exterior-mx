@@ -7,7 +7,7 @@ description: "Guía de RRNA: flujo para identificar permisos, avisos, NOM y otra
 
 **Revisado hasta:** 15-08-2026. **Autoridad:** no autoritativa.
 
-Las RRNA son medidas distintas del arancel que pueden condicionar importación o exportación. Pueden incluir permiso previo, aviso automático, cupo, marcado, certificado sanitario, regulación ambiental o cumplimiento de NOM; su alcance depende del instrumento, supuesto y fecha aplicables.[1] [2]
+Las RRNA son medidas distintas del arancel que pueden condicionar importación o exportación. Pueden incluir permiso previo, aviso automático, cupo, marcado, certificado sanitario, regulación ambiental o cumplimiento de NOM; su alcance depende del instrumento, supuesto y fecha aplicables.[1] [2] Antes de tratarlas como una sola categoría, revisa el [Mapa de medidas arancelarias, RRNA y evidencia](mapa-medidas-arancelarias-rrna.md), que separa la contribución, el cupo, la cuota compensatoria, el trámite y la evidencia.
 
 ## Fuentes y alcance
 
@@ -20,7 +20,7 @@ Las RRNA son medidas distintas del arancel que pueden condicionar importación o
 
 Clasifica la mercancía, consulta el acuerdo y sus anexos por fracción/NICO, lee acotaciones y excepciones, identifica autoridad y trámite, y conserva evidencia válida al momento del despacho. Una herramienta de consulta orienta, pero el texto publicado y su fecha efectiva gobiernan.
 
-Continúa con [Reglas y criterios SE](reglas-criterios-se.md), [Anexo 2.2.1](anexo-2-2-1.md) y [Anexo 2.4.1](anexo-2-4-1.md). Para convertir esa consulta en una revisión trazable de instrumento, vigencia, trámite, acuse y evidencia, consulta [Ciclo de vida de una RRNA](ciclo-de-vida-rrna.md).
+Continúa con [Medidas arancelarias, RRNA y evidencia](mapa-medidas-arancelarias-rrna.md), [Reglas y criterios SE](reglas-criterios-se.md), [Anexo 2.2.1](anexo-2-2-1.md) y [Anexo 2.4.1](anexo-2-4-1.md). Para convertir esa consulta en una revisión trazable de instrumento, vigencia, trámite, acuse y evidencia, consulta [Ciclo de vida de una RRNA](ciclo-de-vida-rrna.md).
 
 ## Fuentes
 

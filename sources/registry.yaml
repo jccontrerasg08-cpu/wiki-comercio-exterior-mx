@@ -1236,6 +1236,62 @@ sources:
     cadence_days: 90
     probe: *probe_html
 
+  - id: mx_snice_noms_normatividad
+    jurisdiction: MEX
+    title: SNICE NOMs Normatividad y Anexo 2.4.1
+    url: https://www.snice.gob.mx/cs/avi/snice/seguridad.normatividad.html
+    note_id: null
+    authority: SNICE / Secretaria de Economia
+    evidence_class: official_operational
+    instrument_ids: [mx_reglas_criterios_se, mx_ley_infraestructura_calidad]
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_snice_cupos_acerca
+    jurisdiction: MEX
+    title: SNICE Cupos Acerca de
+    url: https://www.snice.gob.mx/cs/avi/snice/drrnas.cupos.acercade.html
+    note_id: null
+    authority: SNICE / Secretaria de Economia
+    evidence_class: official_operational
+    instrument_id: mx_ley_comercio_exterior
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_snice_avisos_permisos_tramites
+    jurisdiction: MEX
+    title: SNICE Avisos y Permisos Tramites
+    url: https://www.snice.gob.mx/cs/avi/snice/drrnas.avisosypermisos.tramites.html
+    note_id: null
+    authority: SNICE / Secretaria de Economia
+    evidence_class: official_operational
+    instrument_ids: [mx_ley_comercio_exterior, mx_reglas_criterios_se]
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_snice_rrna_documentos
+    jurisdiction: MEX
+    title: SNICE Documentos que avalen RRNA
+    url: https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.exportar.rrnas.html
+    note_id: null
+    authority: SNICE / Secretaria de Economia
+    evidence_class: official_operational
+    instrument_ids: [mx_ligie, mx_ley_comercio_exterior, mx_reglas_criterios_se]
+    allowed_hosts: [www.snice.gob.mx, snice.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
   - id: global_icc_incoterms
     jurisdiction: GLOBAL
     title: ICC Incoterms rules

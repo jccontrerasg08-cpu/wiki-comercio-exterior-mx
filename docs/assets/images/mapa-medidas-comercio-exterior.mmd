@@ -1,0 +1,16 @@
+flowchart TD
+  classDef start fill:#0f766e,color:#ffffff,stroke:#0f766e,stroke-width:2px
+  classDef measure fill:#e0f2fe,color:#0f172a,stroke:#0284c7,stroke-width:1.5px
+  classDef evidence fill:#fef3c7,color:#0f172a,stroke:#d97706,stroke-width:1.5px
+  classDef warning fill:#fee2e2,color:#7f1d1d,stroke:#dc2626,stroke-width:1.5px
+
+  A[Delimitar mercancía, fracción, operación y fecha]:::start
+  B[1. Arancel y contribuciones: revisar LIGIE/TIGIE, valor y tasa vigente]:::measure
+  C[2. Arancel-cupo o cupo: revisar acuerdo, asignación, certificado y saldo]:::measure
+  D[3. RRNA cuantitativa: revisar permiso, aviso, medida sectorial o control aplicable]:::measure
+  E[4. NOM o RRNA cualitativa: revisar Anexo 2.4.1, norma, excepción y evidencia de conformidad]:::measure
+  F[5. Cuota compensatoria: revisar resolución, producto/origen, vigencia y monto]:::measure
+  G[Registrar instrumento, autoridad, trámite, documento, acuse y versión]:::evidence
+  H[No asumir que una medida desplaza a las demás: verificar acumulación y excepciones]:::warning
+
+  A --> B --> C --> D --> E --> F --> G --> H

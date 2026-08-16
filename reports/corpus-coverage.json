@@ -612,11 +612,11 @@
       "total_pages": 8
     },
     {
-      "legally_reviewed_pages": 5,
+      "legally_reviewed_pages": 6,
       "pages_needing_attention": 0,
-      "retrieval_eligible_pages": 5,
+      "retrieval_eligible_pages": 6,
       "section": "rrna",
-      "total_pages": 5
+      "total_pages": 6
     },
     {
       "legally_reviewed_pages": 0,
@@ -629,21 +629,21 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 42,
+      "not_applicable": 43,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 42,
+      "not_applicable": 43,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 56,
-      "reviewed": 27
+      "reviewed": 28
     },
     "source_status": {
-      "current": 63,
+      "current": 64,
       "partial": 20,
       "unknown": 1
     }
@@ -651,16 +651,16 @@
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 54,
-    "legally_reviewed_pages": 27,
+    "distinct_source_ids": 58,
+    "legally_reviewed_pages": 28,
     "non_current_corpus_pages": 40,
     "pages_needing_attention": 63,
-    "pages_with_instruments": 75,
-    "pages_with_sources": 78,
+    "pages_with_instruments": 76,
+    "pages_with_sources": 79,
     "pending_legal_review_pages": 56,
-    "retrieval_eligible_pages": 23,
-    "total_pages": 84,
+    "retrieval_eligible_pages": 24,
+    "total_pages": 85,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 41
+    "wiki_pages": 42
   }
 }

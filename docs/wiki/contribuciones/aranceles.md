@@ -15,7 +15,7 @@ La tasa publicada en la TIGIE no siempre es el importe final que terminará paga
 
 Las **cuotas compensatorias** no forman parte de la tasa de IGI de la TIGIE. Son medidas distintas derivadas de resoluciones en materia de prácticas desleales de comercio internacional. Una operación puede tener una tasa de IGI determinada conforme a la LIGIE o a un trato preferencial y, de manera separada, estar sujeta a una cuota compensatoria si encuadra en el alcance de una resolución vigente.
 
-Esto importa porque una búsqueda tarifaria no sustituye la revisión de cuotas, RRNA, NOM, IEPS, IVA, DTA u otros conceptos aplicables.
+Esto importa porque una búsqueda tarifaria no sustituye la revisión de cuotas, RRNA, NOM, IEPS, IVA, DTA u otros conceptos aplicables. El [Mapa de medidas arancelarias, RRNA y evidencia](../rrna/mapa-medidas-arancelarias-rrna.md) organiza esas capas, sus fuentes y su evidencia sin tratarlas como una sola tarifa.
 
 ## Cómo determinar el trato arancelario
 
@@ -46,7 +46,7 @@ Para un método completo que conecte clasificación, reglas interpretativas, tas
 
 ## Ver también
 
-[TIGIE y NICO](../clasificacion/tigie-nico.md) · [Valor en aduana](valor-en-aduana.md) · [TLC y T-MEC](../programas/tlc-tmec.md) · [PROSEC](../programas/prosec.md) · [Cuotas compensatorias](cuotas-compensatorias.md)
+[TIGIE y NICO](../clasificacion/tigie-nico.md) · [Valor en aduana](valor-en-aduana.md) · [Medidas arancelarias, RRNA y evidencia](../rrna/mapa-medidas-arancelarias-rrna.md) · [TLC y T-MEC](../programas/tlc-tmec.md) · [PROSEC](../programas/prosec.md) · [Cuotas compensatorias](cuotas-compensatorias.md)
 
 > La tasa debe verificarse con la versión normativa aplicable a la fecha de la operación. Una tasa encontrada en una tabla no prueba por sí sola que se cumplan origen, programa o demás requisitos.
 
