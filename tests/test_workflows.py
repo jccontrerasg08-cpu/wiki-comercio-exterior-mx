@@ -77,8 +77,10 @@ class WorkflowPolicyTests(unittest.TestCase):
             text = (WORKFLOWS / workflow_name).read_text(encoding="utf-8")
             provenance = text.index("scripts.page_metadata --check")
             coverage = text.index("scripts.coverage_report --check")
+            knowledge = text.index("scripts.build_knowledge_map --check")
             self.assertLess(provenance, coverage, workflow_name)
-            self.assertLess(coverage, text.index("scripts.temporal_graph --check"), workflow_name)
+            self.assertLess(coverage, knowledge, workflow_name)
+            self.assertLess(knowledge, text.index("scripts.temporal_graph --check"), workflow_name)
 
     def test_pages_runs_deterministic_gate_before_upload(self):
         text = (WORKFLOWS / "pages.yml").read_text(encoding="utf-8")
@@ -89,6 +91,7 @@ class WorkflowPolicyTests(unittest.TestCase):
             "scripts.build_catalog --check",
             "scripts.page_metadata --check",
             "scripts.coverage_report --check",
+            "scripts.build_knowledge_map --check",
             "scripts.temporal_graph --check",
             "scripts.rag_eval --check",
         ):
@@ -100,7 +103,7 @@ class WorkflowPolicyTests(unittest.TestCase):
 
     def test_legacy_routes_are_configured(self):
         config = load_workflow(ROOT / "mkdocs.yml")
-        redirects = next(item["redirects"] for item in config["plugins"] if isinstance(item, dict) and "redirects" in item)
+        redirects = config["plugins"]["redirects"]
         self.assertEqual(redirects["redirect_maps"]["aduana/documentos.md"], "wiki/aduana/documentos.md")
 
 

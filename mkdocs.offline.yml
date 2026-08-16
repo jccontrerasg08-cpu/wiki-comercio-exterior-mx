@@ -1,0 +1,22 @@
+INHERIT: mkdocs.yml
+site_name: Wiki Comercio Exterior MX · Offline
+repo_url: null
+theme:
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.tabs.link
+    - content.tooltips
+    - content.footnote.tooltips
+    - search.suggest
+    - search.highlight
+plugins:
+  privacy: {}
+  offline: {}

@@ -27,6 +27,26 @@ Fuentes de referencia:
 - [Material for MkDocs, changelog](https://squidfunk.github.io/mkdocs-material/changelog/)
 - [Material for MkDocs y MkDocs 2.0](https://squidfunk.github.io/mkdocs-material/blog/2026/mkdocs-2/)
 
+## Perfiles web y offline
+
+La wiki tiene dos perfiles de build deliberadamente distintos:
+
+- `mkdocs.yml` es el perfil web de GitHub Pages. Conserva Instant Navigation, prefetch, progress e instant previews porque el sitio se sirve por HTTP(S).
+- `mkdocs.offline.yml` hereda la configuración base, activa los plugins `privacy` y `offline`, elimina el enlace de repositorio y reemplaza la lista de features para excluir `navigation.instant*`.
+
+La separación es necesaria porque Material documenta que Instant Navigation usa `fetch`, y esas solicitudes están restringidas cuando el sitio se abre directamente desde `file://`. El plugin `offline` mueve el índice de búsqueda a JavaScript y el plugin `privacy` materializa activos externos requeridos por el modo offline, de forma que el artefacto distribuido no dependa de una conexión en tiempo de ejecución.
+
+Verificación reproducible:
+
+```bash
+python -m mkdocs build --strict
+python -m scripts.verify_site site
+python -m mkdocs build --strict -f mkdocs.offline.yml -d site-offline
+python -m scripts.verify_offline_site site-offline
+```
+
+El perfil offline no reemplaza al de Pages. Es un segundo artefacto para consulta local y conservación.
+
 ## Candidato evaluado: Zensical 0.0.54
 
 Zensical es el sucesor desarrollado por el equipo de Material for MkDocs. La versión **Zensical 0.0.54** fue publicada el 13 de agosto de 2026.
