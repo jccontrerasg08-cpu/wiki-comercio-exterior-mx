@@ -33,6 +33,7 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
+    - navigation.instant.preview
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
@@ -44,43 +45,59 @@ theme:
     - toc.follow
     - content.tabs.link
     - content.tooltips
+    - content.footnote.tooltips
     - search.suggest
     - search.highlight
     - search.share
 plugins:
-  - search
-  - redirects:
-      redirect_maps:
-        aduana/anam.md: wiki/aduana/anam.md
-        aduana/cambios-2026.md: wiki/aduana/cambios-2026.md
-        aduana/documentos.md: wiki/aduana/documentos.md
-        aduana/pedimento-rgce.md: wiki/aduana/pedimento-rgce.md
-        aduana/regimenes-aduaneros.md: wiki/aduana/regimenes-aduaneros.md
-        clasificacion/rrna.md: wiki/clasificacion/rrna.md
-        clasificacion/sistema-armonizado.md: wiki/clasificacion/sistema-armonizado.md
-        clasificacion/tigie-nico.md: wiki/clasificacion/tigie-nico.md
-        contribuciones/aranceles.md: wiki/contribuciones/aranceles.md
-        contribuciones/cuotas-compensatorias.md: wiki/contribuciones/cuotas-compensatorias.md
-        contribuciones/impuestos-importacion.md: wiki/contribuciones/impuestos-importacion.md
-        contribuciones/valor-en-aduana.md: wiki/contribuciones/valor-en-aduana.md
-        fundamentos/marco-juridico.md: wiki/fundamentos/marco-juridico.md
-        fundamentos/padron-importadores.md: wiki/fundamentos/padron-importadores.md
-        logistica/incoterms.md: wiki/logistica/incoterms.md
-        logistica/logistica-internacional.md: wiki/logistica/logistica-internacional.md
-        logistica/pagos-internacionales.md: wiki/logistica/pagos-internacionales.md
-        programas/drawback.md: wiki/programas/drawback.md
-        programas/immex.md: wiki/programas/immex.md
-        programas/prosec.md: wiki/programas/prosec.md
-        programas/reglas-de-origen.md: wiki/programas/reglas-de-origen.md
-        programas/tlc-tmec.md: wiki/programas/tlc-tmec.md
-        rrna/anexo-2-2-1.md: wiki/rrna/anexo-2-2-1.md
-        rrna/anexo-2-4-1.md: wiki/rrna/anexo-2-4-1.md
-        rrna/index.md: wiki/rrna/index.md
-        rrna/reglas-criterios-se.md: wiki/rrna/reglas-criterios-se.md
+  search: {}
+  meta: {}
+  tags:
+    tags_hierarchy: true
+    tags_allowed:
+      - Tema/Fundamentos
+      - Tema/Aduana
+      - Tema/Clasificación
+      - Tema/RRNA
+      - Tema/Contribuciones
+      - Tema/Programas
+      - Tema/Logística
+      - Tipo/Fuente
+      - Tipo/Metodología
+      - Tipo/Estado
+  redirects:
+    redirect_maps:
+      aduana/anam.md: wiki/aduana/anam.md
+      aduana/cambios-2026.md: wiki/aduana/cambios-2026.md
+      aduana/documentos.md: wiki/aduana/documentos.md
+      aduana/pedimento-rgce.md: wiki/aduana/pedimento-rgce.md
+      aduana/regimenes-aduaneros.md: wiki/aduana/regimenes-aduaneros.md
+      clasificacion/rrna.md: wiki/clasificacion/rrna.md
+      clasificacion/sistema-armonizado.md: wiki/clasificacion/sistema-armonizado.md
+      clasificacion/tigie-nico.md: wiki/clasificacion/tigie-nico.md
+      contribuciones/aranceles.md: wiki/contribuciones/aranceles.md
+      contribuciones/cuotas-compensatorias.md: wiki/contribuciones/cuotas-compensatorias.md
+      contribuciones/impuestos-importacion.md: wiki/contribuciones/impuestos-importacion.md
+      contribuciones/valor-en-aduana.md: wiki/contribuciones/valor-en-aduana.md
+      fundamentos/marco-juridico.md: wiki/fundamentos/marco-juridico.md
+      fundamentos/padron-importadores.md: wiki/fundamentos/padron-importadores.md
+      logistica/incoterms.md: wiki/logistica/incoterms.md
+      logistica/logistica-internacional.md: wiki/logistica/logistica-internacional.md
+      logistica/pagos-internacionales.md: wiki/logistica/pagos-internacionales.md
+      programas/drawback.md: wiki/programas/drawback.md
+      programas/immex.md: wiki/programas/immex.md
+      programas/prosec.md: wiki/programas/prosec.md
+      programas/reglas-de-origen.md: wiki/programas/reglas-de-origen.md
+      programas/tlc-tmec.md: wiki/programas/tlc-tmec.md
+      rrna/anexo-2-2-1.md: wiki/rrna/anexo-2-2-1.md
+      rrna/anexo-2-4-1.md: wiki/rrna/anexo-2-4-1.md
+      rrna/index.md: wiki/rrna/index.md
+      rrna/reglas-criterios-se.md: wiki/rrna/reglas-criterios-se.md
 markdown_extensions:
   - abbr
   - admonition
   - attr_list
+  - footnotes
   - md_in_html
   - tables
   - pymdownx.details
@@ -96,8 +113,12 @@ extra_css:
   - stylesheets/extra.css
 nav:
   - Inicio: index.md
+  - Estado del corpus: status/corpus-coverage.md
+  - Roadmap de contenido: status/content-roadmap.md
   - Explorar:
     - Mapa de exploración: explore/index.md
+    - Temas: topics.md
+    - Mapa de conocimiento: explore/knowledge-map.md
     - Aranceles: explore/aranceles.md
     - Marco jurídico: explore/marco-juridico.md
     - RGCE y anexos: explore/rgce.md
@@ -106,8 +127,6 @@ nav:
     - RRNA y NOM: explore/rrna-nom.md
     - Aduanas y mapa: explore/mapa.md
     - Fuentes oficiales: catalog/library.md
-  - Estado del corpus: status/corpus-coverage.md
-  - Roadmap de contenido: status/content-roadmap.md
   - Wiki:
     - Mapa: wiki/index.md
     - Fundamentos:
@@ -153,6 +172,7 @@ nav:
   - Fuentes:
     - Guía del catálogo: catalog/index.md
     - Biblioteca de originales: catalog/library.md
+    - Originales faltantes: status/missing-primary-sources.md
     - Catálogo general: catalog/catalog.md
     - Catálogo generado: catalog/registry.md
     - México:
