@@ -19,7 +19,7 @@ Se eligió **reescritura conservadora + manifest por anexo + revisión humana do
 
 ### Alternativa descartada A: actualizar sólo metadata
 
-Ventaja: menor diff. Desventaja: mantendría afirmaciones incorrectas ya detectadas, por ejemplo una supuesta modificación anticipada del Anexo 1 y referencias a una “segunda modificación” de Anexos 5/29 que en realidad fueron versiones anticipadas de la primera modificación. Cambiar estados sin corregir texto violaría el modelo de gobernanza.
+Ventaja: menor diff. Desventaja: mantendría afirmaciones incorrectas ya detectadas, por ejemplo referencias a una “segunda modificación” de Anexos 5/29 que en realidad fueron versiones anticipadas de la primera modificación y cualquier tratamiento de una anticipada como si fuera publicación DOF. Cambiar estados sin corregir texto violaría el modelo de gobernanza.
 
 ### Alternativa descartada B: importar el texto completo de los anexos
 
@@ -50,7 +50,8 @@ Una versión anticipada no se modela como publicación DOF ni promueve currentne
 
 Al corte del 2026-08-15:
 
-- SAT muestra una versión anticipada asociada a la futura modificación del Anexo 2 dentro de la 2da RMRGCE 2026;
+- SAT muestra una **tercera versión anticipada de la primera modificación del Anexo 1**, publicada en el portal el 2026-07-31; se documenta como señal de seguimiento, no como modificación DOF vigente;
+- SAT muestra una **segunda versión anticipada de la primera modificación del Anexo 2**, publicada en el portal el 2026-06-04; tampoco se modela como modificación DOF;
 - las versiones anticipadas que precedieron la 1ra modificación de Anexos 5 y 29 no son una “segunda modificación”; la publicación jurídica relevante es la primera modificación de 2026-05-20;
 - no se afirmará una modificación publicada para anexos que el índice SAT sólo presente en la sección de anticipadas.
 
@@ -77,6 +78,8 @@ Para los 30 digests individuales y los dos digests compuestos:
 - `legal_review_status: reviewed`: permitido porque un humano revisó todas las afirmaciones conservadas en el resumen contra el estado oficial;
 - `corpus_status: current`: permitido aunque la extracción sea parcial, ya que “current” significa que el contenido incluido puede citarse como actual, no que sea exhaustivo;
 - `current_through`: 2026-05-20 para reflejar que se revisó el alcance completo de la primera modificación y se confirmó qué anexos fueron o no afectados.
+
+Las anticipadas posteriores al 2026-05-20 se documentan en el texto como señales no vigentes y no amplían artificialmente `current_through`, que representa el último acto DOF de anexos revisado para promoción jurídica.
 
 Esta combinación es coherente con el modelo de estados: una extracción parcial puede ser jurídicamente revisada y actual si su alcance está claramente delimitado.
 
@@ -111,7 +114,7 @@ El evento sigue siendo `has_annex`: representa la nueva manifestación publicada
 
 ### `anexos-formatos-tramites.md`
 
-Debe explicar que sintetiza Anexos 1 y 2, que ambos tienen publicaciones separadas y que la versión anticipada del Anexo 2 no se trata como una modificación publicada.
+Debe explicar que sintetiza Anexos 1 y 2, que ambos tienen publicaciones separadas y que sus versiones anticipadas posteriores no se tratan como modificaciones publicadas.
 
 ### `anexos-riesgo-logistica.md`
 
@@ -125,7 +128,7 @@ Crear `scripts/rgce_annexes.py` y tests que verifiquen:
 - título y `corpus_path` únicos;
 - source IDs existentes;
 - sólo 5, 22 y 29 tienen `mx_sidof_rgce_2026_mod1_anexos` como modificación publicada al corte;
-- Anexo 2 no tiene una modificación publicada en el manifest;
+- Anexos 1 y 2 no tienen una modificación publicada en el manifest pese a sus anticipadas posteriores;
 - todos los digests gobernados tienen metadata;
 - los 32 registros de metadata quedan `current/reviewed/current` con extracción `partial` y `current_through: 2026-05-20`;
 - no reaparecen frases de riesgo conocidas como “2da Modificación” aplicada a anticipadas, “puede destinarse” de forma absoluta, o consecuencias sancionadoras automáticas.
@@ -139,8 +142,9 @@ Se añadirán evals representativas, no una pregunta por cada anexo. Deben cubri
 - Anexo 1 formatos;
 - Anexo 2 trámites y anticipada no publicada;
 - Anexo 5 criterio modificado;
-- Anexo 13 multas/cantidades;
+- Anexo 13 multas/cantidades y prevalidación;
 - Anexo 22 pedimento;
+- Anexo 24 SECIIT/RECE;
 - Anexo 29 regímenes;
 - Anexo 30 SCCCyG.
 
@@ -162,4 +166,4 @@ Se añadirán evals representativas, no una pregunta por cada anexo. Deben cubri
 
 ## Fuera de alcance
 
-Esta ola no reescribe todavía los otros corpus (`ley-aduanera`, `noms-comercio-exterior`, etc.) ni las 19 páginas wiki pendientes. Esos elementos se integrarán en la siguiente PR desde `main` actualizado, junto con los fixes útiles rescatados de la PR #35 cerrada.
+Esta ola no reescribe todavía los otros corpus (`ley-aduanera`, `noms-comercio-exterior`, etc.) ni las 19 páginas wiki pendientes. Esos elementos se integrarán en una siguiente PR desde `main` actualizado. La infraestructura de archivo/exploradores del PR #38 permanece separada y no se incorpora a esta rama.
