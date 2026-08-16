@@ -1,0 +1,211 @@
+annexes:
+  - annex: 1
+    title: Formatos y Modelos de Comercio Exterior
+    publication_source_id: mx_sidof_rgce_2026_anexo_1
+    publication_date: 2026-01-08
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-01-formatos-modelos.md
+  - annex: 2
+    title: Trámites de Comercio Exterior
+    publication_source_id: mx_sidof_rgce_2026_anexo_2
+    publication_date: 2026-01-12
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-02-tramites.md
+  - annex: 3
+    title: Aduanas PITA
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-03-aduanas-pita.md
+  - annex: 4
+    title: Horario de las aduanas
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-04-horarios-aduanas.md
+  - annex: 5
+    title: Criterios normativos y sobre prácticas indebidas
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: [mx_sidof_rgce_2026_mod1_anexos]
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-05-criterios-practicas-indebidas.md
+  - annex: 6
+    title: Reglas de operación de clasificación arancelaria
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-06-consejo-clasificacion-arancelaria.md
+  - annex: 7
+    title: Mercancías de ejidatarios que no requieren inscripción en padrones de importadores
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-07-ejidatarios-sin-padron.md
+  - annex: 8
+    title: Mercancías para uso exclusivo del importador que no requiere inscripción en padrones de importadores
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-08-uso-exclusivo-importador-sin-padron.md
+  - annex: 9
+    title: Mercancías por las que no se está obligado al pago del IGI y equipo médico que no requiere inscripción en padrones de importadores
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-09-exentos-igi-equipo-medico.md
+  - annex: 10
+    title: Mercancías sujetas a inscripción al Padrón de Importadores de Sectores Específicos o Padrón de Exportadores Sectorial
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-10-padron-sectorial.md
+  - annex: 11
+    title: Rutas fiscales autorizadas para el tránsito internacional
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-11-rutas-fiscales-transito.md
+  - annex: 12
+    title: Mercancías por las que procede exportación temporal
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-12-exportacion-temporal.md
+  - annex: 13
+    title: Multas y cantidades actualizadas de LA y el RLA
+    publication_source_id: mx_sidof_rgce_2026
+    publication_date: 2025-12-27
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-13-multas-cantidades.md
+  - annex: 14
+    title: Importación o exportación de hidrocarburos, petrolíferos, petroquímicos y azufre
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-14-hidrocarburos-petroliferos.md
+  - annex: 15
+    title: Distancias y plazos máximos para tránsitos
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-15-distancias-plazos-transito.md
+  - annex: 16
+    title: Aduanas para tránsito de la frontera norte a la frontera sur y viceversa
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-16-aduanas-transito-norte-sur.md
+  - annex: 17
+    title: Mercancías por las que no procede el tránsito internacional
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-17-sin-transito-internacional.md
+  - annex: 18
+    title: Mercancías que no pueden ser objeto de depósito fiscal
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-18-sin-deposito-fiscal.md
+  - annex: 19
+    title: Datos inexactos, falsos u omitidos para efectos del art. 184 fr. III LA
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-19-datos-inexactos-multa-184.md
+  - annex: 20
+    title: Mercancías sujetas a la declaración de marcas nominativas o mixtas
+    publication_source_id: mx_sidof_rgce_2026_anexos_3_20
+    publication_date: 2026-01-14
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-20-marcas-nominativas.md
+  - annex: 21
+    title: Aduanas exclusivas para tramitar el despacho aduanero de mercancías
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-21-aduanas-exclusivas.md
+  - annex: 22
+    title: Instructivo para el llenado del Pedimento
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: [mx_sidof_rgce_2026_mod1_anexos]
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-22.md
+  - annex: 23
+    title: Mercancías peligrosas o que requieran instalaciones o equipos especiales
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-23-mercancias-peligrosas-muestreo.md
+  - annex: 24
+    title: Sistema automatizado de control de inventarios
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-24-control-inventarios-immex.md
+  - annex: 25
+    title: Puntos de revisión para introducción de mercancías de la franja o región fronteriza
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-25-puntos-revision-franja.md
+  - annex: 26
+    title: Datos omitidos o inexactos de las NOM de información comercial
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-26-noms-informacion-comercial.md
+  - annex: 27
+    title: Fracciones arancelarias por cuya importación no se está obligado al pago del IVA
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-27-fracciones-sin-iva.md
+  - annex: 28
+    title: Importación de mercancías sensibles por empresas con RECE modalidad IVA e IEPS
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-28-mercancias-certificacion-iva-ieps.md
+  - annex: 29
+    title: Mercancías que no pueden destinarse a determinados regímenes aduaneros
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: [mx_sidof_rgce_2026_mod1_anexos]
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-29-regimenes-prohibidos.md
+  - annex: 30
+    title: Sistema de Control de Cuentas de Créditos y Garantías (SCCCyG)
+    publication_source_id: mx_sidof_rgce_2026_anexos_21_30
+    publication_date: 2026-01-15
+    modification_source_ids: []
+    reviewed_through: 2026-05-20
+    corpus_path: data/corpus/anexo-30-scccyg.md
