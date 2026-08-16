@@ -48,8 +48,8 @@ jobs:
       - name: Validate cross-repo data contracts
         run: python -m scripts.validate_data_contracts
 
-      - name: Generate primary-source archive audit
-        run: python -m scripts.archive_audit
+      - name: Check primary-source archive audit
+        run: python -m scripts.archive_audit --check
 
       - name: Check generated catalog
         run: python -m scripts.build_catalog --check
