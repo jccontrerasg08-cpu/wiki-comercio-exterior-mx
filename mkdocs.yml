@@ -128,12 +128,27 @@ nav:
     - Aduanas y mapa: explore/mapa.md
     - Fuentes oficiales: catalog/library.md
   - Wiki:
-    - Mapa: wiki/index.md
-    - Fundamentos:
+    - Empieza aquí:
+      - Mapa de consulta: wiki/index.md
       - Marco jurídico: wiki/fundamentos/marco-juridico.md
-      - Padrón de importadores: wiki/fundamentos/padron-importadores.md
       - Biblioteca de instrumentos prioritarios: wiki/fundamentos/biblioteca-instrumentos-prioritarios.md
-    - Aduana:
+      - Padrón de importadores: wiki/fundamentos/padron-importadores.md
+    - 1. Clasifica y determina el tratamiento:
+      - Sistema Armonizado: wiki/clasificacion/sistema-armonizado.md
+      - TIGIE y NICO: wiki/clasificacion/tigie-nico.md
+      - Aranceles: wiki/contribuciones/aranceles.md
+      - Lectura de tarifa y tratamientos: wiki/contribuciones/lectura-tarifa-y-tratos.md
+      - Valor en aduana: wiki/contribuciones/valor-en-aduana.md
+      - Impuestos de importación: wiki/contribuciones/impuestos-importacion.md
+      - Cuotas compensatorias: wiki/contribuciones/cuotas-compensatorias.md
+    - 2. Confirma requisitos previos:
+      - Guía de RRNA: wiki/rrna/index.md
+      - Ciclo de vida de una RRNA: wiki/rrna/ciclo-de-vida-rrna.md
+      - Reglas y criterios SE: wiki/rrna/reglas-criterios-se.md
+      - Anexo 2.2.1: wiki/rrna/anexo-2-2-1.md
+      - Anexo 2.4.1: wiki/rrna/anexo-2-4-1.md
+      - Consulta de RRNA por fracción: wiki/clasificacion/rrna.md
+    - 3. Prepara y despacha:
       - Proceso de despacho: wiki/aduana/proceso-despacho.md
       - Regímenes aduaneros: wiki/aduana/regimenes-aduaneros.md
       - Documentos: wiki/aduana/documentos.md
@@ -142,39 +157,23 @@ nav:
       - Ventanilla Única y VUCEM: wiki/aduana/vucem.md
       - Agente y agencia aduanal: wiki/aduana/agente-agencia-aduanal.md
       - ANAM: wiki/aduana/anam.md
-      - PAMA e infracciones: wiki/aduana/infracciones-pama.md
-      - Cambios 2026: wiki/aduana/cambios-2026.md
-    - Clasificación:
-      - Sistema Armonizado: wiki/clasificacion/sistema-armonizado.md
-      - TIGIE y NICO: wiki/clasificacion/tigie-nico.md
-      - RRNA, nota existente: wiki/clasificacion/rrna.md
-    - RRNA:
-      - Guía: wiki/rrna/index.md
-      - Ciclo de vida de una RRNA: wiki/rrna/ciclo-de-vida-rrna.md
-      - Reglas y criterios SE: wiki/rrna/reglas-criterios-se.md
-      - Anexo 2.2.1: wiki/rrna/anexo-2-2-1.md
-      - Anexo 2.4.1: wiki/rrna/anexo-2-4-1.md
-    - Contribuciones:
-      - Impuestos de importación: wiki/contribuciones/impuestos-importacion.md
-      - Aranceles: wiki/contribuciones/aranceles.md
-      - Lectura de tarifa y tratamientos: wiki/contribuciones/lectura-tarifa-y-tratos.md
-      - Valor en aduana: wiki/contribuciones/valor-en-aduana.md
-      - Cuotas compensatorias: wiki/contribuciones/cuotas-compensatorias.md
-    - Programas y tratados:
-      - Drawback: wiki/programas/drawback.md
-      - IMMEX: wiki/programas/immex.md
-      - Anexo 24 - control de inventarios: wiki/programas/anexo-24-control-inventarios.md
-      - Anexo 30 - SCCCyG: wiki/programas/anexo-30-scccyg.md
-      - PROSEC: wiki/programas/prosec.md
+    - 4. Aplica programas, origen y tratados:
       - TLC y T-MEC: wiki/programas/tlc-tmec.md
       - Reglas de origen: wiki/programas/reglas-de-origen.md
-    - Logística:
+      - IMMEX: wiki/programas/immex.md
+      - PROSEC: wiki/programas/prosec.md
+      - Drawback: wiki/programas/drawback.md
+      - Anexo 24 - control de inventarios: wiki/programas/anexo-24-control-inventarios.md
+      - Anexo 30 - SCCCyG: wiki/programas/anexo-30-scccyg.md
+    - 5. Mueve, documenta y controla:
       - Incoterms: wiki/logistica/incoterms.md
       - Logística internacional: wiki/logistica/logistica-internacional.md
       - Pagos internacionales: wiki/logistica/pagos-internacionales.md
-    - Operación y evidencia:
       - Trazabilidad de evidencia: wiki/operacion/trazabilidad-evidencia.md
       - Reconciliación y control de cambios: wiki/operacion/reconciliacion-control-cambios.md
+    - Riesgos y actualización:
+      - PAMA e infracciones: wiki/aduana/infracciones-pama.md
+      - Cambios 2026: wiki/aduana/cambios-2026.md
   - Fuentes:
     - Guía del catálogo: catalog/index.md
     - Biblioteca de originales: catalog/library.md
