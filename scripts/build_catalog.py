@@ -12,6 +12,9 @@ import yaml
 from scripts.archive_metadata import archive_label
 
 
+REPOSITORY_URL = "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx"
+
+
 @dataclass(frozen=True, slots=True)
 class CheckResult:
     exit_code: int
@@ -182,6 +185,66 @@ def _render_archive_section(
     return lines
 
 
+def _release_bundles(registry_path: Path) -> list[tuple[dict[str, Any], dict[str, Any]]]:
+    releases_path = registry_path.parents[1] / "data" / "originals" / "releases.yaml"
+    if not releases_path.is_file():
+        return []
+    bundles: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    for release in _load_list(releases_path, "releases"):
+        assets = release.get("assets")
+        if not isinstance(assets, list):
+            continue
+        for asset in assets:
+            if isinstance(asset, dict):
+                bundles.append((release, asset))
+    return bundles
+
+
+def _render_release_bundles(registry_path: Path) -> list[str]:
+    bundles = _release_bundles(registry_path)
+    lines = ["## Original-source release bundles", ""]
+    if not bundles:
+        lines.extend(["No original-source release bundles are indexed yet.", ""])
+        return lines
+
+    lines.extend(
+        [
+            "The manifest layer preserves document-level SHA256 values. These release assets preserve the corresponding original bytes in domain bundles outside Git history.",
+            "",
+            "| Snapshot | Domains | Release asset | Bytes | SHA256 |",
+            "|---|---|---|---:|---|",
+        ]
+    )
+    for release, asset in sorted(
+        bundles,
+        key=lambda pair: (
+            str(pair[0].get("snapshot_date", "")),
+            str(pair[1].get("name", "")),
+        ),
+    ):
+        tag = _display(release.get("tag"))
+        name = _display(asset.get("name"))
+        domains = asset.get("domains")
+        domain_text = ", ".join(str(item) for item in domains) if isinstance(domains, list) else "-"
+        url = f"{REPOSITORY_URL}/releases/download/{tag}/{name}"
+        sha256 = _display(asset.get("sha256"))
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    _display(release.get("snapshot_date")),
+                    _display(domain_text),
+                    f"[{name}]({url})",
+                    _display(asset.get("bytes")),
+                    f"`{sha256}`",
+                ]
+            )
+            + " |"
+        )
+    lines.append("")
+    return lines
+
+
 def render_library(registry_path: Path, instruments_path: Path) -> str:
     """Render the human-facing archive library from explicit archive metadata."""
 
@@ -202,9 +265,10 @@ def render_library(registry_path: Path, instruments_path: Path) -> str:
         "Large originals may be stored as GitHub Release assets. Interactive or redundant sources may remain external-only when the reason is documented.",
         "",
     ]
+    lines.extend(_render_release_bundles(registry_path))
     sections = (
-        ("Local Git originals", "local_git"),
-        ("GitHub Release assets", "release_asset"),
+        ("Source-specific Local Git originals", "local_git"),
+        ("Source-specific GitHub Release assets", "release_asset"),
         ("External-only references", "external_only"),
     )
     for title, status in sections:
@@ -213,7 +277,7 @@ def render_library(registry_path: Path, instruments_path: Path) -> str:
         [
             "## Unclassified sources",
             "",
-            "Sources without an explicit `archive` block remain available in the canonical source registry but are intentionally omitted from the archive tables until their storage state has been verified.",
+            "Sources without an explicit `archive` block remain available in the canonical source registry but are intentionally omitted from the source-specific archive tables until their storage state has been verified. Existing document manifests and release bundles remain authoritative for archived bytes.",
             "",
         ]
     )
