@@ -87,15 +87,36 @@ INSTRUMENTS = """instruments:
     events: []
 """
 
+RELEASES = """releases:
+  - tag: originals-2026.01.01
+    snapshot_date: 2026-01-01
+    published_at: 2026-01-02T00:00:00Z
+    assets:
+      - name: originals-test.zip
+        domains: [sat, sidof]
+        sha256: cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        bytes: 789
+        media_type: application/zip
+"""
+
 
 class CatalogGenerationTests(unittest.TestCase):
+    def _write_fixture(self, root: Path, *, releases: bool = False) -> tuple[Path, Path]:
+        (root / "sources").mkdir(parents=True, exist_ok=True)
+        registry = root / "sources" / "registry.yaml"
+        instruments = root / "sources" / "instruments.yaml"
+        registry.write_text(REGISTRY, encoding="utf-8")
+        instruments.write_text(INSTRUMENTS, encoding="utf-8")
+        if releases:
+            originals = root / "data" / "originals"
+            originals.mkdir(parents=True)
+            (originals / "releases.yaml").write_text(RELEASES, encoding="utf-8")
+        return registry, instruments
+
     def test_render_is_deterministic_and_groups_by_authority(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            registry = root / "registry.yaml"
-            instruments = root / "instruments.yaml"
-            registry.write_text(REGISTRY, encoding="utf-8")
-            instruments.write_text(INSTRUMENTS, encoding="utf-8")
+            registry, instruments = self._write_fixture(root)
             first = render_registry(registry, instruments)
             second = render_registry(registry, instruments)
         self.assertEqual(first, second)
@@ -108,21 +129,29 @@ class CatalogGenerationTests(unittest.TestCase):
     def test_library_groups_sources_by_archive_state(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            registry = root / "registry.yaml"
-            instruments = root / "instruments.yaml"
-            registry.write_text(REGISTRY, encoding="utf-8")
-            instruments.write_text(INSTRUMENTS, encoding="utf-8")
+            registry, instruments = self._write_fixture(root)
             first = render_library(registry, instruments)
             second = render_library(registry, instruments)
         self.assertEqual(first, second)
         self.assertIn("# Official document library", first)
-        self.assertIn("## Local Git originals", first)
-        self.assertIn("## GitHub Release assets", first)
+        self.assertIn("## Source-specific Local Git originals", first)
+        self.assertIn("## Source-specific GitHub Release assets", first)
         self.assertIn("## External-only references", first)
         self.assertIn("`local_source`", first)
         self.assertIn("sources-2026-01-01 / alpha.pdf", first)
         self.assertIn("Interactive portal retained as a live reference.", first)
         self.assertIn("bbbbbbbbbbbb", first)
+
+    def test_library_surfaces_indexed_release_bundles(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            registry, instruments = self._write_fixture(root, releases=True)
+            library = render_library(registry, instruments)
+        self.assertIn("## Original-source release bundles", library)
+        self.assertIn("originals-2026.01.01", library)
+        self.assertIn("originals-test.zip", library)
+        self.assertIn("sat, sidof", library)
+        self.assertIn("cccccccccccc", library)
 
     def test_library_has_stable_empty_state_for_unclassified_registry(self):
         registry_text = REGISTRY.replace(
@@ -137,23 +166,22 @@ class CatalogGenerationTests(unittest.TestCase):
         )
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            registry = root / "registry.yaml"
-            instruments = root / "instruments.yaml"
+            (root / "sources").mkdir()
+            registry = root / "sources" / "registry.yaml"
+            instruments = root / "sources" / "instruments.yaml"
             registry.write_text(registry_text, encoding="utf-8")
             instruments.write_text(INSTRUMENTS, encoding="utf-8")
             library = render_library(registry, instruments)
         self.assertIn("No sources are classified in this archive state yet.", library)
+        self.assertIn("## Unclassified sources", library)
 
     def test_check_detects_drift_in_either_generated_file(self):
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
-            (root / "sources").mkdir()
+            registry, instruments = self._write_fixture(root)
             (root / "docs" / "catalog").mkdir(parents=True)
-            (root / "sources" / "registry.yaml").write_text(REGISTRY, encoding="utf-8")
-            (root / "sources" / "instruments.yaml").write_text(INSTRUMENTS, encoding="utf-8")
             (root / "docs" / "catalog" / "registry.md").write_text(
-                render_registry(root / "sources" / "registry.yaml", root / "sources" / "instruments.yaml"),
-                encoding="utf-8",
+                render_registry(registry, instruments), encoding="utf-8"
             )
             (root / "docs" / "catalog" / "library.md").write_text("stale\n", encoding="utf-8")
             result = run_check(root)
