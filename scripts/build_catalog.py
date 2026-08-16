@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import difflib
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 import yaml
 
+from scripts.archive_audit import AuditRow, audit_registry
 from scripts.archive_metadata import archive_label
 
 
@@ -185,6 +187,49 @@ def _render_archive_section(
     return lines
 
 
+def _render_derived_preservation_section(
+    title: str,
+    rows: list[AuditRow],
+    sources_by_id: dict[str, dict[str, Any]],
+    statuses: dict[str, object],
+) -> list[str]:
+    lines = [f"## {title}", ""]
+    if not rows:
+        lines.extend(["No sources are resolved through this preservation path yet.", ""])
+        return lines
+
+    lines.extend(
+        [
+            "| Source | Authority | Published | Instrument / status | Preservation evidence | Official URL |",
+            "|---|---|---|---|---|---|",
+        ]
+    )
+    for row in sorted(
+        rows,
+        key=lambda item: (item.authority.casefold(), item.title.casefold(), item.source_id),
+    ):
+        source = sources_by_id.get(row.source_id)
+        if source is None:
+            continue
+        url = _display(source.get("url"))
+        lines.append(
+            "| "
+            + " | ".join(
+                [
+                    f"`{_display(row.source_id)}`<br>{_display(row.title)}",
+                    _display(row.authority),
+                    _display(row.publication_date),
+                    _instrument_display(source, statuses),
+                    _display(row.what_repo_has),
+                    f"[official]({url})",
+                ]
+            )
+            + " |"
+        )
+    lines.append("")
+    return lines
+
+
 def _release_bundles(registry_path: Path) -> list[tuple[dict[str, Any], dict[str, Any]]]:
     releases_path = registry_path.parents[1] / "data" / "originals" / "releases.yaml"
     if not releases_path.is_file():
@@ -246,14 +291,42 @@ def _render_release_bundles(registry_path: Path) -> list[str]:
 
 
 def render_library(registry_path: Path, instruments_path: Path) -> str:
-    """Render the human-facing archive library from explicit archive metadata."""
+    """Render the human-facing archive library from all governed preservation layers."""
 
     sources = _load_list(registry_path, "sources")
+    sources_by_id = {
+        str(source.get("id")): source
+        for source in sources
+        if isinstance(source.get("id"), str)
+    }
     statuses = _instrument_statuses(instruments_path)
     grouped = {
         status: [source for source in sources if archive_label(source) == status]
         for status in ("local_git", "release_asset", "external_only")
     }
+    audit_rows = audit_registry(registry_path.parents[1])
+    derived = {
+        status: [row for row in audit_rows if row.status == status]
+        for status in ("archived_manifest", "archived_equivalent")
+    }
+    derived_ids = {
+        row.source_id
+        for rows in derived.values()
+        for row in rows
+    }
+    explicit_ids = {
+        str(source.get("id"))
+        for status_sources in grouped.values()
+        for source in status_sources
+        if isinstance(source.get("id"), str)
+    }
+    unresolved_count = sum(
+        1
+        for source in sources
+        if isinstance(source.get("id"), str)
+        and str(source.get("id")) not in derived_ids
+        and str(source.get("id")) not in explicit_ids
+    )
 
     lines = [
         "# Official document library",
@@ -266,6 +339,22 @@ def render_library(registry_path: Path, instruments_path: Path) -> str:
         "",
     ]
     lines.extend(_render_release_bundles(registry_path))
+    lines.extend(
+        _render_derived_preservation_section(
+            "Sources preserved by document manifests",
+            derived["archived_manifest"],
+            sources_by_id,
+            statuses,
+        )
+    )
+    lines.extend(
+        _render_derived_preservation_section(
+            "Sources preserved through verified official equivalents",
+            derived["archived_equivalent"],
+            sources_by_id,
+            statuses,
+        )
+    )
     sections = (
         ("Source-specific Local Git originals", "local_git"),
         ("Source-specific GitHub Release assets", "release_asset"),
@@ -275,9 +364,13 @@ def render_library(registry_path: Path, instruments_path: Path) -> str:
         lines.extend(_render_archive_section(title, grouped[status], statuses))
     lines.extend(
         [
-            "## Unclassified sources",
+            "## Sources without resolved source-specific preservation",
             "",
-            "Sources without an explicit `archive` block remain available in the canonical source registry but are intentionally omitted from the source-specific archive tables until their storage state has been verified. Existing document manifests and release bundles remain authoritative for archived bytes.",
+            f"{unresolved_count} registry sources are not resolved above through an explicit source archive block, a direct manifest match, or a declared verified official equivalent. This count includes sources intentionally outside the conservative primary-source request scope as well as sources that still need preservation review.",
+            "",
+            "Use the [missing-primary-source audit](../status/missing-primary-sources.md) for the conservative request queue. Existing document manifests and Release bundles remain authoritative for archived bytes.",
+            "",
+            "For compatibility with earlier catalog terminology: these unresolved entries are the remaining **unclassified sources** at the source-specific preservation layer.",
             "",
         ]
     )
@@ -299,6 +392,7 @@ def _expected_outputs(root: Path) -> dict[Path, str]:
 
 def run_check(root: Path) -> CheckResult:
     stale: list[str] = []
+    diff_lines: list[str] = []
     for output, expected in _expected_outputs(root).items():
         try:
             actual = output.read_text(encoding="utf-8")
@@ -306,13 +400,27 @@ def run_check(root: Path) -> CheckResult:
             actual = ""
         if actual != expected:
             stale.append(output.name)
+            diff_lines.extend(
+                difflib.unified_diff(
+                    actual.splitlines(),
+                    expected.splitlines(),
+                    fromfile=f"committed/{output.as_posix()}",
+                    tofile=f"generated/{output.as_posix()}",
+                    lineterm="",
+                )
+            )
     if stale:
-        return CheckResult(
-            1,
+        message = (
             "generated catalog is stale for "
             + ", ".join(stale)
-            + "; regenerate with: python -m scripts.build_catalog",
+            + "; regenerate with: python -m scripts.build_catalog"
         )
+        if diff_lines:
+            preview = diff_lines[:200]
+            message += "\n" + "\n".join(preview)
+            if len(diff_lines) > len(preview):
+                message += f"\n... diff truncated ({len(diff_lines) - len(preview)} more lines)"
+        return CheckResult(1, message)
     return CheckResult(0, "generated catalog is current")
 
 
