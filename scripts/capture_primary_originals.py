@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import html
+import re
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlsplit
@@ -16,6 +18,10 @@ from scripts.archive_audit import audit_registry
 
 MAX_CAPTURE_BYTES = 25 * 1024 * 1024
 BLOCK_MARKERS = (b"access denied", b"captcha", b"forbidden")
+_IFRAME_SRC_RE = re.compile(
+    rb"<iframe\b[^>]*\bsrc\s*=\s*['\"]([^'\"]+)['\"]", re.IGNORECASE
+)
+_EMBEDDED_DOF_HOST = "dof.gob.mx"
 
 
 def _normalized_media_type(value: str) -> str:
@@ -42,6 +48,51 @@ def _validate_capture_url(source: dict[str, Any], url: str) -> None:
             f"{source.get('id', '<unknown>')}: capture host {host or '<missing>'} "
             "is outside allowed_hosts"
         )
+
+
+def _is_sidof_source(source: dict[str, Any]) -> bool:
+    canonical = source.get("url")
+    return (
+        isinstance(canonical, str)
+        and (urlsplit(canonical).hostname or "").casefold() == "sidof.segob.gob.mx"
+    )
+
+
+def _validate_manifest_capture_url(source: dict[str, Any], url: str) -> None:
+    parts = urlsplit(url)
+    host = (parts.hostname or "").casefold()
+    if _is_sidof_source(source) and host == _EMBEDDED_DOF_HOST:
+        if parts.scheme.casefold() != "https" or not parts.path.casefold().endswith(".pdf"):
+            raise ValueError(
+                f"{source.get('id', '<unknown>')}: embedded DOF capture must be an HTTPS PDF"
+            )
+        return
+    _validate_capture_url(source, url)
+
+
+def embedded_official_pdf_url(payload: bytes) -> str | None:
+    """Return a single DOF PDF embedded by a SIDOF visor, if present."""
+
+    candidates: list[str] = []
+    for raw_src in _IFRAME_SRC_RE.findall(payload):
+        try:
+            src = html.unescape(raw_src.decode("utf-8", errors="strict")).strip()
+        except UnicodeDecodeError as exc:
+            raise ValueError("embedded PDF URL is not valid UTF-8") from exc
+        parts = urlsplit(src)
+        if not parts.path.casefold().endswith(".pdf"):
+            continue
+        if parts.scheme.casefold() != "https":
+            raise ValueError("embedded PDF must use HTTPS")
+        host = (parts.hostname or "").casefold()
+        if host != _EMBEDDED_DOF_HOST:
+            raise ValueError(f"embedded PDF host {host or '<missing>'} is not dof.gob.mx")
+        candidates.append(src)
+
+    unique = list(dict.fromkeys(candidates))
+    if len(unique) > 1:
+        raise ValueError("SIDOF visor contains multiple distinct official PDF candidates")
+    return unique[0] if unique else None
 
 
 def capture_url_for(source: dict[str, Any]) -> tuple[str, str]:
@@ -121,7 +172,7 @@ def build_manifest_document(
     if not isinstance(canonical_url, str) or not canonical_url:
         raise ValueError(f"{source_id}: canonical source URL is required")
 
-    _validate_capture_url(source, capture_url)
+    _validate_manifest_capture_url(source, capture_url)
     document: dict[str, Any] = {
         "id": source_id,
         "storage": "local_git",
@@ -151,7 +202,7 @@ class _AllowedRedirectHandler(HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def _fetch_source(source: dict[str, Any], url: str) -> tuple[str, bytes]:
+def _fetch_once(source: dict[str, Any], url: str) -> tuple[str, str, bytes]:
     opener = build_opener(_AllowedRedirectHandler(source))
     request = Request(
         url,
@@ -175,7 +226,22 @@ def _fetch_source(source: dict[str, Any], url: str) -> tuple[str, bytes]:
             )
         media_type = response.headers.get_content_type()
     validate_payload(source, final_url, media_type, payload)
-    return media_type, payload
+    return final_url, media_type, payload
+
+
+def _fetch_source(source: dict[str, Any], url: str) -> tuple[str, str, bytes]:
+    final_url, media_type, payload = _fetch_once(source, url)
+    if _is_sidof_source(source) and _normalized_media_type(media_type) in {
+        "text/html",
+        "application/xhtml+xml",
+    }:
+        embedded_pdf = embedded_official_pdf_url(payload)
+        if embedded_pdf:
+            embedded_source = dict(source)
+            embedded_source["allowed_hosts"] = [_EMBEDDED_DOF_HOST]
+            embedded_source["media_types"] = ["application/pdf"]
+            return _fetch_once(embedded_source, embedded_pdf)
+    return final_url, media_type, payload
 
 
 def _load_registry(root: Path) -> dict[str, dict[str, Any]]:
@@ -198,13 +264,14 @@ def capture_missing_sources(root: Path, output: Path) -> list[dict[str, Any]]:
 
     for source_id in missing_ids:
         source = registry[source_id]
-        capture_url, suffix = capture_url_for(source)
-        media_type, payload = _fetch_source(source, capture_url)
+        planned_capture_url, _ = capture_url_for(source)
+        final_capture_url, media_type, payload = _fetch_source(source, planned_capture_url)
+        suffix = ".pdf" if _normalized_media_type(media_type) == "application/pdf" else ".html"
         file_name = f"{source_id}{suffix}"
         (output / file_name).write_bytes(payload)
         documents.append(
             build_manifest_document(
-                source, file_name, capture_url, media_type, payload
+                source, file_name, final_capture_url, media_type, payload
             )
         )
 
