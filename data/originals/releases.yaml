@@ -1,0 +1,40 @@
+releases:
+  - tag: originals-2026.08.13
+    snapshot_date: 2026-08-13
+    published_at: 2026-08-14T05:33:48Z
+    assets:
+      - name: originals-diputados.zip
+        domains: [diputados]
+        sha256: 9ce0958107bab45858a29a57fb41e7007f64cc19594a7762df2d22d20ac7eff4
+        bytes: 26301138
+        media_type: application/zip
+      - name: originals-sat.zip
+        domains: [sat]
+        sha256: 2845d93953e8a242b48d07aa960895116364903ba5dd173aa5ad833e735f7fef
+        bytes: 120079036
+        media_type: application/zip
+      - name: originals-se.zip
+        domains: [se]
+        sha256: 0a8c15e05b671e7be7f55868e5f4354d5989ff67f8d303235029e6f7e04a1a55
+        bytes: 17565588
+        media_type: application/zip
+      - name: originals-sidof.zip
+        domains: [sidof]
+        sha256: a5da2087ef4ce139e2df8e7e50db115f4e0334e5febf3de002ac44da20d302ae
+        bytes: 5290833
+        media_type: application/zip
+      - name: originals-snice-tigie-wto.zip
+        domains: [snice, tigie, wto]
+        sha256: d40f28c691c757ffd4fbf3391da4c37e4c55b5425a5298563db89fadb8057e8a
+        bytes: 11496458
+        media_type: application/zip
+      - name: originals-tlc-tmec.zip
+        domains: [tlc, tmec]
+        sha256: b01939a33b803fe7e237b77c6c4fcd97c7f35f12164cb0fa09db0299a7a4a170
+        bytes: 44401414
+        media_type: application/zip
+      - name: originals-vucem.zip
+        domains: [vucem]
+        sha256: 558bb248733eb14c704af76db857eecdc7ec445a5f803dd22bdfa2fed49c6fc1
+        bytes: 41980421
+        media_type: application/zip
