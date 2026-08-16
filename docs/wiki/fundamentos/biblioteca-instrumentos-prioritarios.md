@@ -5,6 +5,10 @@ description: Mapa navegable de LIGIE/TIGIE, legislación aduanera, RRNA, tratado
 
 # Biblioteca de instrumentos prioritarios
 
+![Banner institucional del Servicio Nacional de Información de Comercio Exterior: contenedor y grúas portuarias](../../assets/images/snice-comercio-exterior-oficial.jpg)
+
+*Activo institucional enlazado por el [portal oficial SNICE](https://www.snice.gob.mx/cs/avi/snice/home.html). Ilustra la capa de consulta de comercio exterior; no sustituye la publicación que determina vigencia jurídica.*
+
 ## Disponibilidad dentro de la wiki: acceso, contexto y trazabilidad
 
 Esta biblioteca no intenta republicar indiscriminadamente leyes, tratados, tablas o materiales con derechos reservados. Su objetivo es que los documentos esenciales estén **disponibles para consulta desde la misma wiki** mediante enlaces oficiales, descripciones de uso, estado de fuente y rutas hacia el catálogo del proyecto. Cuando un documento tiene un original verificable archivado conforme a la política del repositorio, el catálogo puede indicar su disponibilidad; cuando no, la wiki preserva la referencia institucional y explica el límite.

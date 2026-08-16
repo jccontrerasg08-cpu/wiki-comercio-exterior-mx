@@ -1,0 +1,15 @@
+flowchart LR
+    A["Publicación oficial<br/>DOF / SIDOF"] -->|"acto, fecha y transitorios"| D["Decisión documentada<br/>por operación"]
+    B["Texto consolidado<br/>Cámara de Diputados"] -->|"lectura integrada"| D
+    C["Herramientas oficiales<br/>SNICE / VUCEM"] -->|"consulta, trámite o acuse"| D
+    D --> E["Expediente trazable<br/>fuente · versión · evidencia"]
+
+    classDef official fill:#6b1727,color:#ffffff,stroke:#6b1727,stroke-width:2px;
+    classDef consolidated fill:#f1e8d8,color:#2e2922,stroke:#a68d5b,stroke-width:2px;
+    classDef operational fill:#0f5d62,color:#ffffff,stroke:#0f5d62,stroke-width:2px;
+    classDef result fill:#1e3a5f,color:#ffffff,stroke:#1e3a5f,stroke-width:2px;
+
+    class A official;
+    class B consolidated;
+    class C operational;
+    class D,E result;

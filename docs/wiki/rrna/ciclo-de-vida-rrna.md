@@ -17,6 +17,10 @@ SNICE organiza su información operativa de medidas no arancelarias en rutas sep
 
 Un mismo tema puede requerir varias fuentes. La Ley de Comercio Exterior y su Reglamento ofrecen marco general; las Reglas y criterios de la Secretaría de Economía (SE), sus anexos y modificaciones desarrollan supuestos operativos; las dependencias sectoriales pueden emitir requisitos adicionales; y los sistemas como VUCEM/SNICE facilitan consulta o trámite. La página puede ser útil, pero el instrumento jurídico con efectos y sus transitorios deben mantenerse visibles en la investigación.
 
+![Diagrama de relación entre publicación oficial DOF/SIDOF, texto consolidado, herramientas SNICE/VUCEM y expediente trazable](../../assets/images/fuentes-oficiales-comercio-exterior.png)
+
+*Diagrama propio de la wiki. Resume funciones documentales distintas; no establece jerarquía entre autoridades ni sustituye los requisitos de una medida concreta.*
+
 | Nivel de fuente | Pregunta que responde | Ejemplo de uso | Riesgo si se usa de forma aislada |
 |---|---|---|---|
 | Publicación jurídica | ¿Qué medida se estableció, a quién alcanza y desde cuándo? | DOF/SIDOF, decreto, acuerdo, resolución y sus transitorios | Usar una página informativa sin comprobar vigencia, alcance o tablas publicadas. |
