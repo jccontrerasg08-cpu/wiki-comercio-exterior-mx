@@ -1539,3 +1539,30 @@ sources:
     harvest: false
     cadence_days: 30
     probe: *probe_html
+
+
+  - id: mx_vucem_semaforo_servicios
+    jurisdiction: MEX
+    title: VUCEM Semaforo de servicios
+    url: https://www.ventanillaunica.gob.mx/vucem/semaforo.html
+    note_id: null
+    authority: VUCEM
+    evidence_class: official_administrative
+    allowed_hosts: [www.ventanillaunica.gob.mx, ventanillaunica.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 7
+    probe: *probe_html
+
+  - id: mx_vucem_descargas_manuales
+    jurisdiction: MEX
+    title: VUCEM Descargas manuales y guias tecnicas
+    url: https://www.ventanillaunica.gob.mx/vucem/descargas.html
+    note_id: null
+    authority: VUCEM
+    evidence_class: official_administrative
+    allowed_hosts: [www.ventanillaunica.gob.mx, ventanillaunica.gob.mx]
+    media_types: [text/html, application/pdf, application/xml]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html

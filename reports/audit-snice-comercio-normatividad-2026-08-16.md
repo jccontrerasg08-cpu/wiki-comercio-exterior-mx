@@ -73,3 +73,15 @@ La página pública de Estatus de pedimentos DODA expone un campo de “Número 
 ## Verificación visual de calculadoras y consultas integradas
 
 Chrome mostró la nueva sección “Calculadoras, clasificadores y consultas operativas” en la tabla de contenidos y en la columna principal. Los párrafos mantienen un ancho legible, los nombres de herramienta se distinguen en negritas y las referencias numeradas permanecen junto a la afirmación respectiva. El panel lateral conserva la guía en Empieza aquí y la navegación hacia clasificación, contribuciones, pedimento, VUCEM y trazabilidad queda visible. La redacción explica estados de disponibilidad y límites sin presentar ningún recurso de consulta como decisión automática.
+
+## Hallazgo complementario: directorio visual de VUCEM y semáforo
+
+La página `comercioexterior.html` cargó en Chrome y mostró seis tarjetas: Clasificador arancelario, Calculadora de contribuciones, Pedimentos de autos usados, Estatus de pedimentos DODA, Trazabilidad de contenedores y Semáforo de servicios VUCEM. La parte inferior mostró el Semáforo con tres bloques visibles: “Servicios Informativos”, “Servicios Exportador” y “Acuse de Valor y DODA”. Se clasifica el semáforo como indicador de disponibilidad técnica de familias de servicios; no demuestra que un trámite, permiso, pedimento, acuse o mercancía haya sido validado, autorizado o cumplido. Las tarjetas se usan como directorio de rutas y cada herramienta exige verificación individual de entradas, resultado, fecha y límites.
+
+## Hallazgo complementario: manuales y materiales técnicos VUCEM
+
+La página de Descargas de VUCEM cargó en Chrome y exhibe un buscador de manuales, guías e insumos, agrupados por dependencias y procesos. Entre los recursos visibles están Manifestación de Valor; COVE y digitalización —incluidos WSDL, XSD, diccionarios de datos, ejemplos y consulta de e-document—; manifiestos ferroviario, marítimo y aéreo; gafetes; consulta de pedimentos por web services; e insumos SIRA/recintos fiscalizados. Se clasifican como documentación técnica, manuales de uso e interfaces de transmisión: ayudan a preparar, enviar, consultar o integrar datos, pero no reemplazan el Anexo 22, reglas, lineamientos, autorización, acuse, pedimento ni el instrumento que rige la mercancía. La página también contiene materiales históricos identificados por fecha, por lo que debe conservarse la versión utilizada y verificarse vigencia antes de implementación.
+
+## Verificación visual de disponibilidad y documentación técnica
+
+En la guía renderizada, los nuevos párrafos de Semáforo de servicios y Descargas VUCEM se muestran consecutivamente después de DODA/SOIA, conservan referencias numeradas junto a las afirmaciones y mantienen un ancho de lectura legible en modo oscuro. La separación entre estado técnico, manual de interfaz y evidencia de operación es visible en la prosa; el panel lateral y la tabla de contenidos continúan conectando la guía con Pedimento, VUCEM, clasificación, contribuciones y trazabilidad.

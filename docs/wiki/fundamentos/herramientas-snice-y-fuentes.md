@@ -48,6 +48,10 @@ La ruta de **Calculadora de Aranceles o Contribuciones** de VUCEM se publicó co
 
 Las consultas de seguimiento responden preguntas distintas. **DODA** pide un número de integración y expone un estatus de pedimento.[18] La consulta rápida **SOIA/ANAM** explica que permite buscar por pedimento/aduana/año, VIN/año o contenedor/aduana/año, y devolver estatus, datos principales o último movimiento, según la entrada.[19] No introduzcas en documentos de ejemplo identificadores de terceros. En una operación propia, conserva el resultado con fecha y contexto, pero contrástalo con pedimento, acuse, documentos de transporte, evidencia de arribo o retorno y datos declarados: un estatus no reemplaza el expediente.
 
+El **Semáforo de servicios VUCEM** es un control de disponibilidad técnica. La página separa servicios internos —portal e ingreso—, servicios externos —aéreos, ferroviarios, SADER, identificación del contribuyente, RENAPO y e.firma— y Acuse de Valor/Documento Digitalizado, con estado disponible y tiempo de respuesta.[20] La propia interfaz advierte que la información es meramente ilustrativa y no vinculatoria. Úsalo para decidir si conviene reintentar, monitorear o escalar una interrupción; no para concluir que un trámite fue recibido, un documento fue validado o una mercancía puede despacharse.
+
+La página de **Descargas VUCEM** reúne manuales, guías e insumos por dependencia y proceso. Incluye Manifestación de Valor, COVE, digitalización/e-document, manifiestos ferroviario, marítimo y aéreo, gafetes, consulta de pedimentos por web services y materiales SIRA.[21] Un manual, WSDL, XSD, diccionario de datos o ejemplo XML explica cómo preparar una interacción técnica; conserva versión, fecha, ambiente y nombre del archivo. Antes de desarrollar o transmitir, contrasta la especificación con la regla, lineamiento, autorización, fecha de vigencia y entorno oficial aplicables. La documentación técnica no sustituye el acuse ni demuestra que un mensaje concreto se aceptó.
+
 ## Normatividad: localizar no equivale a concluir
 
 La **Biblioteca Jurídica** organiza Tratados y Acuerdos Internacionales, Códigos y Leyes, Reglamentos, Decretos, Acuerdos, Resoluciones y Reglas.[11] Es la ruta adecuada para descubrir el tipo de instrumento, pero una conclusión exige abrir el texto, confirmar fecha de publicación y entrada en vigor, leer transitorios y ubicar el supuesto concreto. Cuando exista una versión consolidada oficial, también debe contrastarse contra eventos posteriores.
@@ -69,6 +73,8 @@ Cuando uses un recurso SNICE, conserva una ficha breve. Debe responder qué preg
 | ¿Puede obtenerse una preferencia T-MEC? | Calculadora de Origen SNICE | Regla específica, clasificación, método, versión del tratado e insumos | Reporte, BOM/costos, regla usada y soporte de origen. |
 | ¿Qué fracción es una hipótesis inicial? | Clasificador VUCEM o Mi Fracción Arancelaria | Ficha técnica, reglas/notas, texto vigente y razonamiento | Consulta fechada y expediente de clasificación. |
 | ¿Qué revela una consulta de seguimiento? | DODA o SOIA/ANAM | Pedimento, acuse, transporte/arribo y datos declarados | Captura o resultado fechado, identificador propio y expediente relacionado. |
+| ¿Existe una interrupción técnica de plataforma? | Semáforo de servicios VUCEM | Estado del trámite, acuse y dato real de la operación | Captura fechada, incidente/canal de soporte y posterior confirmación operativa. |
+| ¿Cómo se estructura una transmisión técnica? | Descargas VUCEM, manual, WSDL/XSD o diccionario | Regla/lineamiento vigente, entorno y acuse de aceptación | Versión, archivo, ambiente, mensaje y acuse o error conservado. |
 
 ## Fuentes oficiales y de referencia
 
@@ -109,6 +115,10 @@ Cuando uses un recurso SNICE, conserva una ficha breve. Debe responder qué preg
 [18] [VUCEM, *Estatus de pedimentos DODA*](https://www.ventanillaunica.gob.mx/vucem/doda.html), consulta por número de integración; no sustituye el expediente documental.
 
 [19] [ANAM, *Consulta Rápida de Pedimentos de Vehículos y Contenedores*](https://www.anam.gob.mx/consulta-rapida-de-pedimentos-de-vehiculos-y-contenedores/), descripción oficial de consultas SOIA por pedimento, VIN o contenedor.
+
+[20] [VUCEM, *Semáforo de servicios*](https://www.ventanillaunica.gob.mx/vucem/semaforo.html), indicador ilustrativo y no vinculante de disponibilidad y tiempos de respuesta de servicios.
+
+[21] [VUCEM, *Descargas*](https://www.ventanillaunica.gob.mx/vucem/descargas.html), directorio de manuales, guías e insumos técnicos de la plataforma.
 
 El [catálogo reproducible de fuentes](../../catalog/registry.md) conserva identificadores y estado de procedencia a nivel de repositorio.
 

@@ -214,7 +214,9 @@ Transport availability is not a legal-status decision. Publication events are re
 | `mx_vucem_portal`<br>Ventanilla Unica de Comercio Exterior Mexicana | MEX | official_operational | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/index.html) |
 | `mx_vucem_clasificador`<br>VUCEM Buscador de fracciones arancelarias | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/Clasificador.html) |
 | `mx_vucem_calculadora_contribuciones`<br>VUCEM Calculadora de Aranceles o Contribuciones | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/calculadora.html) |
+| `mx_vucem_descargas_manuales`<br>VUCEM Descargas manuales y guias tecnicas | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/descargas.html) |
 | `mx_vucem_doda`<br>VUCEM Estatus de pedimentos DODA | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/doda.html) |
+| `mx_vucem_semaforo_servicios`<br>VUCEM Semaforo de servicios | MEX | official_administrative | - | no | 7 | - | [open](https://www.ventanillaunica.gob.mx/vucem/semaforo.html) |
 
 ## WCO
 
