@@ -13,7 +13,7 @@ Before asking the repository owner for a document, re-check the official source,
 - Explicit source archive metadata: 0
 - Explicit external-only decisions: 0
 - Superseded-only sources kept out of auto-request: 12
-- Outside conservative auto-request scope: 61
+- Outside conservative auto-request scope: 62
 - Missing primary originals requiring review: 17
 
 ## Request queue

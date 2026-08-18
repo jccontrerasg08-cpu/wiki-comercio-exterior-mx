@@ -62,7 +62,7 @@ No sources are classified in this archive state yet.
 
 ## Sources without resolved source-specific preservation
 
-90 registry sources are not resolved above through an explicit source archive block, a direct manifest match, or a declared verified official equivalent. This count includes sources intentionally outside the conservative primary-source request scope as well as sources that still need preservation review.
+91 registry sources are not resolved above through an explicit source archive block, a direct manifest match, or a declared verified official equivalent. This count includes sources intentionally outside the conservative primary-source request scope as well as sources that still need preservation review.
 
 Use the [missing-primary-source audit](../status/missing-primary-sources.md) for the conservative request queue. Existing document manifests and Release bundles remain authoritative for archived bytes.
 

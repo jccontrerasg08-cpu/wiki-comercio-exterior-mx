@@ -118,6 +118,7 @@ Transport availability is not a legal-status decision. Publication events are re
 
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
+| `mx_inegi_bcmm_mtra_2026`<br>INEGI BCMM mensual por modo de transporte aduana y capitulo | MEX | official_statistics | - | no | 30 | - | [open](https://www.inegi.org.mx/app/descarga/ficha.html?tit=83071&ag=0&f=csv) |
 | `mx_inegi_tigie_scian`<br>INEGI Catalogo TIGIE-SCIAN | MEX | official_statistics | - | no | 90 | - | [open](https://www.inegi.org.mx/app/tigie/) |
 
 ## ITC

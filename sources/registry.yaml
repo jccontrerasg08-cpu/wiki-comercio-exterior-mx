@@ -1566,3 +1566,17 @@ sources:
     harvest: false
     cadence_days: 30
     probe: *probe_html
+
+
+  - id: mx_inegi_bcmm_mtra_2026
+    jurisdiction: MEX
+    title: INEGI BCMM mensual por modo de transporte aduana y capitulo
+    url: https://www.inegi.org.mx/app/descarga/ficha.html?tit=83071&ag=0&f=csv
+    note_id: null
+    authority: INEGI
+    evidence_class: official_statistics
+    allowed_hosts: [www.inegi.org.mx, inegi.org.mx]
+    media_types: [text/html, text/csv, application/zip]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html

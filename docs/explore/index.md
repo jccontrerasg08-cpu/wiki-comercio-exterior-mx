@@ -65,6 +65,14 @@ Esta vista organiza el mismo corpus de la wiki por **decisión y contexto operat
 
     [:octicons-arrow-right-24: Explorar mapa](mapa.md)
 
+-   :material-chart-bar:{ .lg .middle } **Datos y visualizaciones**
+
+    ---
+
+    Series, gráficos reproducibles y mapas de contexto, con unidad, periodo, metadatos y límites de interpretación visibles.
+
+    [:octicons-arrow-right-24: Explorar datos](datos-y-visualizaciones.md)
+
 -   :material-archive-search:{ .lg .middle } **Fuentes oficiales**
 
     ---
