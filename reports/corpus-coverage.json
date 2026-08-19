@@ -462,6 +462,13 @@
       "section": "contribuciones"
     },
     {
+      "path": "docs/wiki/fundamentos/herramientas-snice-y-fuentes.md",
+      "risk_reasons": [
+        "missing_instrument_reference"
+      ],
+      "section": "fundamentos"
+    },
+    {
       "path": "docs/wiki/fundamentos/padron-importadores.md",
       "risk_reasons": [
         "pending_legal_review",
@@ -510,7 +517,6 @@
     {
       "path": "docs/wiki/programas/drawback.md",
       "risk_reasons": [
-        "pending_legal_review",
         "source_not_current"
       ],
       "section": "programas"
@@ -523,9 +529,15 @@
       "section": "programas"
     },
     {
+      "path": "docs/wiki/programas/programas-fomento.md",
+      "risk_reasons": [
+        "source_not_current"
+      ],
+      "section": "programas"
+    },
+    {
       "path": "docs/wiki/programas/prosec.md",
       "risk_reasons": [
-        "pending_legal_review",
         "source_not_current"
       ],
       "section": "programas"
@@ -551,11 +563,11 @@
   "schema_version": 1,
   "sections": [
     {
-      "legally_reviewed_pages": 7,
+      "legally_reviewed_pages": 8,
       "pages_needing_attention": 3,
-      "retrieval_eligible_pages": 7,
+      "retrieval_eligible_pages": 8,
       "section": "aduana",
-      "total_pages": 10
+      "total_pages": 11
     },
     {
       "legally_reviewed_pages": 0,
@@ -565,11 +577,11 @@
       "total_pages": 3
     },
     {
-      "legally_reviewed_pages": 1,
+      "legally_reviewed_pages": 2,
       "pages_needing_attention": 3,
-      "retrieval_eligible_pages": 1,
+      "retrieval_eligible_pages": 2,
       "section": "contribuciones",
-      "total_pages": 4
+      "total_pages": 5
     },
     {
       "legally_reviewed_pages": 2,
@@ -579,11 +591,11 @@
       "total_pages": 43
     },
     {
-      "legally_reviewed_pages": 1,
-      "pages_needing_attention": 1,
-      "retrieval_eligible_pages": 1,
+      "legally_reviewed_pages": 4,
+      "pages_needing_attention": 2,
+      "retrieval_eligible_pages": 4,
       "section": "fundamentos",
-      "total_pages": 2
+      "total_pages": 5
     },
     {
       "legally_reviewed_pages": 0,
@@ -593,18 +605,25 @@
       "total_pages": 3
     },
     {
-      "legally_reviewed_pages": 3,
-      "pages_needing_attention": 5,
+      "legally_reviewed_pages": 2,
+      "pages_needing_attention": 0,
       "retrieval_eligible_pages": 2,
-      "section": "programas",
-      "total_pages": 7
+      "section": "operacion",
+      "total_pages": 2
     },
     {
-      "legally_reviewed_pages": 4,
+      "legally_reviewed_pages": 6,
+      "pages_needing_attention": 6,
+      "retrieval_eligible_pages": 2,
+      "section": "programas",
+      "total_pages": 8
+    },
+    {
+      "legally_reviewed_pages": 6,
       "pages_needing_attention": 0,
-      "retrieval_eligible_pages": 4,
+      "retrieval_eligible_pages": 6,
       "section": "rrna",
-      "total_pages": 4
+      "total_pages": 6
     },
     {
       "legally_reviewed_pages": 0,
@@ -617,38 +636,38 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 35,
+      "not_applicable": 45,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 35,
+      "not_applicable": 45,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
-      "pending_review": 58,
-      "reviewed": 18
+      "pending_review": 56,
+      "reviewed": 30
     },
     "source_status": {
-      "current": 57,
-      "partial": 19,
+      "current": 66,
+      "partial": 20,
       "unknown": 1
     }
   },
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 47,
-    "legally_reviewed_pages": 18,
+    "distinct_source_ids": 75,
+    "legally_reviewed_pages": 30,
     "non_current_corpus_pages": 40,
-    "pages_needing_attention": 62,
-    "pages_with_instruments": 68,
-    "pages_with_sources": 71,
-    "pending_legal_review_pages": 58,
-    "retrieval_eligible_pages": 17,
-    "total_pages": 77,
+    "pages_needing_attention": 64,
+    "pages_with_instruments": 77,
+    "pages_with_sources": 81,
+    "pending_legal_review_pages": 56,
+    "retrieval_eligible_pages": 26,
+    "total_pages": 87,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 34
+    "wiki_pages": 44
   }
 }

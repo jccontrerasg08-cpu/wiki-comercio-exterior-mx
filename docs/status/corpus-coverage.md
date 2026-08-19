@@ -9,29 +9,30 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 77 |
-| Wiki | 34 |
+| Páginas gobernadas | 87 |
+| Wiki | 44 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 17 (22.1%) |
-| Con fuente referenciada | 71 (92.2%) |
-| Con instrumento referenciado | 68 (88.3%) |
-| Revisión jurídica `reviewed` | 18 (23.4%) |
-| Requieren atención | 62 |
-| Fuentes distintas referenciadas | 47 |
+| Elegibles por estado para recuperación vigente | 26 (29.9%) |
+| Con fuente referenciada | 81 (93.1%) |
+| Con instrumento referenciado | 77 (88.5%) |
+| Revisión jurídica `reviewed` | 30 (34.5%) |
+| Requieren atención | 64 |
+| Fuentes distintas referenciadas | 75 |
 | Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección
 
 | Sección | Total | Elegibles | Reviewed | Atención |
 |---|---:|---:|---:|---:|
-| `aduana` | 10 | 7 | 7 | 3 |
+| `aduana` | 11 | 8 | 8 | 3 |
 | `clasificacion` | 3 | 0 | 0 | 3 |
-| `contribuciones` | 4 | 1 | 1 | 3 |
+| `contribuciones` | 5 | 2 | 2 | 3 |
 | `corpus` | 43 | 2 | 2 | 43 |
-| `fundamentos` | 2 | 1 | 1 | 1 |
+| `fundamentos` | 5 | 4 | 4 | 2 |
 | `logistica` | 3 | 0 | 0 | 3 |
-| `programas` | 7 | 2 | 3 | 5 |
-| `rrna` | 4 | 4 | 4 | 0 |
+| `operacion` | 2 | 2 | 2 | 0 |
+| `programas` | 8 | 2 | 6 | 6 |
+| `rrna` | 6 | 6 | 6 | 0 |
 | `wiki` | 1 | 0 | 0 | 1 |
 
 ## Estados
@@ -40,15 +41,15 @@
 
 | Estado | Páginas |
 |---|---:|
-| `current` | 57 |
-| `partial` | 19 |
+| `current` | 66 |
+| `partial` | 20 |
 | `unknown` | 1 |
 
 ### `extraction_status`
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 35 |
+| `not_applicable` | 45 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -56,15 +57,15 @@
 | Estado | Páginas |
 |---|---:|
 | `not_applicable` | 1 |
-| `pending_review` | 58 |
-| `reviewed` | 18 |
+| `pending_review` | 56 |
+| `reviewed` | 30 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 35 |
+| `not_applicable` | 45 |
 | `partial` | 39 |
 | `stale` | 1 |
 
@@ -126,14 +127,16 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `docs/wiki/contribuciones/aranceles.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/contribuciones/cuotas-compensatorias.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/contribuciones/valor-en-aduana.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/fundamentos/herramientas-snice-y-fuentes.md` | `fundamentos` | `missing_instrument_reference` |
 | `docs/wiki/fundamentos/padron-importadores.md` | `fundamentos` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/index.md` | `wiki` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/incoterms.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/logistica-internacional.md` | `logistica` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/pagos-internacionales.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
-| `docs/wiki/programas/drawback.md` | `programas` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/programas/drawback.md` | `programas` | `source_not_current` |
 | `docs/wiki/programas/immex.md` | `programas` | `source_not_current` |
-| `docs/wiki/programas/prosec.md` | `programas` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/programas/programas-fomento.md` | `programas` | `source_not_current` |
+| `docs/wiki/programas/prosec.md` | `programas` | `source_not_current` |
 | `docs/wiki/programas/reglas-de-origen.md` | `programas` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/programas/tlc-tmec.md` | `programas` | `pending_legal_review`, `source_not_current` |
 

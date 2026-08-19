@@ -9,6 +9,9 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_gob_anam`<br>ANAM | MEX | official_operational | - | no | 90 | - | [open](https://anam.gob.mx/) |
+| `mx_anam_soia_consulta_rapida`<br>ANAM Consulta Rapida de Pedimentos de Vehiculos y Contenedores SOIA | MEX | official_administrative | - | no | 30 | - | [open](https://www.anam.gob.mx/consulta-rapida-de-pedimentos-de-vehiculos-y-contenedores/) |
+| `mx_anam_documentos_electronicos_pedimento`<br>ANAM Documentos electronicos o digitales anexos al pedimento de importacion | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/documentos-electronicos-o-digitales-que-se-deben-transmitir-como-anexos-al-pedimento-de-importacion/) |
+| `mx_anam_obligaciones_importadores`<br>ANAM Obligaciones de los importadores | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/obligaciones-de-los-importadores/) |
 
 ## Camara de Diputados
 
@@ -101,6 +104,8 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_gob_tmec`<br>T-MEC | MEX | official_operational | - | no | 90 | - | [open](https://www.gob.mx/t-mec) |
+| `mx_gob_tmec_reglamentaciones_uniformes`<br>T-MEC textos finales de las reglamentaciones uniformes | MEX | official_operational | mx_tmec / partial | no | 90 | 2020-07-01 | [open](https://www.gob.mx/t-mec/acciones-y-programas/textos-finales-de-las-reglamentaciones-uniformes) |
+| `mx_gob_tmec_textos_finales`<br>T-MEC textos finales del Tratado entre Mexico Estados Unidos y Canada | MEX | official_operational | mx_tmec / partial | no | 90 | 2020-07-01 | [open](https://www.gob.mx/t-mec/acciones-y-programas/textos-finales-del-tratado-entre-mexico-estados-unidos-y-canada-t-mec-202730) |
 
 ## ICC
 
@@ -113,6 +118,7 @@ Transport availability is not a legal-status decision. Publication events are re
 
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
+| `mx_inegi_bcmm_mtra_2026`<br>INEGI BCMM mensual por modo de transporte aduana y capitulo | MEX | official_statistics | - | no | 30 | - | [open](https://www.inegi.org.mx/app/descarga/ficha.html?tit=83071&ag=0&f=csv) |
 | `mx_inegi_tigie_scian`<br>INEGI Catalogo TIGIE-SCIAN | MEX | official_statistics | - | no | 90 | - | [open](https://www.inegi.org.mx/app/tigie/) |
 
 ## ITC
@@ -162,12 +168,33 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_snice_biblioteca_juridica`<br>Biblioteca juridica de comercio exterior | MEX | official_administrative | - | no | 7 | - | [open](https://www.snice.gob.mx/cs/avi/snice/biblioteca.juridica.html) |
-| `mx_snice_drawback`<br>Devolucion de impuestos de importacion a exportadores Drawback | MEX | official_administrative | mx_programa_drawback / partial | no | 30 | 1995-05-11 | [open](https://www.snice.gob.mx/cs/avi/snice/drawback.html) |
-| `mx_snice_immex`<br>Programa IMMEX | MEX | official_administrative | mx_programa_immex / partial | no | 30 | 2006-11-01 | [open](https://www.snice.gob.mx/cs/avi/snice/immex.html) |
-| `mx_snice_prosec`<br>Programas de Promocion Sectorial PROSEC | MEX | official_administrative | mx_programa_prosec / partial | no | 30 | 2002-08-02 | [open](https://www.snice.gob.mx/cs/avi/snice/prosec.html) |
+| `mx_snice_drawback`<br>Devolucion de impuestos de importacion a exportadores Drawback | MEX | official_administrative | mx_programa_drawback / partial | no | 30 | 1995-05-11 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.drawback.html) |
+| `mx_snice_moca`<br>MoCA Mx Monitor de Comercio de Acero en Mexico | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/mca.html) |
+| `mx_snice_immex`<br>Programa IMMEX | MEX | official_administrative | mx_programa_immex / partial | no | 30 | 2006-11-01 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.immex.html) |
+| `mx_snice_prosec`<br>Programas de Promocion Sectorial PROSEC | MEX | official_administrative | mx_programa_prosec / partial | no | 30 | 2002-08-02 | [open](https://www.snice.gob.mx/cs/avi/snice/programasdefom.prosec.html) |
+| `mx_snice_siavi`<br>Sistema de Informacion Arancelaria Via Internet SIAVI | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/hce.siavi.html) |
+| `mx_snice_aprende_exportar`<br>SNICE Aprende a Exportar | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.exportar.html) |
+| `mx_snice_aprende_importar`<br>SNICE Aprende a Importar | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.importar.html) |
+| `mx_snice_aviso_disponibilidad`<br>SNICE Aviso de Disponibilidad | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/aviso.disponibilidad.html) |
+| `mx_snice_calculadora_origen`<br>SNICE Calculadora de Origen T-MEC | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/hce.calc.origen2020.html) |
 | `mx_snice_cuotas`<br>SNICE cuotas compensatorias | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.cuotascomp.html) |
+| `mx_snice_comercio_datos`<br>SNICE Datos sobre Comercio Exterior | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comerciointernacional.html) |
+| `mx_snice_fuentes_estadisticas`<br>SNICE Fuentes estadisticas de Comercio Exterior | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/fuentesestadisticas.html) |
+| `mx_snice_historicos`<br>SNICE Historicos de normatividad y actualidad | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/historicos.html) |
 | `mx_snice_ligie_info`<br>SNICE LIGIE IMMEX PROSEC RRNA | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/ligie.info22.html) |
 | `mx_snice_mi_fraccion`<br>SNICE Mi Fraccion Arancelaria | MEX | official_operational | - | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/hce.mi.fraccion.arancelaria.html) |
+| `mx_snice_resoluciones_anticipadas`<br>SNICE Resoluciones anticipadas | MEX | official_administrative | - | no | 30 | - | [open](https://www.snice.gob.mx/cs/avi/snice/normatividad.res.anticip.html) |
+
+## SNICE / Secretaria de Economia
+
+| Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
+|---|---|---|---|---:|---:|---|---|
+| `mx_snice_programas_fomento_transparencia`<br>Directorios de beneficiarios de Programas de Fomento | MEX | official_administrative | mx_programa_immex / partial<br>mx_programa_prosec / partial | no | 30 | 2026-06-30 | [open](https://www.snice.gob.mx/cs/avi/snice/transparencia.programasfomento.html) |
+| `mx_snice_raoce_2026`<br>Guia VUCEM RAOCE 2026 para Programas de Fomento | MEX | official_administrative | mx_programa_immex / partial<br>mx_programa_prosec / partial | yes | 365 | 2026-04-23 | [open](https://www.snice.gob.mx/~oracle/SNICE_DOCS/RAOCE-2026-PROGRAMAS-DE-FOMENTO_20260423-20260423.pdf) |
+| `mx_snice_avisos_permisos_tramites`<br>SNICE Avisos y Permisos Tramites | MEX | official_operational | mx_ley_comercio_exterior / current<br>mx_reglas_criterios_se / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.avisosypermisos.tramites.html) |
+| `mx_snice_cupos_acerca`<br>SNICE Cupos Acerca de | MEX | official_operational | mx_ley_comercio_exterior / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/drrnas.cupos.acercade.html) |
+| `mx_snice_rrna_documentos`<br>SNICE Documentos que avalen RRNA | MEX | official_operational | mx_ligie / current<br>mx_ley_comercio_exterior / current<br>mx_reglas_criterios_se / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/comercio.aprende.exportar.rrnas.html) |
+| `mx_snice_noms_normatividad`<br>SNICE NOMs Normatividad y Anexo 2.4.1 | MEX | official_operational | mx_reglas_criterios_se / current<br>mx_ley_infraestructura_calidad / current | no | 90 | - | [open](https://www.snice.gob.mx/cs/avi/snice/seguridad.normatividad.html) |
 
 ## UNSD
 
@@ -186,6 +213,11 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_vucem_portal`<br>Ventanilla Unica de Comercio Exterior Mexicana | MEX | official_operational | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/index.html) |
+| `mx_vucem_clasificador`<br>VUCEM Buscador de fracciones arancelarias | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/Clasificador.html) |
+| `mx_vucem_calculadora_contribuciones`<br>VUCEM Calculadora de Aranceles o Contribuciones | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/calculadora.html) |
+| `mx_vucem_descargas_manuales`<br>VUCEM Descargas manuales y guias tecnicas | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/descargas.html) |
+| `mx_vucem_doda`<br>VUCEM Estatus de pedimentos DODA | MEX | official_administrative | - | no | 30 | - | [open](https://www.ventanillaunica.gob.mx/vucem/doda.html) |
+| `mx_vucem_semaforo_servicios`<br>VUCEM Semaforo de servicios | MEX | official_administrative | - | no | 7 | - | [open](https://www.ventanillaunica.gob.mx/vucem/semaforo.html) |
 
 ## WCO
 

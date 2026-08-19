@@ -13,6 +13,7 @@ LEGACY_ROUTES = {
     "clasificacion/tigie-nico/index.html": "../../wiki/clasificacion/tigie-nico/",
     "programas/immex/index.html": "../../wiki/programas/immex/",
 }
+SITE_BASE_PATH = "/wiki-comercio-exterior-mx/"
 
 
 class PageParser(HTMLParser):
@@ -100,22 +101,32 @@ def verify_site(site_dir: Path) -> list[str]:
             parsed = urlsplit(href)
             if parsed.scheme or parsed.netloc or href.startswith(("mailto:", "tel:", "javascript:")):
                 continue
-            if href.startswith("#"):
-                fragment = unquote(parsed.fragment)
+            fragment = unquote(parsed.fragment)
+            local_path = unquote(parsed.path)
+            if not local_path:
                 if fragment and fragment not in parser.ids:
                     findings.append(f"missing local fragment: {rel} -> #{fragment}")
                 continue
-            if not parsed.fragment:
-                continue
-            target_path = (path.parent / unquote(parsed.path)).resolve()
+
+            if local_path.startswith(SITE_BASE_PATH):
+                local_path = local_path.removeprefix(SITE_BASE_PATH)
+            if local_path.startswith("/"):
+                target_path = (site_dir / local_path.lstrip("/")).resolve()
+            else:
+                target_path = (path.parent / local_path).resolve()
             if target_path.is_dir():
                 target_path = target_path / "index.html"
             elif target_path.suffix != ".html":
                 candidate = target_path / "index.html"
                 if candidate.exists():
                     target_path = candidate
+            if not target_path.is_file():
+                findings.append(f"missing local target: {rel} -> {href}")
+                continue
+            if not fragment:
+                continue
             target_parser = pages.get(target_path)
-            if target_parser and unquote(parsed.fragment) not in target_parser.ids:
+            if target_parser and fragment not in target_parser.ids:
                 findings.append(f"missing target fragment: {rel} -> {href}")
 
     return findings

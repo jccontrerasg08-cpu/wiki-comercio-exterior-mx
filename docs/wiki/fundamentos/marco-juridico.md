@@ -9,11 +9,9 @@ description: "Marco jurídico del comercio exterior mexicano: jerarquía de leye
 
 ## Hechos verificados
 
-La Constitución distribuye facultades federales y limita la actuación de las autoridades. La Ley Aduanera regula entrada, salida, despacho, regímenes y facultades aduaneras. La LIGIE contiene la tarifa y reglas de interpretación. La Ley de Comercio Exterior sustenta política comercial, RRNA, cupos y prácticas desleales. CFF, LIVA, LIEPS y LFD complementan contribuciones y procedimiento.
+La Constitución distribuye facultades federales y limita la actuación de las autoridades.[1] La Ley Aduanera regula entrada, salida, despacho, regímenes y facultades aduaneras.[2] La LIGIE contiene la tarifa y reglas de interpretación; la Ley de Comercio Exterior aporta el marco de política comercial, RRNA, cupos y prácticas desleales.[3] [4] CFF, LIVA, LIEPS y LFD complementan contribuciones y procedimiento según el supuesto.
 
-Los reglamentos desarrollan las leyes. RGCE y sus anexos detallan operación SAT. Las Reglas y criterios de la Secretaría de Economía desarrollan permisos, avisos, cupos y cumplimiento de NOM en punto de entrada.
-
-Fuentes principales: `mx_diputados_constitucion`, `mx_diputados_ley_aduanera`, `mx_diputados_ligie_current`, `mx_diputados_lce_current`, `mx_sidof_rgce_2026` y `mx_sidof_reglas_se_2022`.
+Los reglamentos desarrollan las leyes. Las RGCE y sus anexos detallan operación aduanera, mientras que las Reglas y criterios de la Secretaría de Economía desarrollan permisos, avisos, cupos y supuestos de NOM en punto de entrada.[5] [6]
 
 ## Implicación operativa
 
@@ -28,7 +26,19 @@ Una operación puede estar simultáneamente sujeta a clasificación arancelaria,
 
 ## Fuentes
 
-Esta página conserva en su encabezado o cuerpo las autoridades, instrumentos o identificadores de fuente ya revisados. Para seguirlos hasta su URL y estado de procedencia, consulta el [catálogo reproducible de fuentes](../../catalog/registry.md).
+[1] [Cámara de Diputados, *Constitución Política de los Estados Unidos Mexicanos*](https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf), texto consolidado.
+
+[2] [Cámara de Diputados, *Ley Aduanera*](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf), texto consolidado.
+
+[3] [Cámara de Diputados, *LIGIE*](https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf), texto consolidado; revisar decretos y transitorios posteriores.
+
+[4] [Cámara de Diputados, *Ley de Comercio Exterior*](https://www.diputados.gob.mx/LeyesBiblio/pdf/LCE.pdf), texto consolidado.
+
+[5] [SIDOF, *Reglas Generales de Comercio Exterior 2026 y Anexo 13*](https://sidof.segob.gob.mx/notas/5777199), publicación oficial; verificar modificaciones y anexos por fecha de operación.
+
+[6] [SIDOF, *Reglas y criterios de comercio exterior de la Secretaría de Economía*](https://sidof.segob.gob.mx/notas/5651333), publicación base que debe leerse con sus modificaciones posteriores.
+
+El [catálogo reproducible de fuentes](../../catalog/registry.md) conserva identificadores y estado de procedencia a nivel de repositorio.
 
 ## Ver también
 

@@ -108,10 +108,10 @@ pages:
     path: docs/wiki/programas/immex.md
     title: Programa IMMEX
     topic: programas
-    source_ids: [mx_snice_immex, mx_sidof_immex_reform_20241219, mx_sidof_immex_reform_20250828, mx_sidof_immex_suspension_2026]
+    source_ids: [mx_snice_immex, mx_sidof_immex_reform_20241219, mx_sidof_immex_reform_20250828, mx_sidof_immex_suspension_2026, mx_snice_raoce_2026]
     instrument_ids: [mx_programa_immex, mx_rgce_2026]
     effective_from: 2006-11-13
-    current_through: 2025-08-29
+    current_through: 2026-08-15
     source_status: partial
     legal_review_status: reviewed
   - <<: *wiki
@@ -138,8 +138,32 @@ pages:
     path: docs/wiki/programas/prosec.md
     title: Programas de Promocion Sectorial
     topic: programas
-    source_ids: [mx_snice_prosec]
+    source_ids: [mx_snice_prosec, mx_sidof_ligie_prosec_20260423, mx_snice_raoce_2026]
     instrument_ids: [mx_programa_prosec]
+    effective_from: 2002-08-03
+    current_through: 2026-08-15
+    source_status: partial
+    legal_review_status: reviewed
+  - <<: *wiki
+    path: docs/wiki/programas/drawback.md
+    title: Devolucion de impuestos de importacion a exportadores Drawback
+    topic: programas
+    source_ids: [mx_snice_drawback]
+    instrument_ids: [mx_programa_drawback]
+    effective_from: 1995-05-12
+    current_through: 2026-08-15
+    source_status: partial
+    legal_review_status: reviewed
+  - <<: *wiki
+    path: docs/wiki/programas/programas-fomento.md
+    title: Programas de fomento y RAOCE
+    topic: programas
+    source_ids: [mx_snice_programas_fomento_transparencia, mx_snice_raoce_2026, mx_snice_immex, mx_snice_prosec, mx_snice_drawback]
+    instrument_ids: [mx_programa_immex, mx_programa_prosec, mx_programa_drawback]
+    effective_from: 2026-04-23
+    current_through: 2026-08-15
+    source_status: partial
+    legal_review_status: reviewed
   - <<: *wiki
     path: docs/wiki/programas/reglas-de-origen.md
     title: Reglas de origen
@@ -464,18 +488,20 @@ pages:
     path: docs/wiki/rrna/anexo-2-4-1.md
     title: Anexo 2.4.1 NOM en punto de entrada
     topic: rrna
-    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260529, mx_diputados_ley_infraestructura_calidad]
+    source_ids: [mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260529, mx_diputados_ley_infraestructura_calidad, mx_snice_noms_normatividad]
     instrument_ids: [mx_reglas_criterios_se, mx_ley_infraestructura_calidad]
     source_status: current
     legal_review_status: reviewed
     current_through: 2026-08-15
   - <<: *wiki
-    path: docs/wiki/programas/drawback.md
-    title: Drawback
-    topic: programas
-    source_ids: [mx_snice_drawback]
-    instrument_ids: [mx_programa_drawback]
-    source_status: partial
+    path: docs/wiki/rrna/mapa-medidas-arancelarias-rrna.md
+    title: Medidas arancelarias RRNA y evidencia
+    topic: rrna
+    source_ids: [mx_snice_rrna_documentos, mx_snice_cupos_acerca, mx_snice_avisos_permisos_tramites, mx_snice_noms_normatividad, mx_snice_cuotas, mx_diputados_ligie_current, mx_diputados_lce_current, mx_sidof_reglas_se_2022]
+    instrument_ids: [mx_ligie, mx_ley_comercio_exterior, mx_reglas_criterios_se, mx_ley_infraestructura_calidad]
+    source_status: current
+    legal_review_status: reviewed
+    current_through: 2026-08-15
   - <<: *wiki
     path: docs/wiki/aduana/regimenes-aduaneros.md
     title: Regimenes aduaneros
@@ -550,5 +576,86 @@ pages:
     source_ids: [mx_diputados_ley_aduanera, mx_sidof_rgce_2026]
     instrument_ids: [mx_ley_aduanera, mx_rgce_2026]
     current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/operacion/trazabilidad-evidencia.md
+    title: Trazabilidad de evidencia por operacion
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_anam_obligaciones_importadores, mx_anam_documentos_electronicos_pedimento, mx_vucem_portal]
+    instrument_ids: [mx_ley_aduanera, mx_ventanilla_unica_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/operacion/reconciliacion-control-cambios.md
+    title: Reconciliacion y control de cambios
+    topic: aduana
+    source_ids: [mx_diputados_ley_aduanera, mx_anam_documentos_electronicos_pedimento, mx_vucem_portal]
+    instrument_ids: [mx_ley_aduanera, mx_ventanilla_unica_2026]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/contribuciones/lectura-tarifa-y-tratos.md
+    title: Lectura de la tarifa y tratamientos arancelarios
+    topic: contribuciones
+    source_ids: [mx_diputados_ligie_current, mx_snice_ligie_info, mx_sidof_ligie_prosec_20260423, mx_gob_tmec, mx_gob_tmec_textos_finales]
+    instrument_ids: [mx_ligie, mx_programa_prosec, mx_tmec]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/rrna/ciclo-de-vida-rrna.md
+    title: Ciclo de vida de una regulacion o restriccion no arancelaria
+    topic: rrna
+    source_ids: [mx_diputados_lce_current, mx_diputados_reg_lce, mx_sidof_reglas_se_2022, mx_sidof_reglas_se_mod_20260212, mx_snice_ligie_info, mx_snice_cuotas]
+    instrument_ids: [mx_ley_comercio_exterior, mx_reglamento_ley_comercio_exterior, mx_reglas_criterios_se]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/fundamentos/biblioteca-instrumentos-prioritarios.md
+    title: Biblioteca de instrumentos prioritarios
+    topic: fundamentos
+    source_ids: [mx_diputados_ligie_current, mx_diputados_ley_aduanera, mx_diputados_lce_current, mx_sidof_rgce_2026, mx_snice_ligie_info, mx_gob_tmec, mx_gob_tmec_textos_finales, mx_gob_tmec_reglamentaciones_uniformes]
+    instrument_ids: [mx_ligie, mx_ley_aduanera, mx_ley_comercio_exterior, mx_rgce_2026, mx_tmec]
+    current_through: 2026-08-15
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/fundamentos/arquitectura-decision-evidencia.md
+    title: Arquitectura de decision y evidencia por operacion
+    topic: fundamentos
+    source_ids: [mx_diputados_lce_current, mx_diputados_ley_aduanera, mx_vucem_portal]
+    instrument_ids: [mx_ley_comercio_exterior, mx_ley_aduanera, mx_ventanilla_unica_2026]
+    current_through: 2026-08-16
+    source_status: current
+    legal_review_status: reviewed
+
+
+  - <<: *wiki
+    path: docs/wiki/fundamentos/herramientas-snice-y-fuentes.md
+    title: Herramientas SNICE consulta normatividad y evidencia
+    topic: fundamentos
+    source_ids: [mx_snice_aprende_importar, mx_snice_aprende_exportar, mx_snice_comercio_datos, mx_snice_siavi, mx_snice_fuentes_estadisticas, mx_snice_moca, mx_snice_biblioteca_juridica, mx_snice_historicos, mx_snice_resoluciones_anticipadas, mx_snice_aviso_disponibilidad, mx_snice_calculadora_origen, mx_vucem_calculadora_contribuciones, mx_vucem_clasificador, mx_vucem_doda, mx_anam_soia_consulta_rapida, mx_vucem_semaforo_servicios, mx_vucem_descargas_manuales]
+    instrument_ids: []
+    current_through: 2026-08-16
+    source_status: current
+    legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/aduana/ruta-exportacion.md
+    title: Ruta de exportacion verificable
+    topic: aduana
+    source_ids: [mx_snice_aprende_exportar, mx_vucem_portal, mx_diputados_ley_aduanera, mx_sidof_rgce_2026, mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026, mx_ventanilla_unica_2026]
+    current_through: 2026-08-18
     source_status: current
     legal_review_status: reviewed

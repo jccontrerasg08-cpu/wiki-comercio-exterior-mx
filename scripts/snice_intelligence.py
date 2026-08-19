@@ -329,19 +329,30 @@ def parse_index_snapshot(
     documents: list[SniceDocument] = []
     unparsed: list[UnparsedSniceEntry] = []
     entry_count = 0
+    base_path = parsed_base.path.rstrip("/") + "/"
     for anchor in _INDEX_ANCHOR_RE.finditer(index_html):
         href = html.unescape(anchor.group("href")).strip()
         if href.startswith("?") or (href.startswith("/") and href.rstrip("/") == ""):
             continue
-        filename = unquote(urlparse(href).path.rsplit("/", 1)[-1])
+        source_url = urljoin(base_url, href)
+        parsed_source = urlparse(source_url)
+        if (
+            parsed_source.scheme != parsed_base.scheme
+            or parsed_source.hostname != parsed_base.hostname
+            or parsed_source.port != parsed_base.port
+            or not parsed_source.path.startswith(base_path)
+        ):
+            continue
+        filename = unquote(parsed_source.path.rsplit("/", 1)[-1])
         if not filename:
             continue
-        tail = _TAG_RE.sub(" ", index_html[anchor.end() : anchor.end() + 300])
+        next_anchor = _INDEX_ANCHOR_RE.search(index_html, anchor.end())
+        tail_end = next_anchor.start() if next_anchor else anchor.end() + 300
+        tail = _TAG_RE.sub(" ", index_html[anchor.end() : tail_end])
         row = _INDEX_TAIL_RE.search(re.sub(r"\s+", " ", tail).strip())
         if row is None:
             continue
         entry_count += 1
-        source_url = urljoin(base_url, href)
         last_modified = datetime.strptime(
             f"{row.group('day')} {row.group('time')}", "%d-%b-%Y %H:%M"
         )

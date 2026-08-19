@@ -1,0 +1,26 @@
+flowchart TB
+  start[Pregunta de la operación o del mercado] --> kind{¿Qué se quiere resolver?}
+  kind -->|Plan o mercado| orient[Comercio: Aprende, datos, MiPyMEs, inversión]
+  kind -->|Dato estadístico| stats[SIAVI histórico, BANXICO, INEGI, MoCA]
+  kind -->|Instrumento o antecedente| norms[Biblioteca Jurídica, Históricos, Oficios]
+  kind -->|Medida o trámite| oper[Mapa RRNA, LIGIE, avisos, permisos, cupos]
+  orient --> limit1[Usar para orientación; no prueba requisito]
+  stats --> limit2[Registrar periodo, cobertura y rezago]
+  norms --> limit3[Localizar texto, fecha y alcance]
+  oper --> limit4[Verificar fracción, supuesto, vigencia y canal]
+  limit1 --> source[Contrastar con fuente oficial aplicable]
+  limit2 --> source
+  limit3 --> source
+  limit4 --> source
+  source --> decision[Decisión documentada]
+  decision --> evidence[Expediente: fuente, versión, cálculo, trámite y acuse]
+  classDef start fill:#e8f1f5,stroke:#0f4c5c,color:#102a43
+  classDef question fill:#f8edd7,stroke:#91672c,color:#4a3110
+  classDef tool fill:#eaf4ee,stroke:#2d6a4f,color:#163a2a
+  classDef limit fill:#fff8e6,stroke:#a47148,color:#4a3110
+  classDef outcome fill:#e9edf8,stroke:#3f5f9a,color:#1f3154
+  class start start
+  class kind question
+  class orient,stats,norms,oper tool
+  class limit1,limit2,limit3,limit4 limit
+  class source,decision,evidence outcome

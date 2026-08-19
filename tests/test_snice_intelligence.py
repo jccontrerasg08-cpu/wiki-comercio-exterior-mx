@@ -98,6 +98,40 @@ class SniceIndexTests(unittest.TestCase):
         self.assertEqual(entries[0].family, "VALIDADOS")
         self.assertEqual(entries[0].bytes, 1_572_864)
 
+    def test_does_not_borrow_metadata_from_the_next_anchor(self) -> None:
+        html = """
+        <pre>
+        <a href="IMMEX_MAYO2026-DIRECTORIO_20260622-20260622.xlsx">orphan</a>
+        <a href="PROSEC_MAYO2026-DIRECTORIO_20260622-20260622.xlsx">PROSEC</a> 22-Jun-2026 17:35 629K
+        </pre>
+        """
+
+        entries = parse_index_html(
+            html,
+            base_url="https://www.snice.gob.mx/~oracle/SNICE_DOCS/",
+            discovered_at=datetime(2026, 8, 15, 18, 0, tzinfo=timezone.utc),
+        )
+
+        self.assertEqual([entry.family for entry in entries], ["PROSEC"])
+        self.assertEqual(entries[0].bytes, 644_096)
+
+    def test_ignores_cross_origin_document_links(self) -> None:
+        html = """
+        <pre>
+        <a href="https://example.invalid/IMMEX_MAYO2026-DIRECTORIO_20260622-20260622.xlsx">external</a> 22-Jun-2026 17:34 848K
+        <a href="IMMEX_MAYO2026-DIRECTORIO_20260622-20260622.xlsx">IMMEX</a> 22-Jun-2026 17:34 848K
+        </pre>
+        """
+
+        entries = parse_index_html(
+            html,
+            base_url="https://www.snice.gob.mx/~oracle/SNICE_DOCS/",
+            discovered_at=datetime(2026, 8, 15, 18, 0, tzinfo=timezone.utc),
+        )
+
+        self.assertEqual(len(entries), 1)
+        self.assertTrue(entries[0].source_url.startswith("https://www.snice.gob.mx/"))
+
 
 class SniceSeriesTests(unittest.TestCase):
     def _docs(self):

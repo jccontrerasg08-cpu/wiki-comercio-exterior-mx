@@ -1,0 +1,21 @@
+flowchart TB
+    A["Marco jurídico y temporal<br/>ley · decreto · acuerdo · tratado · transitorio"] --> D["Decisión por operación<br/>mercancía · régimen · origen · fecha · actor"]
+    B["Datos comerciales y técnicos<br/>ficha · factura · clasificación · valor · condición"] --> D
+    D --> E["Declaración y trámite<br/>pedimento · permiso · aviso · documento electrónico"]
+    E --> F["Evento de sistema<br/>transmisión · folio · acuse · notificación"]
+    C["Evidencia y reconciliación<br/>soporte · versión · relación · conservación"] --> D
+    C --> F
+    F --> G["Despacho, control y revisión posterior"]
+    G -. "cambio normativo, diferencia o incidencia" .-> D
+
+    classDef law fill:#6b1727,color:#ffffff,stroke:#6b1727,stroke-width:2px;
+    classDef data fill:#0f5d62,color:#ffffff,stroke:#0f5d62,stroke-width:2px;
+    classDef decision fill:#1e3a5f,color:#ffffff,stroke:#1e3a5f,stroke-width:2px;
+    classDef event fill:#a66d03,color:#ffffff,stroke:#a66d03,stroke-width:2px;
+    classDef review fill:#e8edf3,color:#1d2733,stroke:#5c6f82,stroke-width:2px;
+
+    class A law;
+    class B,C data;
+    class D decision;
+    class E,F event;
+    class G review;

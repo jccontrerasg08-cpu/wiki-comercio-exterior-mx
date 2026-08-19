@@ -25,6 +25,19 @@ El mismo decreto dispone que la operación tecnológica se realiza a través de 
 
 Por eso ya no conviene resumir la arquitectura con “ANAM = VUCEM” o “todo el despacho electrónico se tramita en VUCEM”. La **Ventanilla Única** es una capa de gestión digital e interoperabilidad de trámites; cada declaración, autorización, acto y resolución conserva el fundamento y la autoridad competente que le corresponden.
 
+## Cómo leer las herramientas oficiales de ANAM
+
+La portada institucional de ANAM presenta accesos a Sistema Electrónico de Aduanas, VUCEM, Módulo Único de Pago Electrónico Aduanero, recintos fiscalizados y programas especiales.[1] Estos accesos son útiles para localizar el canal correcto, pero deben leerse como componentes de un flujo y no como sustitutos del análisis de la operación.
+
+| Herramienta o acceso | Pregunta que ayuda a resolver | Evidencia que normalmente deja | Límite que debe conservarse |
+|---|---|---|---|
+| [Sistema Electrónico de Aduanas](https://anam.gob.mx/) | ¿Qué canal institucional se presenta para procesos electrónicos aduaneros? | Evento, transmisión o consulta según el servicio concreto | No determina por sí solo fracción, régimen, autoridad emisora o cumplimiento de fondo. |
+| [VUCEM](https://www.ventanillaunica.gob.mx/vucem/index.html) | ¿Por qué vía se gestiona un trámite de comercio exterior cuando corresponde? | Solicitud, folio, documento electrónico o acuse, según el trámite | Un acuse acredita un evento de sistema; no reemplaza permiso, clasificación, RRNA ni soporte técnico. |
+| [MUPEA](https://anam.gob.mx/) | ¿Qué recurso institucional puede estar relacionado con pago electrónico aduanero? | Referencia o comprobante que el servicio produzca | El pago no prueba por sí solo que todos los datos o requisitos sustantivos sean correctos. |
+| [Recintos fiscalizados](https://anam.gob.mx/) | ¿Qué capa de infraestructura o control puede intervenir en una operación? | Registros, autorizaciones o datos operativos según el supuesto | La presencia de un recinto no define por sí misma el régimen ni la procedencia de la mercancía. |
+
+La regla práctica es recorrer cada herramienta desde la **decisión** hacia el evento: primero define mercancía, régimen, origen, fecha y requisito; después identifica el trámite y autoridad; por último registra qué se transmitió, qué acuse se obtuvo y qué soporte debe conservarse. La [Arquitectura de decisión y evidencia](../fundamentos/arquitectura-decision-evidencia.md) desarrolla esta relación entre norma, datos, plataforma y expediente.
+
 ## Agente aduanal tampoco es ANAM
 
 El agente aduanal es una persona física con patente en términos del artículo 159 de la Ley Aduanera. La agencia aduanal es una persona moral autorizada conforme al artículo 167-D. Ambos participan privadamente en el despacho por cuenta ajena dentro de los límites de su autorización. ANAM, en cambio, ejerce funciones de autoridad.
@@ -33,10 +46,13 @@ Consulta [Agente y agencia aduanal](agente-agencia-aduanal.md) para esta distinc
 
 ## Fuentes oficiales
 
-- [ANAM](https://anam.gob.mx/)
-- [Ley Aduanera, Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf)
-- [RGCE 2026, SIDOF](https://sidof.segob.gob.mx/notas/5777199)
-- [Decreto de Ventanilla Única, 4-may-2026](https://sidof.segob.gob.mx/notas/5786598)
+[1] [ANAM](https://anam.gob.mx/), portal institucional con accesos a herramientas y servicios, verificado el 16 de agosto de 2026.
+
+[2] [Ley Aduanera, Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf), marco de despacho, transmisión y actos relacionados.
+
+[3] [RGCE 2026, SIDOF](https://sidof.segob.gob.mx/notas/5777199), reglas operativas que deben contrastarse con anexos y modificaciones aplicables.
+
+[4] [Decreto de Ventanilla Única, 4-may-2026](https://sidof.segob.gob.mx/notas/5786598), fuente del marco de Ventanilla Única descrito en esta página.
 
 ## Ver también
 
