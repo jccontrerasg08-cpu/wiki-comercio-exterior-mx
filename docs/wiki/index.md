@@ -5,7 +5,7 @@ description: Ruta de consulta por clasificación, RRNA, contribuciones, despacho
 
 # Wiki Comercio Exterior MX
 
-Esta wiki está organizada para resolver una operación, no para memorizar un índice legal. Empieza por identificar **qué mercancía es, qué régimen se pretende utilizar, quién interviene y qué fecha gobierna la operación**. Después sigue la ruta de clasificación, regulaciones, contribuciones y despacho. Si necesitas primero entender cómo se conectan norma, datos, transmisión y expediente, consulta [Arquitectura de decisión y evidencia](fundamentos/arquitectura-decision-evidencia.md).
+La wiki organiza una operación desde mercancía, régimen, actores y fecha hasta clasificación, medidas, despacho y evidencia. Para entender las capas conectadas, consulta [Arquitectura de decisión y evidencia](fundamentos/arquitectura-decision-evidencia.md).
 
 ## Empieza por la decisión
 
@@ -28,6 +28,8 @@ Para importación, separa la tasa de IGI del **valor en aduana** y de obligacion
 ### 4. Preparar el despacho
 
 [Proceso de despacho](aduana/proceso-despacho.md) integra clasificación, RRNA, valor, documentos, pedimento, validación y eventos posteriores. Para piezas específicas consulta [Documentos](aduana/documentos.md), [Manifestación de Valor](aduana/manifestacion-valor.md), [Pedimento y RGCE](aduana/pedimento-rgce.md) y [Ventanilla Única y VUCEM](aduana/vucem.md).
+
+Para salidas, sigue la [Ruta de exportación](aduana/ruta-exportacion.md).
 
 Si una incidencia activa una causal legal, [PAMA e infracciones](aduana/infracciones-pama.md) explica cómo distinguir una irregularidad de un supuesto de embargo precautorio.
 

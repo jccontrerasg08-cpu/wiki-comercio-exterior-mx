@@ -563,11 +563,11 @@
   "schema_version": 1,
   "sections": [
     {
-      "legally_reviewed_pages": 7,
+      "legally_reviewed_pages": 8,
       "pages_needing_attention": 3,
-      "retrieval_eligible_pages": 7,
+      "retrieval_eligible_pages": 8,
       "section": "aduana",
-      "total_pages": 10
+      "total_pages": 11
     },
     {
       "legally_reviewed_pages": 0,
@@ -636,21 +636,21 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 44,
+      "not_applicable": 45,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 44,
+      "not_applicable": 45,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 56,
-      "reviewed": 29
+      "reviewed": 30
     },
     "source_status": {
-      "current": 65,
+      "current": 66,
       "partial": 20,
       "unknown": 1
     }
@@ -659,15 +659,15 @@
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
     "distinct_source_ids": 75,
-    "legally_reviewed_pages": 29,
+    "legally_reviewed_pages": 30,
     "non_current_corpus_pages": 40,
     "pages_needing_attention": 64,
-    "pages_with_instruments": 76,
-    "pages_with_sources": 80,
+    "pages_with_instruments": 77,
+    "pages_with_sources": 81,
     "pending_legal_review_pages": 56,
-    "retrieval_eligible_pages": 25,
-    "total_pages": 86,
+    "retrieval_eligible_pages": 26,
+    "total_pages": 87,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 43
+    "wiki_pages": 44
   }
 }

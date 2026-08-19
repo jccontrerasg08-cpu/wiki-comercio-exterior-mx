@@ -9,13 +9,13 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 86 |
-| Wiki | 43 |
+| Páginas gobernadas | 87 |
+| Wiki | 44 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 25 (29.1%) |
-| Con fuente referenciada | 80 (93.0%) |
-| Con instrumento referenciado | 76 (88.4%) |
-| Revisión jurídica `reviewed` | 29 (33.7%) |
+| Elegibles por estado para recuperación vigente | 26 (29.9%) |
+| Con fuente referenciada | 81 (93.1%) |
+| Con instrumento referenciado | 77 (88.5%) |
+| Revisión jurídica `reviewed` | 30 (34.5%) |
 | Requieren atención | 64 |
 | Fuentes distintas referenciadas | 75 |
 | Instrumentos distintos referenciados | 20 |
@@ -24,7 +24,7 @@
 
 | Sección | Total | Elegibles | Reviewed | Atención |
 |---|---:|---:|---:|---:|
-| `aduana` | 10 | 7 | 7 | 3 |
+| `aduana` | 11 | 8 | 8 | 3 |
 | `clasificacion` | 3 | 0 | 0 | 3 |
 | `contribuciones` | 5 | 2 | 2 | 3 |
 | `corpus` | 43 | 2 | 2 | 43 |
@@ -41,7 +41,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `current` | 65 |
+| `current` | 66 |
 | `partial` | 20 |
 | `unknown` | 1 |
 
@@ -49,7 +49,7 @@
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 44 |
+| `not_applicable` | 45 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -58,14 +58,14 @@
 |---|---:|
 | `not_applicable` | 1 |
 | `pending_review` | 56 |
-| `reviewed` | 29 |
+| `reviewed` | 30 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 44 |
+| `not_applicable` | 45 |
 | `partial` | 39 |
 | `stale` | 1 |
 

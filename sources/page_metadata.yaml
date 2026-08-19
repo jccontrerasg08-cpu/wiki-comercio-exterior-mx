@@ -649,3 +649,13 @@ pages:
     current_through: 2026-08-16
     source_status: current
     legal_review_status: reviewed
+
+  - <<: *wiki
+    path: docs/wiki/aduana/ruta-exportacion.md
+    title: Ruta de exportacion verificable
+    topic: aduana
+    source_ids: [mx_snice_aprende_exportar, mx_vucem_portal, mx_diputados_ley_aduanera, mx_sidof_rgce_2026, mx_sidof_rgce_2026_anexos_21_30]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026, mx_ventanilla_unica_2026]
+    current_through: 2026-08-18
+    source_status: current
+    legal_review_status: reviewed

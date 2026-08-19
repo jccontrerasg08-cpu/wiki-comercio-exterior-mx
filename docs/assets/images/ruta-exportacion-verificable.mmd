@@ -1,0 +1,20 @@
+flowchart TD
+    A[Definir operación y producto] --> B[Clasificar y documentar hechos técnicos]
+    B --> C[Confirmar régimen, destino, origen y fecha]
+    C --> D[Revisar medidas aplicables]
+    D --> E[Preparar soporte comercial y transporte]
+    E --> F[Tramitar o transmitir lo que corresponda]
+    F --> G[Despacho y salida]
+    G --> H[Conservar prueba de salida y expediente]
+    H --> I[Conciliar, controlar cambios y atender incidencias]
+
+    D -. fracción, acotación, autoridad, vigencia .-> J[RRNA, NOM, permisos, cupos o cuotas si aplican]
+    E -. factura, lista de empaque, contrato, transporte .-> K[Documentos comerciales]
+    F -. COVE, e-document, permiso o certificado cuando corresponda .-> L[VUCEM y acuses]
+    G -. pedimento y evento aduanero según régimen .-> M[Autoridad y recinto]
+    H -. no sustituye la regla ni el acuse .-> N[Expediente trazable]
+
+    classDef decision fill:#0b5f73,stroke:#083d4a,color:#ffffff;
+    classDef evidence fill:#f2f6f8,stroke:#5f7480,color:#102a34;
+    class A,B,C,D,F,G decision;
+    class E,H,I,J,K,L,M,N evidence;
