@@ -98,6 +98,18 @@ class MkDocsUxTests(unittest.TestCase):
         ):
             self.assertIn(label, nav)
 
+    def test_anam_faq_entry_is_discoverable_from_navigation_and_home(self):
+        nav = yaml.safe_dump(self.config["nav"], allow_unicode=True, sort_keys=False)
+        home = (ROOT / "docs" / "index.md").read_text(encoding="utf-8")
+        self.assertIn("Preguntas frecuentes ANAM", nav)
+        self.assertIn("wiki/aduana/faq-anam.md", nav)
+        self.assertIn("wiki/aduana/faq-anam.md", home)
+
+    def test_official_publications_library_is_discoverable(self):
+        nav = yaml.safe_dump(self.config["nav"], allow_unicode=True, sort_keys=False)
+        self.assertIn("Publicaciones oficiales preservadas", nav)
+        self.assertIn("catalog/publicaciones-oficiales.md", nav)
+
     def test_motion_is_decorative_and_respects_reduced_motion(self):
         css = (ROOT / "docs" / "stylesheets" / "extra.css").read_text(encoding="utf-8")
         self.assertIn("@keyframes trade-route-flow", css)

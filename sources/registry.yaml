@@ -1098,6 +1098,32 @@ sources:
     cadence_days: 90
     probe: *probe_html
 
+  - id: mx_gob_anam_faq
+    jurisdiction: MEX
+    title: Preguntas frecuentes ANAM
+    url: https://www.anam.gob.mx/preguntas-frecuentes-anam/
+    note_id: null
+    authority: ANAM
+    evidence_class: official_operational
+    allowed_hosts: [anam.gob.mx, www.anam.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
+  - id: mx_gob_anam_informacion_aduanas
+    jurisdiction: MEX
+    title: Informacion por Aduanas
+    url: https://www.anam.gob.mx/informacion-por-aduanas-2022/
+    note_id: null
+    authority: ANAM
+    evidence_class: official_operational
+    allowed_hosts: [anam.gob.mx, www.anam.gob.mx]
+    media_types: [text/html]
+    harvest: false
+    cadence_days: 90
+    probe: *probe_html
+
   - id: mx_sat_padron
     jurisdiction: MEX
     title: SAT Padron de Importadores y Exportadores

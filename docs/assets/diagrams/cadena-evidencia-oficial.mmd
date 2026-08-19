@@ -1,0 +1,15 @@
+%% Diagrama original de Wiki Comercio Exterior MX, Apache-2.0.
+flowchart LR
+    A[Publicación oficial\nPDF, DOC o imagen] --> B[Fuente oficial\nSIDOF, DOF o Diputados]
+    B --> C[Manifiesto\nURL, hash y bytes]
+    C --> D[Release de originales\nactivo preservado]
+    C --> E[Catálogo wiki\ncontexto y atribución]
+    E --> F[Lectura y verificación\nfuente primaria]
+    D --> F
+
+    classDef official fill:#e7f2ec,stroke:#006341,color:#102a1e,stroke-width:2px;
+    classDef evidence fill:#fff6e6,stroke:#9a6700,color:#4a3100,stroke-width:2px;
+    classDef wiki fill:#edf4ff,stroke:#2f6fad,color:#102a43,stroke-width:2px;
+    class A,B official;
+    class C,D evidence;
+    class E,F wiki;

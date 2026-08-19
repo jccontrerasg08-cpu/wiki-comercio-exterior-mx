@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_ventanilla_unica_20260504
+  file: 5786598.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5786598
+  title: Decreto por el que se habilita la Ventanilla Única de Trámites de Comercio Exterior
+  sha256: 4d61917bfc331fbb24088f5e35a03e6622db42f6225db8ae58267d7e107090ca
+  bytes: 65056
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

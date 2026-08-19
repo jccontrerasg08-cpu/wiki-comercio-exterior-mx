@@ -13,6 +13,7 @@ Structured TIGIE/NICO tables live in [arancel-mx](https://github.com/jccontreras
 
 ## Contents
 
+- [Publicaciones oficiales preservadas](publicaciones-oficiales.md)
 - [Document library](library.md)
 - [Mexico](#mexico)
 - [Global](#global)
@@ -43,4 +44,4 @@ Structured TIGIE/NICO tables live in [arancel-mx](https://github.com/jccontreras
 
 ## Catalog
 
-Human guidance: [catalog.md](catalog.md). Browse preservation and checksums in the [official document library](library.md). The generated snapshot of every canonical source remains in [registry.md](registry.md).
+Human guidance: [catalog.md](catalog.md). Consulta la [biblioteca de publicaciones oficiales preservadas](publicaciones-oficiales.md) para los activos documentales, su atribución y sus hashes; revisa la preservación completa y los checksums de paquetes en la [official document library](library.md). The generated snapshot of every canonical source remains in [registry.md](registry.md).

@@ -9,6 +9,8 @@ description: Papel de la Agencia Nacional de Aduanas de México en el despacho y
 
 La **Agencia Nacional de Aduanas de México (ANAM)** es una autoridad federal con funciones aduaneras. No debe confundirse con una **agencia aduanal**, que es una persona moral autorizada para promover el despacho por cuenta ajena conforme a la Ley Aduanera.
 
+Las [Preguntas frecuentes de ANAM](faq-anam.md) y el directorio de aduanas son recursos operativos para localizar una ruta de atención. Sus datos administrativos pueden cambiar; las obligaciones, horarios, formatos y trámites deben corroborarse en la fuente jurídica o de trámite vigente que corresponda.
+
 La Ley Aduanera regula la entrada y salida de mercancías, el despacho y los actos derivados de esas operaciones. Desde la reforma publicada el 19 de noviembre de 2025 también incorpora ajustes relevantes al marco de autoridad, agentes y agencias aduanales que deben leerse junto con el Reglamento y las RGCE vigentes.
 
 ## Qué hace ANAM en una operación
@@ -34,16 +36,18 @@ Consulta [Agente y agencia aduanal](agente-agencia-aduanal.md) para esta distinc
 ## Fuentes oficiales
 
 - [ANAM](https://anam.gob.mx/)
+- [Preguntas frecuentes ANAM](https://www.anam.gob.mx/preguntas-frecuentes-anam/) — orientación operativa, consultada el 19 de agosto de 2026.
+- [Información por Aduanas](https://www.anam.gob.mx/informacion-por-aduanas-2022/) — directorio operativo; para horarios consulta el [Anexo 4 de las RGCE 2026](https://sidof.segob.gob.mx/notas/5778241).
 - [Ley Aduanera, Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf)
 - [RGCE 2026, SIDOF](https://sidof.segob.gob.mx/notas/5777199)
 - [Decreto de Ventanilla Única, 4-may-2026](https://sidof.segob.gob.mx/notas/5786598)
 
 ## Ver también
 
-[Ventanilla Única y VUCEM](vucem.md) · [Agente y agencia aduanal](agente-agencia-aduanal.md) · [Proceso de despacho](proceso-despacho.md) · [Pedimento y RGCE](pedimento-rgce.md)
+[Preguntas frecuentes ANAM](faq-anam.md) · [Ventanilla Única y VUCEM](vucem.md) · [Agente y agencia aduanal](agente-agencia-aduanal.md) · [Proceso de despacho](proceso-despacho.md) · [Pedimento y RGCE](pedimento-rgce.md)
 
 > La autoridad competente depende del acto concreto. Una interfaz tecnológica no sustituye la identificación del fundamento, autoridad emisora y fecha de vigencia del trámite.
 
-Catálogo local: `docs/catalog/`.
+Catálogo local: `docs/catalog/` · [registro de fuentes](../../catalog/registry.md).
 
 > No es asesoría legal. Corrobora la operación concreta contra la fuente oficial vigente.
