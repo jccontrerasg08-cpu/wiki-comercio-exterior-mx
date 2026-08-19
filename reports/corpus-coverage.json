@@ -405,6 +405,14 @@
       "section": "aduana"
     },
     {
+      "path": "docs/wiki/aduana/faq-anam.md",
+      "risk_reasons": [
+        "pending_legal_review",
+        "source_not_current"
+      ],
+      "section": "aduana"
+    },
+    {
       "path": "docs/wiki/aduana/pedimento-rgce.md",
       "risk_reasons": [
         "pending_legal_review",
@@ -552,10 +560,10 @@
   "sections": [
     {
       "legally_reviewed_pages": 7,
-      "pages_needing_attention": 3,
+      "pages_needing_attention": 4,
       "retrieval_eligible_pages": 7,
       "section": "aduana",
-      "total_pages": 10
+      "total_pages": 11
     },
     {
       "legally_reviewed_pages": 0,
@@ -617,38 +625,38 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 35,
+      "not_applicable": 36,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 35,
+      "not_applicable": 36,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
-      "pending_review": 58,
+      "pending_review": 59,
       "reviewed": 18
     },
     "source_status": {
       "current": 57,
-      "partial": 19,
+      "partial": 20,
       "unknown": 1
     }
   },
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 47,
+    "distinct_source_ids": 49,
     "legally_reviewed_pages": 18,
     "non_current_corpus_pages": 40,
-    "pages_needing_attention": 62,
-    "pages_with_instruments": 68,
-    "pages_with_sources": 71,
-    "pending_legal_review_pages": 58,
+    "pages_needing_attention": 63,
+    "pages_with_instruments": 69,
+    "pages_with_sources": 72,
+    "pending_legal_review_pages": 59,
     "retrieval_eligible_pages": 17,
-    "total_pages": 77,
+    "total_pages": 78,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 34
+    "wiki_pages": 35
   }
 }
