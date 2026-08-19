@@ -6,6 +6,9 @@ fragments:
 - se/cuotas/MANIFEST.yaml
 - se/noms-241/MANIFEST.yaml
 - se/upci/MANIFEST.yaml
+- sidof/5651333/MANIFEST.yaml
+- sidof/5745788/MANIFEST.yaml
+- sidof/5766797/MANIFEST.yaml
 - sidof/5746685/MANIFEST.yaml
 - sidof/5777199/MANIFEST.yaml
 - sidof/5777376/MANIFEST.yaml
@@ -15,6 +18,7 @@ fragments:
 - sidof/5778300/MANIFEST.yaml
 - sidof/5787425/MANIFEST.yaml
 - sidof/5787982/MANIFEST.yaml
+- sidof/5785818/MANIFEST.yaml
 - sidof/5786598/MANIFEST.yaml
 - snice/reglas-aduaneras-tlc/MANIFEST.yaml
 - tlc/alianza-pacifico/MANIFEST.yaml

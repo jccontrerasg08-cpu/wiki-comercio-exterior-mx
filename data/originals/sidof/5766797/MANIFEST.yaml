@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_immex_reform_20250828
+  file: 5766797.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5766797
+  title: Decreto por el que se modifica el diverso para el Fomento de la Industria Manufacturera, Maquiladora y de Servicios de Exportacion
+  sha256: 0d89a5f79defcd80804ad7c3f646da3b5533f8314d8c1ffd67cbbd76b9b438dd
+  bytes: 292752
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

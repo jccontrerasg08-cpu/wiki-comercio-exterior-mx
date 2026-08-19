@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_reglas_se_2022
+  file: 5651333.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5651333
+  title: Acuerdo por el que se establecen las Reglas y criterios de caracter general en materia de comercio exterior
+  sha256: c1947b6af0c5a7dfb4c86533400fd06d01663cf652b0686ca999f249cbf042e8
+  bytes: 19939664
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed
