@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_lineamientos_159bis_20260331
+  file: 5783669.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5783669
+  title: Acuerdo por el que se expiden los Lineamientos a que se refiere el articulo 159 bis de la Ley Aduanera
+  sha256: 38c20b3552d393dca1729fdb01b0543c92aab90482a313bea74505012a9fcfab
+  bytes: 65056
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

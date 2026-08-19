@@ -78,6 +78,33 @@ El release [Fuentes primarias íntegras 2026.08.19 — ciclo dos](https://github
 
 Estas publicaciones se consultan junto con las versiones consolidadas oficiales y las reformas posteriores aplicables. Las copias administrativas de SNICE para IMMEX o PROSEC pueden ser útiles como material de consulta, pero no reemplazan los actos SIDOF que documentan la publicación y el efecto cronológico de las modificaciones.
 
+## Ciclo tres: jerarquía normativa, reglamento aduanero y comercio exterior
+
+El release [Fuentes primarias íntegras 2026.08.19 — ciclo tres](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/tag/primary-sources-2026.08.19-cycle-three) añade cuatro documentos de base o de reforma. La Constitución se presenta como un texto consolidado oficial de consulta; los tres documentos SIDOF son actos de publicación independientes. Cada activo conserva su formato nativo y su referencia oficial.
+
+| Publicación íntegra | Descarga de evidencia exacta | Fuente oficial | SHA-256 verificado |
+|---|---|---|---|
+| Constitución Política de los Estados Unidos Mexicanos (consolidado de consulta) | [PDF íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-three/CPEUM.pdf) | [PDF de Cámara de Diputados](https://www.diputados.gob.mx/LeyesBiblio/pdf/CPEUM.pdf) | `ca63a23a4b7444ebdbdad93759fbf46bd14c069e587c5878decf89fc9c12ca8e` |
+| Decreto de reforma al Reglamento de la Ley Aduanera, 23-feb-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-three/5780677.doc) | [SIDOF 5780677](https://sidof.segob.gob.mx/notas/5780677) | `1a5e393c925f37968011d488c342777a55665b7fb825db6cf075c3eb318db3d3` |
+| Lineamientos del artículo 159 bis de la Ley Aduanera, 31-mar-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-three/5783669.doc) | [SIDOF 5783669](https://sidof.segob.gob.mx/notas/5783669) | `38c20b3552d393dca1729fdb01b0543c92aab90482a313bea74505012a9fcfab` |
+| Decreto de reforma a la Ley de Comercio Exterior en materia de agroexportación, 1-may-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-three/5786538.doc) | [SIDOF 5786538](https://sidof.segob.gob.mx/notas/5786538) | `49007f368c4799442384929f2f831941ad022abf09c8d91fe6a88ddc0aed9820` |
+
+Un consolidado de consulta facilita leer un texto integrado; un acto SIDOF prueba su publicación y su secuencia cronológica. La existencia de ambos no evita que la vigencia concreta deba confirmarse frente a reformas posteriores, transitorios y el alcance de cada disposición.
+
+## Ciclo cuatro: secuencia de reformas a Reglas y criterios de Secretaría de Economía
+
+El release [Fuentes primarias íntegras 2026.08.19 — ciclo cuatro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/tag/primary-sources-2026.08.19-cycle-four) completa el conjunto de cinco actos reformadores de las Reglas y criterios de Secretaría de Economía identificados en el modelo temporal. Cada documento es una publicación separada: el orden cronológico facilita su consulta, pero no equivale a reconstruir o declarar un texto consolidado vigente.
+
+| Reforma publicada | Descarga de evidencia exacta | Publicación oficial | SHA-256 verificado |
+|---|---|---|---|
+| Modificación a Reglas y criterios SE, 2-sep-2025 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-four/5767158.doc) | [SIDOF 5767158](https://sidof.segob.gob.mx/notas/5767158) | `17dc4925303e7546e1e42e76e294b16471c9875261f811e2a09f78a0f8380643` |
+| Modificación a Reglas y criterios SE, 12-feb-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-four/5779942.doc) | [SIDOF 5779942](https://sidof.segob.gob.mx/notas/5779942) | `28151f562d37b6c780e79934de4f45ced9e401858f0e992e3487efe1f14d3652` |
+| Modificación a Reglas y criterios SE, 2-abr-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-four/5783929.doc) | [SIDOF 5783929](https://sidof.segob.gob.mx/notas/5783929) | `d3ea2ad50a5ac868afb8b132a668582a0bae314f27d0322eb01d87737b6aea93` |
+| Modificación a Reglas y criterios SE, 28-may-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-four/5788843.doc) | [SIDOF 5788843](https://sidof.segob.gob.mx/notas/5788843) | `65617249a0847ab790660604066455ca258ed61499aade29b9cc010e836c0781` |
+| Modificación a Reglas y criterios SE, 29-may-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-four/5788992.doc) | [SIDOF 5788992](https://sidof.segob.gob.mx/notas/5788992) | `bde62b941c68a2bac969d648dbdbf9ba53f9608dc502439c6ebfff4771289451` |
+
+Para identificar un Anexo 2.2.1 o 2.4.1 concreto, la consulta debe partir de su título oficial, edición y acto aplicable. Esta tabla no debe usarse para inferirlos por el número de anexo o por la presencia de una reforma.
+
 ## Núcleo jurídico de comercio exterior
 
 Los siguientes PDFs están preservados como archivos de evidencia dentro del paquete de Cámara de Diputados. La versión oficial enlazada es la referencia vinculante; la copia de release permite comprobación de integridad frente al manifiesto.

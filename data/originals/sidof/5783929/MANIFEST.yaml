@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_reglas_se_mod_20260402
+  file: 5783929.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5783929
+  title: Acuerdo que modifica el diverso por el que la Secretaria de Economia emite reglas y criterios de caracter general en materia de comercio exterior
+  sha256: d3ea2ad50a5ac868afb8b132a668582a0bae314f27d0322eb01d87737b6aea93
+  bytes: 130112
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed
