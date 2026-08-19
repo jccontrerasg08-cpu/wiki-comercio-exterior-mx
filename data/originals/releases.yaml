@@ -133,3 +133,28 @@ releases:
         sha256: 4d61917bfc331fbb24088f5e35a03e6622db42f6225db8ae58267d7e107090ca
         bytes: 65056
         media_type: application/msword
+
+  - tag: primary-sources-2026.08.19-cycle-two
+    snapshot_date: 2026-08-19
+    published_at: 2026-08-19T08:35:24Z
+    assets:
+      - name: 5651333.doc
+        domains: [sidof]
+        sha256: c1947b6af0c5a7dfb4c86533400fd06d01663cf652b0686ca999f249cbf042e8
+        bytes: 19939664
+        media_type: application/msword
+      - name: 5745788.doc
+        domains: [sidof]
+        sha256: 44a2ccbaa5af83adc2842a19da0dc516463dbe54f793e7e2d662cf3081406ffa
+        bytes: 845728
+        media_type: application/msword
+      - name: 5766797.doc
+        domains: [sidof]
+        sha256: 0d89a5f79defcd80804ad7c3f646da3b5533f8314d8c1ffd67cbbd76b9b438dd
+        bytes: 292752
+        media_type: application/msword
+      - name: 5785818.doc
+        domains: [sidof]
+        sha256: cf8214d2b8621955396851b59e39dee502148520d8fcdcd98e28f2b79e92b550
+        bytes: 357808
+        media_type: application/msword

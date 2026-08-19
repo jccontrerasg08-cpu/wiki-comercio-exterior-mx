@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_immex_reform_20241219
+  file: 5745788.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5745788
+  title: Decreto por el que se modifica la Tarifa de la Ley de los Impuestos Generales de Importacion y de Exportacion y el Decreto para el Fomento de la Industria Manufacturera, Maquiladora y de Servicios de Exportacion
+  sha256: 44a2ccbaa5af83adc2842a19da0dc516463dbe54f793e7e2d662cf3081406ffa
+  bytes: 845728
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

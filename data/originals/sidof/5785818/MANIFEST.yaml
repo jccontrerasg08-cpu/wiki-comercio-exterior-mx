@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_ligie_prosec_20260423
+  file: 5785818.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5785818
+  title: Decreto por el que se modifica la Tarifa de la Ley de los Impuestos Generales de Importacion y de Exportacion y el Decreto por el que se establecen diversos Programas de Promocion Sectorial
+  sha256: cf8214d2b8621955396851b59e39dee502148520d8fcdcd98e28f2b79e92b550
+  bytes: 357808
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

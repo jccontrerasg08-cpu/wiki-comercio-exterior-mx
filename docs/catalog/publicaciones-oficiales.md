@@ -65,6 +65,19 @@ El release [Fuentes primarias íntegras 2026.08.19 — lote ampliado](https://gi
 
 El archivo de Anexos 21–30 conserva la publicación íntegra como fue emitida. La consulta específica de Anexos 22, 24 o 30 debe cotejarse con la publicación y modificaciones posteriores correspondientes; esta biblioteca no divide ni reescribe los bytes oficiales para hacer pasar un extracto como texto autónomo.
 
+## Ciclo dos: reglas de Secretaría de Economía, IMMEX y PROSEC
+
+El release [Fuentes primarias íntegras 2026.08.19 — ciclo dos](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/tag/primary-sources-2026.08.19-cycle-two) conserva cuatro actos SIDOF completos como eventos independientes. Su inclusión permite verificar los bytes de cada publicación, pero no convierte una reforma aislada en una versión consolidada ni sustituye el análisis de vigencia del instrumento afectado.
+
+| Publicación íntegra | Descarga de evidencia exacta | Publicación oficial | SHA-256 verificado |
+|---|---|---|---|
+| Reglas y criterios de carácter general en materia de comercio exterior, 9-may-2022 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-two/5651333.doc) | [SIDOF 5651333](https://sidof.segob.gob.mx/notas/5651333) | `c1947b6af0c5a7dfb4c86533400fd06d01663cf652b0686ca999f249cbf042e8` |
+| Decreto de reforma IMMEX, 19-dic-2024 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-two/5745788.doc) | [SIDOF 5745788](https://sidof.segob.gob.mx/notas/5745788) | `44a2ccbaa5af83adc2842a19da0dc516463dbe54f793e7e2d662cf3081406ffa` |
+| Decreto de reforma IMMEX, 28-ago-2025 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-two/5766797.doc) | [SIDOF 5766797](https://sidof.segob.gob.mx/notas/5766797) | `0d89a5f79defcd80804ad7c3f646da3b5533f8314d8c1ffd67cbbd76b9b438dd` |
+| Decreto de modificación TIGIE y PROSEC, 23-abr-2026 | [DOC íntegro](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-two/5785818.doc) | [SIDOF 5785818](https://sidof.segob.gob.mx/notas/5785818) | `cf8214d2b8621955396851b59e39dee502148520d8fcdcd98e28f2b79e92b550` |
+
+Estas publicaciones se consultan junto con las versiones consolidadas oficiales y las reformas posteriores aplicables. Las copias administrativas de SNICE para IMMEX o PROSEC pueden ser útiles como material de consulta, pero no reemplazan los actos SIDOF que documentan la publicación y el efecto cronológico de las modificaciones.
+
 ## Núcleo jurídico de comercio exterior
 
 Los siguientes PDFs están preservados como archivos de evidencia dentro del paquete de Cámara de Diputados. La versión oficial enlazada es la referencia vinculante; la copia de release permite comprobación de integridad frente al manifiesto.
