@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_rla_reform_20260223
+  file: 5780677.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5780677
+  title: Decreto por el que se reforman, adicionan y derogan diversas disposiciones del Reglamento de la Ley Aduanera
+  sha256: 1a5e393c925f37968011d488c342777a55665b7fb825db6cf075c3eb318db3d3
+  bytes: 162640
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

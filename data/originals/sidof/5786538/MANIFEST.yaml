@@ -1,0 +1,13 @@
+documents:
+- id: mx_sidof_lce_reform_20260501
+  file: 5786538.doc
+  url: https://sidof.segob.gob.mx/notas/getDoc/5786538
+  title: Decreto por el que se reforman los articulos 40, fraccion I, de la Ley Organica de la Administracion Publica Federal; 15, fracciones IV y VI, de la Ley de Comercio Exterior y se adiciona el articulo 283 Quater a la Ley Federal del Trabajo, en materia de agroexportacion
+  sha256: 49007f368c4799442384929f2f831941ad022abf09c8d91fe6a88ddc0aed9820
+  bytes: 32528
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+redistribution: Official Mexican government or treaty publication. Not relicensed
+  as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
+  originals-YYYY.MM.DD, not this git clone.
+license: official-not-relicensed

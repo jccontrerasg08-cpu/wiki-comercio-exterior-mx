@@ -158,3 +158,58 @@ releases:
         sha256: cf8214d2b8621955396851b59e39dee502148520d8fcdcd98e28f2b79e92b550
         bytes: 357808
         media_type: application/msword
+
+  - tag: primary-sources-2026.08.19-cycle-three
+    snapshot_date: 2026-08-19
+    published_at: 2026-08-19T08:43:10Z
+    assets:
+      - name: CPEUM.pdf
+        domains: [diputados]
+        sha256: ca63a23a4b7444ebdbdad93759fbf46bd14c069e587c5878decf89fc9c12ca8e
+        bytes: 3141703
+        media_type: application/pdf
+      - name: 5780677.doc
+        domains: [sidof]
+        sha256: 1a5e393c925f37968011d488c342777a55665b7fb825db6cf075c3eb318db3d3
+        bytes: 162640
+        media_type: application/msword
+      - name: 5783669.doc
+        domains: [sidof]
+        sha256: 38c20b3552d393dca1729fdb01b0543c92aab90482a313bea74505012a9fcfab
+        bytes: 65056
+        media_type: application/msword
+      - name: 5786538.doc
+        domains: [sidof]
+        sha256: 49007f368c4799442384929f2f831941ad022abf09c8d91fe6a88ddc0aed9820
+        bytes: 32528
+        media_type: application/msword
+
+  - tag: primary-sources-2026.08.19-cycle-four
+    snapshot_date: 2026-08-19
+    published_at: 2026-08-19T08:46:11Z
+    assets:
+      - name: 5767158.doc
+        domains: [sidof]
+        sha256: 17dc4925303e7546e1e42e76e294b16471c9875261f811e2a09f78a0f8380643
+        bytes: 65056
+        media_type: application/msword
+      - name: 5779942.doc
+        domains: [sidof]
+        sha256: 28151f562d37b6c780e79934de4f45ced9e401858f0e992e3487efe1f14d3652
+        bytes: 227696
+        media_type: application/msword
+      - name: 5783929.doc
+        domains: [sidof]
+        sha256: d3ea2ad50a5ac868afb8b132a668582a0bae314f27d0322eb01d87737b6aea93
+        bytes: 130112
+        media_type: application/msword
+      - name: 5788843.doc
+        domains: [sidof]
+        sha256: 65617249a0847ab790660604066455ca258ed61499aade29b9cc010e836c0781
+        bytes: 97584
+        media_type: application/msword
+      - name: 5788992.doc
+        domains: [sidof]
+        sha256: bde62b941c68a2bac969d648dbdbf9ba53f9608dc502439c6ebfff4771289451
+        bytes: 195168
+        media_type: application/msword
