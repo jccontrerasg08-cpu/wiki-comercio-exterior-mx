@@ -38,3 +38,98 @@ releases:
         sha256: 558bb248733eb14c704af76db857eecdc7ec445a5f803dd22bdfa2fed49c6fc1
         bytes: 41980421
         media_type: application/zip
+
+  - tag: primary-sources-2026.08.19
+    snapshot_date: 2026-08-19
+    published_at: 2026-08-19T07:51:56Z
+    assets:
+      - name: Ley_Aduanera.pdf
+        domains: [diputados]
+        sha256: 43927095d22ff7bc7780e78132d2160b5050b5f76026b539daec32be09d7341d
+        bytes: 2088249
+        media_type: application/pdf
+      - name: Reglamento_Ley_Aduanera.pdf
+        domains: [diputados]
+        sha256: bcdfcd9073014aec4aefbacc01c9dd5b1f97f0da0c4556f0f506d20f12d77812
+        bytes: 903770
+        media_type: application/pdf
+      - name: LIGIE_2022.pdf
+        domains: [diputados]
+        sha256: a7688a47c8283f327b943e06ed948782feba2f5a0e16fe796d50d8340ce40ece
+        bytes: 19154404
+        media_type: application/pdf
+      - name: Ley_Comercio_Exterior.pdf
+        domains: [diputados]
+        sha256: 3f114f47007c21b4691bad502b786b45aa5e45c1571bd56dd8ca4f5af991b459
+        bytes: 573351
+        media_type: application/pdf
+      - name: RGCE_2026_y_Anexo_13.doc
+        domains: [sidof]
+        sha256: 778d0c051ec8af75ccf8b2f3f064b3045a0dc0b5c40fb66dba9e9421dafc3ebf
+        bytes: 2504656
+        media_type: application/msword
+      - name: Anexo_1_RGCE_2026.doc
+        domains: [sidof]
+        sha256: f098a1b165612b1fec3e0e522510bf0ad19c387d367cf1860d0e89477ad0e742
+        bytes: 162640
+        media_type: application/msword
+      - name: Anexo_2_RGCE_2026.doc
+        domains: [sidof]
+        sha256: cce1a6e21bfb3499fd35fac3065b35336cba371de25fc959acdf207218eab2e6
+        bytes: 5920096
+        media_type: application/msword
+      - name: Anexos_3_a_12_y_14_a_20_RGCE_2026.doc
+        domains: [sidof]
+        sha256: 9ac1efa0a6608e7813a3cad36748f3c861c99cd283c3bb219f8d4c14a6fce382
+        bytes: 9855984
+        media_type: application/msword
+
+  - tag: primary-sources-2026.08.19-extended
+    snapshot_date: 2026-08-19
+    published_at: 2026-08-19T08:11:48Z
+    assets:
+      - name: LIGIE_2022_ref02_29dic25.pdf
+        domains: [diputados]
+        sha256: 3c5285cf2b250af0175ae9f31d69d069915834acdfa7150c3449349f087690bf
+        bytes: 1241762
+        media_type: application/pdf
+      - name: LIVA.pdf
+        domains: [diputados]
+        sha256: f2b5b1770441a6a4e48f3ade408f9ff7a3e9c81bd5d529e52484f49e4a8e91a6
+        bytes: 1249332
+        media_type: application/pdf
+      - name: LIEPS.pdf
+        domains: [diputados]
+        sha256: 32639ede8448f91e6ddde556d4b8bceaf349b904bc21631f06e1c8a7a3d416f4
+        bytes: 1775862
+        media_type: application/pdf
+      - name: LFD.pdf
+        domains: [diputados]
+        sha256: 64b08a1ff8e5c71759acf550cf9c8df7eb343ea679a2c2663d0eef3db19f10df
+        bytes: 5171154
+        media_type: application/pdf
+      - name: 5777376.doc
+        domains: [sidof]
+        sha256: 47a6b215fdf1574ff80af559eb3f230cb16e680d961f758a3e459df3bf4a5654
+        bytes: 2472128
+        media_type: application/msword
+      - name: 5778300.doc
+        domains: [sidof]
+        sha256: 524413859c053085d141231a48163b94a057fa7e766581a20b4bfafba6adf9fa
+        bytes: 5432176
+        media_type: application/msword
+      - name: 5787425.doc
+        domains: [sidof]
+        sha256: 5c57438d458fd86c23fe8e7a099a73367dbc3769f1499dcfa2d9728292333cf6
+        bytes: 65056
+        media_type: application/msword
+      - name: 5787982.doc
+        domains: [sidof]
+        sha256: ef1616334dbe2d0ae0820cc77a5d2abfa7afa5403d484edd20f1b0b6264fc5d7
+        bytes: 2797408
+        media_type: application/msword
+      - name: 5786598.doc
+        domains: [sidof]
+        sha256: 4d61917bfc331fbb24088f5e35a03e6622db42f6225db8ae58267d7e107090ca
+        bytes: 65056
+        media_type: application/msword

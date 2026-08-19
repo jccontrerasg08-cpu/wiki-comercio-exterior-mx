@@ -9,6 +9,8 @@ Transport availability is not a legal-status decision. Publication events are re
 | Source | Jurisdiction | Evidence | Instrument / status | Harvest | Cadence | Published | Official URL |
 |---|---|---|---|---:|---:|---|---|
 | `mx_gob_anam`<br>ANAM | MEX | official_operational | - | no | 90 | - | [open](https://anam.gob.mx/) |
+| `mx_gob_anam_informacion_aduanas`<br>Informacion por Aduanas | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/informacion-por-aduanas-2022/) |
+| `mx_gob_anam_faq`<br>Preguntas frecuentes ANAM | MEX | official_operational | - | no | 90 | - | [open](https://www.anam.gob.mx/preguntas-frecuentes-anam/) |
 
 ## Camara de Diputados
 

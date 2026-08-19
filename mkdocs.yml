@@ -141,6 +141,7 @@ nav:
       - Ventanilla Única y VUCEM: wiki/aduana/vucem.md
       - Agente y agencia aduanal: wiki/aduana/agente-agencia-aduanal.md
       - ANAM: wiki/aduana/anam.md
+      - Preguntas frecuentes ANAM: wiki/aduana/faq-anam.md
       - PAMA e infracciones: wiki/aduana/infracciones-pama.md
       - Cambios 2026: wiki/aduana/cambios-2026.md
     - Clasificación:
@@ -171,6 +172,7 @@ nav:
       - Pagos internacionales: wiki/logistica/pagos-internacionales.md
   - Fuentes:
     - Guía del catálogo: catalog/index.md
+    - Publicaciones oficiales preservadas: catalog/publicaciones-oficiales.md
     - Biblioteca de originales: catalog/library.md
     - Originales faltantes: status/missing-primary-sources.md
     - Catálogo general: catalog/catalog.md
@@ -201,6 +203,8 @@ nav:
     - Compatibilidad del motor: methodology/docs-engine-compatibility.md
     - Contratos entre repositorios: methodology/cross-repo-contracts.md
     - Arquitectura: ARCHITECTURE.md
-  - Alcance: about/scope.md
+  - Alcance:
+    - Alcance del proyecto: about/scope.md
+    - Cómo funciona la wiki: about/como-funciona-la-wiki.md
   - Cambios: changes/index.md
   - Glosario: glossary.md

@@ -38,6 +38,12 @@ pages:
     source_ids: [mx_gob_anam, mx_diputados_ley_aduanera, mx_sidof_ventanilla_unica_20260504]
     instrument_ids: [mx_ley_aduanera, mx_ventanilla_unica_2026]
   - <<: *wiki
+    path: docs/wiki/aduana/faq-anam.md
+    title: Preguntas frecuentes ANAM
+    topic: aduana
+    source_ids: [mx_gob_anam_faq, mx_gob_anam_informacion_aduanas, mx_diputados_ley_aduanera, mx_sidof_rgce_2026, mx_sidof_rgce_2026_anexo_1, mx_sidof_rgce_2026_anexo_2, mx_sidof_rgce_2026_anexos_3_20]
+    instrument_ids: [mx_ley_aduanera, mx_rgce_2026]
+  - <<: *wiki
     path: docs/wiki/aduana/documentos.md
     title: Documentos para el despacho aduanero
     topic: aduana

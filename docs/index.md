@@ -59,6 +59,10 @@ Una forma práctica de recorrer la wiki. La secuencia real depende de la mercanc
   </a>
 </div>
 
+## Consultas frecuentes de ANAM
+
+Si llegas con una situación concreta —por ejemplo, un paquete, equipaje, abandono de mercancías, declaración de dinero o una queja— utiliza la [guía de preguntas frecuentes de ANAM](wiki/aduana/faq-anam.md). Distingue entre los portales operativos de ANAM y las fuentes jurídicas que deben verificarse para cada acto.
+
 ## Entra por el problema que estás resolviendo
 
 <div class="grid cards" markdown>

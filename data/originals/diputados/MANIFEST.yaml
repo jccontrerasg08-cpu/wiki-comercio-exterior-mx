@@ -125,6 +125,30 @@ documents:
   bytes: 588718
   license: official-not-relicensed
   redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_liva_current
+  file: LIVA.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIVA.pdf
+  summary: data/corpus/README.md
+  sha256: f2b5b1770441a6a4e48f3ade408f9ff7a3e9c81bd5d529e52484f49e4a8e91a6
+  bytes: 1249332
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lieps_current
+  file: LIEPS.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LIEPS.pdf
+  summary: data/corpus/README.md
+  sha256: 32639ede8448f91e6ddde556d4b8bceaf349b904bc21631f06e1c8a7a3d416f4
+  bytes: 1775862
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
+- id: mx_diputados_lfd_current
+  file: LFD.pdf
+  url: https://www.diputados.gob.mx/LeyesBiblio/pdf/LFD.pdf
+  summary: data/corpus/README.md
+  sha256: 64b08a1ff8e5c71759acf550cf9c8df7eb343ea679a2c2663d0eef3db19f10df
+  bytes: 5171154
+  license: official-not-relicensed
+  redistribution: Mexican government or treaty publication; URL+sha256; not Apache-2.0
 redistribution: Official Mexican government or treaty publication. Not relicensed
   as original authorship. Binding cite is the official URL. Bytes live in GitHub Release
   originals-YYYY.MM.DD, not this git clone.
