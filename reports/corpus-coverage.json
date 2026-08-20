@@ -421,6 +421,15 @@
       "section": "aduana"
     },
     {
+      "path": "docs/wiki/aduana/recaudacion-anam.md",
+      "risk_reasons": [
+        "extraction_incomplete",
+        "missing_instrument_reference",
+        "source_not_current"
+      ],
+      "section": "aduana"
+    },
+    {
       "path": "docs/wiki/clasificacion/rrna.md",
       "risk_reasons": [
         "pending_legal_review",
@@ -566,11 +575,11 @@
   "schema_version": 1,
   "sections": [
     {
-      "legally_reviewed_pages": 7,
-      "pages_needing_attention": 4,
+      "legally_reviewed_pages": 8,
+      "pages_needing_attention": 5,
       "retrieval_eligible_pages": 7,
       "section": "aduana",
-      "total_pages": 11
+      "total_pages": 12
     },
     {
       "legally_reviewed_pages": 0,
@@ -639,38 +648,38 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 37,
+      "not_applicable": 38,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
       "not_applicable": 37,
-      "partial": 42
+      "partial": 43
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 59,
-      "reviewed": 19
+      "reviewed": 20
     },
     "source_status": {
       "current": 57,
-      "partial": 21,
+      "partial": 22,
       "unknown": 1
     }
   },
   "summary": {
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
-    "distinct_source_ids": 49,
-    "legally_reviewed_pages": 19,
+    "distinct_source_ids": 50,
+    "legally_reviewed_pages": 20,
     "non_current_corpus_pages": 40,
-    "pages_needing_attention": 64,
+    "pages_needing_attention": 65,
     "pages_with_instruments": 70,
-    "pages_with_sources": 73,
+    "pages_with_sources": 74,
     "pending_legal_review_pages": 59,
     "retrieval_eligible_pages": 17,
-    "total_pages": 79,
+    "total_pages": 80,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 36
+    "wiki_pages": 37
   }
 }

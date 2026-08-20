@@ -37,3 +37,9 @@ La siguiente verificación visual debe concentrarse en páginas HTML oficiales d
 ## Captura de fuente oficial HTML
 
 El asiento oficial SIDOF 5777199 fue accesible como HTML y mostró: título **“Reglas Generales de Comercio Exterior para 2026 y Anexo 13”**, emisor **Poder Ejecutivo / Secretaría de Hacienda y Crédito Público**, publicación **27-12-2025**, y las opciones oficiales para descargar el documento `.doc`, ver la imagen digitalizada y descargar la edición electrónica del diario. La propia fuente advierte que la conversión HTML puede omitir tablas, caracteres u objetos; por ese motivo, la wiki debe conservar la advertencia de usar la imagen digitalizada o el archivo de la edición para detalle documental. Esta captura confirma identidad y disponibilidad del asiento, no una conclusión autónoma de vigencia jurídica.
+
+## Observación visual directa — Recaudación ANAM
+
+La página oficial `recaudacion-anam` se abrió en navegador y muestra la navegación institucional de ANAM, el encabezado «Reporte segundo trimestre 2026 (abril, mayo, junio)» y una tarjeta visual central para «Informe Trimestral Q2» con una llamada a la acción «Más información». La extracción textual identifica además los bloques «Informe Mensual 2026», «Históricos 2026», «Históricos 2025» e «Históricos 2024».
+
+La página actúa como **catálogo de informes visuales en PDF**, no como tablero de datos: no se observaron filtros, tabla navegable, exportación estructurada ni indicadores interactivos en el contenido extraído. La experiencia propuesta para la wiki debe por tanto declarar que sus datos estructurados son una transcripción o extracción verificable de informes ANAM, conservar enlace al PDF y evitar sugerir que ANAM publica una API o CSV.

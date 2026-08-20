@@ -9,22 +9,22 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 79 |
-| Wiki | 36 |
+| Páginas gobernadas | 80 |
+| Wiki | 37 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 17 (21.5%) |
-| Con fuente referenciada | 73 (92.4%) |
-| Con instrumento referenciado | 70 (88.6%) |
-| Revisión jurídica `reviewed` | 19 (24.1%) |
-| Requieren atención | 64 |
-| Fuentes distintas referenciadas | 49 |
+| Elegibles por estado para recuperación vigente | 17 (21.2%) |
+| Con fuente referenciada | 74 (92.5%) |
+| Con instrumento referenciado | 70 (87.5%) |
+| Revisión jurídica `reviewed` | 20 (25.0%) |
+| Requieren atención | 65 |
+| Fuentes distintas referenciadas | 50 |
 | Instrumentos distintos referenciados | 20 |
 
 ## Cobertura por sección
 
 | Sección | Total | Elegibles | Reviewed | Atención |
 |---|---:|---:|---:|---:|
-| `aduana` | 11 | 7 | 7 | 4 |
+| `aduana` | 12 | 7 | 8 | 5 |
 | `clasificacion` | 3 | 0 | 0 | 3 |
 | `contribuciones` | 4 | 1 | 1 | 3 |
 | `corpus` | 43 | 2 | 2 | 43 |
@@ -42,7 +42,7 @@
 | Estado | Páginas |
 |---|---:|
 | `current` | 57 |
-| `partial` | 21 |
+| `partial` | 22 |
 | `unknown` | 1 |
 
 ### `extraction_status`
@@ -50,7 +50,7 @@
 | Estado | Páginas |
 |---|---:|
 | `not_applicable` | 37 |
-| `partial` | 42 |
+| `partial` | 43 |
 
 ### `legal_review_status`
 
@@ -58,14 +58,14 @@
 |---|---:|
 | `not_applicable` | 1 |
 | `pending_review` | 59 |
-| `reviewed` | 19 |
+| `reviewed` | 20 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 37 |
+| `not_applicable` | 38 |
 | `partial` | 39 |
 | `stale` | 1 |
 
@@ -122,6 +122,7 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `docs/wiki/aduana/documentos.md` | `aduana` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/aduana/faq-anam.md` | `aduana` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/aduana/pedimento-rgce.md` | `aduana` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/aduana/recaudacion-anam.md` | `aduana` | `extraction_incomplete`, `missing_instrument_reference`, `source_not_current` |
 | `docs/wiki/clasificacion/rrna.md` | `clasificacion` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/clasificacion/sistema-armonizado.md` | `clasificacion` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/clasificacion/tigie-nico.md` | `clasificacion` | `pending_legal_review`, `source_not_current` |

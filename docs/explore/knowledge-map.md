@@ -7,7 +7,7 @@ description: "Vista generada de páginas, fuentes, instrumentos y estado de revi
 
 Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml` y `sources/instruments.yaml`. Los estados describen **metadatos de revisión del repositorio**, no una opinión jurídica independiente ni sustituyen la fuente oficial.
 
-**Páginas gobernadas visibles:** 36
+**Páginas gobernadas visibles:** 37
 
 ## Por tema
 
@@ -24,6 +24,7 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | [Pedimento y RGCE](../wiki/aduana/pedimento-rgce.md) | partial · pending_review | — | `mx_rgce_2026` | `mx_sidof_rgce_2026`, `mx_sidof_rgce_2026_anexos_21_30` |
 | [Preguntas frecuentes ANAM](../wiki/aduana/faq-anam.md) | partial · pending_review | — | `mx_ley_aduanera`, `mx_rgce_2026` | `mx_diputados_ley_aduanera`, `mx_gob_anam_faq`, `mx_gob_anam_informacion_aduanas`, `mx_sidof_rgce_2026`, `mx_sidof_rgce_2026_anexo_1`, `mx_sidof_rgce_2026_anexo_2`, `mx_sidof_rgce_2026_anexos_3_20` |
 | [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_rgce_2026` | `mx_diputados_ley_aduanera`, `mx_gob_anam`, `mx_sidof_rgce_2026`, `mx_vucem_portal` |
+| [Recaudacion ANAM](../wiki/aduana/recaudacion-anam.md) | partial · reviewed | 2026-06-30 | — | `mx_gob_anam_recaudacion` |
 | [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_rgce_2026` | `mx_diputados_ley_aduanera`, `mx_sidof_rgce_2026` |
 | [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) | current · reviewed | 2026-08-15 | `mx_ley_aduanera`, `mx_ventanilla_unica_2026` | `mx_diputados_ley_aduanera`, `mx_sidof_ventanilla_unica_20260504`, `mx_vucem_portal` |
 

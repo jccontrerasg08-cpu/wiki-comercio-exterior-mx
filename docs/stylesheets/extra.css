@@ -331,3 +331,206 @@ input {
     transform: none;
   }
 }
+
+/* Tablero de recaudación ANAM: mejora progresiva para datos publicados. */
+.anam-dashboard {
+  margin: 1.5rem 0 2rem;
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  border: 1px solid var(--trade-border);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--trade-surface), var(--md-default-bg-color));
+  box-shadow: 0 0.8rem 2rem rgba(6, 38, 58, 0.06);
+}
+
+.anam-dashboard__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.anam-dashboard__heading h2 {
+  margin: 0.2rem 0 0.45rem;
+  color: var(--trade-ink);
+}
+
+.anam-dashboard__heading p:last-child {
+  max-width: 66ch;
+  margin-bottom: 0;
+  color: var(--trade-muted);
+}
+
+.anam-dashboard__eyebrow {
+  margin: 0;
+  color: var(--trade-sea);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.anam-dashboard__filters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.25rem 0 0.85rem;
+}
+
+.anam-dashboard__filters label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--trade-ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.anam-dashboard__filters select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--trade-border);
+  border-radius: 0.6rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+}
+
+.anam-dashboard__filters select:focus-visible {
+  border-color: var(--trade-sea);
+  outline: 3px solid color-mix(in srgb, var(--trade-amber) 65%, transparent);
+  outline-offset: 2px;
+}
+
+.anam-dashboard__status {
+  min-height: 1.5rem;
+  margin: 0.5rem 0 1rem;
+  color: var(--trade-muted);
+  font-size: 0.85rem;
+}
+
+.anam-dashboard__metric {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.2rem 1rem;
+  align-items: end;
+  padding: 1rem;
+  border-left: 3px solid var(--trade-sea);
+  border-radius: 0 0.7rem 0.7rem 0;
+  background: var(--md-default-bg-color);
+}
+
+.anam-dashboard__metric p,
+.anam-dashboard__metric small {
+  margin: 0;
+}
+
+.anam-dashboard__metric p {
+  color: var(--trade-muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.anam-dashboard__metric strong {
+  grid-row: span 2;
+  color: var(--trade-ink);
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  line-height: 1;
+}
+
+.anam-dashboard__metric strong span {
+  font-size: 0.62em;
+}
+
+.anam-dashboard__metric small {
+  color: var(--trade-sea);
+  font-weight: 700;
+}
+
+.anam-dashboard__result {
+  margin-top: 1rem;
+}
+
+.anam-dashboard__bars {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.anam-dashboard__bar-row {
+  display: grid;
+  grid-template-columns: minmax(7rem, 1fr) auto;
+  gap: 0.25rem 0.75rem;
+  align-items: center;
+  color: var(--trade-ink);
+  font-size: 0.88rem;
+}
+
+.anam-dashboard__bar-row strong {
+  color: var(--trade-muted);
+  font-size: 0.82rem;
+}
+
+.anam-dashboard__bar {
+  grid-column: 1 / -1;
+  height: 0.55rem;
+  overflow: hidden;
+  border-radius: 99px;
+  background: color-mix(in srgb, var(--trade-sea) 14%, transparent);
+}
+
+.anam-dashboard__bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--trade-sea), var(--md-accent-fg-color));
+}
+
+.anam-dashboard__table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--trade-border);
+  border-radius: 0.7rem;
+  background: var(--md-default-bg-color);
+}
+
+.anam-dashboard__table-wrap table {
+  width: 100%;
+  margin: 0;
+  border: 0;
+}
+
+.anam-dashboard__table-wrap th,
+.anam-dashboard__table-wrap td {
+  white-space: nowrap;
+}
+
+.anam-dashboard__caption,
+.anam-dashboard__empty {
+  margin: 0.75rem 0 0;
+  color: var(--trade-muted);
+  font-size: 0.82rem;
+}
+
+@media screen and (max-width: 44.984375em) {
+  .anam-dashboard__heading,
+  .anam-dashboard__filters {
+    grid-template-columns: 1fr;
+  }
+
+  .anam-dashboard__heading {
+    display: grid;
+  }
+
+  .anam-dashboard__heading .md-button {
+    justify-self: start;
+  }
+
+  .anam-dashboard__metric {
+    grid-template-columns: 1fr;
+  }
+
+  .anam-dashboard__metric strong {
+    grid-row: auto;
+  }
+}

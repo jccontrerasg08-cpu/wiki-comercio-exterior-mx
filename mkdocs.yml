@@ -111,6 +111,8 @@ markdown_extensions:
       permalink: true
 extra_css:
   - stylesheets/extra.css
+extra_javascript:
+  - assets/javascripts/anam-dashboard.js
 nav:
   - Inicio: index.md
   - Estado del corpus: status/corpus-coverage.md
@@ -142,6 +144,7 @@ nav:
       - Ventanilla Única y VUCEM: wiki/aduana/vucem.md
       - Agente y agencia aduanal: wiki/aduana/agente-agencia-aduanal.md
       - ANAM: wiki/aduana/anam.md
+      - Recaudación ANAM: wiki/aduana/recaudacion-anam.md
       - Preguntas frecuentes ANAM: wiki/aduana/faq-anam.md
       - PAMA e infracciones: wiki/aduana/infracciones-pama.md
       - Cambios 2026: wiki/aduana/cambios-2026.md
@@ -184,6 +187,7 @@ nav:
       - Arancel: catalog/mexico/arancel.md
       - INEGI, TIGIE y SCIAN: catalog/mexico/inegi-tigie-scian.md
       - RGCE: catalog/mexico/rgce.md
+      - Recaudación ANAM: catalog/mexico/recaudacion-anam.md
     - Global: catalog/global/index.md
     - Países:
       - Brasil: catalog/countries/BRA.md

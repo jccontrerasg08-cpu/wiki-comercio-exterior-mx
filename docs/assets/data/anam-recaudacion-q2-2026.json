@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "scope": {
+    "country": "MEX",
+    "period": "2026-Q2",
+    "period_label": "Segundo trimestre de 2026 (abril-junio)",
+    "currency": "MXN",
+    "unit": "MDP",
+    "unit_label": "millones de pesos",
+    "aggregation": "nacional"
+  },
+  "source": {
+    "authority": "ANAM",
+    "title": "Informe Trimestral Q2 2026",
+    "url": "https://www.anam.gob.mx/wp-content/uploads/Informe_trimestral_Q2_2026_f.pdf",
+    "catalog_url": "https://www.anam.gob.mx/recaudacion-anam/",
+    "retrieved_at": "2026-08-20",
+    "method_note": "Valores transcritos únicamente cuando aparecen de forma explícita en el informe. Las cifras pueden presentar diferencias por redondeo."
+  },
+  "indicators": {
+    "recaudacion_q2_mdp": {
+      "label": "Recaudación Q2",
+      "value": 336190,
+      "unit": "MDP",
+      "comparison_label": "vs Q1",
+      "comparison_value": 4.0
+    },
+    "recaudacion_semestre_mdp": {
+      "label": "Recaudación acumulada",
+      "value": 659393,
+      "unit": "MDP",
+      "comparison_label": "enero-junio",
+      "comparison_value": null
+    },
+    "pedimentos_q2_millones": {
+      "label": "Pedimentos Q2",
+      "value": 2.72,
+      "unit": "millones",
+      "comparison_label": "vs Q1",
+      "comparison_value": 5.4
+    },
+    "pedimentos_semestre": {
+      "label": "Pedimentos acumulados",
+      "value": 5308502,
+      "unit": "número",
+      "comparison_label": "enero-junio",
+      "comparison_value": null
+    },
+    "operaciones_q2_millones": {
+      "label": "Operaciones Q2",
+      "value": 5.65,
+      "unit": "millones",
+      "comparison_label": "vs Q1",
+      "comparison_value": 7.5
+    },
+    "operaciones_semestre": {
+      "label": "Operaciones acumuladas",
+      "value": 10905057,
+      "unit": "número",
+      "comparison_label": "enero-junio",
+      "comparison_value": null
+    }
+  },
+  "series": {
+    "recaudacion_mensual_mdp": [
+      {"period": "2026-01", "label": "Enero", "value": 106023},
+      {"period": "2026-02", "label": "Febrero", "value": 101568},
+      {"period": "2026-03", "label": "Marzo", "value": 115611},
+      {"period": "2026-04", "label": "Abril", "value": 109879},
+      {"period": "2026-05", "label": "Mayo", "value": 105189},
+      {"period": "2026-06", "label": "Junio", "value": 121122}
+    ]
+  },
+  "breakdowns": {
+    "recaudacion_por_impuesto_q2_pct": [
+      {"label": "IVA", "value": 69.2},
+      {"label": "IGI", "value": 13.8},
+      {"label": "IEPS", "value": 13.8},
+      {"label": "Otros", "value": 3.1}
+    ],
+    "recaudacion_por_tipo_aduana_q2_pct": [
+      {"label": "Marítima", "value": 52},
+      {"label": "Fronteriza", "value": 31},
+      {"label": "Interior", "value": 17}
+    ],
+    "pedimentos_por_tipo_aduana_q2_pct": [
+      {"label": "Fronteriza", "value": 52.2},
+      {"label": "Interior", "value": 29.9},
+      {"label": "Marítima", "value": 17.9}
+    ],
+    "operaciones_por_tipo_aduana_q2_pct": [
+      {"label": "Fronteriza", "value": 68.8},
+      {"label": "Interior", "value": 19.3},
+      {"label": "Marítima", "value": 11.9}
+    ]
+  },
+  "rankings": {
+    "recaudacion_aduanas_q2_mdp": [
+      {"rank": 1, "name": "Nuevo Laredo", "value": 50063},
+      {"rank": 2, "name": "Manzanillo", "value": 47492},
+      {"rank": 3, "name": "Lázaro Cárdenas", "value": 31217},
+      {"rank": 4, "name": "Veracruz", "value": 29503},
+      {"rank": 5, "name": "Tuxpan", "value": 19855},
+      {"rank": 6, "name": "AIFA", "value": 16982},
+      {"rank": 7, "name": "Ciudad Juárez", "value": 12694},
+      {"rank": 8, "name": "Altamira", "value": 10741},
+      {"rank": 9, "name": "Matamoros", "value": 10249},
+      {"rank": 10, "name": "AICM", "value": 9529},
+      {"rank": 11, "name": "Ensenada", "value": 9464},
+      {"rank": 12, "name": "Puebla", "value": 7953},
+      {"rank": 13, "name": "Mazatlán", "value": 7760},
+      {"rank": 14, "name": "Toluca", "value": 7088},
+      {"rank": 15, "name": "Colombia", "value": 7010}
+    ]
+  },
+  "caveats": [
+    "La recaudación ANAM es una métrica fiscal aduanera; no equivale al valor total del comercio exterior.",
+    "Los indicadores de recaudación, pedimentos y operaciones se muestran con su propia unidad y no se agregan entre sí.",
+    "Los valores de mapas y gráficas se incluyen sólo cuando el texto del informe permite confirmar la etiqueta y el valor.",
+    "La disponibilidad del PDF no prueba por sí sola vigencia jurídica ni sustituye la fuente oficial."
+  ],
+  "global_extension": {
+    "status": "planned",
+    "rule": "Una futura capa mundial debe conservar fuente, moneda, metodología, periodo y nivel geográfico propios; no compara directamente recaudación ANAM con comercio internacional o recaudación de otros países."
+  }
+}

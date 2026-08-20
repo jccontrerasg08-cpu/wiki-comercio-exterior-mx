@@ -1098,6 +1098,19 @@ sources:
     cadence_days: 90
     probe: *probe_html
 
+  - id: mx_gob_anam_recaudacion
+    jurisdiction: MEX
+    title: Recaudacion ANAM
+    url: https://www.anam.gob.mx/recaudacion-anam/
+    note_id: null
+    authority: ANAM
+    evidence_class: official_operational
+    allowed_hosts: [anam.gob.mx, www.anam.gob.mx]
+    media_types: [text/html, application/pdf]
+    harvest: false
+    cadence_days: 30
+    probe: *probe_html
+
   - id: mx_gob_anam_faq
     jurisdiction: MEX
     title: Preguntas frecuentes ANAM
