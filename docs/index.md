@@ -59,6 +59,10 @@ Una forma práctica de recorrer la wiki. La secuencia real depende de la mercanc
   </a>
 </div>
 
+## ¿Vas a exportar?
+
+La [ruta de exportación](wiki/exportacion/index.md) conecta clasificación, RRNA, origen, despacho y logística en un orden de consulta. Úsala para organizar qué fuente y qué fecha debes verificar; no reemplaza el análisis específico de mercancía, destino o régimen.
+
 ## Consultas frecuentes de ANAM
 
 Si llegas con una situación concreta —por ejemplo, un paquete, equipaje, abandono de mercancías, declaración de dinero o una queja— utiliza la [guía de preguntas frecuentes de ANAM](wiki/aduana/faq-anam.md). Distingue entre los portales operativos de ANAM y las fuentes jurídicas que deben verificarse para cada acto.

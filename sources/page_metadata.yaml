@@ -32,6 +32,14 @@ pages:
     title: Wiki de comercio exterior de Mexico
     topic: fundamentos
   - <<: *wiki
+    path: docs/wiki/exportacion/index.md
+    title: Ruta de exportacion
+    topic: operacion
+    source_ids: [mx_diputados_ley_aduanera, mx_diputados_lce_current, mx_sidof_rgce_2026, sice_tmec]
+    instrument_ids: [mx_ley_aduanera, mx_ley_comercio_exterior, mx_rgce_2026, mx_tmec]
+    source_status: partial
+    legal_review_status: reviewed
+  - <<: *wiki
     path: docs/wiki/aduana/anam.md
     title: Agencia Nacional de Aduanas de Mexico
     topic: aduana
