@@ -43,6 +43,12 @@ El aviso publicado en el DOF el **30 de junio de 2026** identificó programas su
 
 El Decreto IMMEX fue reformado el **19 de diciembre de 2024** y nuevamente el **28 de agosto de 2025**. Ambos decretos dispusieron entrada en vigor al día siguiente de su publicación. La reforma de agosto de 2025 modificó, entre otros elementos, el Anexo I del Decreto IMMEX.
 
+| Documento | Función dentro de la consulta | Evidencia preservada |
+|---|---|---|
+| Reforma IMMEX, 19-dic-2024 | Acto jurídico de publicación; permite ubicar el cambio y su fecha | [DOC íntegro con SHA-256](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-two/5745788.doc) |
+| Reforma IMMEX, 28-ago-2025 | Acto jurídico posterior; debe revisarse junto con transitorios y la fecha de operación | [DOC íntegro con SHA-256](https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/releases/download/primary-sources-2026.08.19-cycle-two/5766797.doc) |
+| Portal SNICE IMMEX | Orientación operativa y acceso institucional; no sustituye los actos de publicación | [Consulta institucional](https://www.snice.gob.mx/cs/avi/snice/immex.html) |
+
 Cuando una decisión dependa de una fracción concreta, se debe revisar el texto oficial vigente y su fecha efectiva; una lista copiada en una guía puede quedar desactualizada.
 
 ## Cómo verificar una operación
