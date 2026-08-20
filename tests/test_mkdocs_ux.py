@@ -122,6 +122,11 @@ class MkDocsUxTests(unittest.TestCase):
         self.assertIn("@keyframes trade-route-flow", css)
         self.assertIn("@media (prefers-reduced-motion: reduce)", css)
         self.assertNotIn("url(http", css.casefold())
+        self.assertIn("--trade-ease-out:", css)
+        self.assertIn("@media (hover: hover) and (pointer: fine)", css)
+        self.assertIn(".trade-route__step:active", css)
+        self.assertIn(".md-typeset .md-button:active", css)
+        self.assertIn(".grid.cards > ul > li:focus-within", css)
 
 
 if __name__ == "__main__":

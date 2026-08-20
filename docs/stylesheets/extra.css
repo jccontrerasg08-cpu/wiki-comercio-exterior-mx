@@ -10,6 +10,9 @@
   --trade-surface: #f4f8fa;
   --trade-border: rgba(11, 57, 84, 0.16);
   --trade-route-line: rgba(8, 127, 122, 0.28);
+  --trade-ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --trade-duration-press: 120ms;
+  --trade-duration-hover: 180ms;
 }
 
 [data-md-color-scheme="slate"] {
@@ -162,14 +165,16 @@ input {
   background: var(--md-default-bg-color);
   color: var(--md-default-fg-color);
   text-decoration: none;
-  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  transition:
+    border-color var(--trade-duration-hover) var(--trade-ease-out),
+    box-shadow var(--trade-duration-hover) var(--trade-ease-out),
+    transform var(--trade-duration-press) var(--trade-ease-out);
 }
 
-.trade-route__step:hover,
 .trade-route__step:focus-visible {
   border-color: var(--trade-sea);
-  box-shadow: 0 0.7rem 1.6rem rgba(6, 38, 58, 0.09);
-  transform: translateY(-2px);
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--trade-sea) 22%, transparent),
+    0 0.7rem 1.6rem rgba(6, 38, 58, 0.09);
 }
 
 .trade-route__number {
@@ -200,14 +205,17 @@ input {
 .grid.cards > ol > li {
   border-color: var(--trade-border);
   border-radius: 0.85rem;
-  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  transition:
+    border-color var(--trade-duration-hover) var(--trade-ease-out),
+    box-shadow var(--trade-duration-hover) var(--trade-ease-out),
+    transform var(--trade-duration-press) var(--trade-ease-out);
 }
 
-.grid.cards > ul > li:hover,
-.grid.cards > ol > li:hover {
+.grid.cards > ul > li:focus-within,
+.grid.cards > ol > li:focus-within {
   border-color: var(--trade-sea);
-  box-shadow: 0 0.65rem 1.5rem rgba(6, 38, 58, 0.08);
-  transform: translateY(-2px);
+  box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--trade-sea) 18%, transparent),
+    0 0.65rem 1.5rem rgba(6, 38, 58, 0.08);
 }
 
 .trade-assurance {
@@ -235,9 +243,37 @@ input {
   font-size: 0.83rem;
 }
 
+.md-typeset .md-button {
+  transition:
+    background-color var(--trade-duration-hover) var(--trade-ease-out),
+    border-color var(--trade-duration-hover) var(--trade-ease-out),
+    box-shadow var(--trade-duration-hover) var(--trade-ease-out),
+    transform var(--trade-duration-press) var(--trade-ease-out);
+}
+
 .md-typeset .md-button--primary {
   background-color: var(--trade-sea);
   border-color: var(--trade-sea);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .trade-route__step:hover {
+    border-color: var(--trade-sea);
+    box-shadow: 0 0.7rem 1.6rem rgba(6, 38, 58, 0.09);
+    transform: translateY(-2px);
+  }
+
+  .grid.cards > ul > li:hover,
+  .grid.cards > ol > li:hover {
+    border-color: var(--trade-sea);
+    box-shadow: 0 0.65rem 1.5rem rgba(6, 38, 58, 0.08);
+    transform: translateY(-2px);
+  }
+}
+
+.trade-route__step:active,
+.md-typeset .md-button:active:not(:disabled) {
+  transform: scale(0.98);
 }
 
 .md-typeset a:focus-visible,
@@ -288,8 +324,10 @@ input {
   }
 
   .trade-route__step:hover,
+  .trade-route__step:active,
   .grid.cards > ul > li:hover,
-  .grid.cards > ol > li:hover {
+  .grid.cards > ol > li:hover,
+  .md-typeset .md-button:active:not(:disabled) {
     transform: none;
   }
 }
