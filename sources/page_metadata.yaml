@@ -46,6 +46,16 @@ pages:
     source_ids: [mx_gob_anam, mx_diputados_ley_aduanera, mx_sidof_ventanilla_unica_20260504]
     instrument_ids: [mx_ley_aduanera, mx_ventanilla_unica_2026]
   - <<: *wiki
+    path: docs/wiki/aduana/recaudacion-anam.md
+    title: Recaudacion ANAM
+    topic: aduana
+    source_ids: [mx_gob_anam_recaudacion]
+    current_through: 2026-06-30
+    source_status: partial
+    extraction_status: partial
+    legal_review_status: reviewed
+
+  - <<: *wiki
     path: docs/wiki/aduana/faq-anam.md
     title: Preguntas frecuentes ANAM
     topic: aduana
