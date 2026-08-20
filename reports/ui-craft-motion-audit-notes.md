@@ -25,3 +25,15 @@ Se recomienda un ajuste CSS acotado, sin dependencias ni JavaScript: tokens de m
 ## Nota de compatibilidad
 
 La interfaz pública observada muestra la versión desplegada disponible al momento de revisión. Los cambios futuros deben verificarse localmente con build estricto, reglas existentes de accesibilidad y visualización responsive.
+
+## Captura posterior a la integración
+
+La portada desplegada siguió mostrando la jerarquía de hero, la ruta de cinco pasos, los accesos por tema y el acceso a la ruta de exportación sin errores de presentación visibles. La navegación y los llamados a la acción permanecieron legibles en modo oscuro.
+
+Se intentó abrir el PDF oficial LIGIE 2022 de Cámara de Diputados directamente en el visor del navegador. El navegador navegó a la URL, pero no entregó una captura visual ni texto extraíble del PDF. Este resultado **no invalida** el recurso ni confirma visualmente su contenido; se registra como límite del visor. La identidad documental de esa fuente queda respaldada por la revisión HTTP paralela y por el manifiesto/registro de evidencia, no por esta captura visual.
+
+La siguiente verificación visual debe concentrarse en páginas HTML oficiales de SIDOF y en la portada desplegada, que sí proporcionan una representación visual interpretable.
+
+## Captura de fuente oficial HTML
+
+El asiento oficial SIDOF 5777199 fue accesible como HTML y mostró: título **“Reglas Generales de Comercio Exterior para 2026 y Anexo 13”**, emisor **Poder Ejecutivo / Secretaría de Hacienda y Crédito Público**, publicación **27-12-2025**, y las opciones oficiales para descargar el documento `.doc`, ver la imagen digitalizada y descargar la edición electrónica del diario. La propia fuente advierte que la conversión HTML puede omitir tablas, caracteres u objetos; por ese motivo, la wiki debe conservar la advertencia de usar la imagen digitalizada o el archivo de la edición para detalle documental. Esta captura confirma identidad y disponibilidad del asiento, no una conclusión autónoma de vigencia jurídica.

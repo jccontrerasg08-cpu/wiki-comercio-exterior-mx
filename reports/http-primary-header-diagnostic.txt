@@ -1,0 +1,31 @@
+URL=https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
+status=000 type= bytes=0 final=https://www.diputados.gob.mx/LeyesBiblio/pdf/LAdua.pdf
+curl_error=35
+URL=https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAdua.pdf
+status=000 type= bytes=0 final=https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LAdua.pdf
+curl_error=35
+URL=https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf
+status=000 type= bytes=0 final=https://www.diputados.gob.mx/LeyesBiblio/pdf/LIGIE_2022.pdf
+curl_error=35
+URL=https://www.diputados.gob.mx/LeyesBiblio/pdf/LCE.pdf
+status=000 type= bytes=0 final=https://www.diputados.gob.mx/LeyesBiblio/pdf/LCE.pdf
+curl_error=35
+URL=https://sidof.segob.gob.mx/notas/getDoc/5777199
+status=000 type= bytes=0 final=https://sidof.segob.gob.mx/notas/getDoc/5777199
+curl_error=28
+URL=https://sidof.segob.gob.mx/notas/getDoc/5777997
+status=200 type=application/doc bytes=0 final=https://sidof.segob.gob.mx/notas/getDoc/5777997
+URL=https://sidof.segob.gob.mx/notas/getDoc/5778101
+status=200 type=application/doc bytes=0 final=https://sidof.segob.gob.mx/notas/getDoc/5778101
+URL=https://sidof.segob.gob.mx/notas/getDoc/5778241
+status=200 type=application/doc bytes=0 final=https://sidof.segob.gob.mx/notas/getDoc/5778241
+URL=https://sidof.segob.gob.mx/notas/getDoc/5778300
+status=000 type= bytes=0 final=https://sidof.segob.gob.mx/notas/getDoc/5778300
+curl_error=28
+URL=https://sidof.segob.gob.mx/notas/getDoc/5787425
+status=200 type=application/doc bytes=0 final=https://sidof.segob.gob.mx/notas/getDoc/5787425
+URL=https://sidof.segob.gob.mx/notas/getDoc/5786598
+status=200 type=application/doc bytes=0 final=https://sidof.segob.gob.mx/notas/getDoc/5786598
+URL=https://www.dof.gob.mx/2020/SRE/T_MEC_290620.pdf
+status=000 type= bytes=0 final=https://www.dof.gob.mx/2020/SRE/T_MEC_290620.pdf
+curl_error=60
