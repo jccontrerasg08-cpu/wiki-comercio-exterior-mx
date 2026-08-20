@@ -113,6 +113,7 @@ extra_css:
   - stylesheets/extra.css
 extra_javascript:
   - assets/javascripts/anam-dashboard.js
+  - assets/javascripts/world-explorer.js
 nav:
   - Inicio: index.md
   - Estado del corpus: status/corpus-coverage.md
@@ -128,6 +129,7 @@ nav:
     - Programas: explore/programas.md
     - RRNA y NOM: explore/rrna-nom.md
     - Aduanas y mapa: explore/mapa.md
+    - Mundo y fuentes comparables: explore/mundo.md
     - Fuentes oficiales: catalog/library.md
   - Wiki:
     - Mapa: wiki/index.md

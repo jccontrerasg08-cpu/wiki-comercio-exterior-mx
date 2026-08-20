@@ -534,3 +534,94 @@ input {
     grid-row: auto;
   }
 }
+
+/* Explorador mundial: lista y datos primero; el mapa futuro será opcional. */
+.world-explorer {
+  margin: 1.4rem 0 2rem;
+  padding: clamp(1rem, 2.5vw, 1.6rem);
+  border: 1px solid var(--trade-border);
+  border-radius: 1rem;
+  background:
+    radial-gradient(circle at 92% 8%, color-mix(in srgb, var(--trade-sea) 12%, transparent) 0 3.5rem, transparent 3.6rem),
+    var(--trade-surface);
+}
+
+.world-explorer__intro h2 {
+  margin: 0.15rem 0 0.45rem;
+  color: var(--trade-ink);
+}
+
+.world-explorer__intro > p:last-child,
+.world-explorer__status,
+.world-explorer > p:last-child {
+  color: var(--trade-muted);
+}
+
+.world-explorer__controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1.1rem 0 0.45rem;
+}
+
+.world-explorer__controls p {
+  margin: 0;
+}
+
+.world-explorer__controls label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--trade-ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.world-explorer__controls input,
+.world-explorer__controls select {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--trade-border);
+  border-radius: 0.55rem;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  font: inherit;
+}
+
+.world-explorer__controls input:focus-visible,
+.world-explorer__controls select:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--trade-sea) 35%, transparent);
+  outline-offset: 2px;
+  border-color: var(--trade-sea);
+}
+
+.world-explorer__status {
+  margin: 0.7rem 0;
+  font-size: 0.85rem;
+}
+
+.world-explorer__table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--trade-border);
+  border-radius: 0.65rem;
+  background: var(--md-default-bg-color);
+}
+
+.world-explorer table {
+  min-width: 43rem;
+  margin: 0;
+}
+
+.world-explorer th {
+  color: var(--trade-ink);
+}
+
+@media screen and (max-width: 44.9375em) {
+  .world-explorer__controls {
+    grid-template-columns: 1fr;
+  }
+
+  .world-explorer table {
+    min-width: 36rem;
+  }
+}

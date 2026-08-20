@@ -1,0 +1,103 @@
+{
+  "source": {
+    "title": "Inventario editorial de guías de país y fuentes internacionales",
+    "version": "2026-08-20",
+    "reviewed_at": "2026-08-20",
+    "method": "Registro curado a partir del catálogo de países y de fuentes globales de la wiki; no contiene una serie estadística mundial."
+  },
+  "scope": {
+    "coverage": "curated-country-guides",
+    "geometry_mode": "contract-only",
+    "embed_ready": false,
+    "license_note": "La geometría mundial canónica pertenece a AduanaMap MX bajo un contrato de consumo; esta wiki no mantiene una copia manual ni sirve un mapa de países.",
+    "comparability_note": "Las guías de país y las fuentes multilaterales son puntos de consulta. No son valores homologados de comercio, aranceles ni recaudación."
+  },
+  "country_guides": [
+    {
+      "iso3": "BRA",
+      "name_es": "Brasil",
+      "region": "América del Sur",
+      "guide_url": "../catalog/countries/BRA.md",
+      "official_focus": "Portal oficial de comercio exterior de Brasil",
+      "source_id": "country_bra_trade"
+    },
+    {
+      "iso3": "CAN",
+      "name_es": "Canadá",
+      "region": "América del Norte",
+      "guide_url": "../catalog/countries/CAN.md",
+      "official_focus": "Portal oficial de comercio de Canadá",
+      "source_id": "country_can_trade"
+    },
+    {
+      "iso3": "CHN",
+      "name_es": "China",
+      "region": "Asia Oriental",
+      "guide_url": "../catalog/countries/CHN.md",
+      "official_focus": "Portal oficial de comercio de China",
+      "source_id": "country_chn_trade"
+    },
+    {
+      "iso3": "DEU",
+      "name_es": "Alemania",
+      "region": "Europa",
+      "guide_url": "../catalog/countries/DEU.md",
+      "official_focus": "Portal oficial de comercio de Alemania",
+      "source_id": "country_deu_trade"
+    },
+    {
+      "iso3": "JPN",
+      "name_es": "Japón",
+      "region": "Asia Oriental",
+      "guide_url": "../catalog/countries/JPN.md",
+      "official_focus": "Portal oficial de comercio de Japón",
+      "source_id": "country_jpn_trade"
+    },
+    {
+      "iso3": "NLD",
+      "name_es": "Países Bajos",
+      "region": "Europa",
+      "guide_url": "../catalog/countries/NLD.md",
+      "official_focus": "Portal oficial de comercio de Países Bajos",
+      "source_id": "country_nld_trade"
+    },
+    {
+      "iso3": "USA",
+      "name_es": "Estados Unidos",
+      "region": "América del Norte",
+      "guide_url": "../catalog/countries/USA.md",
+      "official_focus": "Portal oficial de comercio de Estados Unidos",
+      "source_id": "country_usa_trade"
+    }
+  ],
+  "international_sources": [
+    {
+      "id": "global_un_comtrade",
+      "name": "UN Comtrade",
+      "official_url": "https://comtrade.un.org/",
+      "coverage": "Flujos de mercancías por reportante, socio, producto y periodo",
+      "use": "Base candidata para series globales, previa revisión de clasificación, flujo, moneda, valoración y vintage."
+    },
+    {
+      "id": "global_wits",
+      "name": "WITS / Banco Mundial",
+      "official_url": "https://wits.worldbank.org/",
+      "coverage": "Comercio de mercancías, aranceles y medidas no arancelarias",
+      "use": "Consulta comparativa de comercio y acceso a mercados; no debe agregarse con ANAM como una misma métrica."
+    },
+    {
+      "id": "global_wto_tariff_download",
+      "name": "WTO Tariff & Trade Data",
+      "official_url": "https://ttd.wto.org/en",
+      "coverage": "Comercio, aranceles y metadatos por economía y periodo",
+      "use": "Referencia intergubernamental para contexto y series comparables cuando se documente su metodología."
+    },
+    {
+      "id": "global_cepii_baci",
+      "name": "CEPII BACI",
+      "official_url": "https://www.cepii.fr/cepii/en/bdd_modele/bdd_modele_item.asp?id=37",
+      "coverage": "Flujos bilaterales reconciliados por exportador, importador, producto y año",
+      "use": "Fuente secundaria para análisis metodológico; no reemplaza un dato declarado por México."
+    }
+  ]
+}
