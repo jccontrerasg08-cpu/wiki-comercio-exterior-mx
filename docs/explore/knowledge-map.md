@@ -63,7 +63,7 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 
 | Página | Estado | Vigente hasta | Instrumentos | Fuentes |
 |---|---|---|---|---|
-| [Ruta de exportacion](../wiki/exportacion/index.md) | partial · pending_review | — | `mx_ley_aduanera`, `mx_ley_comercio_exterior`, `mx_rgce_2026`, `mx_tmec` | `mx_diputados_lce_current`, `mx_diputados_ley_aduanera`, `mx_sidof_rgce_2026`, `sice_tmec` |
+| [Ruta de exportacion](../wiki/exportacion/index.md) | partial · reviewed | — | `mx_ley_aduanera`, `mx_ley_comercio_exterior`, `mx_rgce_2026`, `mx_tmec` | `mx_diputados_lce_current`, `mx_diputados_ley_aduanera`, `mx_sidof_rgce_2026`, `sice_tmec` |
 
 ### programas
 

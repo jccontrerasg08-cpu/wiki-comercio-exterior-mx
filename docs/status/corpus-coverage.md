@@ -9,14 +9,14 @@
 
 | Métrica | Valor |
 |---|---:|
-| Páginas gobernadas | 78 |
-| Wiki | 35 |
+| Páginas gobernadas | 79 |
+| Wiki | 36 |
 | Corpus de apoyo | 43 |
-| Elegibles por estado para recuperación vigente | 17 (21.8%) |
-| Con fuente referenciada | 72 (92.3%) |
-| Con instrumento referenciado | 69 (88.5%) |
-| Revisión jurídica `reviewed` | 18 (23.1%) |
-| Requieren atención | 63 |
+| Elegibles por estado para recuperación vigente | 17 (21.5%) |
+| Con fuente referenciada | 73 (92.4%) |
+| Con instrumento referenciado | 70 (88.6%) |
+| Revisión jurídica `reviewed` | 19 (24.1%) |
+| Requieren atención | 64 |
 | Fuentes distintas referenciadas | 49 |
 | Instrumentos distintos referenciados | 20 |
 
@@ -28,6 +28,7 @@
 | `clasificacion` | 3 | 0 | 0 | 3 |
 | `contribuciones` | 4 | 1 | 1 | 3 |
 | `corpus` | 43 | 2 | 2 | 43 |
+| `exportacion` | 1 | 0 | 1 | 1 |
 | `fundamentos` | 2 | 1 | 1 | 1 |
 | `logistica` | 3 | 0 | 0 | 3 |
 | `programas` | 7 | 2 | 3 | 5 |
@@ -41,14 +42,14 @@
 | Estado | Páginas |
 |---|---:|
 | `current` | 57 |
-| `partial` | 20 |
+| `partial` | 21 |
 | `unknown` | 1 |
 
 ### `extraction_status`
 
 | Estado | Páginas |
 |---|---:|
-| `not_applicable` | 36 |
+| `not_applicable` | 37 |
 | `partial` | 42 |
 
 ### `legal_review_status`
@@ -57,14 +58,14 @@
 |---|---:|
 | `not_applicable` | 1 |
 | `pending_review` | 59 |
-| `reviewed` | 18 |
+| `reviewed` | 19 |
 
 ### `corpus_status`
 
 | Estado | Páginas |
 |---|---:|
 | `current` | 2 |
-| `not_applicable` | 36 |
+| `not_applicable` | 37 |
 | `partial` | 39 |
 | `stale` | 1 |
 
@@ -127,6 +128,7 @@ Estas señales describen estado editorial/provenance. No equivalen por sí misma
 | `docs/wiki/contribuciones/aranceles.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/contribuciones/cuotas-compensatorias.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/contribuciones/valor-en-aduana.md` | `contribuciones` | `pending_legal_review`, `source_not_current` |
+| `docs/wiki/exportacion/index.md` | `exportacion` | `source_not_current` |
 | `docs/wiki/fundamentos/padron-importadores.md` | `fundamentos` | `pending_legal_review`, `source_not_current` |
 | `docs/wiki/index.md` | `wiki` | `missing_instrument_reference`, `missing_source_reference`, `pending_legal_review`, `source_not_current` |
 | `docs/wiki/logistica/incoterms.md` | `logistica` | `missing_instrument_reference`, `pending_legal_review`, `source_not_current` |

@@ -470,6 +470,13 @@
       "section": "contribuciones"
     },
     {
+      "path": "docs/wiki/exportacion/index.md",
+      "risk_reasons": [
+        "source_not_current"
+      ],
+      "section": "exportacion"
+    },
+    {
       "path": "docs/wiki/fundamentos/padron-importadores.md",
       "risk_reasons": [
         "pending_legal_review",
@@ -589,6 +596,13 @@
     {
       "legally_reviewed_pages": 1,
       "pages_needing_attention": 1,
+      "retrieval_eligible_pages": 0,
+      "section": "exportacion",
+      "total_pages": 1
+    },
+    {
+      "legally_reviewed_pages": 1,
+      "pages_needing_attention": 1,
       "retrieval_eligible_pages": 1,
       "section": "fundamentos",
       "total_pages": 2
@@ -625,22 +639,22 @@
   "status_counts": {
     "corpus_status": {
       "current": 2,
-      "not_applicable": 36,
+      "not_applicable": 37,
       "partial": 39,
       "stale": 1
     },
     "extraction_status": {
-      "not_applicable": 36,
+      "not_applicable": 37,
       "partial": 42
     },
     "legal_review_status": {
       "not_applicable": 1,
       "pending_review": 59,
-      "reviewed": 18
+      "reviewed": 19
     },
     "source_status": {
       "current": 57,
-      "partial": 20,
+      "partial": 21,
       "unknown": 1
     }
   },
@@ -648,15 +662,15 @@
     "corpus_pages": 43,
     "distinct_instrument_ids": 20,
     "distinct_source_ids": 49,
-    "legally_reviewed_pages": 18,
+    "legally_reviewed_pages": 19,
     "non_current_corpus_pages": 40,
-    "pages_needing_attention": 63,
-    "pages_with_instruments": 69,
-    "pages_with_sources": 72,
+    "pages_needing_attention": 64,
+    "pages_with_instruments": 70,
+    "pages_with_sources": 73,
     "pending_legal_review_pages": 59,
     "retrieval_eligible_pages": 17,
-    "total_pages": 78,
+    "total_pages": 79,
     "unknown_source_status_pages": 1,
-    "wiki_pages": 35
+    "wiki_pages": 36
   }
 }
