@@ -7,7 +7,7 @@ description: "Vista generada de páginas, fuentes, instrumentos y estado de revi
 
 Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml` y `sources/instruments.yaml`. Los estados describen **metadatos de revisión del repositorio**, no una opinión jurídica independiente ni sustituyen la fuente oficial.
 
-**Páginas gobernadas visibles:** 35
+**Páginas gobernadas visibles:** 36
 
 ## Por tema
 
@@ -59,6 +59,12 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | [Logistica internacional](../wiki/logistica/logistica-internacional.md) | partial · pending_review | — | — | — |
 | [Pagos internacionales](../wiki/logistica/pagos-internacionales.md) | partial · pending_review | — | — | `global_icc_ucp_600` |
 
+### operacion
+
+| Página | Estado | Vigente hasta | Instrumentos | Fuentes |
+|---|---|---|---|---|
+| [Ruta de exportacion](../wiki/exportacion/index.md) | partial · pending_review | — | `mx_ley_aduanera`, `mx_ley_comercio_exterior`, `mx_rgce_2026`, `mx_tmec` | `mx_diputados_lce_current`, `mx_diputados_ley_aduanera`, `mx_sidof_rgce_2026`, `sice_tmec` |
+
 ### programas
 
 | Página | Estado | Vigente hasta | Instrumentos | Fuentes |
@@ -91,8 +97,8 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | Instrumento | Estado | Vigente hasta | Páginas relacionadas |
 |---|---|---|---|
 | Constitucion Politica de los Estados Unidos Mexicanos (`mx_constitucion`) | current | 2026-06-02 | [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md) |
-| Ley Aduanera (`mx_ley_aduanera`) | current | 2026-08-15 | [Agencia Nacional de Aduanas de Mexico](../wiki/aduana/anam.md), [Agente aduanal y agencia aduanal](../wiki/aduana/agente-agencia-aduanal.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md), [Infracciones embargo precautorio y PAMA](../wiki/aduana/infracciones-pama.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [Preguntas frecuentes ANAM](../wiki/aduana/faq-anam.md), [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md), [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md), [Valor en aduana](../wiki/contribuciones/valor-en-aduana.md), [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) |
-| Ley de Comercio Exterior (`mx_ley_comercio_exterior`) | current | 2026-08-15 | [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Cuotas compensatorias](../wiki/contribuciones/cuotas-compensatorias.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [Regulaciones y restricciones no arancelarias](../wiki/clasificacion/rrna.md), [Regulaciones y restricciones no arancelarias](../wiki/rrna/index.md) |
+| Ley Aduanera (`mx_ley_aduanera`) | current | 2026-08-15 | [Agencia Nacional de Aduanas de Mexico](../wiki/aduana/anam.md), [Agente aduanal y agencia aduanal](../wiki/aduana/agente-agencia-aduanal.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md), [Infracciones embargo precautorio y PAMA](../wiki/aduana/infracciones-pama.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [Preguntas frecuentes ANAM](../wiki/aduana/faq-anam.md), [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md), [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md), [Ruta de exportacion](../wiki/exportacion/index.md), [Valor en aduana](../wiki/contribuciones/valor-en-aduana.md), [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) |
+| Ley de Comercio Exterior (`mx_ley_comercio_exterior`) | current | 2026-08-15 | [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Cuotas compensatorias](../wiki/contribuciones/cuotas-compensatorias.md), [Marco juridico del comercio exterior](../wiki/fundamentos/marco-juridico.md), [Regulaciones y restricciones no arancelarias](../wiki/clasificacion/rrna.md), [Regulaciones y restricciones no arancelarias](../wiki/rrna/index.md), [Ruta de exportacion](../wiki/exportacion/index.md) |
 | Ley Federal de Derechos (`mx_ley_federal_derechos`) | current | 2026-08-15 | [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md) |
 | Ley del Impuesto Especial sobre Produccion y Servicios (`mx_ley_ieps`) | current | 2026-08-15 | [Impuestos y cargos en la importacion](../wiki/contribuciones/impuestos-importacion.md) |
 | Ley de Infraestructura de la Calidad (`mx_ley_infraestructura_calidad`) | current | 2026-08-15 | [Anexo 2.4.1 NOM en punto de entrada](../wiki/rrna/anexo-2-4-1.md) |
@@ -105,10 +111,10 @@ Esta vista se genera desde `sources/page_metadata.yaml`, `sources/registry.yaml`
 | Reglamento de la Ley Aduanera (`mx_reglamento_ley_aduanera`) | current | 2026-08-15 | [Agente aduanal y agencia aduanal](../wiki/aduana/agente-agencia-aduanal.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md) |
 | Reglamento de la Ley de Comercio Exterior (`mx_reglamento_ley_comercio_exterior`) | current | 2026-08-15 | [Regulaciones y restricciones no arancelarias](../wiki/rrna/index.md) |
 | Reglas y criterios de caracter general en materia de comercio exterior de la SE (`mx_reglas_criterios_se`) | current | 2026-08-15 | [Anexo 2.2.1 permisos y avisos](../wiki/rrna/anexo-2-2-1.md), [Anexo 2.4.1 NOM en punto de entrada](../wiki/rrna/anexo-2-4-1.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Reglas y criterios de la Secretaria de Economia](../wiki/rrna/reglas-criterios-se.md), [Regulaciones y restricciones no arancelarias](../wiki/clasificacion/rrna.md), [Regulaciones y restricciones no arancelarias](../wiki/rrna/index.md) |
-| Reglas Generales de Comercio Exterior para 2026 (`mx_rgce_2026`) | current | 2026-08-15 | [Anexo 24 - control de inventarios](../wiki/programas/anexo-24-control-inventarios.md), [Anexo 30 - SCCCyG](../wiki/programas/anexo-30-scccyg.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Infracciones embargo precautorio y PAMA](../wiki/aduana/infracciones-pama.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Padron de importadores](../wiki/fundamentos/padron-importadores.md), [Pedimento y RGCE](../wiki/aduana/pedimento-rgce.md), [Preguntas frecuentes ANAM](../wiki/aduana/faq-anam.md), [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md), [Programa IMMEX](../wiki/programas/immex.md), [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md) |
+| Reglas Generales de Comercio Exterior para 2026 (`mx_rgce_2026`) | current | 2026-08-15 | [Anexo 24 - control de inventarios](../wiki/programas/anexo-24-control-inventarios.md), [Anexo 30 - SCCCyG](../wiki/programas/anexo-30-scccyg.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Infracciones embargo precautorio y PAMA](../wiki/aduana/infracciones-pama.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Padron de importadores](../wiki/fundamentos/padron-importadores.md), [Pedimento y RGCE](../wiki/aduana/pedimento-rgce.md), [Preguntas frecuentes ANAM](../wiki/aduana/faq-anam.md), [Proceso de despacho aduanero](../wiki/aduana/proceso-despacho.md), [Programa IMMEX](../wiki/programas/immex.md), [Regimenes aduaneros](../wiki/aduana/regimenes-aduaneros.md), [Ruta de exportacion](../wiki/exportacion/index.md) |
 | Tratado Integral y Progresista de Asociacion Transpacifico (`mx_tipat`) | partial | 2026-08-15 | [Tratados comerciales y T-MEC](../wiki/programas/tlc-tmec.md) |
 | Tratado de Libre Comercio Mexico Union Europea (`mx_tlcuem`) | partial | 2026-08-15 | [Tratados comerciales y T-MEC](../wiki/programas/tlc-tmec.md) |
-| Tratado entre Mexico, Estados Unidos y Canada (`mx_tmec`) | partial | 2026-08-15 | [Reglas de origen](../wiki/programas/reglas-de-origen.md), [Tratados comerciales y T-MEC](../wiki/programas/tlc-tmec.md) |
+| Tratado entre Mexico, Estados Unidos y Canada (`mx_tmec`) | partial | 2026-08-15 | [Reglas de origen](../wiki/programas/reglas-de-origen.md), [Ruta de exportacion](../wiki/exportacion/index.md), [Tratados comerciales y T-MEC](../wiki/programas/tlc-tmec.md) |
 | Decreto de Ventanilla Unica de Tramites de Comercio Exterior (`mx_ventanilla_unica_2026`) | current | 2026-08-15 | [Agencia Nacional de Aduanas de Mexico](../wiki/aduana/anam.md), [Cambios relevantes de 2026](../wiki/aduana/cambios-2026.md), [Documentos para el despacho aduanero](../wiki/aduana/documentos.md), [Manifestacion de Valor](../wiki/aduana/manifestacion-valor.md), [Ventanilla Unica y VUCEM en 2026](../wiki/aduana/vucem.md) |
 
 ## Uso por herramientas
