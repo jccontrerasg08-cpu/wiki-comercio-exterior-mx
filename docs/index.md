@@ -134,7 +134,7 @@ Si llegas con una situación concreta —por ejemplo, un paquete, equipaje, aban
   </div>
 </div>
 
-Consulta la [metodología](methodology/index.md), el [modelo de estados](methodology/status-model.md), los [cambios jurídicos de 2026](wiki/aduana/cambios-2026.md) y el [catálogo completo de fuentes](catalog/registry.md).
+Consulta la [guía para leer fuentes](about/como-consultar-fuentes.md), la [metodología](methodology/index.md), el [modelo de estados](methodology/status-model.md), los [cambios jurídicos de 2026](wiki/aduana/cambios-2026.md) y el [catálogo completo de fuentes](catalog/registry.md).
 
 !!! warning "Alcance"
     Esta wiki organiza conocimiento y evidencia para consulta y estudio. No sustituye al DOF, SAT, ANAM, Secretaría de Economía ni asesoría profesional.
