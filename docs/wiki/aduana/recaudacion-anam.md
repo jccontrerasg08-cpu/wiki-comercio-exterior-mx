@@ -37,6 +37,21 @@ Este tablero organiza **indicadores agregados publicados por la Agencia Nacional
   </fieldset>
   <p class="anam-dashboard__status" data-dashboard-status aria-live="polite">Selecciona una vista para cargar los datos documentados.</p>
   <div data-dashboard-output></div>
+  <template data-dashboard-fallback>
+    <section class="anam-dashboard__fallback" aria-label="Resumen publicado de ANAM">
+      <h3>Resumen publicado de ANAM</h3>
+      <table>
+        <caption>Indicadores disponibles si no carga la vista interactiva</caption>
+        <thead><tr><th scope="col">Indicador</th><th scope="col">Valor</th><th scope="col">Periodo</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Recaudación</th><td>336,190 MDP</td><td>Q2 2026</td></tr>
+          <tr><th scope="row">Recaudación acumulada</th><td>659,393 MDP</td><td>Enero-junio 2026</td></tr>
+          <tr><th scope="row">Pedimentos</th><td>2.72 millones</td><td>Q2 2026</td></tr>
+          <tr><th scope="row">Operaciones</th><td>5.65 millones</td><td>Q2 2026</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </template>
 </div>
 
 <noscript>

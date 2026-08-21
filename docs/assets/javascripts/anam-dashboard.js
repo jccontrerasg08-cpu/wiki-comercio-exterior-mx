@@ -159,7 +159,12 @@
         render(root, data);
       })
       .catch(() => {
-        status.textContent = "No fue posible cargar la vista interactiva. Usa la tabla y la fuente primaria disponibles en esta página.";
+        const output = root.querySelector("[data-dashboard-output]");
+        const fallback = root.querySelector("[data-dashboard-fallback]");
+        if (output && fallback instanceof HTMLTemplateElement) {
+          output.replaceChildren(fallback.content.cloneNode(true));
+        }
+        status.textContent = "No fue posible cargar la vista interactiva. Se muestra el Resumen publicado de ANAM y la fuente primaria disponibles en esta página.";
       });
   };
 

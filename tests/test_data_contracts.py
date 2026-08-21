@@ -3,11 +3,13 @@ from pathlib import Path
 
 import yaml
 
-from scripts.validate_data_contracts import validate_contract
+from scripts.validate_data_contracts import main, validate_contract
 
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTRACT = ROOT / "data" / "contracts" / "aduanamap.yaml"
+ARANCEL_CONTRACT = ROOT / "data" / "contracts" / "arancel-mx.yaml"
+DOF_DIFF_CONTRACT = ROOT / "data" / "contracts" / "dof-diff-lab.yaml"
 
 
 class DataContractTests(unittest.TestCase):
@@ -33,6 +35,15 @@ class DataContractTests(unittest.TestCase):
         self.assertRegex(dataset["observed_commit"], r"^[0-9a-f]{40}$")
         self.assertEqual(dataset["consumption"]["fallback"], "text_links")
         self.assertIsNone(dataset["consumption"]["public_artifact"])
+
+    def test_release_and_monitor_contracts_are_present_and_valid(self):
+        for path in (ARANCEL_CONTRACT, DOF_DIFF_CONTRACT):
+            self.assertTrue(path.is_file(), f"missing integration contract: {path.name}")
+            data = yaml.safe_load(path.read_text(encoding="utf-8"))
+            self.assertEqual(validate_contract(data, ROOT), [])
+
+    def test_cli_validates_cross_repository_contracts_without_reading_local_model(self):
+        self.assertEqual(main([str(ROOT)]), 0)
 
     def test_wiki_does_not_vendor_canonical_geojson(self):
         geojson = [path for path in ROOT.rglob("*.geojson") if ".git" not in path.parts]

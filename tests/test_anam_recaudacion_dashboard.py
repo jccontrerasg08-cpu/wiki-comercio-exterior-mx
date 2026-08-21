@@ -66,6 +66,13 @@ class AnamRecaudacionDashboardTests(unittest.TestCase):
         self.assertIn("textContent", script)
         self.assertIn("createElement", script)
 
+    def test_dashboard_has_visible_fallback_for_data_load_failure(self):
+        page = self.page.read_text(encoding="utf-8")
+        script = self.script_path.read_text(encoding="utf-8")
+        self.assertIn("data-dashboard-fallback", page)
+        self.assertIn("data-dashboard-fallback", script)
+        self.assertIn("Resumen publicado de ANAM", script)
+
     def test_dashboard_script_has_keyboard_safe_filtering_and_no_remote_dependency(self):
         script = self.script_path.read_text(encoding="utf-8")
         self.assertIn("data-anam-dashboard", script)

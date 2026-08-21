@@ -28,7 +28,8 @@
     const query = root.querySelector("[data-world-query]");
     const tableBody = root.querySelector("[data-world-table]");
     const status = root.querySelector("[data-world-status]");
-    if (!source || !region || !query || !tableBody || !status) return;
+    const empty = root.querySelector("[data-world-empty]");
+    if (!source || !region || !query || !tableBody || !status || !empty) return;
 
     try {
       const response = await fetch(source, { credentials: "same-origin" });
@@ -47,6 +48,10 @@
           return regionMatches && textMatches;
         });
         renderCountries(tableBody, visible);
+        empty.hidden = visible.length !== 0;
+        empty.textContent = visible.length === 0
+          ? "No hay guías que coincidan con estos filtros."
+          : "";
         status.textContent = visible.length === 1
           ? "Mostrando 1 guía de país curada."
           : "Mostrando " + visible.length + " guías de país curadas.";

@@ -35,6 +35,7 @@ Esta ruta organiza las guías de país y las fuentes multilaterales que la wiki 
     </p>
   </fieldset>
   <p class="world-explorer__status" data-world-status aria-live="polite">Lista accesible: 7 guías de país curadas.</p>
+  <p class="world-explorer__empty" data-world-empty hidden aria-live="polite"></p>
   <div class="world-explorer__table-wrap">
     <table>
       <caption>Guías de país actualmente incluidas</caption>

@@ -9,6 +9,19 @@ Este catálogo organiza las capacidades de la wiki por **tarea**, sin convertir 
 
 > **Regla de uso.** Una herramienta puede ayudarte a recuperar fuentes y ordenar pasos, pero **no clasifica mercancías**, no acredita origen, no determina una tasa preferencial ni genera un pedimento transmisible. Verifica la fuente primaria, la fecha de corte y el contexto de la operación.
 
+## Estado, procedencia y fecha de corte
+
+Las tarjetas indican una capacidad de consulta, no una promoción jurídica o automática de sus fuentes. El **Estado editorial** resume el alcance visible de la ruta; la procedencia detallada vive en el [registro de fuentes](../catalog/registry.md) y las cinco dimensiones de estado —fuente, extracción, revisión legal, corpus y transporte— se interpretan con el [modelo de estados](../methodology/status-model.md). La fecha de corte pertenece a la evidencia indicada; no equivale a la fecha de consulta ni determina vigencia por sí sola.
+
+| Ruta | Estado editorial | Fecha de corte visible | Fuente o contrato |
+|---|---|---|---|
+| Aranceles | Ruta documental; los datos estructurados permanecen externos. | Release `data-2026.08.17` observada en el contrato. | `arancel-mx` y [registro de fuentes](../catalog/registry.md). |
+| RRNA y NOM | Descubrimiento con límites de cobertura; requiere contrastar instrumento y fecha. | La que declare cada publicación vinculada. | DOF/SIDOF, autoridades y [registro de fuentes](../catalog/registry.md). |
+| Tratados y origen | Ruta de evidencia; no determina origen ni preferencia. | La del tratado, protocolo o publicación aplicable. | Tratados promulgados y [registro de fuentes](../catalog/registry.md). |
+| Ruta de importación | Recorrido editorial; cada caso requiere su propia revisión. | Sin corte único: depende de mercancía, régimen y operación. | Metodología y fuentes enlazadas por etapa. |
+| Recaudación ANAM | Datos publicados con granularidad declarada. | Q2 2026 para el primer conjunto interactivo. | Informes ANAM y [catálogo documental](../catalog/mexico/recaudacion-anam.md). |
+| Mundo y fuentes comparables | Exploración textual primero; no hay geometría pública embebida. | La que declare cada guía o conjunto internacional. | Catálogo global y contrato Wiki–AduanaMap. |
+
 ## Herramientas disponibles
 
 <div class="grid cards" markdown>

@@ -1,0 +1,32 @@
+contract_version: 1
+contract_type: release_bundle
+canonical_repository: jccontrerasg08-cpu/arancel-mx
+datasets:
+  - id: mexico_ligie_nico_release
+    canonical_path: releases/data-2026.08.17
+    generator_path: scripts/publish_release.py
+    observed_commit: 032338b64a49f40cb558ae74655abbcdb50732a4
+    schema_fields:
+      - fraccion8
+      - nico10
+      - igi_text
+      - ige_text
+      - provenance
+    wiki_local_copy: null
+    release:
+      tag: data-2026.08.17
+      target_commit: 48990f4e599f5fd4af3d6dd381c6babe0aa5016f
+      release_url: https://github.com/jccontrerasg08-cpu/arancel-mx/releases/tag/data-2026.08.17
+      manifest_schema_version: 2
+      assets:
+        - arancel_mx.duckdb
+        - arancel_mx.csv
+        - arancel_mx.json
+        - manifest.json
+        - SHA256SUMS
+        - official-sources.tar.gz
+    consumption:
+      fallback: text_links
+      embed_ready: false
+      public_artifact: null
+      sha256: null
