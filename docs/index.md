@@ -16,6 +16,7 @@ hide:
 
 <div class="trade-hero__actions" markdown>
 [Explorar la wiki](wiki/index.md){ .md-button .md-button--primary }
+[Herramientas verificables](explore/herramientas.md){ .md-button }
 [Ver cambios 2026](wiki/aduana/cambios-2026.md){ .md-button }
 </div>
 

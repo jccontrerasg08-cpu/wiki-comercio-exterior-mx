@@ -117,6 +117,26 @@ class MkDocsUxTests(unittest.TestCase):
         self.assertIn("wiki/exportacion/index.md", nav)
         self.assertIn("wiki/exportacion/index.md", home)
 
+    def test_modular_tools_catalog_is_discoverable_and_evidence_first(self):
+        nav = yaml.safe_dump(self.config["nav"], allow_unicode=True, sort_keys=False)
+        home = (ROOT / "docs" / "index.md").read_text(encoding="utf-8")
+        catalog_path = ROOT / "docs" / "explore" / "herramientas.md"
+        self.assertIn("Herramientas verificables", nav)
+        self.assertIn("explore/herramientas.md", nav)
+        self.assertIn("explore/herramientas.md", home)
+        self.assertTrue(catalog_path.exists())
+        catalog = catalog_path.read_text(encoding="utf-8")
+        for module in (
+            "Buscar fracción y tasa",
+            "Explorar RRNA y NOM",
+            "Tratados y origen",
+            "Ruta de importación",
+            "Dashboard de recaudación",
+        ):
+            self.assertIn(module, catalog)
+        self.assertIn("no clasifica mercancías", catalog)
+        self.assertIn("fecha de corte", catalog)
+
     def test_motion_is_decorative_and_respects_reduced_motion(self):
         css = (ROOT / "docs" / "stylesheets" / "extra.css").read_text(encoding="utf-8")
         self.assertIn("@keyframes trade-route-flow", css)
