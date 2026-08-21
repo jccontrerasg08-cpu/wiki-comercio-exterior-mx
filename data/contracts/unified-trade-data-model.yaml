@@ -1,0 +1,196 @@
+model_version: "1.0"
+purpose: >-
+  Modelo canónico de observaciones para conectar recaudación administrativa ANAM,
+  aranceles y flujos internacionales sin tratarlos como una misma variable.
+controlled_vocabularies:
+  domain:
+    - revenue_anam
+    - tariff
+    - trade_flow
+  observation_status:
+    - published
+    - provisional
+    - revised
+    - schema_fixture
+  tariff_rate_type:
+    - bound
+    - mfn_applied
+    - preferential
+    - specific
+    - compound
+logical_key:
+  - domain
+  - source_dataset_id
+  - source_release_or_vintage
+  - observation_period
+  - reporter_iso3
+  - partner_iso3
+  - classification_system
+  - classification_version
+  - classification_code
+  - measure_id
+  - customs_regime_or_preference
+cross_repo_boundaries:
+  wiki_comercio_exterior_mx: "Fuentes, instrumentos, evidencia, metadatos, contratos y vistas editoriales."
+  arancel_mx: "LIGIE, TIGIE, fracción, NICO y lógica arancelaria mexicana estructurada."
+  dof_diff_lab: "Detección de cambios documentales; requiere revisión humana antes de declarar una consecuencia normativa."
+  aduanamap_mx: "Geometrías y relaciones geoespaciales canónicas."
+  geometry_mode: contract-only
+  dashboard_mode: read-only-progressive-enhancement
+modules:
+  source_registry:
+    responsibility: "Identidad de fuente, autoridad, URL, licencia, hash, consulta y publicación."
+    owner: wiki-comercio-exterior-mx
+  observation_contract:
+    responsibility: "Valida dimensiones, medidas, periodo, unidad y exclusión de dominios incompatibles."
+    owner: wiki-comercio-exterior-mx
+  tariff_adapter:
+    responsibility: "Publica versión, hash e identificadores desde arancel-mx; no duplica su lógica."
+    owner: arancel-mx
+  legal_change_adapter:
+    responsibility: "Publica evento detectado, evidencia y estado de revisión; no declara vigencia automática."
+    owner: dof-diff-lab
+  geographic_adapter:
+    responsibility: "Consume artefacto geoespacial público, inmutable y verificable cuando exista."
+    owner: aduanamap-mx
+  dashboard_view:
+    responsibility: "Lee observaciones ya validadas y conserva tabla y fuente como ruta primaria."
+    owner: wiki-comercio-exterior-mx
+prioritization:
+  micro:
+    objective: "Calidad de cada observación y de cada fuente."
+    deliverables:
+      - "Fuente, URL, hash cuando exista, fecha de consulta, release/vintage y nota metodológica."
+      - "Periodo, unidad, moneda, frecuencia, dominio, medida y estado de granularidad obligatorios."
+      - "Tablas Markdown accesibles y filtros locales sobre datos publicados."
+  meso:
+    objective: "Relaciones gobernadas entre instrumentos, operación, producto, socio y fuente."
+    deliverables:
+      - "Identificadores ISO3, HS6 y versión de clasificación."
+      - "Adaptadores versionados para arancel-mx y dof-diff-lab."
+      - "Catálogo de indicadores que prohíba mezclar recaudación, aranceles y flujos."
+  macro:
+    objective: "Exploración México-mundo reproducible y escalable."
+    deliverables:
+      - "Indicadores internacionales con metadata completa y tabla equivalente."
+      - "Mapa opcional sobre la misma tabla, sólo tras artefacto geoespacial verificable."
+      - "PMTiles o carga diferida sólo cuando la evidencia y volumen justifiquen la complejidad."
+representative_observations:
+  - schema_version: "1.0"
+    observation_id: anam-q2-2026-recaudacion
+    domain: revenue_anam
+    observation_status: published
+    source:
+      source_id: mx_gob_anam_recaudacion
+      publisher: "Agencia Nacional de Aduanas de México"
+      dataset_id: informe_trimestral_recaudacion
+      release_or_vintage: 2026-Q2
+      source_url: https://www.anam.gob.mx/wp-content/uploads/Informe_trimestral_Q2_2026_f.pdf
+      retrieved_at: "2026-08-20T00:00:00Z"
+      sha256: null
+    observation_period:
+      frequency: quarterly
+      start: "2026-04-01"
+      end: "2026-06-30"
+      label: Q2 2026
+    geography:
+      reporter_iso3: MEX
+      partner_iso3: null
+      customs_office_id: null
+      customs_office_name: null
+    measure:
+      id: recaudacion_aduanera
+      value: 336190
+      unit: MDP
+      currency: MXN
+      decimals: 0
+    revenue:
+      authority: ANAM
+      fiscal_concept: recaudacion_aduanera
+      accounting_basis: reported
+      granularity_status: aggregate
+      customs_regime: null
+    methodology_note: "Valor agregado explícitamente publicado por ANAM para el trimestre; no es valor de comercio ni tasa arancelaria."
+    related_instruments: []
+  - schema_version: "1.0"
+    observation_id: fixture-tariff-mfn-hs6
+    domain: tariff
+    observation_status: schema_fixture
+    source:
+      source_id: global_wto_tariff_download
+      publisher: "World Trade Organization"
+      dataset_id: tariff_contract_fixture
+      release_or_vintage: schema-fixture-1
+      source_url: https://ttd.wto.org/en
+      retrieved_at: "2026-08-20T00:00:00Z"
+      sha256: null
+    observation_period:
+      frequency: annual
+      start: "2025-01-01"
+      end: "2025-12-31"
+      label: "Fixture anual"
+    geography:
+      reporter_iso3: MEX
+      partner_iso3: null
+      customs_office_id: null
+      customs_office_name: null
+    classification:
+      system: HS
+      version: HS-2022
+      code: "8703"
+      level: 4
+    measure:
+      id: tariff_rate
+      value: 0
+      unit: percent
+      currency: none
+      decimals: 2
+    tariff:
+      rate_type: mfn_applied
+      rate_value: 0
+      rate_unit: percent
+      preference_scope: null
+      valuation_basis: ad_valorem
+    methodology_note: "Fixture de esquema: no representa una tasa publicada ni sustituye la consulta de arancel-mx."
+    related_instruments: []
+  - schema_version: "1.0"
+    observation_id: fixture-trade-flow-hs6
+    domain: trade_flow
+    observation_status: schema_fixture
+    source:
+      source_id: global_un_comtrade
+      publisher: "United Nations Statistics Division"
+      dataset_id: trade_flow_contract_fixture
+      release_or_vintage: schema-fixture-1
+      source_url: https://comtrade.un.org/
+      retrieved_at: "2026-08-20T00:00:00Z"
+      sha256: null
+    observation_period:
+      frequency: annual
+      start: "2025-01-01"
+      end: "2025-12-31"
+      label: "Fixture anual"
+    geography:
+      reporter_iso3: MEX
+      partner_iso3: USA
+      customs_office_id: null
+      customs_office_name: null
+    classification:
+      system: HS
+      version: HS-2022
+      code: "8703"
+      level: 4
+    measure:
+      id: trade_value
+      value: 0
+      unit: USD
+      currency: USD
+      decimals: 2
+    trade_flow:
+      flow: export
+      valuation_basis: fob
+      quantity_status: not_published
+      quantity_value: null
+      quantity_unit: null
+    methodology_note: "Fixture de esquema: no representa un flujo publicado y debe sustituirse por un corte, release y descarga verificables."
+    related_instruments: []

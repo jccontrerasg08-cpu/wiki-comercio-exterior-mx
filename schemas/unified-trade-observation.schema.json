@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jccontrerasg08-cpu/wiki-comercio-exterior-mx/schemas/unified-trade-observation.schema.json",
+  "title": "Unified trade observation",
+  "description": "Observación versionada para recaudación ANAM, aranceles o flujos de comercio. Los dominios no son intercambiables.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "observation_id",
+    "domain",
+    "observation_status",
+    "source",
+    "observation_period",
+    "geography",
+    "measure"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "observation_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]{7,255}$"},
+    "domain": {"enum": ["revenue_anam", "tariff", "trade_flow"]},
+    "observation_status": {"enum": ["published", "provisional", "revised", "schema_fixture"]},
+    "source": {"$ref": "#/$defs/source"},
+    "observation_period": {"$ref": "#/$defs/period"},
+    "geography": {"$ref": "#/$defs/geography"},
+    "classification": {"$ref": "#/$defs/classification"},
+    "measure": {"$ref": "#/$defs/measure"},
+    "revenue": {"$ref": "#/$defs/revenue"},
+    "tariff": {"$ref": "#/$defs/tariff"},
+    "trade_flow": {"$ref": "#/$defs/trade_flow"},
+    "methodology_note": {"type": "string", "minLength": 1, "maxLength": 4000},
+    "related_instruments": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    }
+  },
+  "allOf": [
+    {
+      "oneOf": [
+        {
+          "properties": {"domain": {"const": "revenue_anam"}},
+          "required": ["revenue"],
+          "not": {"anyOf": [{"required": ["tariff"]}, {"required": ["trade_flow"]}]}
+        },
+        {
+          "properties": {"domain": {"const": "tariff"}},
+          "required": ["tariff", "classification"],
+          "not": {"anyOf": [{"required": ["revenue"]}, {"required": ["trade_flow"]}]}
+        },
+        {
+          "properties": {"domain": {"const": "trade_flow"}},
+          "required": ["trade_flow", "classification"],
+          "not": {"anyOf": [{"required": ["revenue"]}, {"required": ["tariff"]}]}
+        }
+      ]
+    }
+  ],
+  "$defs": {
+    "iso3": {"type": ["string", "null"], "pattern": "^[A-Z]{3}$"},
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_id", "publisher", "dataset_id", "release_or_vintage", "source_url", "retrieved_at"],
+      "properties": {
+        "source_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"},
+        "publisher": {"type": "string", "minLength": 2},
+        "dataset_id": {"type": "string", "minLength": 1},
+        "release_or_vintage": {"type": "string", "minLength": 1},
+        "source_url": {"type": "string", "format": "uri", "pattern": "^https://"},
+        "retrieved_at": {"type": "string", "format": "date-time"},
+        "sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "period": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["frequency", "start", "end"],
+      "properties": {
+        "frequency": {"enum": ["monthly", "quarterly", "annual", "event"]},
+        "start": {"type": "string", "format": "date"},
+        "end": {"type": "string", "format": "date"},
+        "label": {"type": "string", "minLength": 1}
+      }
+    },
+    "geography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reporter_iso3", "partner_iso3"],
+      "properties": {
+        "reporter_iso3": {"$ref": "#/$defs/iso3"},
+        "partner_iso3": {"$ref": "#/$defs/iso3"},
+        "customs_office_id": {"type": ["string", "null"], "minLength": 1},
+        "customs_office_name": {"type": ["string", "null"], "minLength": 1}
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["system", "version", "code", "level"],
+      "properties": {
+        "system": {"enum": ["HS", "TIGIE", "NICO", "national_tariff_line"]},
+        "version": {"type": "string", "minLength": 1},
+        "code": {"type": "string", "pattern": "^[0-9A-Z.-]{2,32}$"},
+        "level": {"type": "integer", "minimum": 2, "maximum": 12}
+      }
+    },
+    "measure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "value", "unit", "currency"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "value": {"type": "number"},
+        "unit": {"enum": ["MXN", "MDP", "USD", "quantity", "percent", "count"]},
+        "currency": {"enum": ["MXN", "USD", "none"]},
+        "decimals": {"type": "integer", "minimum": 0, "maximum": 12}
+      }
+    },
+    "revenue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority", "fiscal_concept", "accounting_basis", "granularity_status"],
+      "properties": {
+        "authority": {"const": "ANAM"},
+        "fiscal_concept": {"type": "string", "minLength": 1},
+        "accounting_basis": {"enum": ["reported", "collected", "assessed", "not_published"]},
+        "granularity_status": {"enum": ["aggregate", "by_customs_office", "by_fiscal_concept", "not_published"]},
+        "customs_regime": {"type": ["string", "null"], "minLength": 1}
+      }
+    },
+    "tariff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rate_type", "rate_value", "rate_unit", "preference_scope"],
+      "properties": {
+        "rate_type": {"enum": ["bound", "mfn_applied", "preferential", "specific", "compound"]},
+        "rate_value": {"type": "number", "minimum": 0},
+        "rate_unit": {"enum": ["percent", "currency_per_quantity", "formula"]},
+        "preference_scope": {"type": ["string", "null"], "minLength": 1},
+        "valuation_basis": {"enum": ["ad_valorem", "specific", "compound", "not_published"]}
+      }
+    },
+    "trade_flow": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["flow", "valuation_basis", "quantity_status"],
+      "properties": {
+        "flow": {"enum": ["import", "export", "re_export"]},
+        "valuation_basis": {"enum": ["cif", "fob", "customs_value", "not_published"]},
+        "quantity_status": {"enum": ["published", "not_published"]},
+        "quantity_value": {"type": ["number", "null"], "minimum": 0},
+        "quantity_unit": {"type": ["string", "null"], "minLength": 1}
+      }
+    }
+  }
+}
