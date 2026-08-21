@@ -18,7 +18,8 @@ Este tablero organiza **indicadores agregados publicados por la Agencia Nacional
     </div>
     <a class="md-button" href="https://www.anam.gob.mx/wp-content/uploads/Informe_trimestral_Q2_2026_f.pdf">Fuente primaria</a>
   </div>
-  <div class="anam-dashboard__filters" aria-label="Filtros del tablero de recaudación">
+  <fieldset class="anam-dashboard__filters">
+    <legend>Filtros del tablero de recaudación</legend>
     <label>Indicador
       <select data-dashboard-metric>
         <option value="recaudacion">Recaudación</option>
@@ -33,7 +34,7 @@ Este tablero organiza **indicadores agregados publicados por la Agencia Nacional
         <option value="ranking">Top 15 aduanas</option>
       </select>
     </label>
-  </div>
+  </fieldset>
   <p class="anam-dashboard__status" data-dashboard-status aria-live="polite">Selecciona una vista para cargar los datos documentados.</p>
   <div data-dashboard-output></div>
 </div>

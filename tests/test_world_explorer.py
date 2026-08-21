@@ -28,6 +28,14 @@ class WorldExplorerTests(unittest.TestCase):
         self.assertIn("No hay globo WebGL", page)
         self.assertIn('aria-live="polite"', page)
 
+    def test_world_explorer_groups_filters_and_reflows_on_mobile(self):
+        page = self.page.read_text(encoding="utf-8")
+        styles = (ROOT / "docs/stylesheets/extra.css").read_text(encoding="utf-8")
+        self.assertIn("<fieldset", page)
+        self.assertIn("<legend>Filtros de guías de país</legend>", page)
+        self.assertIn("min-width: 0;", styles)
+        self.assertNotIn("min-width: 36rem", styles)
+
     def test_world_data_keeps_scope_sources_and_contract_boundary(self):
         data = json.loads(self.data_path.read_text(encoding="utf-8"))
         self.assertEqual(data["scope"]["coverage"], "curated-country-guides")
