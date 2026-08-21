@@ -373,7 +373,18 @@ input {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.85rem;
+  min-inline-size: 0;
   margin: 1.25rem 0 0.85rem;
+  padding: 0;
+  border: 0;
+}
+
+.anam-dashboard__filters legend {
+  grid-column: 1 / -1;
+  padding: 0;
+  color: var(--trade-ink);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .anam-dashboard__filters label {
@@ -561,7 +572,18 @@ input {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
+  min-inline-size: 0;
   margin: 1.1rem 0 0.45rem;
+  padding: 0;
+  border: 0;
+}
+
+.world-explorer__controls legend {
+  grid-column: 1 / -1;
+  padding: 0;
+  color: var(--trade-ink);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .world-explorer__controls p {
@@ -612,6 +634,11 @@ input {
   margin: 0;
 }
 
+.world-explorer th,
+.world-explorer td {
+  overflow-wrap: anywhere;
+}
+
 .world-explorer th {
   color: var(--trade-ink);
 }
@@ -622,6 +649,9 @@ input {
   }
 
   .world-explorer table {
-    min-width: 36rem;
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
+    font-size: 0.78rem;
   }
 }

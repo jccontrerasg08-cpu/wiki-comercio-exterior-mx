@@ -216,5 +216,7 @@ nav:
     - Cómo funciona la wiki: about/como-funciona-la-wiki.md
     - Cómo consultar fuentes: about/como-consultar-fuentes.md
     - Arquitectura modular de datos: about/arquitectura-datos-modular.md
-  - Cambios: changes/index.md
+  - Cambios:
+    - Índice: changes/index.md
+    - IMMEX y Anexos 24/30: changes/2026-08-15-immex-anexos-24-30.md
   - Glosario: glossary.md

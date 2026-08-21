@@ -27,6 +27,11 @@ class AnamRecaudacionDashboardTests(unittest.TestCase):
         self.assertIn("Sin JavaScript", page)
         self.assertIn('aria-live="polite"', page)
 
+    def test_dashboard_groups_filters_with_native_semantics(self):
+        page = self.page.read_text(encoding="utf-8")
+        self.assertIn("<fieldset", page)
+        self.assertIn("<legend>Filtros del tablero de recaudación</legend>", page)
+
     def test_dashboard_data_preserves_period_unit_and_source(self):
         data = json.loads(self.data_path.read_text(encoding="utf-8"))
         self.assertEqual(data["scope"]["country"], "MEX")
@@ -54,6 +59,12 @@ class AnamRecaudacionDashboardTests(unittest.TestCase):
         self.assertIn("informe_trimestral_q2_2026_f.pdf", normalized)
         dashboard_page = self.page.read_text(encoding="utf-8")
         self.assertIn("../../catalog/mexico/recaudacion-anam.md", dashboard_page)
+
+    def test_dashboard_script_renders_dataset_text_without_html_interpolation(self):
+        script = self.script_path.read_text(encoding="utf-8")
+        self.assertNotIn(".innerHTML", script)
+        self.assertIn("textContent", script)
+        self.assertIn("createElement", script)
 
     def test_dashboard_script_has_keyboard_safe_filtering_and_no_remote_dependency(self):
         script = self.script_path.read_text(encoding="utf-8")

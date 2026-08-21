@@ -4,23 +4,81 @@
     minimumFractionDigits: digits,
   }).format(value);
 
+  const finiteNumber = (value) => Number.isFinite(Number(value)) ? Number(value) : 0;
+
+  const element = (tag, className) => {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    return node;
+  };
+
+  const textElement = (tag, text, className) => {
+    const node = element(tag, className);
+    node.textContent = text;
+    return node;
+  };
+
   const renderBars = (items, suffix) => {
-    const maximum = Math.max(...items.map((item) => item.value));
-    const rows = items.map((item) => {
-      const width = maximum ? (item.value / maximum) * 100 : 0;
-      return `<li class="anam-dashboard__bar-row"><span>${item.label || item.name}</span><strong>${formatNumber(item.value, suffix === "%" ? 1 : 0)} ${suffix}</strong><span class="anam-dashboard__bar" aria-hidden="true"><span style="width:${width}%"></span></span></li>`;
-    }).join("");
-    return `<ul class="anam-dashboard__bars">${rows}</ul>`;
+    const values = items.map((item) => finiteNumber(item.value));
+    const maximum = Math.max(...values, 0);
+    const list = element("ul", "anam-dashboard__bars");
+
+    items.forEach((item, index) => {
+      const value = values[index];
+      const width = maximum ? Math.min((value / maximum) * 100, 100) : 0;
+      const row = element("li", "anam-dashboard__bar-row");
+      const label = textElement("span", item.label || item.name || "");
+      const amount = textElement(
+        "strong",
+        `${formatNumber(value, suffix === "%" ? 1 : 0)} ${suffix}`,
+      );
+      const track = element("span", "anam-dashboard__bar");
+      track.setAttribute("aria-hidden", "true");
+      const fill = document.createElement("span");
+      fill.style.width = `${width}%`;
+      track.append(fill);
+      row.append(label, amount, track);
+      list.append(row);
+    });
+
+    return list;
   };
 
   const renderRanking = (items) => {
-    const body = items.map((item) => `<tr><td>${item.rank}</td><td>${item.name}</td><td>${formatNumber(item.value)} MDP</td></tr>`).join("");
-    return `<div class="anam-dashboard__table-wrap"><table><thead><tr><th>Posición</th><th>Aduana</th><th>Recaudación Q2</th></tr></thead><tbody>${body}</tbody></table></div>`;
+    const wrapper = element("div", "anam-dashboard__table-wrap");
+    const table = document.createElement("table");
+    const head = document.createElement("thead");
+    const headerRow = document.createElement("tr");
+    ["Posición", "Aduana", "Recaudación Q2"].forEach((label) => {
+      headerRow.append(textElement("th", label));
+    });
+    head.append(headerRow);
+    const body = document.createElement("tbody");
+
+    items.forEach((item) => {
+      const row = document.createElement("tr");
+      row.append(
+        textElement("td", String(item.rank ?? "")),
+        textElement("td", item.name || ""),
+        textElement("td", `${formatNumber(finiteNumber(item.value))} MDP`),
+      );
+      body.append(row);
+    });
+
+    table.append(head, body);
+    wrapper.append(table);
+    return wrapper;
   };
 
   const renderSeries = (items) => {
-    const rows = items.map((item) => ({ label: item.label, value: item.value }));
-    return `${renderBars(rows, "MDP")}<p class="anam-dashboard__caption">Serie mensual de recaudación publicada para enero-junio de 2026.</p>`;
+    const fragment = document.createDocumentFragment();
+    fragment.append(renderBars(items, "MDP"));
+    fragment.append(textElement(
+      "p",
+      "Serie mensual de recaudación publicada para enero-junio de 2026.",
+      "anam-dashboard__caption",
+    ));
+    return fragment;
   };
 
   const metricSummary = (data, metric) => {
@@ -35,7 +93,16 @@
     const comparison = indicator.comparison_value === null
       ? indicator.comparison_label
       : `${indicator.comparison_value > 0 ? "+" : ""}${formatNumber(indicator.comparison_value, 1)}% ${indicator.comparison_label}`;
-    return `<section class="anam-dashboard__metric"><p>${indicator.label}</p><strong>${formatNumber(indicator.value, digits)} <span>${unit}</span></strong><small>${comparison}</small></section>`;
+    const summary = element("section", "anam-dashboard__metric");
+    const value = document.createElement("strong");
+    value.append(document.createTextNode(`${formatNumber(finiteNumber(indicator.value), digits)} `));
+    value.append(textElement("span", unit));
+    summary.append(
+      textElement("p", indicator.label || ""),
+      value,
+      textElement("small", comparison || ""),
+    );
+    return summary;
   };
 
   const render = (root, data) => {
@@ -43,24 +110,33 @@
     const view = root.querySelector("[data-dashboard-view]").value;
     const output = root.querySelector("[data-dashboard-output]");
     const status = root.querySelector("[data-dashboard-status]");
-    let body = "";
+    const result = element("div", "anam-dashboard__result");
 
     if (view === "serie" && metric === "recaudacion") {
-      body = renderSeries(data.series.recaudacion_mensual_mdp);
+      result.append(renderSeries(data.series.recaudacion_mensual_mdp));
     } else if (view === "ranking" && metric === "recaudacion") {
-      body = renderRanking(data.rankings.recaudacion_aduanas_q2_mdp);
+      result.append(renderRanking(data.rankings.recaudacion_aduanas_q2_mdp));
     } else if (view === "composicion") {
       const items = metric === "recaudacion"
         ? data.breakdowns.recaudacion_por_tipo_aduana_q2_pct
         : metric === "pedimentos"
           ? data.breakdowns.pedimentos_por_tipo_aduana_q2_pct
           : data.breakdowns.operaciones_por_tipo_aduana_q2_pct;
-      body = `${renderBars(items, "%")}<p class="anam-dashboard__caption">Participaciones reportadas por ANAM para Q2 2026; no se recalculan desde otras métricas.</p>`;
+      result.append(renderBars(items, "%"));
+      result.append(textElement(
+        "p",
+        "Participaciones reportadas por ANAM para Q2 2026; no se recalculan desde otras métricas.",
+        "anam-dashboard__caption",
+      ));
     } else {
-      body = `<p class="anam-dashboard__empty">Esta vista no está publicada con la granularidad seleccionada. Consulta el informe fuente para el detalle disponible.</p>`;
+      result.append(textElement(
+        "p",
+        "Esta vista no está publicada con la granularidad seleccionada. Consulta el informe fuente para el detalle disponible.",
+        "anam-dashboard__empty",
+      ));
     }
 
-    output.innerHTML = `${metricSummary(data, metric)}<div class="anam-dashboard__result">${body}</div>`;
+    output.replaceChildren(metricSummary(data, metric), result);
     const labels = { recaudacion: "recaudación", pedimentos: "pedimentos", operaciones: "operaciones" };
     status.textContent = `Mostrando ${labels[metric]} para ${data.scope.period_label}.`;
   };

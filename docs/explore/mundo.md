@@ -17,7 +17,8 @@ Esta ruta organiza las guías de país y las fuentes multilaterales que la wiki 
     <h2>Lista accesible de países</h2>
     <p>Filtra las guías por región o nombre. Cada resultado conduce a una ficha de fuente; no representa flujo comercial, arancel, recaudación ni relación jurídica por sí solo.</p>
   </div>
-  <div class="world-explorer__controls" aria-label="Filtros de guías de país">
+  <fieldset class="world-explorer__controls">
+    <legend>Filtros de guías de país</legend>
     <p>
       <label for="world-region">Región</label>
       <select id="world-region" data-world-region>
@@ -32,7 +33,7 @@ Esta ruta organiza las guías de país y las fuentes multilaterales que la wiki 
       <label for="world-query">Buscar país o código ISO3</label>
       <input id="world-query" data-world-query type="search" autocomplete="off" placeholder="Ejemplo: México, USA o Europa">
     </p>
-  </div>
+  </fieldset>
   <p class="world-explorer__status" data-world-status aria-live="polite">Lista accesible: 7 guías de país curadas.</p>
   <div class="world-explorer__table-wrap">
     <table>
