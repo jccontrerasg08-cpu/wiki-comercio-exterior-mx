@@ -36,6 +36,12 @@ class WorldExplorerTests(unittest.TestCase):
         self.assertIn("min-width: 0;", styles)
         self.assertNotIn("min-width: 36rem", styles)
 
+    def test_world_explorer_exposes_an_empty_result_message(self):
+        page = self.page.read_text(encoding="utf-8")
+        script = self.script_path.read_text(encoding="utf-8")
+        self.assertIn("data-world-empty", page)
+        self.assertIn("No hay guías que coincidan con estos filtros.", script)
+
     def test_world_data_keeps_scope_sources_and_contract_boundary(self):
         data = json.loads(self.data_path.read_text(encoding="utf-8"))
         self.assertEqual(data["scope"]["coverage"], "curated-country-guides")

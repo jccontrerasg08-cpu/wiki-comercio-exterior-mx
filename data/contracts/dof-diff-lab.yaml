@@ -1,0 +1,26 @@
+contract_version: 1
+contract_type: monitor_state
+canonical_repository: jccontrerasg08-cpu/dof-diff-lab
+datasets:
+  - id: dof_daily_monitor
+    canonical_path: data/state/latest.json
+    generator_path: dof_diff_lab/monitor.py
+    observed_commit: 69b1d42c17df81c6bbf13df7c3ff4cbe7faec445
+    schema_fields:
+      - publication_date
+      - edition
+      - manifest_path
+      - normalized_sha256
+      - status
+      - updated_at
+    wiki_local_copy: null
+    monitor:
+      state_version: 1
+      source_primary: official_publication_url
+      review_rule: human_review_required
+      interpretation_limit: detected_change_is_not_legal_currentness
+    consumption:
+      fallback: text_links
+      embed_ready: false
+      public_artifact: null
+      sha256: null

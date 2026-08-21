@@ -137,6 +137,14 @@ class MkDocsUxTests(unittest.TestCase):
         self.assertIn("no clasifica mercancías", catalog)
         self.assertIn("fecha de corte", catalog)
 
+    def test_tools_catalog_explains_editorial_status_and_provenance(self):
+        catalog = (ROOT / "docs" / "explore" / "herramientas.md").read_text(encoding="utf-8")
+        self.assertIn("## Estado, procedencia y fecha de corte", catalog)
+        self.assertIn("Estado editorial", catalog)
+        self.assertIn("Fuente o contrato", catalog)
+        self.assertIn("../methodology/status-model.md", catalog)
+        self.assertIn("../catalog/registry.md", catalog)
+
     def test_motion_is_decorative_and_respects_reduced_motion(self):
         css = (ROOT / "docs" / "stylesheets" / "extra.css").read_text(encoding="utf-8")
         self.assertIn("@keyframes trade-route-flow", css)
