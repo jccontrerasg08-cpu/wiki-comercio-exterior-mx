@@ -214,5 +214,6 @@ nav:
     - Alcance del proyecto: about/scope.md
     - Cómo funciona la wiki: about/como-funciona-la-wiki.md
     - Cómo consultar fuentes: about/como-consultar-fuentes.md
+    - Arquitectura modular de datos: about/arquitectura-datos-modular.md
   - Cambios: changes/index.md
   - Glosario: glossary.md

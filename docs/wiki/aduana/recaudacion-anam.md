@@ -72,6 +72,18 @@ La vista de **evolución mensual** está disponible inicialmente sólo para reca
 
 Si una combinación no aparece, el tablero muestra un estado explícito. No rellena una serie con OCR incompleto, no deduce valores desde una gráfica y no transforma pedimentos u operaciones en pesos.
 
+## Contrato de datos del prototipo
+
+Cada registro que consume este prototipo pertenece al dominio `revenue_anam`: conserva fuente, periodo, medida, unidad, moneda y granularidad publicada. El [modelo unificado de datos](../../about/arquitectura-datos-modular.md) reserva contratos distintos para `tariff` y `trade_flow`; por ello, este tablero no suma ni compara su recaudación con tasas arancelarias o valores de comercio internacional.
+
+| Campo de observación | Uso en este prototipo | Límite actual |
+|---|---|---|
+| Fuente y release | Informe Trimestral Q2 2026 de ANAM y URL primaria | ANAM publica un catálogo de PDFs, no una API tabular. |
+| Periodo y frecuencia | Q2 2026; enero–junio para la serie mensual disponible | No se infieren meses, años o categorías ausentes. |
+| Medida y unidad | Recaudación en MDP; pedimentos y operaciones como conteos | Las unidades no se transforman entre sí. |
+| Geografía | México y tipos/ranking de aduana cuando el informe lo publica | No se geocodifican aduanas ni se presume cobertura territorial. |
+| Estado de granularidad | Agregado, composición o ranking según el indicador | Una combinación sin datos publicados muestra estado vacío. |
+
 ## Fuentes, método y límites
 
 La página de [Recaudación ANAM](https://www.anam.gob.mx/recaudacion-anam/) funciona como catálogo de informes PDF mensuales, trimestrales e históricos. No publica en esa página una API, CSV o XLSX estructurado. Por ello, este tablero es una **capa editorial de datos extraídos con procedencia**, no una réplica de un portal de datos abiertos de ANAM.
