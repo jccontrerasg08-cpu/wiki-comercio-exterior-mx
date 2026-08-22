@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -54,6 +55,49 @@ def _instrument_ids(source: dict[str, Any]) -> tuple[str, ...]:
     return tuple(dict.fromkeys(result))
 
 
+def _verify_local_manifest_document(
+    root: Path, manifest_path: Path, document: dict[str, Any]
+) -> None:
+    if document.get("storage") != "local_git":
+        return
+
+    document_id = str(document.get("id", "<unknown>"))
+    file_value = document.get("file")
+    expected_sha = document.get("sha256")
+    expected_bytes = document.get("bytes")
+
+    if not isinstance(file_value, str) or not file_value.strip():
+        raise ValueError(f"{document_id}: local_git manifest document requires file")
+    if (
+        not isinstance(expected_sha, str)
+        or len(expected_sha) != 64
+        or any(char not in "0123456789abcdefABCDEF" for char in expected_sha)
+    ):
+        raise ValueError(f"{document_id}: local_git manifest document requires sha256")
+    if not isinstance(expected_bytes, int) or isinstance(expected_bytes, bool) or expected_bytes < 0:
+        raise ValueError(f"{document_id}: local_git manifest document requires bytes")
+
+    originals_root = (root / "data" / "originals").resolve()
+    candidate = (manifest_path.parent / file_value).resolve()
+    if candidate == originals_root or originals_root not in candidate.parents:
+        raise ValueError(f"{document_id}: local_git manifest path escapes data/originals")
+    if not candidate.is_file():
+        raise ValueError(f"{document_id}: local_git file missing: {file_value}")
+
+    payload = candidate.read_bytes()
+    if len(payload) != expected_bytes:
+        raise ValueError(
+            f"{document_id}: local_git manifest byte count mismatch: "
+            f"expected {expected_bytes}, got {len(payload)}"
+        )
+    actual_sha = hashlib.sha256(payload).hexdigest()
+    if actual_sha != expected_sha.casefold():
+        raise ValueError(
+            f"{document_id}: local_git manifest sha256 mismatch: "
+            f"expected {expected_sha.casefold()}, got {actual_sha}"
+        )
+
+
 def _manifest_index(root: Path) -> tuple[dict[str, str], dict[str, str]]:
     originals = root / "data" / "originals"
     master_path = originals / "manifest.yaml"
@@ -75,6 +119,7 @@ def _manifest_index(root: Path) -> tuple[dict[str, str], dict[str, str]]:
         for document in documents:
             if not isinstance(document, dict):
                 continue
+            _verify_local_manifest_document(root, manifest_path, document)
             document_id = document.get("id")
             if isinstance(document_id, str) and document_id:
                 by_id[document_id] = fragment

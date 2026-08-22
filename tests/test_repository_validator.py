@@ -1,3 +1,4 @@
+import hashlib
 import io
 import shutil
 import tempfile
@@ -90,7 +91,52 @@ class RepositoryValidatorTests(unittest.TestCase):
             findings = validate_hygiene(root)
         self.assertIn("REPOSITORY_BINARY_IN_GIT", {item.code for item in findings})
 
-    def test_real_repository_has_no_original_binary_payloads(self):
+    def _write_declared_local_binary(self, root: Path, *, wrong_sha: bool = False) -> None:
+        originals = root / "data" / "originals"
+        batch = originals / "batch"
+        batch.mkdir(parents=True)
+        payload = b"%PDF-1.7\nverified fixture bytes\n"
+        digest = hashlib.sha256(payload).hexdigest()
+        declared_digest = "f" * 64 if wrong_sha else digest
+        (batch / "source.pdf").write_bytes(payload)
+        (originals / "manifest.yaml").write_text(
+            "fragments:\n- batch/MANIFEST.yaml\n", encoding="utf-8"
+        )
+        (originals / "SHA256SUMS").write_text("", encoding="utf-8")
+        (batch / "MANIFEST.yaml").write_text(
+            "documents:\n"
+            "- id: declared_local\n"
+            "  storage: local_git\n"
+            "  file: source.pdf\n"
+            "  url: https://example.gob.mx/source.pdf\n"
+            f"  sha256: {declared_digest}\n"
+            f"  bytes: {len(payload)}\n"
+            "  license: official-not-relicensed\n"
+            "  redistribution: Official source preserved for provenance.\n",
+            encoding="utf-8",
+        )
+
+    def test_declared_verified_local_git_binary_is_allowed(self):
+        validate_hygiene = getattr(validator, "validate_repository_hygiene", None)
+        self.assertIsNotNone(validate_hygiene, "validate_repository_hygiene must exist")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_declared_local_binary(root)
+            findings = validate_hygiene(root)
+        self.assertNotIn("REPOSITORY_BINARY_IN_GIT", {item.code for item in findings})
+
+    def test_declared_local_git_checksum_mismatch_is_rejected(self):
+        validate_originals = getattr(validator, "validate_originals", None)
+        self.assertIsNotNone(validate_originals, "validate_originals must exist")
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_declared_local_binary(root, wrong_sha=True)
+            findings = validate_originals(root / "data" / "originals")
+        self.assertIn(
+            "ORIGINALS_LOCAL_SHA256_MISMATCH", {item.code for item in findings}
+        )
+
+    def test_real_repository_has_no_undeclared_original_binary_payloads(self):
         validate_hygiene = getattr(validator, "validate_repository_hygiene", None)
         self.assertIsNotNone(validate_hygiene, "validate_repository_hygiene must exist")
         self.assertEqual(validate_hygiene(ROOT), [])

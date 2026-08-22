@@ -115,7 +115,10 @@ MASTER = """fragments:
 - example/MANIFEST.yaml
 """
 
-FRAGMENT = """documents:
+LOCAL_PAYLOAD = b"official local bytes"
+LOCAL_SHA256 = "1fb45711dd3d28e0f6440c23b2e027e9cf9ac55243504cfab0da8dc411f14d9b"
+
+FRAGMENT = f"""documents:
 - id: archived_copy
   file: example/law.pdf
   url: https://example.gob.mx/law.pdf
@@ -126,6 +129,12 @@ FRAGMENT = """documents:
   url: https://example.gob.mx/event.pdf
   sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
   bytes: 456
+- id: verified_local_blob
+  storage: local_git
+  file: local.bin
+  url: https://example.gob.mx/local.bin
+  sha256: {LOCAL_SHA256}
+  bytes: 20
 """
 
 EQUIVALENTS = """equivalences:
@@ -148,6 +157,7 @@ class ArchiveAuditTests(unittest.TestCase):
         (root / "data" / "originals" / "example" / "MANIFEST.yaml").write_text(
             FRAGMENT, encoding="utf-8"
         )
+        (root / "data" / "originals" / "example" / "local.bin").write_bytes(LOCAL_PAYLOAD)
 
     def test_report_only_lists_genuinely_missing_active_primary_sources(self):
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -189,6 +199,48 @@ class ArchiveAuditTests(unittest.TestCase):
                 encoding="utf-8",
             )
             with self.assertRaisesRegex(ValueError, "missing_manifest_id"):
+                audit_registry(root)
+
+    def test_local_git_manifest_accepts_exact_bytes(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_fixture(root)
+            rows = audit_registry(root)
+        self.assertTrue(rows)
+
+    def test_local_git_manifest_rejects_missing_file(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_fixture(root)
+            (root / "data" / "originals" / "example" / "local.bin").unlink()
+            with self.assertRaisesRegex(ValueError, "local_git.*missing"):
+                audit_registry(root)
+
+    def test_local_git_manifest_rejects_path_escape(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_fixture(root)
+            manifest = root / "data" / "originals" / "example" / "MANIFEST.yaml"
+            manifest.write_text(FRAGMENT.replace("file: local.bin", "file: ../../escape.bin"), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "escapes data/originals"):
+                audit_registry(root)
+
+    def test_local_git_manifest_rejects_wrong_size(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_fixture(root)
+            manifest = root / "data" / "originals" / "example" / "MANIFEST.yaml"
+            manifest.write_text(FRAGMENT.replace("bytes: 20", "bytes: 21"), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "byte count mismatch"):
+                audit_registry(root)
+
+    def test_local_git_manifest_rejects_wrong_sha256(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            self._write_fixture(root)
+            manifest = root / "data" / "originals" / "example" / "MANIFEST.yaml"
+            manifest.write_text(FRAGMENT.replace(LOCAL_SHA256, "f" * 64), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "sha256 mismatch"):
                 audit_registry(root)
 
     def test_superseded_only_sources_are_not_automatic_requests(self):
