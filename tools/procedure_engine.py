@@ -50,14 +50,3 @@ class ProcedureState:
             "evidence_keys": list(self.evidence.keys())
         }
 
-if __name__ == "__main__":
-    import json
-    # Demo de uso
-    proc = ProcedureState("Importar Mercancía", ["clasificacion", "nico", "arancel", "rrna", "despacho"])
-    proc.next_step("clasificacion", {"fraccion": "8517.13.01"})
-    proc.next_step("nico", {"nico": "00"})
-    
-    # Intento de salto de paso
-    proc.next_step("rrna", {"permiso": "ok"}) 
-    
-    print(json.dumps(proc.public_state(), indent=2))

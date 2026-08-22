@@ -47,10 +47,3 @@ class RegulatoryDiffEngine:
             "details": changes
         }
 
-if __name__ == "__main__":
-    import json
-    v1 = "Artículo 1. Esta ley regula la entrada.\nArtículo 2. Derogado."
-    v2 = "Artículo 1. Esta ley regula la entrada y salida.\nArtículo 3. Nuevo."
-    
-    diff = RegulatoryDiffEngine.compare_versions(v1, v2)
-    print(json.dumps(diff, indent=2))
