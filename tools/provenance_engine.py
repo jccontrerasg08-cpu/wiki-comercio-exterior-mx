@@ -74,16 +74,3 @@ class LegalValidator:
             "record": record.to_dict()
         }
 
-if __name__ == "__main__":
-    import json
-    # Prueba del concepto
-    record = ProvenanceRecord(
-        source_name="Diario Oficial de la Federación",
-        authority=SourceAuthority.PRIMARY_PUBLICATION,
-        content="Artículo 1. Esta Ley..."
-    )
-    # Simulamos que es viejo
-    record.fetched_at = time.time() - (40 * 24 * 3600)
-    
-    result = LegalValidator.evaluate_record(record)
-    print(json.dumps(result, indent=2))
