@@ -1,5 +1,5 @@
 import unittest
-from procedure_engine import ProcedureState
+from tools.procedure_engine import ProcedureState
 
 class ProcedureEngineTests(unittest.TestCase):
     def test_initial_state_is_busy_and_has_first_step_pending(self):
