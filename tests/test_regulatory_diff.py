@@ -1,5 +1,5 @@
 import unittest
-from regulatory_diff import RegulatoryDiffEngine
+from tools.regulatory_diff import RegulatoryDiffEngine
 
 class RegulatoryDiffEngineTests(unittest.TestCase):
     def test_compare_versions_detects_additions_and_deletions(self):
