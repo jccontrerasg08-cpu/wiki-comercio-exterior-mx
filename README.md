@@ -24,7 +24,7 @@ data/corpus/      Digest RAG (no es el DOF)
 evals/            Preguntas temporales revisadas
 ```
 
-Cita vinculante: SIDOF, Diputados o SAT. Incoterms®: solo [ICC](https://iccwbo.org/business-solutions/incoterms-rules/), [ICC México](https://iccmex.mx/seccion/incoterms-2020), [ICC 2go](https://2go.iccwbo.org).
+Cita vinculante: SIDOF, Diputados o SAT. Incoterms®: solo [ICC](https://iccwbo.org/business-solutions/incoterms-rules/), [ICC México](https://www.iccmex.mx/seccion/incoterms-2020), [ICC 2go](https://2go.iccwbo.org).
 
 ## Cómo empezar
 

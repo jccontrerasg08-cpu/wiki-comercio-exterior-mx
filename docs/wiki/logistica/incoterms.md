@@ -48,7 +48,7 @@ De la misma forma, que una regla asigne al vendedor una obligación de despacho 
 ## Fuentes oficiales
 
 - [ICC, Incoterms® rules](https://iccwbo.org/business-solutions/incoterms-rules/)
-- [ICC México, Incoterms® 2020](https://iccmex.mx/seccion/incoterms-2020)
+- [ICC México, Incoterms® 2020](https://www.iccmex.mx/seccion/incoterms-2020)
 - [ICC 2go](https://2go.iccwbo.org)
 
 ## Ver también
