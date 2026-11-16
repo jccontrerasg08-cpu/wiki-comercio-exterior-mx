@@ -41,11 +41,11 @@ def _display(value: object) -> str:
 def _instrument_ids(source: dict[str, Any]) -> tuple[str, ...]:
     declared: list[str] = []
     single = source.get("instrument_id")
-    if isinstance(single, str):
+    if isinstance(single, str) and single:
         declared.append(single)
     multiple = source.get("instrument_ids")
     if isinstance(multiple, list):
-        declared.extend(item for item in multiple if isinstance(item, str))
+        declared.extend(item for item in multiple if isinstance(item, str) and item)
     return tuple(dict.fromkeys(declared))
 
 
