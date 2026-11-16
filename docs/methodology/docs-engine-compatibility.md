@@ -25,7 +25,7 @@ Material for MkDocs 9.7 está en modo de mantenimiento. Su documentación tambi�
 Fuentes de referencia:
 
 - [Material for MkDocs, changelog](https://squidfunk.github.io/mkdocs-material/changelog/)
-- [Material for MkDocs y MkDocs 2.0](https://squidfunk.github.io/mkdocs-material/blog/2026/mkdocs-2/)
+- [Material for MkDocs y MkDocs 2.0](https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/)
 
 ## Perfiles web y offline
 
@@ -60,7 +60,7 @@ Fuentes de referencia:
 - [Zensical](https://zensical.org/)
 - [Compatibilidad con proyectos existentes](https://zensical.org/compatibility/)
 - [Compatibilidad de plugins](https://zensical.org/compatibility/plugins/)
-- [Release 0.0.54](https://github.com/zensical/zensical/releases/tag/0.0.54)
+- [Release 0.0.54](https://github.com/zensical/zensical/releases/tag/v0.0.54)
 
 ## Bloqueador actual: redirects legacy
 
