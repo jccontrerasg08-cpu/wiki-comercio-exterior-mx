@@ -16,7 +16,6 @@ exclude = [
   "^https://www\\.snice\\.gob\\.mx/cs/avi/snice/drawback\\.html$",
   "^https://www\\.wcoomd\\.org/en/topics/nomenclature\\.aspx$",
   "^https://ec\\.europa\\.eu/eurostat/web/sdmx-infospace/",
-  "^https://iccmex\\.mx/",
   # Repositorio privado: da 404 sin sesión.
   "^https://github\\.com/jccontrerasg08-cpu/aduanamap-mx$"
 ]

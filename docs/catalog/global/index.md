@@ -67,6 +67,6 @@ ICC Incoterms® hub. Current edition Incoterms® 2020. Catalog-only. This librar
 
 - source_id: `global_icc_incoterms`
 - official_url: https://iccwbo.org/business-solutions/incoterms-rules/
-- also catalog-only, not in registry: https://iccmex.mx/seccion/incoterms-2020 and https://2go.iccwbo.org
+- also catalog-only, not in registry: https://www.iccmex.mx/seccion/incoterms-2020 and https://2go.iccwbo.org
 - evidence_class: secondary
 - harvest: false
