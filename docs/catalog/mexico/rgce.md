@@ -5,7 +5,7 @@ description: "Fuentes oficiales de RGCE, resoluciones de modificaciones y anexos
 
 # RGCE y anexos (SIDOF)
 
-Notas del Diario Oficial vía SIDOF. El cuerpo legal vive en el iframe `https://sidof.segob.gob.mx/notas/docFuente/<id>`. Corroborado con Playwright el 2026-08-13. No hay Segunda Modificación RGCE 2026 en SIDOF a esa fecha.
+Notas del Diario Oficial vía SIDOF. El cuerpo legal vive en el iframe `https://sidof.segob.gob.mx/notas/docFuente/<id>`. Corroborado con Playwright el 2026-08-13. No había Segunda Modificación RGCE 2026 en SIDOF a esa fecha. Posteriormente se publicó la Segunda Resolución de Modificaciones a las RGCE para 2026 y anexos 1, 2 y 22 (DOF 22-09-2026, SIDOF nota 5799243; verificada el 2026-11-16).
 
 ## Contents
 
