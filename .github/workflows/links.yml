@@ -21,9 +21,27 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+      # .lychee.toml sets cache = true, but a hosted runner starts empty every run:
+      # persist .lycheecache so external hosts are not re-queried (and rate-limited).
+      - name: Restore lychee cache
+        id: lychee-cache
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
       - name: Check links
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
         with:
           args: --config .lychee.toml README.md docs/**/*.md
           fail: true
           jobSummary: true
+        env:
+          # Authenticated GitHub requests avoid the anonymous rate limit.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Save lychee cache
+        if: always()
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .lycheecache
+          key: ${{ steps.lychee-cache.outputs.cache-primary-key }}

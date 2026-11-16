@@ -1,5 +1,7 @@
 cache = true
 max_cache_age = "2d"
+# Do not cache server errors: retry them on the next run.
+cache_exclude_status = "500.."
 max_retries = 2
 timeout = 20
 user_agent = "wiki-comercio-exterior-mx-link-check/1.0"
