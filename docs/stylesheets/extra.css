@@ -154,6 +154,10 @@ input {
   }
 }
 
+.trade-route > p {
+  display: contents;
+}
+
 .trade-route__step {
   position: relative;
   z-index: 1;
