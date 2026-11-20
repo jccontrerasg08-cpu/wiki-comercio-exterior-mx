@@ -32,32 +32,14 @@ hide:
 
 Una forma práctica de recorrer la wiki. La secuencia real depende de la mercancía, el régimen, el origen, el destino y las obligaciones aplicables.
 
-<div class="trade-route" aria-label="Ruta de una operación de comercio exterior">
-  <a class="trade-route__step" href="wiki/clasificacion/tigie-nico/">
-    <span class="trade-route__number">1</span>
-    <span class="trade-route__label">Clasificar</span>
-    <small>Ubica fracción arancelaria, NICO y contexto TIGIE.</small>
-  </a>
-  <a class="trade-route__step" href="wiki/rrna/">
-    <span class="trade-route__number">2</span>
-    <span class="trade-route__label">Revisar RRNA</span>
-    <small>Identifica permisos, avisos, NOM y otras restricciones.</small>
-  </a>
-  <a class="trade-route__step" href="wiki/contribuciones/impuestos-importacion/">
-    <span class="trade-route__number">3</span>
-    <span class="trade-route__label">Calcular</span>
-    <small>Conecta IGI, IVA, IEPS, DTA y cuotas cuando correspondan.</small>
-  </a>
-  <a class="trade-route__step" href="wiki/aduana/pedimento-rgce/">
-    <span class="trade-route__number">4</span>
-    <span class="trade-route__label">Despachar</span>
-    <small>Consulta pedimento, RGCE, anexos y documentación aduanera.</small>
-  </a>
-  <a class="trade-route__step" href="wiki/logistica/logistica-internacional/">
-    <span class="trade-route__number">5</span>
-    <span class="trade-route__label">Mover</span>
-    <small>Relaciona transporte, documentos, seguros y cadena logística.</small>
-  </a>
+<div class="trade-route" aria-label="Ruta de una operación de comercio exterior" markdown="1">
+
+[<span class="trade-route__number">1</span> <span class="trade-route__label">Clasificar</span> <small>Ubica fracción arancelaria, NICO y contexto TIGIE.</small>](wiki/clasificacion/tigie-nico.md){.trade-route__step}
+[<span class="trade-route__number">2</span> <span class="trade-route__label">Revisar RRNA</span> <small>Identifica permisos, avisos, NOM y otras restricciones.</small>](wiki/rrna/index.md){.trade-route__step}
+[<span class="trade-route__number">3</span> <span class="trade-route__label">Calcular</span> <small>Conecta IGI, IVA, IEPS, DTA y cuotas cuando correspondan.</small>](wiki/contribuciones/impuestos-importacion.md){.trade-route__step}
+[<span class="trade-route__number">4</span> <span class="trade-route__label">Despachar</span> <small>Consulta pedimento, RGCE, anexos y documentación aduanera.</small>](wiki/aduana/pedimento-rgce.md){.trade-route__step}
+[<span class="trade-route__number">5</span> <span class="trade-route__label">Mover</span> <small>Relaciona transporte, documentos, seguros y cadena logística.</small>](wiki/logistica/logistica-internacional.md){.trade-route__step}
+
 </div>
 
 ## ¿Vas a exportar?
